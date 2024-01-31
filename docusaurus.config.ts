@@ -5,13 +5,13 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const config: Config = {
   title: 'My Site',
   tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  favicon: '/gfdoc-md/img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/gfdoc-md/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
