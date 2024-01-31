@@ -1,0 +1,25 @@
+大家好啊，新的一轮 `GoFrame` 框架技术分享来啦！
+
+这次呢，是由 `GoCN` 和 `Tap4Fun` 在成都举办的一次 `Golang` 领域的技术分享，很荣幸作为其中一位讲师受邀参加。
+
+本次技术分享主题仍旧以框架设计介绍为主，以下是参考目录：
+
+![](/download/attachments/7296880/image2021-4-14_17-55-22.png?version=1&modificationDate=1618394123326&api=v2)![](/download/attachments/7296880/image2021-4-18_0-54-15.png?version=1&modificationDate=1618678455826&api=v2)
+
+更多关于 `GoFrame` 设计相关的介绍，可参考《 [框架设计](/docs/框架设计/框架设计)》章节。
+
+由于时间有限，针对于大家比较感兴趣的微服务开发方面的介绍，会在后续活动中再进行分享交流。
+
+活动报名地址： [https://www.bagevent.com/event/7198261](https://www.bagevent.com/event/7198261?code=001hWnFa1BenRA0Q3lGa1V6Sci0hWnFn&state=STATE)
+
+* * *
+
+华丽的分割线
+
+* * *
+
+感谢本次 `GoCN` 及 `Tap4Fun` 举办的 `Golang` 技术分享活动，整个活动举办得很成功，主办方也很用心，礼品也很不错❤️。
+
+这里是本次 `GoFrame` 框架的技术分享的PPT稿件，欢迎各位按需取用。
+
+[gocn-GoFrame框架介绍及设计.pdf](/download/attachments/7296880/gocn-GoFrame%E6%A1%86%E6%9E%B6%E4%BB%8B%E7%BB%8D%E5%8F%8A%E8%AE%BE%E8%AE%A1.pdf?version=1&modificationDate=1618678587595&api=v2)
