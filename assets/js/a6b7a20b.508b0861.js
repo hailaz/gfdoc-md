@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgfdoc=self.webpackChunkgfdoc||[]).push([[90307],{93861:s=>{s.exports=JSON.parse('{"label":"docusaurus","permalink":"/gfdoc-md/blog/tags/docusaurus","allTagsPath":"/gfdoc-md/blog/tags","count":4,"unlisted":false}')}}]);
