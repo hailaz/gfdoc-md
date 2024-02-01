@@ -53,7 +53,7 @@ go: upgraded golang.org/x/tools v0.1.11-0.20220504162446-54c7ba520b92 => v0.1.12
 
 upgrading "github.com/gogf/gf/v2" from "v2.2.4" to "latest"
 
-auto fixing path "/Users/john/Workspace/Go/GOPATH/src/git.code.oa.com/Khaos/eros"...
+auto fixing path "/Users/john/Workspace/Go/GOPATH/src/github.com/Khaos/eros"...
 done!
 ```
 
