@@ -53,8 +53,17 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-
-
+  plugins: [
+    // 搜索
+    [
+      require.resolve("@cmfcmf/docusaurus-search-local"),
+      {
+        // Options here
+        // language of your documentation, see next section
+        language: "zh",
+      },
+    ],
+  ],
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
