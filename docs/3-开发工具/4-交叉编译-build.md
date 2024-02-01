@@ -36,46 +36,21 @@ gfcli:
 
 配置选项的释义同命令行同名选项。
 
-名称默认值含义示例`name`与程序入口 `go` 文件同名生成的可执行文件名称。如果是 `windows` 平台，那么默认会加上 `.exe` 后缀`gf``arch`当前系统架构编译架构，多个以 `,` 号分隔，如果是 `all` 表示编译所有支持架构`386,amd64,arm``system``当前系统平台`编译平台，多个以 `,` 号分隔，如果是 `all` 表示编译所有支持平台`linux,darwin,windows``path``./bin`编译可执行文件存储的 **目录地址**`./bin``mod`
-
-同 `go build -mod` 编译选项，不常用`none``cgo``false`是否开启 `CGO`，默认是关闭的。如果开启，那么交叉编译可能会有问题。
-
-`packSrc`
-
-需要打包的目录，多个以 `,` 号分隔，生成到 `internal/packed/build_pack_data.go``public,template,manifest``packDst`
-
-`internal/packed/build_pack_data.go`
-
-打包后生成的 `Go` 文件路径，一般使用相对路径指定到本项目目录中
-
-`version`
-
-程序版本，如果指定版本信息，那么程序生成的路径中会多一层以版本名称的目录`v1.0.0``output`
-
-输出的可执行文件路径，当该参数指定时， `name` 和 `path` 参数失效，常用于编译单个可执行文件。`./bin/gf.exe``extra`
-
-额外自定义的编译参数，会直接传递给 `go build` 命令
-
-`varMap`
-
-自定义的内置变量键值对，构建的二进制中可以通过 `gbuild` 包获取编译信息。
-
-```
-gfcli:
-  build:
-    name:     "gf"
-    arch:     "all"
-    system:   "all"
-    mod:      "none"
-    cgo:      0
-    varMap:
-      k1: v1
-      k2: v2
-```
-
-`exitWhenError``false`当编译发生错误时，立即停止后续执行，并退出编译流程（使用 `os.Exit(1)`）
-
-`dumpEnv``false`每次编译之前在终端打印当前编译环境的环境变量信息
+| 名称 | 默认值 | 含义 | 示例 |
+| `name` | 与程序入口 `go` 文件同名 | 生成的可执行文件名称。如果是 `windows` 平台，那么默认会加上 `.exe` 后缀 | `gf` |
+| `arch` | 当前系统架构 | 编译架构，多个以 `,` 号分隔，如果是 `all` 表示编译所有支持架构 | `386,amd64,arm` |
+| `system` | `当前系统平台` | 编译平台，多个以 `,` 号分隔，如果是 `all` 表示编译所有支持平台 | `linux,darwin,windows` |
+| `path` | `./bin` | 编译可执行文件存储的 **目录地址** | `./bin` |
+| `mod` |  | 同 `go build -mod` 编译选项，不常用 | `none` |
+| `cgo` | `false` | 是否开启 `CGO`，默认是关闭的。如果开启，那么交叉编译可能会有问题。 |  |
+| `packSrc` |  | 需要打包的目录，多个以 `,` 号分隔，生成到 `internal/packed/build_pack_data.go` | `public,template,manifest` |
+| `packDst` | `internal/packed/build_pack_data.go` | 打包后生成的 `Go` 文件路径，一般使用相对路径指定到本项目目录中 |  |
+| `version` |  | 程序版本，如果指定版本信息，那么程序生成的路径中会多一层以版本名称的目录 | `v1.0.0` |
+| `output` |  | 输出的可执行文件路径，当该参数指定时， `name` 和 `path` 参数失效，常用于编译单个可执行文件。 | `./bin/gf.exe` |
+| `extra` |  | 额外自定义的编译参数，会直接传递给 `go build` 命令 |  |
+| `varMap` |  | 自定义的内置变量键值对，构建的二进制中可以通过 `gbuild` 包获取编译信息。 | ```<br></br>gfcli:<br></br>  build:<br></br>    name:     "gf"<br></br>    arch:     "all"<br></br>    system:   "all"<br></br>    mod:      "none"<br></br>    cgo:      0<br></br>    varMap:<br></br>      k1: v1<br></br>      k2: v2<br></br>``` |
+| `exitWhenError` | `false` | 当编译发生错误时，立即停止后续执行，并退出编译流程（使用 `os.Exit(1)`） |  |
+| `dumpEnv` | `false` | 每次编译之前在终端打印当前编译环境的环境变量信息 |  |
 
 编译时的内置变量可以在运行时通过 `gbuild` 包 [构建信息-gbuild](/docs/组件列表/系统相关/构建信息-gbuild) 获取。
 

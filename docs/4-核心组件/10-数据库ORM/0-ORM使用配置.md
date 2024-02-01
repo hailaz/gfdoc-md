@@ -40,17 +40,17 @@ database:
 
 不同数据类型对应的 `link` 示例如下:
 
-类型link示例extra参数`mysql``mysql:root:12345678@tcp(127.0.0.1:3306)/test?loc=Local&parseTime=true`[mysql](https://github.com/go-sql-driver/mysql)`mariadb``mariadb:root:12345678@tcp(127.0.0.1:3306)/test?loc=Local&parseTime=true`[mysql](https://github.com/go-sql-driver/mysql)`tidb``tidb:root:12345678@tcp(127.0.0.1:3306)/test?loc=Local&parseTime=true`[mysql](https://github.com/go-sql-driver/mysql)`pgsql``pgsql:root:12345678@tcp(127.0.0.1:5432)/test`[pq](https://github.com/lib/pq)`mssql`
-
-`mssql:root:12345678@tcp(127.0.0.1:1433)/test?encrypt=disable`
-
-[go-mssqldb](https://github.com/denisenkom/go-mssqldb)`sqlite``sqlite::@file(/var/data/db.sqlite3)  (可以使用相对路径，如: db.sqlite3)`[go-sqlite3](https://github.com/mattn/go-sqlite3)`oracle``oracle:root:12345678@tcp(127.0.0.1:5432)/test`[go-oci8](https://github.com/mattn/go-oci8)`clickhouse``clickhouse:root:12345678@tcp(127.0.0.1:9000)/test`
-
-[clickhouse-go](https://github.com/ClickHouse/clickhouse-go)
-
-`dm``dm:root:12345678@tcp(127.0.0.1:5236)/test`
-
-[dm](https://gitee.com/chunanyong/dm)
+| 类型 | link示例 | extra参数 |
+| --- | --- | --- |
+| `mysql` | `mysql:root:12345678@tcp(127.0.0.1:3306)/test?loc=Local&parseTime=true` | [mysql](https://github.com/go-sql-driver/mysql) |
+| `mariadb` | `mariadb:root:12345678@tcp(127.0.0.1:3306)/test?loc=Local&parseTime=true` | [mysql](https://github.com/go-sql-driver/mysql) |
+| `tidb` | `tidb:root:12345678@tcp(127.0.0.1:3306)/test?loc=Local&parseTime=true` | [mysql](https://github.com/go-sql-driver/mysql) |
+| `pgsql` | `pgsql:root:12345678@tcp(127.0.0.1:5432)/test` | [pq](https://github.com/lib/pq) |
+| `mssql` | `mssql:root:12345678@tcp(127.0.0.1:1433)/test?encrypt=disable` | [go-mssqldb](https://github.com/denisenkom/go-mssqldb) |
+| `sqlite` | `sqlite::@file(/var/data/db.sqlite3)  (可以使用相对路径，如: db.sqlite3)` | [go-sqlite3](https://github.com/mattn/go-sqlite3) |
+| `oracle` | `oracle:root:12345678@tcp(127.0.0.1:5432)/test` | [go-oci8](https://github.com/mattn/go-oci8) |
+| `clickhouse` | `clickhouse:root:12345678@tcp(127.0.0.1:9000)/test` | [clickhouse-go](https://github.com/ClickHouse/clickhouse-go) |
+| `dm` | `dm:root:12345678@tcp(127.0.0.1:5236)/test` | [dm](https://gitee.com/chunanyong/dm) |
 
 更多框架支持的数据库类型请参考： [https://github.com/gogf/gf/tree/master/contrib/drivers](https://github.com/gogf/gf/tree/master/contrib/drivers)
 

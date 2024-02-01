@@ -83,25 +83,22 @@ EXAMPLE
 
 参数说明：
 
-名称必须默认值含义`srcFolder`是`internal/logic`指向logic代码目录地址`dstFolder`是`internal/service`指向生成的接口文件存放目录`dstFileNameCase`否`Snake`生成的文件名名称格式`stPattern`否`s([A-A]\w+)`
+| 名称 | 必须 | 默认值 | 含义 |
+| --- | --- | --- | --- |
+| `srcFolder` | 是 | `internal/logic` | 指向logic代码目录地址 |
+| `dstFolder` | 是 | `internal/service` | 指向生成的接口文件存放目录 |
+| `dstFileNameCase` | 否 | `Snake` | 生成的文件名名称格式 |
+| `stPattern` | 否 | `s([A-A]\w+)` | 使用正则指定业务模块结构体定义格式，便于解析业务接口定义名称。在默认的正则下，所有小写 `s` 开头，大写字母随后的结构体都将被当做业务模块接口名称。例如：
 
-使用正则指定业务模块结构体定义格式，便于解析业务接口定义名称。在默认的正则下，所有小写 `s` 开头，大写字母随后的结构体都将被当做业务模块接口名称。例如：
-
-logic结构体名称service接口名称`sUser``User``sMetaData``MetaData`
-
-`watchFile`
-
-用在代码文件监听中，代表当前改变的代码文件路径
-
-`packages`
-
-仅生成指定包名的接口文件，给定字符串数组，通过命令行传参则给定 `JSON` 字符串，命令行组件自动转换数据类型`importPrefix`
-
-指定生成业务引用文件中的引用包名前缀`overwrite`
-
-`true`生成代码文件时是否覆盖已有文件`clear`
-
-`false`自动删除 `logic` 中不存在的接口文件（仅删除自动维护的文件）
+| logic结构体名称 | service接口名称 |
+| --- | --- |
+| `sUser` | `User` |
+| `sMetaData` | `MetaData` | |
+| `watchFile` |  |  | 用在代码文件监听中，代表当前改变的代码文件路径 |
+| `packages` |  |  | 仅生成指定包名的接口文件，给定字符串数组，通过命令行传参则给定 `JSON` 字符串，命令行组件自动转换数据类型 |
+| `importPrefix` |  |  | 指定生成业务引用文件中的引用包名前缀 |
+| `overwrite` |  | `true` | 生成代码文件时是否覆盖已有文件 |
+| `clear` |  | `false` | 自动删除 `logic` 中不存在的接口文件（仅删除自动维护的文件） |
 
 ## 自动模式
 

@@ -6,7 +6,12 @@ title: 字符集转换-gcharset
 
 支持的字符集:
 
-编码字符集**中文**`GBK/GB18030/GB2312/Big5`**日文**`EUCJP/ISO2022JP/ShiftJIS`**韩文**`EUCKR`**Unicode**`UTF-8/UTF-16/UTF-16BE/UTF-16LE`**其他编码**`macintosh/IBM*/Windows*/ISO-*`
+| 编码 | 字符集 |
+| **中文** | `GBK/GB18030/GB2312/Big5` |
+| **日文** | `EUCJP/ISO2022JP/ShiftJIS` |
+| **韩文** | `EUCKR` |
+| **Unicode** | `UTF-8/UTF-16/UTF-16BE/UTF-16LE` |
+| **其他编码** | `macintosh/IBM*/Windows*/ISO-*` |
 
 **使用方式**：
 

@@ -14,6 +14,23 @@ title: ORM高级特性-类型识别
 
 版本可能随时迭代更新，具体可查看源码 [https://github.com/gogf/gf/blob/master/database/gdb/gdb\_core\_structure.go](https://github.com/gogf/gf/blob/master/database/gdb/gdb_core_structure.go)
 
-数据库类型Go变量类型`*char``string``*text``string``*binary``bytes``*blob``bytes``*int``int``*money``float64``bit``int``big_int``int64``float``float64``double``float64``decimal``float64``bool``bool``date``time.Time``datetime``time.Time``timestamp``time.Time``其他``string`
+| 数据库类型 | Go变量类型 |
+| --- | --- |
+| `*char` | `string` |
+| `*text` | `string` |
+| `*binary` | `bytes` |
+| `*blob` | `bytes` |
+| `*int` | `int` |
+| `*money` | `float64` |
+| `bit` | `int` |
+| `big_int` | `int64` |
+| `float` | `float64` |
+| `double` | `float64` |
+| `decimal` | `float64` |
+| `bool` | `bool` |
+| `date` | `time.Time` |
+| `datetime` | `time.Time` |
+| `timestamp` | `time.Time` |
+| `其他` | `string` |
 
 这一特性对于需要将查询结果进行编码，并通过例如 `JSON` 方式直接返回给客户端来说将会非常友好。

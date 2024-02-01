@@ -129,27 +129,42 @@ func HelloHandler(r *ghttp.Request) {
 
 ![](/download/attachments/38575579/image2021-1-29_10-51-41.png?version=1&modificationDate=1644394026152&api=v2)
 
-Attribute/Tag说明`otel.instrumentation_library.name`当前仪表器名称，往往是当前 `span` 操作的组件名称`otel.instrumentation_library.version`当前仪表器组件版本`span.kind`
+| Attribute/Tag | 说明 |
+| --- | --- |
+| `otel.instrumentation_library.name` | 当前仪表器名称，往往是当前 `span` 操作的组件名称 |
+| `otel.instrumentation_library.version` | 当前仪表器组件版本 |
+| `span.kind` | 当前 `span` 的类型，一般由组件自动写入。常见 `span` 类型为：
 
-当前 `span` 的类型，一般由组件自动写入。常见 `span` 类型为：
-
-类型说明
-
-`client `
-
-客户端`server`服务端`producer`生产者，常用于MQ`consumer`消费者，常用于MQ`internal`内部方法，一般业务使用`undefined`未定义，较少使用
-
-`status.code`当前 `span` 状态， `0` 为正常， `非0` 表示失败`status.message`当前 `span` 状态信息，往往在失败时会带有错误信息`hostname`当前节点的主机名称`ip.intranet`当前节点的主机内网地址列表`http.address.local`HTTP通信的本地地址和端口`http.address.remote`HTTP通信的目标地址和端口`http.dns.start`当请求的目标地址带有域名时，开始解析的域名地址`http.dns.done`当请求的目标地址带有域名时，解析结束之后的IP地址`http.connect.start`开始创建连接的类型和地址`http.connect.done`创建连接成功后的类型和地址
+| 类型 | 说明 |
+| --- | --- |
+| `client ` | 客户端 |
+| `server` | 服务端 |
+| `producer` | 生产者，常用于MQ |
+| `consumer` | 消费者，常用于MQ |
+| `internal` | 内部方法，一般业务使用 |
+| `undefined` | 未定义，较少使用 | |
+| `status.code` | 当前 `span` 状态， `0` 为正常， `非0` 表示失败 |
+| `status.message` | 当前 `span` 状态信息，往往在失败时会带有错误信息 |
+| `hostname` | 当前节点的主机名称 |
+| `ip.intranet` | 当前节点的主机内网地址列表 |
+| `http.address.local` | HTTP通信的本地地址和端口 |
+| `http.address.remote` | HTTP通信的目标地址和端口 |
+| `http.dns.start` | 当请求的目标地址带有域名时，开始解析的域名地址 |
+| `http.dns.done` | 当请求的目标地址带有域名时，解析结束之后的IP地址 |
+| `http.connect.start` | 开始创建连接的类型和地址 |
+| `http.connect.done` | 创建连接成功后的类型和地址 |
 
 ## HTTP Client Events
 
 ![](/download/attachments/38575579/image2021-1-29_11-18-16.png?version=1&modificationDate=1644394026176&api=v2)
 
-Event/Log说明`http.request.headers`HTTP客户端请求提交的 `Header` 信息，可能会比较大。`http.request.baggage`HTTP客户端请求提交的 `Baggage` 信息，用于服务间链路信息传递。`http.request.body`
-
-HTTP客户端请求提交的 `Body` 数据，可能会比较大，最大只记录 `512KB`，如果超过该大小则忽略。
-
-`http.response.headers`HTTP客户端请求接收返回的的 `Header` 信息，可能会比较大。`http.response.body`HTTP客户端请求接收返回的 `Body` 数据，可能会比较大，最大只记录 `512KB`，如果超过该大小则忽略。
+| Event/Log | 说明 |
+| --- | --- |
+| `http.request.headers` | HTTP客户端请求提交的 `Header` 信息，可能会比较大。 |
+| `http.request.baggage` | HTTP客户端请求提交的 `Baggage` 信息，用于服务间链路信息传递。 |
+| `http.request.body` | HTTP客户端请求提交的 `Body` 数据，可能会比较大，最大只记录 `512KB`，如果超过该大小则忽略。 |
+| `http.response.headers` | HTTP客户端请求接收返回的的 `Header` 信息，可能会比较大。 |
+| `http.response.body` | HTTP客户端请求接收返回的 `Body` 数据，可能会比较大，最大只记录 `512KB`，如果超过该大小则忽略。 |
 
 ## HTTP Server Attributes
 

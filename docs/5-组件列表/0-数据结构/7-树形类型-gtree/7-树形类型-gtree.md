@@ -6,7 +6,11 @@ title: 树形类型-gtree
 
 支持并发安全开关特性的树形容器，树形数据结构的特点是支持有序遍历、内存占用低、复杂度稳定、适合大数据量存储。该模块包含多个数据结构的树形容器： `RedBlackTree`、 `AVLTree` 和 `BTree`。
 
-类型数据结构平均复杂度支持排序有序遍历说明`RedBlackTree`红黑树`O(log N)`是是写入性能比较好`AVLTree`高度平衡树`O(log N)`是是查找性能比较好`BTree`B树/B-树`O(log N)`是是常用于外部存储
+| 类型 | 数据结构 | 平均复杂度 | 支持排序 | 有序遍历 | 说明 |
+| --- | --- | --- | --- | --- | --- |
+| `RedBlackTree` | 红黑树 | `O(log N)` | 是 | 是 | 写入性能比较好 |
+| `AVLTree` | 高度平衡树 | `O(log N)` | 是 | 是 | 查找性能比较好 |
+| `BTree` | B树/B-树 | `O(log N)` | 是 | 是 | 常用于外部存储 |
 
 > 参考连接： [https://en.wikipedia.org/wiki/Binary\_tree](https://en.wikipedia.org/wiki/Binary_tree)
 

@@ -276,17 +276,21 @@ g.DB().GetCache().SetAdapter(gcache.NewAdapterRedis(g.Redis()))
 
 可以看到这里的 `span.kind` 是 `internal`，也就是之前介绍过的方法内部 `span` 类型。这里很多 `Tags` 在之前已经介绍过，因此这里主要介绍关于数据库相关的 `Tags`：
 
-Attribute/Tag说明`
-                db.type
-              `数据库连接类型。如 `mysql`, `mssql`, `pgsql` 等等。`db.link`数据库连接信息。其中密码字段被自动隐藏。`db.group`在配置文件中的数据库分组名称。
+| Attribute/Tag | 说明 |
+| --- | --- |
+| `<br></br>                db.type<br></br>              ` | 数据库连接类型。如 `mysql`, `mssql`, `pgsql` 等等。 |
+| `db.link` | 数据库连接信息。其中密码字段被自动隐藏。 |
+| `db.group` | 在配置文件中的数据库分组名称。 |
 
 ### Events/Process
 
 ![](/download/attachments/38575588/image2021-1-29_12-35-41.png?version=1&modificationDate=1644394136112&api=v2)
 
-Event/Log说明`db.execution.sql`执行的具体 `SQL` 语句。由于ORM底层是预处理，该语句为方便查看自动拼接而成，仅供参考。`db.execution.type`执行的 `SQL` 语句类型。常见为 `DB.ExecContext` 和 `DB.QueryContext`，分别代表写操作和读操作。`db.execution.cost`
-
-当前 `SQL` 语句执行耗时，单位为 `ms` 毫秒。
+| Event/Log | 说明 |
+| --- | --- |
+| `db.execution.sql` | 执行的具体 `SQL` 语句。由于ORM底层是预处理，该语句为方便查看自动拼接而成，仅供参考。 |
+| `db.execution.type` | 执行的 `SQL` 语句类型。常见为 `DB.ExecContext` 和 `DB.QueryContext`，分别代表写操作和读操作。 |
+| `db.execution.cost` | 当前 `SQL` 语句执行耗时，单位为 `ms` 毫秒。 |
 
 ## Redis链路信息
 
@@ -294,14 +298,18 @@ Event/Log说明`db.execution.sql`执行的具体 `SQL` 语句。由于ORM底层�
 
 ![](/download/attachments/38575588/image2021-1-29_12-39-54.png?version=1&modificationDate=1644394136121&api=v2)
 
-Attribute/Tag说明`
-                redis.host
-              ``Redis` 连接地址。`redis.port``Redis` 连接端口。`redis.db``Redis` 操作 `db`。
+| Attribute/Tag | 说明 |
+| --- | --- |
+| `<br></br>                redis.host<br></br>              ` | `Redis` 连接地址。 |
+| `redis.port` | `Redis` 连接端口。 |
+| `redis.db` | `Redis` 操作 `db`。 |
 
 ### Events/Process
 
 ![](/download/attachments/38575588/image2021-1-29_12-42-22.png?version=1&modificationDate=1644394136131&api=v2)
 
-Event/Log说明`redis.execution.command``Redis` 执行指令。`redis.execution.arguments``Redis` 执行指令参数。`redis.execution.cost`
-
-`Redis` 执行指令执行耗时，单位为 `ms` 毫秒。
+| Event/Log | 说明 |
+| --- | --- |
+| `redis.execution.command` | `Redis` 执行指令。 |
+| `redis.execution.arguments` | `Redis` 执行指令参数。 |
+| `redis.execution.cost` | `Redis` 执行指令执行耗时，单位为 `ms` 毫秒。 |

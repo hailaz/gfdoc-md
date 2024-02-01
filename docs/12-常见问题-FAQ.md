@@ -117,17 +117,12 @@ func main() {
 
 参数请求、数据校验、 `OpenAPIv3`、命令管理、数据库ORM。
 
-Tag(简写)全称描述相关文档`v``valid`数据校验标签。[Struct校验-基本使用](/docs/核心组件/数据校验/数据校验-参数类型/数据校验-Struct校验/Struct校验-基本使用)`p``param`自定义请求参数匹配。
-
-[请求输入-对象处理](/docs/WEB服务开发/请求输入/请求输入-对象处理)
-
-`d``default`请求参数默认值绑定。[请求输入-默认值绑定](/docs/WEB服务开发/请求输入/请求输入-默认值绑定)`orm``orm`ORM标签，用于指定表名、关联关系。
-
-[数据规范-gen dao](/docs/开发工具/代码生成-gen/数据规范-gen dao)
-
-[模型关联-静态关联-With特性](/docs/核心组件/数据库ORM/ORM链式操作/ORM链式操作-模型关联/模型关联-静态关联-With特性)
-
-`dc``description`通用结构体属性描述，ORM和接口都用到。属于框架默认的属性描述标签。
+| Tag(简写) | 全称 | 描述 | 相关文档 |
+| `v` | `valid` | 数据校验标签。 | [Struct校验-基本使用](/docs/核心组件/数据校验/数据校验-参数类型/数据校验-Struct校验/Struct校验-基本使用) |
+| `p` | `param` | 自定义请求参数匹配。 | [请求输入-对象处理](/docs/WEB服务开发/请求输入/请求输入-对象处理) |
+| `d` | `default` | 请求参数默认值绑定。 | [请求输入-默认值绑定](/docs/WEB服务开发/请求输入/请求输入-默认值绑定) |
+| `orm` | `orm` | ORM标签，用于指定表名、关联关系。 | [数据规范-gen dao](/docs/开发工具/代码生成-gen/数据规范-gen dao)<br></br>[模型关联-静态关联-With特性](/docs/核心组件/数据库ORM/ORM链式操作/ORM链式操作-模型关联/模型关联-静态关联-With特性) |
+| `dc` | `description` | 通用结构体属性描述，ORM和接口都用到。属于框架默认的属性描述标签。 |  |
 
 其他：
 
@@ -137,7 +132,7 @@ Tag(简写)全称描述相关文档`v``valid`数据校验标签。[Struct校验-
 
 ## 5、 `HTTP Server` 出现 `context cancel` 报错
 
-从框架 `v2.5` 版本开始，框架的 `HTTP Server` 的 `Request` 对象将会直接继承与标准库的 `http.Request` 对象，其中就包括其中的 `context` 上下文对象，具体请参考发布记录： [v2.5 2023-07-17](https://goframe.org/display/gf/v2.5+2023-07-17)。当客户端例如浏览器、 `HTTP Client` 取消请求时，服务端会接收到 `context cancel` 操作( `context.Done`)，但是服务端并不会直接报出 `context cancel` 的错误。这种错误往往在业务逻辑调用了底层的数据库、消息组件等组件时，由这些组件识别到 `context cancel` 操作，将会停止执行并往上抛出 `context cancel` 错误提醒上层已经终止执行。
+从框架 `v2.5` 版本开始，框架的 `HTTP Server` 的 `Request` 对象将会直接继承与标准库的 `http.Request` 对象，其中就包括其中的 `context` 上下文对象，具体请参考发布记录： [v2.5 2023-07-17](/docs/版本发布记录/v2.5 2023-07-17)。当客户端例如浏览器、 `HTTP Client` 取消请求时，服务端会接收到 `context cancel` 操作( `context.Done`)，但是服务端并不会直接报出 `context cancel` 的错误。这种错误往往在业务逻辑调用了底层的数据库、消息组件等组件时，由这些组件识别到 `context cancel` 操作，将会停止执行并往上抛出 `context cancel` 错误提醒上层已经终止执行。
 
 这是符合标准库设计的行为，客户端终止请求后，服务端也没有继续执行下去的必要。
 

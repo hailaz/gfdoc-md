@@ -108,125 +108,35 @@ gfcli:
 
 # 参数说明
 
-名称默认值含义示例`gfcli.gen.dao`
-
-`dao` 代码生成配置项，可以有多个配置项构成数组，支持多个数据库生成。不同的数据库可以设置不同的生成规则，例如可以生成到不同的位置或者文件。-
-
-`link`
-
-**必须参数**
-
-分为两部分，第一部分表示你连接的数据库类型 `mysql`, `postgresql` 等, 第二部分就是连接数据库的 `dsn` 信息。具体请参考 [ORM使用配置](/docs/核心组件/数据库ORM/ORM使用配置) 章节。
-
--
-
-`path``internal`
-
-生成 `dao` 和 `model` 文件的存储 **目录** 地址。
-
-`./app``group``default`
-
-在数据库配置中的数据库分组名称。只能配置一个名称。数据库在配置文件中的分组名称往往确定之后便不再修改。
-
-`default`
-
-`order`
-
-`user`
-
-`prefix`
-
-生成数据库对象及文件的前缀，以便区分不同数据库或者不同数据库中的相同表名，防止数据表同名覆盖。
-
-`order_`
-
-`user_`
-
-`removePrefix`
-
-删除数据表的指定前缀名称。多个前缀以 `,` 号分隔。`gf_``removeFieldPrefix`
-
-删除字段名称的指定前缀名称。多个前缀以 `,` 号分隔。`f_``tables`
-
-指定当前数据库中需要执行代码生成的数据表。如果为空，表示数据库的所有表都会生成。`user, user_detail``tablesEx`
-
-`Tables Excluding`，指定当前数据库中需要排除代码生成的数据表。`product, order``jsonCase``CamelLower`
-
-指定 `model` 中生成的数据实体对象中 `json` 标签名称规则，参数不区分大小写。参数可选为： `Camel`、 `CamelLower`、 `Snake`、 `SnakeScreaming`、 `SnakeFirstUpper`、 `Kebab`、 `KebabScreaming`。具体介绍请参考命名行帮助示例。
-
-`Snake``stdTime``false`
-
-当数据表字段类型为时间类型时，代码生成的属性类型使用标准库的 `time.Time` 而不是框架的 `*gtime.Time` 类型。
-
-`true``withTime``false`为每个自动生成的代码文件增加生成时间注释
-
-`gJsonSupport``false`
-
-当数据表字段类型为 `JSON` 类型时，代码生成的属性类型使用 `*gjson.Json` 类型。
-
-`true``overwriteDao``false`每次生成 `dao` 代码时是否重新生成覆盖 `dao/internal` 目录外层的文件。注意 `dao/internal` 目录外层的文件可能由开发者自定义扩展了功能，覆盖可能会产生风险。`true``importPrefix`通过 `go.mod` 自动检测
-
-用于指定生成 `Go` 文件的 `import` 路径前缀。特别是针对于不是在项目根目录下使用 `gen dao` 命令，或者想要将代码文件生成到自定义的其他目录，这个时候配置该参数十分必要。
-
-`github.com/gogf/gf``descriptionTag``false`
-
-用于指定是否为数据模型结构体属性增加 `desription` 的标签，内容为对应的数据表字段注释。
-
-`true``noJsonTag``false`生成的数据模型中，字段不带有json标签
-
-`noModelComment``false`
-
-用于指定是否关闭数据模型结构体属性的注释自动生成，内容为数据表对应字段的注释。
-
-`true``clear``false`自动删除数据库中不存在对应数据表的本地 `dao/do/entity` 代码文件。请谨慎使用该参数！
-
-`typeMapping``decimal:`
-
-`  type: float64`
-
-`money:`
-
-`  type: float64`
-
-`numeric:`
-
-`  type: float64`
-
-`smallmoney:`
-
-`  type: float64`
-
-**从版本v2.5开始支持。**
-
-用于自定义数据表字段类型到生成的Go文件中对应属性类型映射。该配置支持通过 `import` 配置引入第三方包，例如：
-
-`decimal:`
-
-`  type:   decimal.Decimal`
-
-`  import: github.com/shopspring/decimal`
-
-`daoPath``dao`代码生成的 `DAO` 文件存放目录
-
-`doPath``model/do`代码生成 `DO` 文件存放目录
-
-`entityPath``model/entity`代码生成的 `Entity` 文件存放目录
-
-`tplDaoIndexPath`
-
-自定义 `DAO Index` 代码生成模板文件路径，使用该参数请参考源码
-
-`tplDaoInternalPath`
-
-自定义 `DAO Internal` 代码生成模板文件路径，使用该参数请参考源码
-
-`tplDaoDoPath`
-
-自定义 `DO` 代码生成模板文件路径，使用该参数请参考源码
-
-`tplDaoEntityPath`
-
-自定义 `Entity` 代码生成模板文件路径，使用该参数请参考源码
+| 名称 | 默认值 | 含义 | 示例 |
+| --- | --- | --- | --- |
+| `gfcli.gen.dao` |  | `dao` 代码生成配置项，可以有多个配置项构成数组，支持多个数据库生成。不同的数据库可以设置不同的生成规则，例如可以生成到不同的位置或者文件。 | - |
+| `link`<br></br>**必须参数** |  | 分为两部分，第一部分表示你连接的数据库类型 `mysql`, `postgresql` 等, 第二部分就是连接数据库的 `dsn` 信息。具体请参考 [ORM使用配置](/docs/核心组件/数据库ORM/ORM使用配置) 章节。 | - |
+| `path` | `internal` | 生成 `dao` 和 `model` 文件的存储 **目录** 地址。 | `./app` |
+| `group` | `default` | 在数据库配置中的数据库分组名称。只能配置一个名称。数据库在配置文件中的分组名称往往确定之后便不再修改。 | `default`<br></br>`order`<br></br>`user` |
+| `prefix` |  | 生成数据库对象及文件的前缀，以便区分不同数据库或者不同数据库中的相同表名，防止数据表同名覆盖。 | `order_`<br></br>`user_` |
+| `removePrefix` |  | 删除数据表的指定前缀名称。多个前缀以 `,` 号分隔。 | `gf_` |
+| `removeFieldPrefix` |  | 删除字段名称的指定前缀名称。多个前缀以 `,` 号分隔。 | `f_` |
+| `tables` |  | 指定当前数据库中需要执行代码生成的数据表。如果为空，表示数据库的所有表都会生成。 | `user, user_detail` |
+| `tablesEx` |  | `Tables Excluding`，指定当前数据库中需要排除代码生成的数据表。 | `product, order` |
+| `jsonCase` | `CamelLower` | 指定 `model` 中生成的数据实体对象中 `json` 标签名称规则，参数不区分大小写。参数可选为： `Camel`、 `CamelLower`、 `Snake`、 `SnakeScreaming`、 `SnakeFirstUpper`、 `Kebab`、 `KebabScreaming`。具体介绍请参考命名行帮助示例。 | `Snake` |
+| `stdTime` | `false` | 当数据表字段类型为时间类型时，代码生成的属性类型使用标准库的 `time.Time` 而不是框架的 `*gtime.Time` 类型。 | `true` |
+| `withTime` | `false` | 为每个自动生成的代码文件增加生成时间注释 |  |
+| `gJsonSupport` | `false` | 当数据表字段类型为 `JSON` 类型时，代码生成的属性类型使用 `*gjson.Json` 类型。 | `true` |
+| `overwriteDao` | `false` | 每次生成 `dao` 代码时是否重新生成覆盖 `dao/internal` 目录外层的文件。注意 `dao/internal` 目录外层的文件可能由开发者自定义扩展了功能，覆盖可能会产生风险。 | `true` |
+| `importPrefix` | 通过 `go.mod` 自动检测 | 用于指定生成 `Go` 文件的 `import` 路径前缀。特别是针对于不是在项目根目录下使用 `gen dao` 命令，或者想要将代码文件生成到自定义的其他目录，这个时候配置该参数十分必要。 | `github.com/gogf/gf` |
+| `descriptionTag` | `false` | 用于指定是否为数据模型结构体属性增加 `desription` 的标签，内容为对应的数据表字段注释。 | `true` |
+| `noJsonTag` | `false` | 生成的数据模型中，字段不带有json标签 |  |
+| `noModelComment` | `false` | 用于指定是否关闭数据模型结构体属性的注释自动生成，内容为数据表对应字段的注释。 | `true` |
+| `clear` | `false` | 自动删除数据库中不存在对应数据表的本地 `dao/do/entity` 代码文件。请谨慎使用该参数！ |  |
+| `typeMapping` | `decimal:`<br></br>`  type: float64`<br></br>`money:`<br></br>`  type: float64`<br></br>`numeric:`<br></br>`  type: float64`<br></br>`smallmoney:`<br></br>`  type: float64` | **从版本v2.5开始支持。**<br></br>用于自定义数据表字段类型到生成的Go文件中对应属性类型映射。该配置支持通过 `import` 配置引入第三方包，例如：<br></br>`decimal:`<br></br>`  type:   decimal.Decimal`<br></br>`  import: github.com/shopspring/decimal` |  |
+| `daoPath` | `dao` | 代码生成的 `DAO` 文件存放目录 |  |
+| `doPath` | `model/do` | 代码生成 `DO` 文件存放目录 |  |
+| `entityPath` | `model/entity` | 代码生成的 `Entity` 文件存放目录 |  |
+| `tplDaoIndexPath` |  | 自定义 `DAO Index` 代码生成模板文件路径，使用该参数请参考源码 |  |
+| `tplDaoInternalPath` |  | 自定义 `DAO Internal` 代码生成模板文件路径，使用该参数请参考源码 |  |
+| `tplDaoDoPath` |  | 自定义 `DO` 代码生成模板文件路径，使用该参数请参考源码 |  |
+| `tplDaoEntityPath` |  | 自定义 `Entity` 代码生成模板文件路径，使用该参数请参考源码 |  |
 
 # 使用示例
 
@@ -236,17 +146,10 @@ gfcli:
 
 1、以下 `3` 个目录的文件由 `dao` 命令生成：
 
-路径说明详细介绍`/internal/dao`数据操作对象通过对象方式访问底层数据源，底层基于 `ORM` 组件实现。往往需要结合 `entity` 和 `do` 通用使用。该目录下的文件开发者可扩展修改，但是往往没这种必要。`/internal/model/do`数据转换模型
-
-数据转换模型用于业务模型到数据模型的转换，由工具维护，用户不能修改。工具每次生成代码文件将会覆盖该目录。关于 `do` 文件的介绍请参考：
-
-- [数据模型与业务模型](/docs/框架设计/工程开发设计/数据模型与业务模型)
-- [DAO-工程痛点及改进](/docs/框架设计/工程开发设计/DAO封装设计/DAO-工程痛点及改进)
-- [利用指针属性和do对象实现灵活的修改接口](/docs/核心组件/数据库ORM/ORM最佳实践/利用指针属性和do对象实现灵活的修改接口)
-
-`/internal/model/entity`数据模型
-
-数据模型由工具维护，用户不能修改。工具每次生成代码文件将会覆盖该目录。
+| 路径 | 说明 | 详细介绍 |
+| `/internal/dao` | 数据操作对象 | 通过对象方式访问底层数据源，底层基于 `ORM` 组件实现。往往需要结合 `entity` 和 `do` 通用使用。该目录下的文件开发者可扩展修改，但是往往没这种必要。 |
+| `/internal/model/do` | 数据转换模型 | 数据转换模型用于业务模型到数据模型的转换，由工具维护，用户不能修改。工具每次生成代码文件将会覆盖该目录。关于 `do` 文件的介绍请参考：<br></br>- [数据模型与业务模型](/docs/框架设计/工程开发设计/数据模型与业务模型)<br></br>- [DAO-工程痛点及改进](/docs/框架设计/工程开发设计/DAO封装设计/DAO-工程痛点及改进)<br></br>- [利用指针属性和do对象实现灵活的修改接口](/docs/核心组件/数据库ORM/ORM最佳实践/利用指针属性和do对象实现灵活的修改接口) |
+| `/internal/model/entity` | 数据模型 | 数据模型由工具维护，用户不能修改。工具每次生成代码文件将会覆盖该目录。 |
 
 2、 `model` 中的模型分为两类： **数据模型** 和 **业务模型**。
 

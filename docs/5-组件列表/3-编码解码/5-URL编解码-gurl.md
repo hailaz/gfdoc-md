@@ -80,7 +80,17 @@ limit=20&name=gopher&page=7
 
 `component` 参数值可选项:
 
-参数值说明-1all1scheme2host4port8user16pass32path64query128fragment
+| 参数值 | 说明 |
+| --- | --- |
+| -1 | all |
+| 1 | scheme |
+| 2 | host |
+| 4 | port |
+| 8 | user |
+| 16 | pass |
+| 32 | path |
+| 64 | query |
+| 128 | fragment |
 
 ```
 package main

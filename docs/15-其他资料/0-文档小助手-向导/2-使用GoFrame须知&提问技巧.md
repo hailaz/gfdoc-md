@@ -11,29 +11,20 @@ title: 使用GoFrame须知&提问技巧
 
 # 她能做什么？
 
-项目类型描述API接口服务Web网站CMD命令行工具Library功能库其它
+| 项目类型 | 描述 |
+| API | 接口服务 |
+| Web | 网站 |
+| CMD | 命令行工具 |
+| Library | 功能库 |
+| 其它 |  |
 
 # 有哪些案例？
 
-项目类型案例API
-
-- [gf-demo-user](https://github.com/gogf/gf-demo-user)
-
-Web
-
-- [gf-demo-chat](https://github.com/gogf/gf-demo-chat)
-- [focus-single](https://github.com/gogf/focus-single)
-
-CMD
-
-- [gf-cli](https://github.com/gogf/gf/tree/master/cmd/gf)
-
-Library
-
-- [polaris](https://github.com/gogf/polaris)
-- [gtoken](https://github.com/goflyfox/gtoken)
-- [csrf](https://github.com/gogf/csrf)
-- [gf-jwt](https://github.com/gogf/gf-jwt)
+| 项目类型 | 案例 |
+| API | - [gf-demo-user](https://github.com/gogf/gf-demo-user) |
+| Web | - [gf-demo-chat](https://github.com/gogf/gf-demo-chat)<br></br>- [focus-single](https://github.com/gogf/focus-single) |
+| CMD | - [gf-cli](https://github.com/gogf/gf/tree/master/cmd/gf) |
+| Library | - [polaris](https://github.com/gogf/polaris)<br></br>- [gtoken](https://github.com/goflyfox/gtoken)<br></br>- [csrf](https://github.com/gogf/csrf)<br></br>- [gf-jwt](https://github.com/gogf/gf-jwt) |
 
 ## 更多 [使用案例](https://github.com/gogf/awesome-gf)
 

@@ -11,16 +11,6 @@ title: 定时任务-gcron与gtimer
 - `gcron` 支持经典的 `crontab` 形式的定时任务语法，最小时间设定间隔为 `秒`。
 - `gcron` 底层实现基于 `gtimer`。
 
-相似模块说明性能类Linux Crontab模式底层实现[定时任务-gcron](/docs/组件列表/系统相关/定时任务-gcron/定时任务-gcron)
-
-定时任务。
-
-较上层封装，时间刻度以自然秒为单位。
-
-一般支持基于 `gtimer`[定时器-gtimer](/docs/组件列表/系统相关/定时器-gtimer/定时器-gtimer)
-
-定时器。
-
-底层组件，时间刻度以时间槽为单位（时间槽可自定义）。
-
-高效不支持基于 `PriorityQueue` 数据结构自实现
+| 相似模块 | 说明 | 性能 | 类Linux Crontab模式 | 底层实现 |
+| [定时任务-gcron](/docs/组件列表/系统相关/定时任务-gcron/定时任务-gcron) | 定时任务。<br></br>较上层封装，时间刻度以自然秒为单位。 | 一般 | 支持 | 基于 `gtimer` |
+| [定时器-gtimer](/docs/组件列表/系统相关/定时器-gtimer/定时器-gtimer) | 定时器。<br></br>底层组件，时间刻度以时间槽为单位（时间槽可自定义）。 | 高效 | 不支持 | 基于 `PriorityQueue` 数据结构自实现 |
