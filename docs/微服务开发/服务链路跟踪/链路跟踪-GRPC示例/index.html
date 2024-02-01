@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.1.1">
 <title data-rh="true">链路跟踪-GRPC示例 | My Site</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://your-docusaurus-site.example.com/gfdoc-md/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://your-docusaurus-site.example.com/gfdoc-md/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://your-docusaurus-site.example.com/gfdoc-md/docs/微服务开发/服务链路跟踪/链路跟踪-GRPC示例"><meta data-rh="true" property="og:locale" content="zh_Hans"><meta data-rh="true" name="docusaurus_locale" content="zh-Hans"><meta data-rh="true" name="docsearch:language" content="zh-Hans"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="链路跟踪-GRPC示例 | My Site"><meta data-rh="true" name="description" content="在本章节中，我们将之前介绍 HTTP Client&amp;Server 的示例修改为 GRPC 微服务，并演示如何使用 GoFrame 框架开发一个简单的 GRPC 服务端和客户端，并且为 GRPC 微服务增加链路跟踪特性。"><meta data-rh="true" property="og:description" content="在本章节中，我们将之前介绍 HTTP Client&amp;Server 的示例修改为 GRPC 微服务，并演示如何使用 GoFrame 框架开发一个简单的 GRPC 服务端和客户端，并且为 GRPC 微服务增加链路跟踪特性。"><link data-rh="true" rel="icon" href="/gfdoc-md/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://your-docusaurus-site.example.com/gfdoc-md/docs/微服务开发/服务链路跟踪/链路跟踪-GRPC示例"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/gfdoc-md/docs/微服务开发/服务链路跟踪/链路跟踪-GRPC示例" hreflang="zh-Hans"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/gfdoc-md/docs/微服务开发/服务链路跟踪/链路跟踪-GRPC示例" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/gfdoc-md/blog/rss.xml" title="My Site RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/gfdoc-md/blog/atom.xml" title="My Site Atom Feed"><link rel="stylesheet" href="/gfdoc-md/assets/css/styles.8dc5f6bf.css">
-<script src="/gfdoc-md/assets/js/runtime~main.4cc73248.js" defer="defer"></script>
+<script src="/gfdoc-md/assets/js/runtime~main.9ded12ef.js" defer="defer"></script>
 <script src="/gfdoc-md/assets/js/main.9c241478.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -47,12 +47,20 @@
 <p>由于 <code>orm</code>、 <code>redis</code>、 <code>logging</code> 组件在之前的章节中已经介绍过链路信息，因此我们这里主要介绍 <code>GRPC Client&amp;Server</code> 的链路信息。</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="attributes">Attributes<a href="#attributes" class="hash-link" aria-label="Attributes的直接链接" title="Attributes的直接链接">​</a></h3>
 <p><img decoding="async" loading="lazy" src="/gfdoc-md/assets/images/image2021-1-29_13-25-43-4c3f28e0dfaeaf50358dae8777b037e3.png" width="1125" height="785" class="img_ev3q"></p>
-<p>Attribute/Tag说明<code>net.peer.ip</code>请求的目标IP。<code>net.peer.port</code>请求的目标端口。<code>rpc.grpc.status_code``GRPC</code> 的内部状态码， <code>0</code> 表示成功， <code>非0</code> 表示失败。<code>rpc.service``RPC</code> 的服务名称，注意这里是 <code>RPC</code> 而不是 <code>GRPC</code>，因为这里是通用定义，客户端支持多种 <code>RPC</code> 通信协议， <code>GRPC</code> 只是其中一种。<code>rpc.method``RPC</code> 的方法名称。<code>rpc.system``RPC</code> 协议类型，如： <code>grpc</code>, <code>thrift</code> 等。</p>
+<p>| Attribute/Tag | 说明 |
+| <code>net.peer.ip</code> | 请求的目标IP。 |
+| <code>net.peer.port</code> | 请求的目标端口。 |
+| <code>rpc.grpc.status_code</code> | <code>GRPC</code> 的内部状态码， <code>0</code> 表示成功， <code>非0</code> 表示失败。 |
+| <code>rpc.service</code> | <code>RPC</code> 的服务名称，注意这里是 <code>RPC</code> 而不是 <code>GRPC</code>，因为这里是通用定义 ，客户端支持多种 <code>RPC</code> 通信协议， <code>GRPC</code> 只是其中一种。 |
+| <code>rpc.method</code> | <code>RPC</code> 的方法名称。 |
+| <code>rpc.system</code> | <code>RPC</code> 协议类型，如： <code>grpc</code>, <code>thrift</code> 等。 |</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="eventslogs">Events/Logs<a href="#eventslogs" class="hash-link" aria-label="Events/Logs的直接链接" title="Events/Logs的直接链接">​</a></h3>
 <p><img decoding="async" loading="lazy" src="/gfdoc-md/assets/images/image2021-1-29_13-32-12-b98e306c04a82995c39d0bdddb329ff1.png" width="1279" height="782" class="img_ev3q"></p>
-<p>Event/Log说明<code>grpc.metadata.outgoing``GRPC</code> 客户端请求提交的 <code>Metadata</code> 信息，可能会比较大。<code>grpc.request.baggage``GRPC</code> 客户端请求提交的 <code>Baggage</code> 信息，用于服务间链路信息传递。<code>grpc.request.message</code></p>
-<p><code>GRPC</code> 客户端请求提交的 <code>Message</code> 数据，可能会比较大，最大只记录 <code>512KB</code>，如果超过该大小则忽略。仅对 <code>Unary</code> 请求类型有效。</p>
-<p><code>grpc.response.message``GRPC</code> 客户端请求接收返回的的 <code>Message</code> 信息，可能会比较大。仅对 <code>Unary</code> 请求类型有效。</p>
+<p>| Event/Log | 说明 |
+| <code>grpc.metadata.outgoing</code> | <code>GRPC</code> 客户端请求提交的 <code>Metadata</code> 信息，可能会比较大。 |
+| <code>grpc.request.baggage</code> | <code>GRPC</code> 客户端请求提交的 <code>Baggage</code> 信息，用于服务间链路信息传递。 |
+| <code>grpc.request.message</code> | <code>GRPC</code> 客户端请求提交的 <code>Message</code> 数据，可能会比较大，最大只记录 <code>512KB</code>，如果超过该大小则忽略。仅对 <code>Unary</code> 请求类型有效。 |
+| <code>grpc.response.message</code> | <code>GRPC</code> 客户端请求接收返回的的 <code>Message</code> 信息，可能会比较大。仅对 <code>Unary</code> 请求类型有效。 |</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="grpc-server-1">GRPC Server<a href="#grpc-server-1" class="hash-link" aria-label="GRPC Server的直接链接" title="GRPC Server的直接链接">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="attributes-1">Attributes<a href="#attributes-1" class="hash-link" aria-label="Attributes的直接链接" title="Attributes的直接链接">​</a></h3>
 <p><img decoding="async" loading="lazy" src="/gfdoc-md/assets/images/image2021-1-29_13-36-49-05ed17d69d6196e4e57a1c553a0ed93a.png" width="1080" height="778" class="img_ev3q"></p>

@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.1.1">
 <title data-rh="true">请求输入🔥 | My Site</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://your-docusaurus-site.example.com/gfdoc-md/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://your-docusaurus-site.example.com/gfdoc-md/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://your-docusaurus-site.example.com/gfdoc-md/docs/WEB服务开发/请求输入/"><meta data-rh="true" property="og:locale" content="zh_Hans"><meta data-rh="true" name="docusaurus_locale" content="zh-Hans"><meta data-rh="true" name="docsearch:language" content="zh-Hans"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="请求输入🔥 | My Site"><meta data-rh="true" name="description" content="请求输入依靠 ghttp.Request 对象实现， ghttp.Request 继承了底层的 http.Request 对象。 ghttp.Request 包含一个与当前请求对应的返回输出对象 Response，用于数据的返回处理。"><meta data-rh="true" property="og:description" content="请求输入依靠 ghttp.Request 对象实现， ghttp.Request 继承了底层的 http.Request 对象。 ghttp.Request 包含一个与当前请求对应的返回输出对象 Response，用于数据的返回处理。"><link data-rh="true" rel="icon" href="/gfdoc-md/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://your-docusaurus-site.example.com/gfdoc-md/docs/WEB服务开发/请求输入/"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/gfdoc-md/docs/WEB服务开发/请求输入/" hreflang="zh-Hans"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/gfdoc-md/docs/WEB服务开发/请求输入/" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/gfdoc-md/blog/rss.xml" title="My Site RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/gfdoc-md/blog/atom.xml" title="My Site Atom Feed"><link rel="stylesheet" href="/gfdoc-md/assets/css/styles.8dc5f6bf.css">
-<script src="/gfdoc-md/assets/js/runtime~main.4cc73248.js" defer="defer"></script>
+<script src="/gfdoc-md/assets/js/runtime~main.9ded12ef.js" defer="defer"></script>
 <script src="/gfdoc-md/assets/js/main.9c241478.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -13,20 +13,24 @@
 <p>相关方法： <a href="https://pkg.go.dev/github.com/gogf/gf/v2/net/ghttp#Request" target="_blank" rel="noopener noreferrer">https://pkg.go.dev/github.com/gogf/gf/v2/net/ghttp#Request</a></p>
 <h1>简要说明</h1>
 <p>可以看到 <code>Request</code> 对象的 <strong>参数获取方法</strong> 非常丰富，常用方法如下：</p>
-<p>常用方法描述<code>Get</code></p>
-<p>常用方法，简化参数获取， <code>GetRequest</code> 的别名。</p>
-<p><code>GetQuery</code>获取 <code>GET</code> 方式传递过来的参数，包括 <code>Query String</code> 及 <code>Body</code> 参数解析。<code>GetForm</code>获取表单方式传递过来的参数，表单方式提交的参数 <code>Content-Type</code> 往往为 <code>application/x-www-form-urlencoded</code>, <code>application/form-data</code>, <code>multipart/form-data</code>, <code>multipart/mixed</code> 等等。<code>GetRequest</code>获取客户端提交的所有参数，按照参数优先级进行覆盖，不区分提交方式。<code>Get*Struct</code>将指定提交类型的所有请求参数绑定到指定的 <code>struct</code> 对象上，注意给定的参数为对象指针。绝大部分场景中往往使用 <code>Parse</code> 方法将请求数据转换为请求对象，具体详见后续章节。<code>GetBody/GetBodyString</code>获取客户端提交的原始数据，该数据是客户端写入到 <code>body</code> 中的原始数据，与 <code>HTTP Method</code> 无关，例如客户端提交 <code>JSON/XML</code> 数据格式时可以通过该方法获取原始的提交数据。<code>GetJson</code>自动将原始请求信息解析为 <code>gjson.Json</code> 对象指针返回， <code>gjson.Json</code> 对象具体在 <a href="/gfdoc-md/docs/组件列表/编码解码/通用编解码-gjson/通用编解码-gjson">通用编解码-gjson</a> 章节中介绍。<code>Exit*</code>用于请求流程退出控制，详见本章后续说明。</p>
+<p>| 常用方法 | 描述 |
+| <code>Get</code> | 常用方法，简化参数获取， <code>GetRequest</code> 的别名。 |
+| <code>GetQuery</code> | 获取 <code>GET</code> 方式传递过来的参数，包括 <code>Query String</code> 及 <code>Body</code> 参数解析。 |
+| <code>GetForm</code> | 获取表单方式传递过来的参数，表单方式提交的参数 <code>Content-Type</code> 往往为 <code>application/x-www-form-urlencoded</code>, <code>application/form-data</code>, <code>multipart/form-data</code>, <code>multipart/mixed</code> 等等。 |
+| <code>GetRequest</code> | 获取客户端提交的所有参数，按照参数优先级进行覆盖，不区分提交方式。 |
+| <code>Get*Struct</code> | 将指定提交类型的所有请求参数绑定到指定的 <code>struct</code> 对象上，注意给定的参数为对象指针。绝大部分场景中往往使用 <code>Parse</code> 方法将请求数据转换为请求对象，具体详见后续章节。 |
+| <code>GetBody/GetBodyString</code> | 获取客户端提交的原始数据，该数据是客户端写入到 <code>body</code> 中的原始数据，与 <code>HTTP Method</code> 无关，例如客户端提交 <code>JSON/XML</code> 数据格式时可以通过该方法获取原始的提交数据。 |
+| <code>GetJson</code> | 自动将原始请求信息解析为 <code>gjson.Json</code> 对象指针返回， <code>gjson.Json</code> 对象具体在 <a href="/gfdoc-md/docs/组件列表/编码解码/通用编解码-gjson/通用编解码-gjson">通用编解码-gjson</a> 章节中介绍。 |
+| <code>Exit*</code> | 用于请求流程退出控制， 详见本章后续说明。 |</p>
 <h1>提交方式</h1>
 <p><code>GoFrame</code> 框架的参数获取不是通过 <code>HTTP Method</code> 来做区分，而是通过参数提交类型来区分。例如，分别通过 <code>HTTP Method: POST、INPUT、DELETE</code> 来提交表单参数，在服务端获取参数不是通过 <code>GetPost</code>/ <code>GetInput</code>/ <code>GetDelete</code> 的方式来获取，而是统一通过 <code>GetForm</code> 方法来获取表单参数，针对其他的 <code>HTTP Method</code> 也是如此。</p>
 <p>在 <code>GoFrame</code> 框架下，有以下几种提交类型：</p>
-<p>提交类型描述<code>Router</code><strong>路由参数</strong>。来源于路由规则匹配。<code>Query</code></p>
-<p><strong><code>Query</code> 参数。</strong> <code>URL</code> 中的 <code>Query String</code> 参数解析，如： <code>http://127.0.0.1/index?id=1&amp;name=john</code> 中的 <code>id=1&amp;name=john</code>。</p>
-<p><code>Form</code></p>
-<p><strong>表单参数</strong>。最常见的提交方式，提交的 <code>Content-Type</code> 往往为： <code>application/x-www-form-urlencoded</code>、 <code>multipart/form-data</code>、 <code>multipart/mixed</code>。</p>
-<p><code>Body</code></p>
-<p><strong>内容参数</strong>。从 <code>Body</code> 中获取并解析得到的参数， <code>JSON</code>/ <code>XML</code> 请求往往使用这种方式提交。</p>
-<p><code>Custom</code></p>
-<p><strong>自定义参数</strong>，往往在服务端的中间件、服务函数中通过 <code>SetParam/GetParam</code> 方法管理。</p>
+<p>| 提交类型 | 描述 |
+| <code>Router</code> | <strong>路由参数</strong>。来源于路由规则匹配。 |
+| <code>Query</code> | <strong><code>Query</code> 参数。</strong> <code>URL</code> 中的 <code>Query String</code> 参数解析，如： <code>http://127.0.0.1/index?id=1&amp;name=john</code> 中的 <code>id=1&amp;name=john</code>。 |
+| <code>Form</code> | <strong>表单参数</strong>。最常见的提交方式，提交的 <code>Content-Type</code> 往往为： <code>application/x-www-form-urlencoded</code>、 <code>multipart/form-data</code>、 <code>multipart/mixed</code>。 |
+| <code>Body</code> | <strong>内容参数</strong>。从 <code>Body</code> 中获取并解析得到的参数， <code>JSON</code>/ <code>XML</code> 请求往往使用这种方式提交。 |
+| <code>Custom</code> | <strong>自定义参数</strong>，往往在服务端的中间件、服务函数中通过 <code>SetParam/GetParam</code> 方法管理。 |</p>
 <h1>参数类型</h1>
 <p>获取的参数方法可以对指定键名的数据进行 <strong>自动类型转换</strong>，例如： <code>http://127.0.0.1:8199/?amount=19.66</code>，通过 <code>Get(xxx).String()</code> 将会返回 <code>19.66</code> 的字符串类型， <code>Get(xxx).Float32()</code>/ <code>Get(xxx).Float64()</code> 将会分别返回 <code>float32</code> 和 <code>float64</code> 类型的数值 <code>19.66</code>。但是， <code>Get(xxx).Int()</code>/ <code>Get(xxx).Uint()</code> 将会返回 <code>19</code>（如果参数为 <code>float</code> 类型的字符串，将会按照 <strong>向下取整</strong> 进行整型转换）。</p>
 <p>聪明的您一定发现了，获取到的参数都是 <strong>泛型变量</strong>，根据该泛型变量再根据需要调用对应的方法转换为对应的数据类型。</p>
@@ -63,7 +67,7 @@
 <li><a href="/gfdoc-md/docs/WEB服务开发/请求输入/请求输入-对象处理">请求输入-对象处理</a></li>
 <li><a href="/gfdoc-md/docs/WEB服务开发/请求输入/请求输入-请求校验">请求输入-请求校验</a></li>
 <li><a href="/gfdoc-md/docs/WEB服务开发/请求输入/请求输入-JSON/XML">请求输入-JSON/XML</a></li>
-<li><a href="/gfdoc-md/docs/WEB服务开发/请求输入/请求输入-默认值绑定">请求输入-默认值  绑定</a></li>
+<li><a href="/gfdoc-md/docs/WEB服务开发/请求输入/请求 输入-默认值绑定">请求输入-默认值绑定</a></li>
 <li><a href="/gfdoc-md/docs/WEB服务开发/请求输入/请求输入-自定义参数">请求输入-自定义参数</a></li>
 <li><a href="/gfdoc-md/docs/WEB服务开发/请求输入/请求输入-Context">请求输入-Context</a></li>
 <li><a href="/gfdoc-md/docs/WEB服务开发/请求输入/请求输入-文件上传">请求输入-文件上传</a></li>
