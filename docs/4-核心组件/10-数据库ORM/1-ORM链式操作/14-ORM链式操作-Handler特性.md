@@ -1,3 +1,7 @@
+---
+title: ORM链式操作-Handler特性
+---
+
 `Handler` 特性允许您轻松地复用常见的逻辑。
 
 # 示例1，查询
@@ -63,5 +67,3 @@ func Paginate(r *ghttp.Request) func(m *gdb.Model) *gdb.Model {
 m.Handler(Paginate(r)).Scan(&users)
 m.Handler(Paginate(r)).Scan(&articles)
 ```
-
-- 无标签

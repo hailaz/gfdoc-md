@@ -1,3 +1,7 @@
+---
+title: TCP组件
+---
+
 `gtcp` 模块实现简便易用、轻量级的 `TCPServer` 服务端。
 
 **使用方式**：
@@ -68,5 +72,3 @@ hi there
 ```
 
 每一个客户端发起的TCP链接，TCPServer都会创建一个 `goroutine` 进行处理，直至TCP链接断开。由于goroutine比较轻量级，因此可以支撑很高的并发量。
-
-- 无标签

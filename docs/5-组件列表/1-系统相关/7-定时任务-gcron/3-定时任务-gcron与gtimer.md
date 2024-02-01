@@ -1,3 +1,7 @@
+---
+title: 定时任务-gcron与gtimer
+---
+
 # `gcron` 与 `gtimer` 区别
 
 [定时任务-gcron](/docs/组件列表/系统相关/定时任务-gcron/定时任务-gcron) 与 [定时器-gtimer](/docs/组件列表/系统相关/定时器-gtimer/定时器-gtimer) 区别:
@@ -20,5 +24,3 @@
 底层组件，时间刻度以时间槽为单位（时间槽可自定义）。
 
 高效不支持基于 `PriorityQueue` 数据结构自实现
-
-- 无标签

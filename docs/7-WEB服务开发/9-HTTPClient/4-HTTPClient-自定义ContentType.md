@@ -1,3 +1,7 @@
+---
+title: HTTPClient-自定义ContentType
+---
+
 # 示例1，提交 `Json` 请求
 
 ```
@@ -44,5 +48,3 @@ g.Client().ContentType("application/json").PostContent(ctx, "http://order.svc/v1
     "create_time" : "2020-03-26 12:00:00",
 })
 ```
-
-- 无标签

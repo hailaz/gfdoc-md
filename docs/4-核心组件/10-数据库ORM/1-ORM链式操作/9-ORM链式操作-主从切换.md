@@ -1,3 +1,7 @@
+---
+title: ORM链式操作-主从切换
+---
+
 从之前的介绍我们知道 `gdb` 支持基于应用层的主从配置以及读写分离，并且所有的特性仅需要通过简单的配置即可实现， `gdb` 内部将会对SQL请求自动地进行主从切换。以下是一个简单的主从配置，包含一主一从：
 
 ```
@@ -27,13 +31,13 @@ database:
 
 
 
-```
-g.Model("order").Data(g.Map{
+   ```
+   g.Model("order").Data(g.Map{
        "uid"   : 1000,
        "price" : 99.99,
        // ...
-}).Insert()
-```
+   }).Insert()
+   ```
 
 2. 在订单列表页面查询时，我们需要使用 `Master` 方法指定查询操作是在主节点上进行，以避免读取延迟。
 
@@ -45,12 +49,10 @@ g.Model("order").Data(g.Map{
 
 
 
-```
-g.Model("order").Master().Where("uid", 1000).All()
-```
+   ```
+   g.Model("order").Master().Where("uid", 1000).All()
+   ```
 
 
 `
 `
-
-- 无标签

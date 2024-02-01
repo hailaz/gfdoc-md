@@ -1,3 +1,7 @@
+---
+title: 分页管理-URL模板
+---
+
 `gpage` 支持自定义 `URL` 模板，在模板中可以使用 `{.page}` 内置变量替换页码的内容，我们来看一个简单的示例：
 
 ```
@@ -45,5 +49,3 @@ func main() {
 在代码中，我们可以使用 `UrlTemplate` 属性设置 `URL` 模板，执行后，结果如下：
 
 ![](/download/attachments/1114218/QQ%E6%88%AA%E5%9B%BE20180806223701.png?version=1&modificationDate=1608654178459&api=v2)
-
-- 无标签

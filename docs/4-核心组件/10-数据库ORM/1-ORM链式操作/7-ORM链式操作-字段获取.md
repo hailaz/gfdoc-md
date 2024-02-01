@@ -1,3 +1,7 @@
+---
+title: ORM链式操作-字段获取
+---
+
 # `FieldsStr/FieldsExStr` 字段获取
 
 1. `FieldsStr` 用于获取指定表的字段，并可给定字段前缀，字段之间使用" `,`"符号连接成字符串返回；
@@ -69,6 +73,3 @@ g.Model("user").FieldsExStr("passport, password")
 // gf_uid,gf_nickname
 g.Model("user").FieldsExStr("passport, password", "gf_")
 ```
-
-
-- 无标签

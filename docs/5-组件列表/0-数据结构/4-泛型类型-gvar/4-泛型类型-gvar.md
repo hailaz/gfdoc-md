@@ -1,3 +1,7 @@
+---
+title: 泛型类型-gvar
+---
+
 ![](/download/attachments/1114353/GoFrame%20GVar%20Features.png?version=1&modificationDate=1624362833292&api=v2)
 
 # 基本介绍
@@ -25,5 +29,3 @@ import "github.com/gogf/gf/v2/container/gvar"
 - [泛型类型-基本使用](/docs/组件列表/数据结构/泛型类型-gvar/泛型类型-基本使用)
 - [泛型类型-方法介绍](/docs/组件列表/数据结构/泛型类型-gvar/泛型类型-方法介绍)
 - [泛型类型-注意事项](/docs/组件列表/数据结构/泛型类型-gvar/泛型类型-注意事项)
-
-- 无标签

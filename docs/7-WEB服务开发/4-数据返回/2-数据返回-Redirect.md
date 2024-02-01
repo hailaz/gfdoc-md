@@ -1,3 +1,7 @@
+---
+title: 数据返回-Redirect
+---
+
 我们可以通过 `RedirectTo/RedirectBack` 来实现页面之间的跳转，该功能通过 `Location Header` 实现。相关方法：
 
 ```
@@ -58,5 +62,3 @@ func main() {
 ```
 
 运行后，我们通过浏览器访问 [http://127.0.0.1:8199/page](http://127.0.0.1:8199/page) 点击页面的 `back` 连接 ，可以发现点击后页面随后又跳转了回来。
-
-- 无标签

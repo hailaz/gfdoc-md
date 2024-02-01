@@ -1,3 +1,7 @@
+---
+title: HTTPClient-基本使用
+---
+
 # 基本使用
 
 最基本的 `HTTP` 客户端使用是通过 `HTTP Method` 同名的几个操作方法来发送请求， **但需要注意的是返回的结果对象需要执行 `Close` 防止内存溢出**。我们来看几个 `HTTP` 客户端请求的简单示例。
@@ -141,5 +145,3 @@ g.Client().GetVar(ctx, url).Scan(&user)
 var users []*User
 g.Client().GetVar(ctx, url).Scan(&users)
 ```
-
-- 无标签

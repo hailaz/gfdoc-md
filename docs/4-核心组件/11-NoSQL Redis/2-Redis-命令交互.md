@@ -1,3 +1,7 @@
+---
+title: Redis-命令交互
+---
+
 # `Do` 方法
 
 `Do` 是通用的命令交互方法，执行同步指令，通过向 `Redis Server` 发送对应的 `Redis API` 命令，来使用 `Redis Server` 的服务。 `Do` 方法最大的特点是使用 `Redis` 命令与服务端交互，因此扩展很强，没有提供 `Redis` 操作方法的其他命令都可以通过 `Do` 方法来实现。使用示例：
@@ -104,5 +108,3 @@ func main() {
 	fmt.Println(user2.Id, user2.Name)
 }
 ```
-
-- 无标签

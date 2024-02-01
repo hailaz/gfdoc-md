@@ -1,3 +1,7 @@
+---
+title: ORM高级特性-RawSQL
+---
+
 由于 `ORM` 的安全性保障，所有输入的参数在底层都将使用预处理模式执行，防止常见的 `SQL` 注入风险。在某一些场景中，我们期望在生成执行的SQL语句中嵌入自定义的SQL语句，那么我们可以使用 `ORM` 的 `RawSQL` 特性，通过 `gdb.Raw` 类型来实现。我们来看几个示例。
 
 # 在 `Insert` 中使用 `RawSQL`
@@ -65,5 +69,3 @@ g.Model("user").WhereLT("created_at", "now()").All()
 // SELECT * FROM `user` WHERE `created_at`<now()
 g.Model("user").WhereLT("created_at", gdb.Raw("now()")).All()
 ```
-
-- 无标签

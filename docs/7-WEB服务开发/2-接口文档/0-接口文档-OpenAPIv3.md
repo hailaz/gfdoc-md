@@ -1,3 +1,7 @@
+---
+title: 接口文档-OpenAPIv3
+---
+
 `OpenAPIv3` 协议主要使用在规范路由中，阅读接口文档协议介绍之前，请先了解一下规范路由： [路由注册-规范路由](/docs/WEB服务开发/路由管理/路由管理-路由注册/路由注册-规范路由/路由注册-规范路由)
 
 # 一、 `OpenAPIv3`
@@ -20,13 +24,7 @@
 
 常见的基础标签包括：
 
-常见OpenAPIv3标签
-
-说明
-
-备注
-
-`path`结合注册时的前缀共同构成接口URI路径用于 `g.Meta` 标识接口元数据`tags`接口所属的标签，用于接口分类用于 `g.Meta` 标识接口元数据`method`接口的请求方式： `GET/PUT/POST/DELETE...(不区分大小写)`用于 `g.Meta` 标识接口元数据`deprecated`标记该接口废弃用于 `g.Meta` 标识接口元数据`summary`接口/参数概要描述缩写 `sm``description`接口/参数详细描述缩写 `dc``in`参数的提交方式`header/path/query/cookie``default`参数的默认值缩写 `d``mime`接口的 `MIME` 类型，例如 `multipart/form-data` 一般是全局设置，默认为 `application/json`。用于 `g.Meta` 标识接口元数据`type`参数的类型，一般不需要设置，特殊参数需要手动设置，例如 `file`仅用于参数属性
+常见OpenAPIv3标签说明备注`path`结合注册时的前缀共同构成接口URI路径用于 `g.Meta` 标识接口元数据`tags`接口所属的标签，用于接口分类用于 `g.Meta` 标识接口元数据`method`接口的请求方式： `GET/PUT/POST/DELETE...(不区分大小写)`用于 `g.Meta` 标识接口元数据`deprecated`标记该接口废弃用于 `g.Meta` 标识接口元数据`summary`接口/参数概要描述缩写 `sm``description`接口/参数详细描述缩写 `dc``in`参数的提交方式`header/path/query/cookie``default`参数的默认值缩写 `d``mime`接口的 `MIME` 类型，例如 `multipart/form-data` 一般是全局设置，默认为 `application/json`。用于 `g.Meta` 标识接口元数据`type`参数的类型，一般不需要设置，特殊参数需要手动设置，例如 `file`仅用于参数属性
 
 更多标签请参考标准的 `OpenAPIv3` 协议： [https://swagger.io/specification/](https://swagger.io/specification/)
 

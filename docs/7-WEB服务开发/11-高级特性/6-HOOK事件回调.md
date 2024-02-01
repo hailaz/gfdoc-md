@@ -1,3 +1,7 @@
+---
+title: HOOK事件回调
+---
+
 ![](/download/attachments/1114387/image2021-6-8_22-53-43.png?version=1&modificationDate=1623163987980&api=v2)
 
 `ghttp.Server` 提供了事件回调注册功能，类似于其他框架的 `中间件` 功能，相比较于 `中间件`，事件回调的特性更加简单。

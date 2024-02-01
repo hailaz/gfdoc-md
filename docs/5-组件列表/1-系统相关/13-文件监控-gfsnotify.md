@@ -1,3 +1,7 @@
+---
+title: 文件监控-gfsnotify
+---
+
 `gfsnotify` 能监控指定文件/目录的改变，如文件的增加、删除、修改、重命名等操作。
 
 **使用方式**：
@@ -152,6 +156,3 @@ func main() {
 - `fs.inotify.max_user_instances`：表示当前用户可创建的 `inotify` 监控实例数量，即 `gfsnotify.New` 方法创建的 `Watcher` 对象数量，一个 `Watcher` 对象对应系统的一个 `inotify` 实例，系统默认数量为： `128`；
 
 - `fs.inotify.max_user_watches`：表示一个 `inotify` 实例可添加的监控文件队列大小，往同一个 `inotify` 添加的监控文件超过该数量限制则会失败，并且会有系统错误日志，系统默认数量往往为： `8192`(有的系统该数值会比较大一些)；
-
-
-- 无标签

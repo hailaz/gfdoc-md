@@ -1,3 +1,7 @@
+---
+title: 模型关联-动态关联-ScanList
+---
+
 `gf` 的 `ORM` 没有采用其他 `ORM` 常见的 `BelongsTo`, `HasOne`, `HasMany`, `ManyToMany` 这样的模型关联设计，这样的关联关系维护较繁琐，例如外键约束、额外的标签备注等，对开发者有一定的心智负担。因此 `gf` 框架不倾向于通过向模型结构体中注入过多复杂的标签内容、关联属性或方法，并一如既往地尝试着简化设计，目标是使得模型关联查询尽可能得易于理解、使用便捷。
 
 接下来关于 `gf ORM` 提供的模型关联实现，从 `GF v1.13.6` 版本开始提供，目前属于实验性特性。
@@ -226,5 +230,3 @@ func ListItemValuesUnique(list interface{}, key string, subKey ...interface{}) [
 
 - `gdb.ListItemValuesUnique(users, "Uid")` 用于获取 `users` 数组中，每一个 `Uid` 属性，构造成 `[]interface{}` 数组返回。这里以便根据 `uid` 构造成 `SELECT...IN...` 查询。
 - `gdb.ListItemValuesUnique(users, "User", "Uid")` 用于获取 `users` 数组中，每一个 `User` 属性项中的 `Uid` 属性，构造成 `[]interface{}` 数组返回。这里以便根据 `uid` 构造成 `SELECT...IN...` 查询。
-
-- 无标签

@@ -1,3 +1,7 @@
+---
+title: 链路跟踪-HTTP示例-Baggage
+---
+
 # `baggage` 链路数据传递
 
 `baggage` 用户链路间（服务间）传递自定义的信息。

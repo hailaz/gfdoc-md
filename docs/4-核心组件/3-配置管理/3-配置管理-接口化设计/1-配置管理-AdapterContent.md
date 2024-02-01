@@ -1,3 +1,7 @@
+---
+title: 配置管理-AdapterContent
+---
+
 # `AdapterContent`
 
 `AdapterContent` 是基于配置内容的实现，用户可以给定具体的配置内容，生成 `Adapter` 接口对象。配置内容支持多种格式，格式列表同配置管理组件。
@@ -47,5 +51,3 @@ func main() {
 :8888
 map[debug:true link:mysql:root:12345678@tcp(127.0.0.1:3306)/test]
 ```
-
-- 无标签

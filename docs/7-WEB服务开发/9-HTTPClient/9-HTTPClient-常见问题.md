@@ -1,3 +1,7 @@
+---
+title: HTTPClient-常见问题
+---
+
 # 是否需要保存复用创建的 `gclient.Client` 对象
 
 无论是通过 `g.Client` 或者 `gclient.New` 方法创建 `gclient.Client` 对象，该对象都应该保存下来复用，而不是每一次都新建 `Client` 对象，这样可以提高效率、降低资源使用、使用方式对 `GC` 友好。该对象内建连接池设计，可充分管理大量的短连接请求。由于 `Client` 对象对资源消耗不是很高，所以很多同学可能都没太注意这个点。
@@ -35,5 +39,3 @@ curl -X POST -H "Content-Type: application/json" localhost:8000/Execute -d '{
 	"Password": ""
 }'
 ```
-
-- 无标签

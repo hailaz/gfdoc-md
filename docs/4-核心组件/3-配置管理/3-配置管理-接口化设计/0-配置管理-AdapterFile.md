@@ -1,3 +1,7 @@
+---
+title: 配置管理-AdapterFile
+---
+
 # `AdapterFile`
 
 `AdapterFile` 是框架默认的配置管理实现方式，基于文件的配置加载和读取。
@@ -96,5 +100,3 @@ func main() {
 :8888
 map[debug:true link:mysql:root:12345678@tcp(127.0.0.1:3306)/test]
 ```
-
-- 无标签

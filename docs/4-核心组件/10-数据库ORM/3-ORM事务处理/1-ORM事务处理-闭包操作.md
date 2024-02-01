@@ -1,3 +1,7 @@
+---
+title: ORM事务处理-闭包操作
+---
+
 # 一、痛点描述
 
 可以看到，通过常规的事务方法来管理事务有一些问题：
@@ -49,5 +53,3 @@ g.DB().Transaction(context.TODO(), func(ctx context.Context, tx gdb.TX) error {
 ```
 
 通过闭包操作的方式可以很简便地实现嵌套事务，且对上层业务开发同学来说无感知，具体可以继续阅读章节： [ORM事务处理-嵌套事务](/docs/核心组件/数据库ORM/ORM事务处理/ORM事务处理-嵌套事务)
-
-- 无标签

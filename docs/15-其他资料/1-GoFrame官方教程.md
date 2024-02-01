@@ -1,3 +1,7 @@
+---
+title: GoFrame官方教程
+---
+
 官方推荐以下四种形式的学习方式：
 
 - 买本 `Golang` 相关书籍，系统学习下基础。例如：《 [Go程序设计语言](http://books.studygolang.com/gopl-zh/)》《 [微软的Go教程](https://docs.microsoft.com/zh-cn/learn/paths/go-first-steps/)》
@@ -6,5 +10,3 @@
 - 最后，可以在 `QQ` 群及微信群问问其他小伙伴，相互探讨、相互学习，但是注意提问的技巧，否则在热闹的群里你可能会感觉孤独。
 
 此外，你可以关注 `GoFrame` 的 `gf` 主库以及当前官网文档项目动态，保持项目发展的前瞻。
-
-- 无标签

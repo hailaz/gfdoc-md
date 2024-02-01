@@ -1,3 +1,7 @@
+---
+title: HTTPClient-代理Proxy设置
+---
+
 # 代理 `Proxy` 设置
 
 HTTP客户端发起请求时可以设置代理服务器地址 `proxyURL`，该该特性使用 `SetProxy*` 相关方法实现。代理主要支持 `http` 和 `socks5` 两种形式，分别为 `http://USER:PASSWORD@IP:PORT` 或 `socks5://USER:PASSWORD@IP:PORT` 形式。

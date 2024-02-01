@@ -1,3 +1,7 @@
+---
+title: 查询时避免返回对象初始化及sql.ErrNoRows判断
+---
+
 # 查询时避免返回对象初始化及 `sql.ErrNoRows` 判断
 
 执行SQL查询时，请避免提前将查询结果初始化，以避免结构对象默认值的影响，避免创建不必要的对象内存。通过返回对象指针 `nil` 判断避免 `sql.ErrNoRows` 使用，降低代码对 `error` 处理的复杂度、统一项目中对空查询结果处理逻辑。
@@ -38,5 +42,3 @@ func (s *sTask) GetOne(ctx context.Context, id uint64) (out *entity.ResourceTask
 注意代码中 `&out` 的使用。
 
 更多的介绍请参考： [ORM结果处理-为空判断](/docs/核心组件/数据库ORM/ORM结果处理/ORM结果处理-为空判断)
-
-- 无标签

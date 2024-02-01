@@ -1,3 +1,7 @@
+---
+title: 为什么要选GoFrame？
+---
+
 在设计新项目的时候
 
 ## 分步指南
@@ -10,10 +14,4 @@
 
 - 页面:
 
-[为什么要选GoFrame？](/docs/其他资料/文档小助手-向导/为什么要选GoFrame？)
-
-
-- [调研](/labels/viewlabel.action?ids=38928411&key=gf)
-- [选型](/labels/viewlabel.action?ids=38928412&key=gf)
-- [技术选型](/labels/viewlabel.action?ids=38928413&key=gf)
-- [kb-how-to-article](/label/gf/kb-how-to-article)
+  [为什么要选GoFrame？](/docs/其他资料/文档小助手-向导/为什么要选GoFrame？)

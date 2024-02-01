@@ -1,3 +1,7 @@
+---
+title: 进程管理-gproc
+---
+
 进程管理以及进程间的通信是通过 `gproc` 模块实现的，其中进程间通信采用的是本地socket通信机制。
 
 **使用方式**：
@@ -19,5 +23,3 @@ import "github.com/gogf/gf/v2/os/gproc"
    - `ShellExec` 执行命令后将会返回输出的结果内容；
    - `ShellRun` 执行命令后将会直接将返回内容输出到标准输出；
    - 我们可以使用 `goroutine` 来实现异步的执行，如： `go ShellRun(...)` 等等；
-
-- 无标签

@@ -1,3 +1,7 @@
+---
+title: 协议编译-gen pb
+---
+
 该功能特性从 `v2.4` 版本开始提供。
 
 # 基本介绍
@@ -26,15 +30,7 @@ EXAMPLE
 
 参数说明：
 
-名称
-
-必须
-
-默认值
-
-含义
-
-`path`否`manifest/protobuf`指向 `proto` 协议定义文件`api`否`api`指向生成的接口文件存放目录`ctrl`否`internal/controller`指向生成的控制器文件存放目录
+名称必须默认值含义`path`否`manifest/protobuf`指向 `proto` 协议定义文件`api`否`api`指向生成的接口文件存放目录`ctrl`否`internal/controller`指向生成的控制器文件存放目录
 
 # 注意事项
 

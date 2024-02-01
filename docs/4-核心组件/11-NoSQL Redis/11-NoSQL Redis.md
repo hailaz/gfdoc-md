@@ -1,3 +1,7 @@
+---
+title: NoSQL Redis
+---
+
 # 基本介绍
 
 `Redis` 客户端由 `gredis` 组件实现，底层采用了链接池设计。
@@ -53,5 +57,3 @@ import (
 - [Redis-命令交互](/docs/核心组件/NoSQL Redis/Redis-命令交互)
 - [Redis-Conn对象](/docs/核心组件/NoSQL Redis/Redis-Conn对象)
 - [Redis-接口化设计](/docs/核心组件/NoSQL Redis/Redis-接口化设计)
-
-- 无标签

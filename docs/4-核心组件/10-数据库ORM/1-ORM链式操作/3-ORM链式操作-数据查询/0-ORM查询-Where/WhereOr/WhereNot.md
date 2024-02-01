@@ -1,3 +1,7 @@
+---
+title: ORM查询-Where/WhereOr/WhereNot
+---
+
 `ORM` 组件提供了一些常用的条件查询方法，并且条件方法支持多种数据类型输入。
 
 ```
@@ -237,5 +241,3 @@ m := g.Model("auth")
 m.Where("status", g.Slice{}).Where("uid", 1).OmitEmpty().All()
 // SELECT * FROM `auth` WHERE `uid`=1
 ```
-
-- 无标签

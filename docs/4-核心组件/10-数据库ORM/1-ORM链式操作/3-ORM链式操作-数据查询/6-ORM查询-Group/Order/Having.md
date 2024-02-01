@@ -1,3 +1,7 @@
+---
+title: ORM查询-Group/Order/Having
+---
+
 # `Group/Order` 分组与排序
 
 `Group` 方法用于查询分组， `Order` 方法用于查询排序。使用示例：
@@ -45,5 +49,3 @@ g.Model("user").Fields("COUNT(*) total,age").Group("age").Having("total>100").Al
 // SELECT * FROM `student` ORDER BY class HAVING score>60
 g.Model("student").Order("class").Having("score>?", 60).All()
 ```
-
-- 无标签

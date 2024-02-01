@@ -1,3 +1,7 @@
+---
+title: ORM查询-All/One/Array/Value/Count
+---
+
 # 这5个方法是数据查询比较常用的方法，方法列表：
 
 ```
@@ -37,5 +41,3 @@ Model("user").Fields("name").Where("uid", 1).Value()
 // SELECT COUNT(1) FROM `user` WHERE `status` IN(1,2,3)
 Model("user").Where("status", g.Slice{1,2,3}).Count()
 ```
-
-- 无标签

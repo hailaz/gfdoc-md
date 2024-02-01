@@ -1,3 +1,7 @@
+---
+title: 文件管理-gfile
+---
+
 # 基本介绍
 
 `gfile` 文件管理组件提供了更加丰富的文件/目录操作能力。
@@ -3642,6 +3646,3 @@ main pkg path on goroutine : /xxx/xx/xxx/xx
 
 
 ```
-
-
-- 无标签

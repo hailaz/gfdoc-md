@@ -1,3 +1,7 @@
+---
+title: Golang学习资源
+---
+
 # 一、大佬博客
 
 ## 国内
@@ -25,5 +29,3 @@ Reliable Insights[https://www.robustperception.io/blog](https://www.robustpercep
 ## 国外
 
 名称地址Go Dev[https://go.dev/](https://go.dev/)reddit Go[https://www.reddit.com/r/golang/](https://www.reddit.com/r/golang/)Dev Go[https://dev.to/t/go](https://dev.to/t/go)golangbridge[https://forum.golangbridge.org/](https://forum.golangbridge.org/)
-
-- 无标签

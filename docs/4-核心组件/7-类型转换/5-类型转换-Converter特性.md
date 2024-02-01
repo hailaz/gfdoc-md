@@ -1,3 +1,7 @@
+---
+title: 类型转换-Converter特性
+---
+
 从框架 v2.6.2 版本开始，转换组件提供了 `Converter` 特性，允许开发者可以自定义 `Converter`转换方法指定特定类型之间的转换逻辑。
 
 # 转换方法定义
@@ -299,5 +303,3 @@ func main() {
 	fmt.Println("dstWrap:", dstWrap)
 }
 ```
-
-- 无标签

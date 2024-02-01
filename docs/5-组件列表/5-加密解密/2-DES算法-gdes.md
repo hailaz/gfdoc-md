@@ -1,3 +1,7 @@
+---
+title: DES算法-gdes
+---
+
 DES算法。
 
 **使用方式**：
@@ -17,5 +21,3 @@ import "github.com/gogf/gf/v2/crypto/gdes"
 **关于gdes包中的密钥的说明：**
 
 **当使用三倍长的DES算法时，密钥为16字节时，key3等于key1。**
-
-- 无标签

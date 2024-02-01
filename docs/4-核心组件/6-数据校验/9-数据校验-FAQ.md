@@ -1,3 +1,7 @@
+---
+title: 数据校验-FAQ
+---
+
 # `Struct` 默认值对 `required` 规则的影响
 
 `Struct` 的属性会有 `默认值`，在某些情况下会引起 `required` 规则的失效。例如：
@@ -16,5 +20,3 @@ type User struct {
 1. （推荐）使用 `Struct` 校验的 `Assoc` 联合校验方法设置联合校验参数，在校验 `Struct` 类型参数时，参数值将以 `Assoc` 方法中给定的参数为准执行校验。如果使用框架的 `Server`，采用结构化的 `API` 输入输出（ `XxxReq/XxxRes`），那么 `Server` 将会自动调用 `Assoc` 执行校验，开发者无需担心默认值的影响。文档链接： [Struct校验-Assoc关联](/docs/核心组件/数据校验/数据校验-参数类型/数据校验-Struct校验/Struct校验-Assoc关联)
 2. 使用组合校验规则来弥补默认值对 `required` 规则的影响，例如以上示例中将 `Age` 属性的校验规则修改为 `required|min:1` 将能达到业务校验的效果。
 3. 将属性改为指针类型，例如 `*int`、 `*float64`、 `*g.Var` 等，通过指针类型默认值为 `nil` 的特点绕过了这个问题。
-
-- 无标签

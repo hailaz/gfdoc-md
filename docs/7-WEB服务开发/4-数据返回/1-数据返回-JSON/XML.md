@@ -1,3 +1,7 @@
+---
+title: 数据返回-JSON/XML
+---
+
 相关方法：
 
 ```
@@ -132,5 +136,3 @@ Content-Length: 76
 
 <?xml version="1.0" encoding="UTF-8"?><doc><id>1</id><name>john</name></doc>
 ```
-
-- 无标签

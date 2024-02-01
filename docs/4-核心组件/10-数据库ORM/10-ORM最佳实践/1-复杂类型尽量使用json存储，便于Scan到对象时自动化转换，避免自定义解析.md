@@ -1,3 +1,7 @@
+---
+title: 复杂类型尽量使用json存储，便于Scan到对象时自动化转换，避免自定义解析
+---
+
 举一个🌰。假如我们需要实现产品售卖规格列表，其中包含可选择的分片数量、分片容量以及副本数量，如下图（非现网代码，仅供示例学习）：
 
 ![](/download/attachments/84103185/image2023-1-3_14-50-16.png?version=1&modificationDate=1681268975910&api=v2)
@@ -71,5 +75,3 @@ _, err = dao.SellSpec.Ctx(ctx).Data(v1.SellSpecItem{
 var items []v1.SellSpecItem
 err = dao.SellSpec.Ctx(ctx).Scan(&items)
 ```
-
-- 无标签

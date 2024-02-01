@@ -1,3 +1,7 @@
+---
+title: 日志组件-Flags特性
+---
+
 `flags` 用于控制日志组件的额外特性开关，这些属性使用常量进行组合控制，包括：
 
 ```
@@ -43,5 +47,3 @@ PS C:\hailaz\test> go run .\main.go
 2022-01-05 16:05:35.109 C:/hailaz/test/main.go:17: standard time format and long line number
 
 ```
-
-- 无标签

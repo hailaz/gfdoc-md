@@ -1,3 +1,7 @@
+---
+title: 通用编解码-FAQ
+---
+
 # JSON中的大数字精度丢失问题
 
 ## 问题描述
@@ -51,5 +55,3 @@ func main() {
 ## 相关连接
 
 - [https://github.com/gogf/gf/issues/1603](https://github.com/gogf/gf/issues/1603)
-
-- 无标签

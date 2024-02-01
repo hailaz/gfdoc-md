@@ -1,3 +1,7 @@
+---
+title: ORM链式操作-时间维护
+---
+
 需要注意，该特性仅对链式操作有效。
 
 `gdb` 模块支持对数据记录的写入、更新、删除时间自动填充，提高开发维护效率。为了便于时间字段名称、类型的统一维护，如果使用该特性，我们约定：
@@ -94,5 +98,3 @@ g.Model("user").Unscoped().Where("uid>?", 1).All()
 // SELECT * FROM `user` AS `u` LEFT JOIN `user_detail` AS `ud` ON (ud.uid=u.uid) WHERE u.uid=10 LIMIT 1
 g.Model("user", "u").LeftJoin("user_detail", "ud", "ud.uid=u.uid").Where("u.uid", 10).Unscoped().One()
 ```
-
-- 无标签

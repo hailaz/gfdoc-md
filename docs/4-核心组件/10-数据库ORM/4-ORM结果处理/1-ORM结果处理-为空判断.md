@@ -1,3 +1,7 @@
+---
+title: ORM结果处理-为空判断
+---
+
 使用 `GoFrame ORM` 对返回结果为空判断非常简便，大部分场景下直接判断返回的数据是否为 `nil` 或者长度为 `0`，或者使用 `IsEmpty/IsNil` 方法。
 
 # 一、数据集合（多条）
@@ -138,5 +142,3 @@ if err == sql.ErrNoRows {
 ```
 
 由于 `struct` 转换利用了 `Golang` 反射特性，执行性能会有一定的损耗。如果您涉及到大量查询结果数据的 `struct` 数组对象转换，并且需要提高转换性能，请参考自定义实现对应 `struct` 的 `UnmarshalValue` 方法： [类型转换-UnmarshalValue](/docs/核心组件/类型转换/类型转换-UnmarshalValue)
-
-- 无标签

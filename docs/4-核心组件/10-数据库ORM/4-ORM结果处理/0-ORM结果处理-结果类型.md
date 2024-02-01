@@ -1,3 +1,7 @@
+---
+title: ORM结果处理-结果类型
+---
+
 # 一、数据结构
 
 查询结果的数据结构如下：
@@ -155,5 +159,3 @@ func main() {
 ```
 [{"Uid":1,"Name":"john","Site":"https://goframe.org"}]
 ```
-
-- 无标签

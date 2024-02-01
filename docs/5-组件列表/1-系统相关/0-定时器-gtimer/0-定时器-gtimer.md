@@ -1,3 +1,7 @@
+---
+title: 定时器-gtimer
+---
+
 # 基本介绍
 
 `gtimer` 是一个并发安全的高性能定时器，类似于 `Java` 的 `Timer`。 `gtimer` 底层采用了 **优先级队列**（ `PriorityQueue`）实现。
@@ -57,5 +61,3 @@ import "github.com/gogf/gf/v2/os/gtimer"
 
 - [定时器-基本使用](/docs/组件列表/系统相关/定时器-gtimer/定时器-基本使用)
 - [定时器-性能测试](/docs/组件列表/系统相关/定时器-gtimer/定时器-性能测试)
-
-- 无标签

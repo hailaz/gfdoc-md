@@ -1,3 +1,7 @@
+---
+title: 配置管理-TOML格式
+---
+
 # 基本介绍
 
 `Toml` 是一种易读、 `mini` 语言，由 `github` 前CEO `Tom` 创建。 `Tom's Obvious, Minimal Language`。
@@ -299,5 +303,3 @@ color = "gray"
   [fruit.variety]
     name = "granny smith"
 ```
-
-- 无标签

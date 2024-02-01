@@ -1,3 +1,7 @@
+---
+title: ORM查询-LeftJoin/RightJoin/InnerJoin
+---
+
 # `LeftJoin/RightJoin/InnerJoin`
 
 1. `LeftJoin` 左关联查询；
@@ -118,5 +122,3 @@ if req.Key != "" {
 // Resource items.
 err = orm.Distinct().FieldsPrefix(rTable, "*").Order(req.Order, req.OrderDirection).Limit(req.Offset, req.Limit).Scan(&res.Items)
 ```
-
-- 无标签

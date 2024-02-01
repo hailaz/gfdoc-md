@@ -1,3 +1,7 @@
+---
+title: 类型转换-Map转换
+---
+
 `gconv.Map` 支持将任意的 `map` 或 `struct`/ `*struct` 类型转换为常用的 `map[string]interface{}` 类型。当转换参数为 `struct`/ `*struct` 类型时，支持自动识别 `struct` 的 `c/gconv/json` 标签，并且可以通过 `Map` 方法的第二个参数 `tags` 指定自定义的转换标签，以及多个标签解析的优先级。如果转换失败，返回 `nil`。
 
 属性标签：当转换 `struct`/ `*struct` 类型时，支持 `c/gconv/json` 属性标签，也支持 `-` 及 `omitempty` 标签属性。当使用 `-` 标签属性时，表示该属性不执行转换；当使用 `omitempty` 标签属性时，表示当属性为空时（空指针 `nil`, 数字 `0`, 字符串 `""`, 空数组 `[]` 等）不执行转换。具体请查看随后示例。
@@ -207,5 +211,3 @@ map[string]interface {}
 ```
 
 看出来差别了吗？
-
-- 无标签

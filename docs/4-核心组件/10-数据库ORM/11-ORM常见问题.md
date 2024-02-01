@@ -1,3 +1,7 @@
+---
+title: ORM常见问题
+---
+
 # `driver: bad connection`
 
 ![](/download/attachments/129466371/image-2024-1-30_11-49-23.png?version=1&modificationDate=1706586564393&api=v2)

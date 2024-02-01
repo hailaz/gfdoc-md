@@ -1,3 +1,7 @@
+---
+title: 日志组件-Handler
+---
+
 从 `v2.0` 版本开始， `glog` 组件提供了超级强大的、可自定义日志处理的 `Handler` 特性。 `Handler` 采用了中间件设计方式，开发者可以为日志对象注册多个处理 `Handler`，也可以在 `Handler` 中覆盖默认的日志组件处理逻辑。
 
 # 相关定义
@@ -290,5 +294,3 @@ func main() {
 Time="2023-11-23 21:00:08.671" Level=INFO Content=caution name=admin
 Time="2023-11-23 21:00:08.671" Level=ERRO oops="use of closed network connection" status=500 Stack="1.  main.main\n    /Users/txqiangguo/Workspace/gogf/gf/example/.test/main.go:16\n"
 ```
-
-- 无标签

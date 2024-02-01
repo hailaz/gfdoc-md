@@ -1,3 +1,7 @@
+---
+title: HTTPClient-自定义Cookie
+---
+
 HTTP客户端发起请求时可以自定义发送给服务端的 `Cookie` 内容，该特性使用 `SetCookie*` 相关方法实现。
 
 方法列表：
@@ -128,6 +132,3 @@ map[name:john score:100]
 
 
 可以看到，服务端已经接收到了客户端自定义的 `Cookie` 参数。
-
-
-- 无标签

@@ -1,3 +1,7 @@
+---
+title: 环境变量-genv
+---
+
 环境变量管理组件。
 
 **使用方式**：
@@ -102,5 +106,3 @@ func Build(m map[string]string) []string
 ```
 
 该方法将 `map` 的参数以数组的形式构建并且返回。
-
-- 无标签

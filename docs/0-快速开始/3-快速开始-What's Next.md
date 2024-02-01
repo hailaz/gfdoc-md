@@ -1,3 +1,7 @@
+---
+title: 快速开始-What's Next
+---
+
 # 简单总结
 
 好的，当您已经学习完前面的基础章节后，你应该学习到以下的内容：
@@ -51,5 +55,3 @@
 - `Web MVC` 开发： [https://github.com/gogf/gf-demo-chat](https://github.com/gogf/gf-demo-chat)
 - 微服务开发： [https://github.com/gogf/gf-demo-grpc](https://github.com/gogf/gf-demo-grpc)
 - 更多示例项目： [https://github.com/gogf/awesome-gf](https://github.com/gogf/awesome-gf)
-
-- 无标签

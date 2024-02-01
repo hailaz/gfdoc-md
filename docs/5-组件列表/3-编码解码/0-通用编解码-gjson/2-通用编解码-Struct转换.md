@@ -1,3 +1,7 @@
+---
+title: 通用编解码-Struct转换
+---
+
 # `Struct` 转换
 
 `Struct` 方法用于将整个 `Json` 包含的数据内容转换为指定的数据格式或者对象。
@@ -26,5 +30,3 @@ if j, err := gjson.DecodeToJson(data); err != nil {
 // Output:
 // &{Count:1 Array:[John Ming]}
 ```
-
-- 无标签

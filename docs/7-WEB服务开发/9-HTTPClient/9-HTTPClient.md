@@ -1,3 +1,7 @@
+---
+title: HTTPClient
+---
+
 # 基本介绍
 
 `GoFrame` 框架提供了强大便捷易用的 `HTTP` 客户端，由 `gclient` 组件实现，对象创建可以通过 `gclient.New()` 包方法，也可以通过 `g.Client()` 方法调用。推荐使用 `g.Client()` 来便捷地创建 `HTTP` 客户端对象。由于 `gclient.Client` 内部封装扩展于标准库的 `http.Client` 对象，因此标准库 `http.Client` 有的特性， `gclient.Client` 也是支持的。
@@ -82,5 +86,3 @@ func (r *Response) Close() error
 - [HTTPClient-代理Proxy设置](/docs/WEB服务开发/HTTPClient/HTTPClient-代理Proxy设置)
 - [HTTPClient-拦截器/中间件](/docs/WEB服务开发/HTTPClient/HTTPClient-拦截器/中间件)
 - [HTTPClient-常见问题](/docs/WEB服务开发/HTTPClient/HTTPClient-常见问题)
-
-- 无标签

@@ -1,3 +1,7 @@
+---
+title: ORM查询-子查询特性
+---
+
 `ORM` 组件目前支持常见的三种语法的子查询： `Where` 子查询、 `Having` 子查询及 `From` 子查询。
 
 # `Where` 子查询
@@ -32,5 +36,3 @@ subQuery2 := g.Model("pets").Fields("name")
 g.Model("? as u, ? as p", subQuery1, subQuery2).Scan(&users)
 // SELECT * FROM (SELECT `name` FROM `users`) as u, (SELECT `name` FROM `pets`) as p
 ```
-
-- 无标签

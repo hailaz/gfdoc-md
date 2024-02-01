@@ -1,3 +1,7 @@
+---
+title: 利用指针属性和do对象实现灵活的修改接口
+---
+
 大家都知道框架自带的开发工具可以生成 `do` 对象代码，该 `do` 对象主要用于查询、修改、写入等操作时对操作字段的自动 `nil` 过滤。
 
 今天教给大家一个新的玩法，通过指针结合 `do` 对象快速实现灵活、便捷的修改操作 `API` 实现。
@@ -82,5 +86,3 @@ func (c *Controller) Update(ctx context.Context, req *v1.UpdateReq) (res *v1.Upd
 	return
 }
 ```
-
-- 无标签

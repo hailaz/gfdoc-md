@@ -1,3 +1,7 @@
+---
+title: 模块规范-gen service
+---
+
 该功能特性从 `v2.1` 版本开始提供。
 
 # 基本介绍
@@ -79,23 +83,11 @@ EXAMPLE
 
 参数说明：
 
-名称
-
-必须
-
-默认值
-
-含义
-
-`srcFolder`是`internal/logic`指向logic代码目录地址`dstFolder`是`internal/service`指向生成的接口文件存放目录`dstFileNameCase`否`Snake`生成的文件名名称格式`stPattern`否`s([A-A]\w+)`
+名称必须默认值含义`srcFolder`是`internal/logic`指向logic代码目录地址`dstFolder`是`internal/service`指向生成的接口文件存放目录`dstFileNameCase`否`Snake`生成的文件名名称格式`stPattern`否`s([A-A]\w+)`
 
 使用正则指定业务模块结构体定义格式，便于解析业务接口定义名称。在默认的正则下，所有小写 `s` 开头，大写字母随后的结构体都将被当做业务模块接口名称。例如：
 
-logic结构体名称
-
-service接口名称
-
-`sUser``User``sMetaData``MetaData`
+logic结构体名称service接口名称`sUser``User``sMetaData``MetaData`
 
 `watchFile`
 

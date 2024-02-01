@@ -1,3 +1,7 @@
+---
+title: ORM查询-常用操作示例
+---
+
 # `in` 查询
 
 使用字符串、 `slice` 参数类型。当使用 `slice` 参数类型时，预处理占位符只需要一个 `?` 即可。
@@ -269,5 +273,3 @@ g.Model("user").Where("created_at>?", gtime.New("2021-05-01")).WhereOrNotNull("i
 // SELECT * FROM `user` WHERE (`created_at`>'2021-05-01 00:00:00') AND (`inviter` IS NULL) AND (`creator` IS NULL)
 g.Model("user").Where("created_at>?", gtime.New("2021-05-01")).WhereNull("inviter", "creator").All()
 ```
-
-- 无标签

@@ -1,3 +1,7 @@
+---
+title: 使用GoFrame须知&提问技巧
+---
+
 来到这里，我们认为你已经具备go语言的开发能力以及基础知识。
 
 # GoFrame是什么？
@@ -80,6 +84,3 @@ Library
 - 页面:
 
 [为什么要选GoFrame？](/docs/其他资料/文档小助手-向导/为什么要选GoFrame？)
-
-
-- [kb-how-to-article](/label/gf/kb-how-to-article)

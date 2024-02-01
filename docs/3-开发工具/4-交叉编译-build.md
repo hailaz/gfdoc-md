@@ -1,3 +1,7 @@
+---
+title: 交叉编译-build
+---
+
 # 使用方式
 
 具体参数，使用 `gf build -h` 查看帮助
@@ -104,5 +108,3 @@ $ gf build
 2020-12-31 00:36:22.994 go build -o ./bin/windows_amd64/gf.exe main.go
 2020-12-31 00:36:25.795 done!
 ```
-
-- 无标签

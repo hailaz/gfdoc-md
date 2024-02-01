@@ -1,3 +1,7 @@
+---
+title: HTTPClient-自定义Header
+---
+
 HTTP客户端发起请求时可以自定义发送给服务端的 `Header` 内容，该特性使用 `SetHeader*` 相关方法实现。
 
 方法列表：
@@ -129,6 +133,3 @@ func main() {
 ```
 Span-Id:0.0.1,Trace-Id:NBC56410N97LJ016FQA
 ```
-
-
-- 无标签

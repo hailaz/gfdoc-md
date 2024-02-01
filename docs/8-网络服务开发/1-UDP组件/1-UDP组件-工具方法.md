@@ -1,3 +1,7 @@
+---
+title: UDP组件-工具方法
+---
+
 `gudp` 模块也提供了一些常用的工具方法。
 
 **使用方式**：
@@ -26,5 +30,3 @@ func SendRecvPkgWithTimeout(addr string, data []byte, timeout time.Duration, ret
 1. 其中， `NewNetConn` 方法用于创建标准库的 `net.UDPConn` 通信对象。
 2. `Send` 与 `SendRecv` 用于根据给定的 `UDP Server` 地址直接地进行 `UDP` 通信，数据写入及读取。
 3. `*Pkg` 方法用于简便的简单包协议数据传输。
-
-- 无标签

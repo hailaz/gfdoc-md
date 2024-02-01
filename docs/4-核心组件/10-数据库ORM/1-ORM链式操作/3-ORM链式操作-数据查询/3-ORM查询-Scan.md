@@ -1,3 +1,7 @@
+---
+title: ORM查询-Scan
+---
+
 `Scan` 方法支持将查询结果转换为结构体或者结构体数组， `Scan` 方法将会根据给定的参数类型自动识别执行的转换类型。
 
 # `struct` 对象
@@ -47,5 +51,3 @@ g.Model("user").Scan(&users)
 var users []*User
 g.Model("user").Scan(&users)
 ```
-
-- 无标签

@@ -1,3 +1,7 @@
+---
+title: 2022-01-27 Let's GoFrame
+---
+
 Hello 朋友们，早出晚归忙活了一年，好久没有来点技术分享啦！
 
 ![](/download/attachments/35359084/image2022-1-25_18-15-31.png?version=1&modificationDate=1643105597077&api=v2)![](/download/attachments/35359084/image2022-1-25_18-14-51.png?version=1&modificationDate=1643105556519&api=v2)

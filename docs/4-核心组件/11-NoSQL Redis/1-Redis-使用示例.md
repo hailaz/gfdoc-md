@@ -1,3 +1,7 @@
+---
+title: Redis-使用示例
+---
+
 # `Set/Get` 操作
 
 ```
@@ -187,5 +191,3 @@ func main() {
 As per Redis 4.0.0, HMSET is considered deprecated. Please use HSET innew code.
 
 根据Redis 4.0.0，HMSET被视为已弃用。请在新代码中使用HSET。
-
-- 无标签

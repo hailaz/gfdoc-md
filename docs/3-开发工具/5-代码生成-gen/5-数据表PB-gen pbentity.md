@@ -1,3 +1,7 @@
+---
+title: 数据表PB-gen pbentity
+---
+
 该功能特性从 `v2.4` 版本开始提供。
 
 # 基本介绍
@@ -109,5 +113,3 @@ CONFIGURATION SUPPORT
 
 - 在 `GRPC` 服务中， `gen dao` 生成的 `entity` 数据结构无法提供给 `GRPC` 接口使用，因为 `GRPC` 的数据结构需要使用 `proto` 文件来定义。因此，在 `GRPC` 服务中就需要使用到 `gen pbentity` 中生成的 `pbentity proto` 文件。同时，在 `GRPC` 微服务开发中， `gen dao` 生成的 `entity` 已经没有具体作用。
 - 取名 `pbentity` 而不是 `entity` 的名称，是为了防止和 `gen dao` 中的 `entity` 含义冲突。
-
-- 无标签
