@@ -23,11 +23,12 @@ jobs:
       - name: Build website
         run: npm run build
 
-      - name: Deploy to GitHub Pages gfqa
+      # 部署到 GitHub Pages 的热门选择：
+      # 文档：https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          external_repository: hailaz/gfqa
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           # 要发布到 `gh-pages` 分支的构建输出：
           publish_dir: ./build
           # 下面两行会将此次部署 commit 的作者设置为官方的
@@ -37,12 +38,16 @@ jobs:
           # 你可以用自己的用户信息替换它们。
           user_name: hailaz
           user_email: 739476267@qq.com
-      # 部署到 GitHub Pages 的热门选择：
-      # 文档：https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
-      - name: Deploy to GitHub Pages
+      - name: Build website
+        run: |
+          rm docusaurus.config.ts
+          cp docusaurus.config.ts.gfqa docusaurus.config.ts
+          npm run build
+      - name: Deploy to GitHub Pages gfqa
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          external_repository: hailaz/gfqa
           # 要发布到 `gh-pages` 分支的构建输出：
           publish_dir: ./build
           # 下面两行会将此次部署 commit 的作者设置为官方的
