@@ -48,7 +48,7 @@ jobs:
         with:
           # deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          external_repository: hailaz/gfqa
+          external_repository: hailaz/gf
           # 要发布到 `gh-pages` 分支的构建输出：
           publish_dir: ./build
           # 下面两行会将此次部署 commit 的作者设置为官方的
