@@ -48,4 +48,4 @@ func main() {
 
 在代码中，我们可以使用 `UrlTemplate` 属性设置 `URL` 模板，执行后，结果如下：
 
-![](/download/attachments/1114218/QQ%E6%88%AA%E5%9B%BE20180806223701.png?version=1&modificationDate=1608654178459&api=v2)
+![](/markdown/a67f2f6285ed959812f70fd066e7453a.png)

@@ -35,7 +35,7 @@ module my-hello
 
 1. 设置 `Goland` 启用 `vgo`
 
-![](/download/attachments/1114258/gomodule2.png?version=1&modificationDate=1608636536938&api=v2)
+![](/markdown/f3f9552ca0703fb4e88ae2958b58815c.png)
 
 
 
@@ -81,7 +81,7 @@ require github.com/gogf/gf latest
 
 增加 `GoFrame` 框架的依赖，其中 `latest` 表示使用最新版本，IDE将会立即去更新下载框架代码。成功后，IDE将会修改 `go.mod` 文件并生成 `go.sum` 依赖分析文件。
 
-![](/download/attachments/1114258/gomodule3.png?version=1&modificationDate=1608636559339&api=v2)
+![](/markdown/cb698537b6d68707fb4c1284530d9f90.png)
 
 3. 随后 `go.mod` 文件被自动更新为：
 
@@ -108,15 +108,15 @@ require github.com/gogf/gf v1.6.13
 
 4. 如果下载最新代码框架后出现下图情况： [https://www.jetbrains.com/help/go/create-a-project-with-vgo-integration.html](https://www.jetbrains.com/help/go/create-a-project-with-vgo-integration.html)
 
-![](/download/attachments/1114258/gomodule6.png?version=1&modificationDate=1608636662128&api=v2)
+![](/markdown/6c6bad791c9e0eee3c740f9cda0ea5c4.png)
 
 5. 请按快捷键 `⌥(option)+↩(return)` 或者 鼠标右键, 选择 `Sync packages of my-hello`
 
-![](/download/attachments/1114258/gomodule7.png?version=1&modificationDate=1608636676703&api=v2)
+![](/markdown/cf02717043547f5e1bf0a14b31d40b1c.png)
 
 6. 随后等待几秒钟之后, 可以看到左侧的 `Go Module` 已经有内容，并且中终端自动输出了下载的框架版本
 
-![](/download/attachments/1114258/gomodule8.png?version=1&modificationDate=1608636691515&api=v2)
+![](/markdown/955367cd46f617411d664c5baa8af9ce.png)
 
 
 ### 使用命令行
@@ -146,7 +146,7 @@ export GO111MODULE=on GOPROXY=https://goproxy.cn; go get -u github.com/gogf/gf
    - `https://goproxy.io`
    - `https://mirrors.aliyun.com/goproxy`
 
-![](/download/attachments/1114258/gomodule1.png?version=1&modificationDate=1608636722128&api=v2)
+![](/markdown/2274104a3ec3a6d2ac7ea35ad374c85c.png)
 
 2. 随后 `go.mod` 文件内容被自动更新为：
 
@@ -191,7 +191,7 @@ func main() {
 
 运行结果如下：
 
-![](/download/attachments/1114258/gomodule4.png?version=1&modificationDate=1608636740393&api=v2)
+![](/markdown/d34e6664a3427ca7b3df0ed2d1b8d3b1.png)
 
 可以看到， `GoFrame` 框架已被自动下载成功，并在编译中被正常引入了。
 

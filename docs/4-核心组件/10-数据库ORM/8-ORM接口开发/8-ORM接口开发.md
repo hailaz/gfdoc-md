@@ -17,7 +17,7 @@ title: ORM接口开发
 
 ## `DB` 接口关系
 
-![](/download/attachments/1114701/image2021-12-27_21-0-8.png?version=1&modificationDate=1640609880734&api=v2)
+![](/markdown/1f5e48cc947e21dbed2745f69254935a.png)
 
 `GoFrame ORM Relations`
 

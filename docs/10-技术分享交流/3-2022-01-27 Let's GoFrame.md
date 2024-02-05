@@ -4,7 +4,7 @@ title: 2022-01-27 Let's GoFrame
 
 Hello 朋友们，早出晚归忙活了一年，好久没有来点技术分享啦！
 
-![](/download/attachments/35359084/image2022-1-25_18-15-31.png?version=1&modificationDate=1643105597077&api=v2)![](/download/attachments/35359084/image2022-1-25_18-14-51.png?version=1&modificationDate=1643105556519&api=v2)
+![](/markdown/4690d7d19d1de647c100d48a4389dedf.png)![](/markdown/806eac487471281a18dc07dd07d9f000.png)
 
 本周四晚8点 `GOCN` 开源说分享主题《 `Let's GoFrame`》，主要介绍 `GoFrame` 框架中的一些核心设计、功能特性以及实战演示。
 

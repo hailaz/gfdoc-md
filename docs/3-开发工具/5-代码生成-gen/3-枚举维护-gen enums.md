@@ -17,7 +17,7 @@ title: 枚举维护-gen enums
 
 > 例如，以下接口定义中，任务包含多种状态，这些状态都是枚举值，如果后端来维护成本比较高，并且容易遗漏状态的维护，造成状态枚举值不完整。
 
-![](/download/attachments/86187843/image2023-4-24_14-49-11.png?version=1&modificationDate=1682318872442&api=v2)
+![](/markdown/3e2d58612c094dcf26ed2f17371ae482.png)
 
 ### 痛点解决
 
@@ -25,7 +25,7 @@ title: 枚举维护-gen enums
 
 > 例如，在以下接口定义中，通过工具来维护枚举值，提高了开发效率。
 
-![](/download/attachments/86187843/image2023-4-24_14-48-13.png?version=1&modificationDate=1682318814110&api=v2)
+![](/markdown/4f5b0d82a3fa65b8c83fcd3f93a8c02a.png)
 
 ## 命令使用
 

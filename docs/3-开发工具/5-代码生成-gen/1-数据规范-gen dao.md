@@ -142,7 +142,7 @@ gfcli:
 
 仓库地址： [https://github.com/gogf/focus-single](https://github.com/gogf/focus-single)
 
-![](/download/attachments/3673173/image2021-12-16_0-57-43.png?version=1&modificationDate=1639587339500&api=v2)
+![](/markdown/a02af38b70bb31224361565570e40789.png)
 
 1、以下 `3` 个目录的文件由 `dao` 命令生成：
 
@@ -160,7 +160,7 @@ gfcli:
 
 3、 `dao` 中的文件按照数据表名称进行命名，一个数据表一个文件及其一个对应的 `DAO` 对象。操作数据表即是通过 `DAO` 对象以及相关操作方法实现。 `dao` 操作采用规范化设计，必须传递 `ctx` 参数，并在生成的代码中必须通过 `Ctx` 或者 `Transaction` 方法创建对象来链式操作数据表。
 
-![](/download/attachments/3673173/image2021-8-11_19-57-42.png?version=1&modificationDate=1628683013806&api=v2)
+![](/markdown/f0da330685c6cfd82ba1c0254dfdbe39.png)
 
 ## 注意事项
 
@@ -168,7 +168,7 @@ gfcli:
 
 `gen dao` 命令涉及到数据访问相关代码生成时，默认支持常用的若干类型数据库。如果需要 `Oracle` 数据库类型支持，需要开发者自己修改源码文件后自行本地手动编译生成 `CLI` 工具随后安装，因为这两个数据库的驱动需要 `CGO` 支持，无法预编译生成给大家直接使用。
 
-![](/download/attachments/3673173/image2022-7-25_17-0-17.png?version=1&modificationDate=1658739618213&api=v2)
+![](/markdown/7f849959c13d224393b93d6b371e8ae0.png)
 
 ### 关于 `bool` 类型对应的数据表字段
 
@@ -176,8 +176,8 @@ gfcli:
 
 例如，表字段：
 
-![](/download/attachments/3673173/image2022-7-27_21-25-40.png?version=1&modificationDate=1658928340614&api=v2)
+![](/markdown/50992d00a792555d2946d294975e9ec4.png)
 
 生成的属性：
 
-![](/download/attachments/3673173/image2022-7-27_21-27-0.png?version=1&modificationDate=1658928420517&api=v2)
+![](/markdown/4bb766d64e607a33c1a6fbf20c742924.png)

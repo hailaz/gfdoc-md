@@ -234,33 +234,33 @@ g.DB().GetCache().SetAdapter(gcache.NewAdapterRedis(g.Redis()))
 
 **启动服务端：**
 
-![](/download/attachments/38575588/image2021-1-29_11-40-50.png?version=1&modificationDate=1644394135974&api=v2)
+![](/markdown/da456bb3ba924d8310f8f2a730f6c883.png)
 
 **启动客户端：**
 
-![](/download/attachments/38575588/image2021-1-29_11-41-8.png?version=1&modificationDate=1644394136009&api=v2)
+![](/markdown/1cdc85405e6cdb92d653df295edf4672.png)
 
 在 `Jaeger` 上查看链路信息：
 
-![](/download/attachments/38575588/image2021-1-29_11-42-1.png?version=1&modificationDate=1644394136027&api=v2)
+![](/markdown/85c062f73b9254973232ec56fa76e1db.png)
 
 可以看到，这次请求总共产生了 `14` 个 `span`，其中客户端有 `4` 个 `span`，服务端有 `10` 个 `span`，每一个 `span` 代表一个链路节点。不过，我们注意到，这里产生了 `3` 个 `errors`。我们点击详情查看什么原因呢。
 
-![](/download/attachments/38575588/image2021-1-29_11-44-9.png?version=1&modificationDate=1644394136045&api=v2)
+![](/markdown/14a27e50c9d458f751a4aca17cb6ecb4.png)
 
 我们看到好像所有的 `redis` 操作都报错了，随便点击一个 `redis` 的相关 `span`，查看一下详情呢：
 
-![](/download/attachments/38575588/image2021-1-29_11-45-7.png?version=1&modificationDate=1644394136059&api=v2)
+![](/markdown/2c59e1b7feaa7094ae74bdcc987bd6a6.png)
 
 原来是 `redis` 连接不上报错了，这样的话所有的 `orm` 缓存功能都失效了，但是可以看到并没有影响接口逻辑，只是所有的查询都走了数据库。这个报错是因为我本地忘了打开 `redis server`，我赶紧启动一下本地的 `redis server`，再看看效果：
 
-![](/download/attachments/38575588/image2021-1-29_11-47-48.png?version=1&modificationDate=1644394136068&api=v2)
+![](/markdown/f43bf06efa5da79a21146d9f6d93ceab.png)
 
 再把上面的客户端运行一下，查看 `jaeger`：
 
-![](/download/attachments/38575588/image2021-1-29_11-48-40.png?version=1&modificationDate=1644394136081&api=v2)
+![](/markdown/4a9fdf41e5e608907176a5d3e4bfd1ff.png)
 
-![](/download/attachments/38575588/image2021-1-29_11-49-18.png?version=1&modificationDate=1644394136091&api=v2)
+![](/markdown/405329a1897f8cc0c9cc28aba01505d9.png)
 
 现在就没有报错了。
 
@@ -272,7 +272,7 @@ g.DB().GetCache().SetAdapter(gcache.NewAdapterRedis(g.Redis()))
 
 我们随便点开一个 `ORM` 链路 `Span`，看看 `Attributes/Tags` 信息：
 
-![](/download/attachments/38575588/image2021-1-29_12-27-25.png?version=1&modificationDate=1644394136102&api=v2)
+![](/markdown/dd036ffacb33f3750edce3484387fe30.png)
 
 可以看到这里的 `span.kind` 是 `internal`，也就是之前介绍过的方法内部 `span` 类型。这里很多 `Tags` 在之前已经介绍过，因此这里主要介绍关于数据库相关的 `Tags`：
 
@@ -284,7 +284,7 @@ g.DB().GetCache().SetAdapter(gcache.NewAdapterRedis(g.Redis()))
 
 #### Events/Process
 
-![](/download/attachments/38575588/image2021-1-29_12-35-41.png?version=1&modificationDate=1644394136112&api=v2)
+![](/markdown/598498f523ea992f53d3cb58fd51eb64.png)
 
 | Event/Log | 说明 |
 | --- | --- |
@@ -296,7 +296,7 @@ g.DB().GetCache().SetAdapter(gcache.NewAdapterRedis(g.Redis()))
 
 #### Attributes/Tags
 
-![](/download/attachments/38575588/image2021-1-29_12-39-54.png?version=1&modificationDate=1644394136121&api=v2)
+![](/markdown/b6acd314e55ef431966734940ea867fe.png)
 
 | Attribute/Tag | 说明 |
 | --- | --- |
@@ -306,7 +306,7 @@ g.DB().GetCache().SetAdapter(gcache.NewAdapterRedis(g.Redis()))
 
 #### Events/Process
 
-![](/download/attachments/38575588/image2021-1-29_12-42-22.png?version=1&modificationDate=1644394136131&api=v2)
+![](/markdown/34139be20f62d27fb0a16fd2edf59031.png)
 
 | Event/Log | 说明 |
 | --- | --- |

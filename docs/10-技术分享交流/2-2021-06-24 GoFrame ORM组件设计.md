@@ -8,7 +8,7 @@ GoFrame的ORM组件功能相当强大，由于准备及分享时间有限，本�
 
 直播地址： [https://live.bilibili.com/21878276](https://live.bilibili.com/21878276)
 
-![](/download/attachments/7302551/image2021-6-21_19-32-2.png?version=1&modificationDate=1624275076650&api=v2)![](/download/attachments/7302551/image2021-6-21_19-34-18.png?version=1&modificationDate=1624275213013&api=v2)
+![](/markdown/2a110b53cb90f2b0ea1af07ed17c4925.png)![](/markdown/823bc3dcb047efeda12e132de48456e4.png)
 
 PPT文件下载： [GoFrame ORM组件设计.pptx](/download/attachments/7302551/GoFrame%20ORM%E7%BB%84%E4%BB%B6%E8%AE%BE%E8%AE%A1.pptx?version=1&modificationDate=1624540592693&api=v2)
 

@@ -112,7 +112,7 @@ func main() {
 
 页面展示如下：
 
-![](/download/attachments/47703685/image2022-5-18_21-6-48.png?version=1&modificationDate=1652879018238&api=v2)
+![](/markdown/c4942cfdd7b4a35c570e4e741619d6c0.png)
 
 开发者自定义其他的接口文档UI类似如此。
 

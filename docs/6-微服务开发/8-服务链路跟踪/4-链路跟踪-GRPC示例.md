@@ -8,7 +8,7 @@ title: 链路跟踪-GRPC示例
 
 ## 目录结构
 
-![](/download/attachments/3673718/image2022-2-9_16-16-13.png?version=1&modificationDate=1644394432696&api=v2)
+![](/markdown/e9fe7410038348854e83de6cb3e35e32.png)
 
 ## Protobuf
 
@@ -252,27 +252,27 @@ func StartRequests() {
 
 **启动服务端：**
 
-![](/download/attachments/3673718/image2021-1-29_13-13-47.png?version=1&modificationDate=1611897227334&api=v2)
+![](/markdown/3470e30ff88d5fdafcaaa175ed5d40a6.png)
 
 **启动客户端：**
 
-![](/download/attachments/3673718/image2021-1-29_13-14-11.png?version=1&modificationDate=1611897251963&api=v2)
+![](/markdown/3730fb2264d7e19a4990cdf8470c3998.png)
 
 这里客户端的执行最后报了一个错误，那是我们 **故意为之**，目的是演示 `GRPC` 报错时的链路信息展示。我们打开 `jaeger` 查看一下链路跟踪信息：
 
-![](/download/attachments/3673718/image2021-1-29_13-16-1.png?version=1&modificationDate=1611897362238&api=v2)
+![](/markdown/933c5a2bda5208eaf0b92231923a8334.png)
 
 可以看到本次请求涉及到两个服务： `tracing-grpc-client` 和 `tracing-grpc-server`，即客户端和服务端。整个请求链路涉及到 `17` 个 `span`，客户端 `5` 个 `span`，服务端 `12` 个 `span`，并且产生了 `2` 个错误。我们点击查看详情：
 
-![](/download/attachments/3673718/image2021-1-29_13-19-29.png?version=1&modificationDate=1611897569747&api=v2)
+![](/markdown/4ebecd20a7894a222dfacffe33ccf262.png)
 
 我们点击查看一下最后接口调用错误的 `span` 情况：
 
-![](/download/attachments/3673718/image2021-1-29_13-21-10.png?version=1&modificationDate=1611897670573&api=v2)
+![](/markdown/f0e9b3892dbbb628757686a311e8bbf0.png)
 
 看起来像个参数校验错误，点击查看 `Events/Logs` 中的请求参数：
 
-![](/download/attachments/3673718/image2021-1-29_13-22-17.png?version=1&modificationDate=1611897737504&api=v2)
+![](/markdown/a9c5cdcd7e86c22f926fd20a141f3d68.png)
 
 查看 `Process` 中的 `Log` 信息可以看到，是由于传递的参数为 `-1`，不满足校验规则，因此在数据校验的时候报错返回了。
 
@@ -282,7 +282,7 @@ func StartRequests() {
 
 #### Attributes
 
-![](/download/attachments/3673718/image2021-1-29_13-25-43.png?version=1&modificationDate=1611897943443&api=v2)
+![](/markdown/273442cb521050b63863e94ac9334d68.png)
 
 | Attribute/Tag | 说明 |
 | --- | --- |
@@ -295,7 +295,7 @@ func StartRequests() {
 
 #### Events/Logs
 
-![](/download/attachments/3673718/image2021-1-29_13-32-12.png?version=1&modificationDate=1611898332852&api=v2)
+![](/markdown/3ee7778da75473938eb5acd4459304a5.png)
 
 | Event/Log | 说明 |
 | --- | --- |
@@ -308,12 +308,12 @@ func StartRequests() {
 
 #### Attributes
 
-![](/download/attachments/3673718/image2021-1-29_13-36-49.png?version=1&modificationDate=1611898610068&api=v2)
+![](/markdown/b6a1d35aebb050058c9305cfb49a4bff.png)
 
 `GRPC Server` 端的 `Attributes` 含义同 `GRPC Client`，在同一请求中，打印的数据基本一致。
 
 #### Events
 
-![](/download/attachments/3673718/image2021-1-29_13-37-8.png?version=1&modificationDate=1611898629216&api=v2)
+![](/markdown/88e292828c1785d7e6bd1ba5af191414.png)
 
 `GRPC Server` 端的 `Events` 与 `GRPC Client` 不同的是，在同一请求中，服务端接收到的 `metadata` 为 `grpc.metadata.incoming`，其他同 `GRPC Client`。

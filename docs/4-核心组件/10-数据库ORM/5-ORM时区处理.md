@@ -8,7 +8,7 @@ title: ORM时区处理
 
 `MySQL` 数据库驱动用得最多的是这个第三方包： [https://github.com/go-sql-driver/mysql](https://github.com/go-sql-driver/mysql) ，在这个第三方包中有这么一个参数:
 
-![](/download/attachments/3672072/image2020-12-30_0-41-54.png?version=1&modificationDate=1609260114499&api=v2)
+![](/markdown/86813361650854a9b17490267709df8a.png)
 
 大概的意思是，当你提交的时间参数为 `time.Time` 时，该参数用来转换参数时区的。当你在连接数据库时，该参数传递 `loc=Local`，那么该 `driver` 将会自动将你提交的 `time.Time` 参数转换为本地程序设置的时区，没有手动设置时，那么该时区为 `UTC` 时区。那么我们来看两个例子。
 

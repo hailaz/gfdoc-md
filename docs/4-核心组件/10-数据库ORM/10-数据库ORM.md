@@ -41,13 +41,13 @@ title: 数据库ORM
 
 ## 知识图谱
 
-![](/download/attachments/1114686/GoFrame%20ORM%20Features.png?version=1&modificationDate=1623116876136&api=v2)
+![](/markdown/74298ab82a6dd23550ed8a4432fa4327.png)
 
 `GoFrame ORM Features`
 
 ## 组件关联
 
-![](/download/attachments/1114686/image2021-6-17_21-15-4.png?version=1&modificationDate=1623935662612&api=v2)
+![](/markdown/cf10ab2ff4d4b341190d5e5a47692061.png)
 
 `GoFrame ORM Dependencies`
 

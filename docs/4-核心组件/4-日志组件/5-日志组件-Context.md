@@ -53,7 +53,7 @@ Stack:
 
 ### 日志示例
 
-![](/download/attachments/1114222/image2021-8-11_21-15-37.png?version=1&modificationDate=1628687688646&api=v2)
+![](/markdown/d9b17863576dca859b0b13b98041130e.png)
 
 ## 传递给 `Handler`
 
@@ -63,4 +63,4 @@ Stack:
 
 `glog` 组件支持 `OpenTelemetry` 标准的链路跟踪特性，该支持是内置的，无需开发者做任何设置，具体请参考章节： [服务链路跟踪](/docs/微服务开发/服务链路跟踪)
 
-![](/download/attachments/1114222/image2022-1-25_22-32-48.png?version=1&modificationDate=1643121034417&api=v2)
+![](/markdown/a6ade54c58ba067b6be203a6e17b15e5.png)

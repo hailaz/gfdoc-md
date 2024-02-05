@@ -79,7 +79,7 @@ type Controller struct {
 
 `Cookie` 的有效期默认是1年，如果我们期望Cookie随着用户的浏览会话过期，像这样：
 
-![](/download/attachments/1114152/image2020-12-29_13-24-13.png?version=1&modificationDate=1609219453719&api=v2)
+![](/markdown/6aca8ffefa9db267e2a4ecf1423ba6be.png)
 
 那么我们仅需要通过 `SetCookie` 来设置 `Cookie` 键值对并将 `maxAge` 参数设置为 `0` 即可。像这样：
 

@@ -4,7 +4,7 @@ title: ORM常见问题
 
 ## `driver: bad connection`
 
-![](/download/attachments/129466371/image-2024-1-30_11-49-23.png?version=1&modificationDate=1706586564393&api=v2)
+![](/markdown/7b384b6f57115b11938d9c0a30dde732.png)
 
 如果数据库执行出现该错误，可能是由于本地数据库连接池的连接已经过期，可以检查一下客户端配置的 `MaxLifeTime` 配置是否超过数据库服务端设置的连接最大超时时间。更多客户端配置请参考章节： [ORM使用配置](/docs/核心组件/数据库ORM/ORM使用配置)
 
@@ -32,7 +32,7 @@ dryRun = "(可选)ORM空跑(只读不写)"
 
 ## MYSQL中的表情,用SQL查询后,乱码问题
 
-![](/download/thumbnails/129466371/image2021-4-30_19-40-54.png?version=1&modificationDate=1706586655300&api=v2)
+![](/markdown/867e951b823bb2652a6b7d62f70a1ff3.png)
 
 解决办法:
 

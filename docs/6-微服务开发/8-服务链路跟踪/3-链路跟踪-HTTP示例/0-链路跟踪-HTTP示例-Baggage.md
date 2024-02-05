@@ -109,17 +109,17 @@ func HelloHandler(r *ghttp.Request) {
 
 **启动服务端：**
 
-![](/download/attachments/38575579/image2021-1-29_0-51-11.png?version=1&modificationDate=1644394026035&api=v2)
+![](/markdown/54c448f0e2863c1159a5470adc52aac8.png)
 
 **启动客户端：**
 
-![](/download/attachments/38575579/image2021-1-29_0-51-43.png?version=1&modificationDate=1644394026079&api=v2)
+![](/markdown/8237ff1b02be36ce1b4e9c160be80d26.png)
 
 可以看到，客户端提交的 `baggage` 已经被服务端成功接收到并打印返回。并且客户端在输出日志内容的时候也同时输出的 `TraceId` 信息。 `TraceId` 是一条链路的唯一ID，可以通过该ID检索该链路的所有日志信息，并且也可以通过该 `TraceId` 在 `Jaeger` 系统上查询该调用链路详情。
 
 在 `Jaeger` 上查看链路信息：
 
-![](/download/attachments/38575579/image2021-1-29_10-47-52.png?version=1&modificationDate=1644394026111&api=v2)
+![](/markdown/83cd3fa37aab22f429df13682afdbe30.png)
 
 可以看到在这里出现了两个服务名称： `tracing-http-client` 和 `tracing-http-server`，表示我们这次请求涉及到两个服务，分别是HTTP请求的客户端和服务端，并且每个服务中分别涉及到 `2` 个 `span` 链路节点。
 
@@ -127,7 +127,7 @@ func HelloHandler(r *ghttp.Request) {
 
 ### HTTP Client Attributes
 
-![](/download/attachments/38575579/image2021-1-29_10-51-41.png?version=1&modificationDate=1644394026152&api=v2)
+![](/markdown/dcbb5e8e0444a4ce3b433aaa4308222c.png)
 
 | Attribute/Tag | 说明 |
 | --- | --- |
@@ -156,7 +156,7 @@ func HelloHandler(r *ghttp.Request) {
 
 ### HTTP Client Events
 
-![](/download/attachments/38575579/image2021-1-29_11-18-16.png?version=1&modificationDate=1644394026176&api=v2)
+![](/markdown/9d35a850c1713efc19d56ec3ac990013.png)
 
 | Event/Log | 说明 |
 | --- | --- |
@@ -168,12 +168,12 @@ func HelloHandler(r *ghttp.Request) {
 
 ### HTTP Server Attributes
 
-![](/download/attachments/38575579/image2021-1-29_11-19-42.png?version=1&modificationDate=1644394026208&api=v2)
+![](/markdown/4df0d3d8e5de018788b9b134ea13d535.png)
 
 `HTTP Server` 端的 `Attributes` 含义同 `HTTP Client`，在同一请求中，打印的数据基本一致。
 
 ### HTTP Server Events
 
-![](/download/attachments/38575579/image2021-1-29_11-20-53.png?version=1&modificationDate=1644394026245&api=v2)
+![](/markdown/f951072d1f5f116b90350788ad71bc89.png)
 
 `HTTP Server` 端的 `Events` 含义同 `HTTP Client`，在同一请求中，打印的数据基本一致。

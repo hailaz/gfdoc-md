@@ -83,7 +83,7 @@ func main() {
 
 执行后访问 [http://127.0.0.1:8999/](http://127.0.0.1:8999/) 可以看到数据通过流式方式不断地将数据返回给调用端。
 
-![](/download/attachments/84084732/image2023-4-7_14-24-32.png?version=1&modificationDate=1680848609730&api=v2)
+![](/markdown/1a8b7fecfb331ebe454633ac06b27592.png)
 
 ## 注意事项
 

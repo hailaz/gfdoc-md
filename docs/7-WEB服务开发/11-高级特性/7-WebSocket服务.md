@@ -209,7 +209,7 @@ func main() {
 
 我们首先执行示例代码 `main.go`，随后访问页面 [http://127.0.0.1:8199/](http://127.0.0.1:8199/)，随意输入请求内容并提交，随后在服务端关闭程序。可以看到，页面会回显提交的内容信息，并且即时展示 `websocket` 的连接状态的改变，当服务端关闭时，客户端也会即时地打印出关闭信息。
 
-![](/download/attachments/1114298/QQ%E6%88%AA%E5%9B%BE20180603000556.png?version=1&modificationDate=1608656405169&api=v2)
+![](/markdown/670be5bdaae78e5cd183fade39dc20e7.png)
 
 ## Websocket安全校验
 

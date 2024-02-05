@@ -114,15 +114,15 @@ func main() {
 
 可以看到，我们直接将之前生成的证书和秘钥文件地址传递给 `EnableHTTPS` 即可，通过 `s.SetPort(8199)` 设置HTTPS的服务端口，当然我们也可以通过 `s.SetHTTPSPort(8199)` 来实现，在单一服务下两者没有区别，当 `WebServer` 需要同时支持 `HTTP` 和 `HTTPS` 服务的时候，两者的作用就不同了，这个特性我们会在后面介绍。随后我们访问页面 [https://127.0.0.1:8199/](https://127.0.0.1:8199/) 来看一下效果：
 
-![](/download/attachments/1114278/Selection_006_1524490791104.png?version=1&modificationDate=1608654664585&api=v2)
+![](/markdown/5dc4bd89fa1808fd5bd803fbb51d8436.png)
 
 可以看到浏览器有提示信息，主要是因为我们生成的证书为私有的，非第三方授信企业提供的。浏览器大多会自带一些第三方授信的HTTPS证书机构，这些机构提供的HTTPS证书被浏览器认为是权威的、可信的，才不会出现该提示信息。一般这种第三方权威机构授信证书价格在每年几千到几万人民币不等，感兴趣的朋友可在搜索引擎上了解下。
 
-![](/download/attachments/1114278/Selection_007_1524491189160.png?version=1&modificationDate=1608654697712&api=v2)
+![](/markdown/cf2c20d3a4af3e5f3efe850b5fa89bc1.png)
 
 我们这里直接点击 `Advanced`，然后点击 `Proceed to 127.0.0.1 (unsafe)`，最终可以看到页面输出预期的结果：
 
-![](/download/attachments/1114278/Selection_008.png?version=1&modificationDate=1608654746791&api=v2)
+![](/markdown/725593f084b193851698d89a35a2bc40.png)
 
 ## `HTTPS` 与 `HTTP` 支持
 

@@ -8,7 +8,7 @@ title: 2021-04-17 GoCN Gopher Meetup
 
 本次技术分享主题仍旧以框架设计介绍为主，以下是参考目录：
 
-![](/download/attachments/7296880/image2021-4-14_17-55-22.png?version=1&modificationDate=1618394123326&api=v2)![](/download/attachments/7296880/image2021-4-18_0-54-15.png?version=1&modificationDate=1618678455826&api=v2)
+![](/markdown/0940acf2b1d7c695310da3d8316e88fc.png)![](/markdown/ec7498b17b29822f11262708edfba681.png)
 
 更多关于 `GoFrame` 设计相关的介绍，可参考《 [框架设计](/docs/框架设计)》章节。
 

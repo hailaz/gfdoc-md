@@ -108,15 +108,15 @@ func main() {
 
 1、 `pprof` 页面
 
-![](/download/attachments/1114350/Selection_005.png?version=1&modificationDate=1608656601593&api=v2)
+![](/markdown/0c6356506eecaa796495070aab32fcb6.png)
 
 2、堆使用量
 
-![](/download/attachments/1114350/Selection_006.png?version=1&modificationDate=1608656617795&api=v2)
+![](/markdown/990043747df320652c2ab0944f259f73.png)
 
 3、当前进程中的 `goroutine` 详情
 
-![](/download/attachments/1114350/Selection_007.png?version=1&modificationDate=1608656633881&api=v2)
+![](/markdown/4aad1989545e9fe67cf46de3b06686aa.png)
 
 ## 性能采集分析
 
@@ -163,7 +163,7 @@ Failed to execute dot. Is Graphviz installed? Error: exec: "dot": executable fil
 
 其中 `web` 命令用以图形展示接口之间的调用关系以及性能情况，但是需要安装 `Graphviz` 图形化工具，以我目前的系统为 `Ubuntu` 为例，直接执行 `sudo apt-get install graphviz` 命令即可安装完成图形化工具（如果是 `MacOS`，使用 `brew install Graphviz` 安装），随后再次使用 `web` 命令，最终生成以下图表：
 
-![](/download/attachments/1114350/pprof001.png?version=1&modificationDate=1608656662262&api=v2)
+![](/markdown/9f9678e7f3697dfe7c351ac613364eab.png)
 
 ### 内存使用分析
 
@@ -196,4 +196,4 @@ Showing top 10 nodes out of 19
 
 通过 `web` 图形展示，类似这样的：
 
-![](/download/attachments/1114350/image2021-5-24_20-6-2.png?version=1&modificationDate=1621857936984&api=v2)
+![](/markdown/c90f14644e3cf7c2f84f79c14e81ec40.png)

@@ -2,7 +2,7 @@
 title: 泛型类型-gvar
 ---
 
-![](/download/attachments/1114353/GoFrame%20GVar%20Features.png?version=1&modificationDate=1624362833292&api=v2)
+![](/markdown/cd9ed75865d6b5efe704f58156a42fa4.png)
 
 ## 基本介绍
 

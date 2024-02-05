@@ -2,7 +2,7 @@
 title: HOOK事件回调
 ---
 
-![](/download/attachments/1114387/image2021-6-8_22-53-43.png?version=1&modificationDate=1623163987980&api=v2)
+![](/markdown/25a101c86afb67b0c4f69162657c7853.png)
 
 `ghttp.Server` 提供了事件回调注册功能，类似于其他框架的 `中间件` 功能，相比较于 `中间件`，事件回调的特性更加简单。
 
@@ -318,7 +318,7 @@ $.get("http://localhost:8199/api.v1/order", function(result){
 
 结果如下：
 
-![](/download/attachments/1114387/Selection_154%20%281%29.png?version=1&modificationDate=1608655695718&api=v2)
+![](/markdown/a6db04d4319bfebb80ff75d5d0f64e6a.png)
 
 返回了不允许跨域的错误，接着我们修改一下测试代码，如下：
 
@@ -351,4 +351,4 @@ func main() {
 
 返回刚才的百度首页，再次执行请求 `AJAX` 请求，这次便成功了：
 
-![](/download/attachments/1114387/Selection_155%20%281%29.png?version=1&modificationDate=1608655714996&api=v2)
+![](/markdown/60e832386a9f7ae79a1022d33cb58db6.png)

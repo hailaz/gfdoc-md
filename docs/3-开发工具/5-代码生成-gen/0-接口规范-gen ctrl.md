@@ -38,7 +38,7 @@ title: 接口规范-gen ctrl
 
 以下是项目工程模板中的 `Hello` 接口示例：
 
-![](/download/attachments/93880327/image2023-7-20_10-26-56.png?version=1&modificationDate=1689820016995&api=v2)
+![](/markdown/71be1e0ac8d8eaa7794a476086c110c2.png)
 
 ### 建议性的命名
 
@@ -98,25 +98,25 @@ EXAMPLE
 
 如果您是使用的 `GolandIDE`，那么可以使用我们提供的配置文件： [watchers.xml](/download/attachments/93880327/watchers.xml?version=1&modificationDate=1686817123230&api=v2)  自动监听代码文件修改时自动生成接口文件。使用方式，如下图：
 
-![](/download/attachments/93880327/image2023-6-15_16-20-1.png?version=1&modificationDate=1686817201825&api=v2)
+![](/markdown/7d15b228b1ee57f8f34254a0413f4fc0.png)
 
 ## 使用示例
 
 ### 自动生成的接口定义文件
 
-![](/download/attachments/93880327/image2023-6-15_16-28-30.png?version=1&modificationDate=1686817711098&api=v2)
+![](/markdown/636aedc34da9bad1f84545dcfbeb38e6.png)
 
 ### 自动生成的控制器代码文件
 
-![](/download/attachments/93880327/image2023-6-15_16-29-12.png?version=1&modificationDate=1686817753666&api=v2)
+![](/markdown/cff8e2509fc89f6f4c4c0c82bb753334.png)
 
-![](/download/attachments/93880327/image2023-6-15_16-32-21.png?version=1&modificationDate=1686817942864&api=v2)
+![](/markdown/e2219959e53c38a80d37254cd3e9e9de.png)
 
 ### 自动生成的 `HTTP SDK` 代码文件
 
-![](/download/attachments/93880327/image2023-6-15_16-30-58.png?version=1&modificationDate=1686817859145&api=v2)
+![](/markdown/f2f5c6793e4aef5ea3c2004ce67edf7b.png)
 
-![](/download/attachments/93880327/image2023-6-15_16-31-39.png?version=1&modificationDate=1686817900339&api=v2)
+![](/markdown/dd2dac2338ebf838ba317f64b32f5a5f.png)
 
 ## 常见问题
 
@@ -142,7 +142,7 @@ EXAMPLE
 
 **例如**：
 
-![](/download/attachments/93880327/image2023-7-27_10-30-23.png?version=1&modificationDate=1690425024422&api=v2)
+![](/markdown/a5b84cce8be1a8b3d563102e7a4c81dd.png)
 
 **说明**：
 

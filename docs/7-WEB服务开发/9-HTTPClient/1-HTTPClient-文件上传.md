@@ -190,6 +190,6 @@ s.Run()
 - 参数接收的数据类型使用 `*ghttp.UploadFile`
 - 如果需要接口文档也支持文件类型，那么参数的标签中设置 `type` 为 `file` 类型
 
-![](/download/attachments/1114391/image2022-3-2_21-38-27.png?version=1&modificationDate=1653462308000&api=v2)
+![](/markdown/3146c1c8d37ca3745a3519f96361de6a.png)
 
-![](/download/attachments/1114391/image2022-3-2_21-39-2.png?version=2&modificationDate=1697624048027&api=v2)
+![](/markdown/57f441f1e4666f73cc320a4e3d47f50b.png)

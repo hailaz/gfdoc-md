@@ -93,7 +93,7 @@ $.get("http://localhost:8199/api.v1/order", function(result){
 
 结果如下：
 
-![](/download/attachments/1114393/Selection_154.png?version=1&modificationDate=1608655157195&api=v2)
+![](/markdown/06b316cb2a487071cf4be67a3481dac3.png)
 
 返回了不允许跨域请求的提示错误，接着我们修改一下服务端接口的测试代码，如下：
 
@@ -129,7 +129,7 @@ func main() {
 
 返回刚才的百度首页，再次执行请求 `AJAX` 请求，这次便成功了：
 
-![](/download/attachments/1114393/Selection_155.png?version=1&modificationDate=1608655178558&api=v2)
+![](/markdown/46045bd28217115525ef3db08eec309b.png)
 
 当然我们也可以通过 `CORSOptions` 对象以及 `CORS` 方法对跨域请求做更多的设置。
 

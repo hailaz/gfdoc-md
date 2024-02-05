@@ -12,15 +12,15 @@ title: DAO-组件痛点及改进
 
 ### 1、需要定义模型
 
-![](/download/attachments/7296196/image2021-3-10_16-8-53.png?version=1&modificationDate=1615363736828&api=v2)用户基础表（仅作演示，真实的表有数十个字段）
+![](/markdown/77daf5d299eabade856d950ab3161f94.png)用户基础表（仅作演示，真实的表有数十个字段）
 
-![](/download/attachments/7296196/image2021-3-10_16-9-48.png?version=1&modificationDate=1615363791249&api=v2)医生信息表（仅作演示，真实的表有上百个字段）
+![](/markdown/f4e8c70ee25ec329f2b64bb3a53ff503.png)医生信息表（仅作演示，真实的表有上百个字段）
 
 ### 2、 `GRPC` 接口实现示例
 
 一个简单的 `GRPC` 查询信息接口。
 
-![](/download/attachments/7296196/image2021-3-10_16-13-22.png?version=1&modificationDate=1615364005192&api=v2)一个简单的 `GRPC` 数据查询接口
+![](/markdown/b45b3af0a0bdc9ad30f739e31d0039ae.png)一个简单的 `GRPC` 数据查询接口
 
 ## 二、现有痛点描述
 
@@ -28,7 +28,7 @@ title: DAO-组件痛点及改进
 
 表字段与实体对象属性名称之间原本就有一定的关联规则，没有必要定义和维护大量的 `tag` 定义。
 
-![](/download/attachments/7296196/image2021-3-10_17-9-45.png?version=1&modificationDate=1615367388800&api=v2)
+![](/markdown/f1bb2d203d4fe4f2c44bbc7e14b7832a.png)
 
 大量非必要的 `tag` 定义，用于指定数据表字段到实体对象属性映射
 
@@ -36,7 +36,7 @@ title: DAO-组件痛点及改进
 
 无法通过返回的对象数据结构指定查询字段，要么只能 `SELECT *` ，要么只能通过额外的方法手动录入查询字段，效率很低下。
 
-![](/download/attachments/7296196/image2020-12-3_13-34-19.png?version=1&modificationDate=1615364385783&api=v2)
+![](/markdown/70e01c869632543b846b04a1696e9737.png)
 
 常见的 `SELECT *` 操作，无法根据接口对象指定查询字段
 
@@ -48,7 +48,7 @@ title: DAO-组件痛点及改进
 
 查询结果不支持 `struct` 智能转换，需要额外定义一个中间 `model` 模型，再通过其他工具进行复制，效率低。
 
-![](/download/attachments/7296196/image2021-3-10_18-5-30.png?version=1&modificationDate=1615370733434&api=v2)
+![](/markdown/05bf7722da09a27e7ca82bf6e0f89271.png)
 
 存在中间临时的模型对象，用于承接查询结果及返回结构对象赋值转换
 
@@ -56,7 +56,7 @@ title: DAO-组件痛点及改进
 
 这种方式不仅不优雅，对性能也有影响，还对 `GC` 不太友好。期望查询到数据时再自动创建返回对象，没有查询到数据时什么都不要做。
 
-![](/download/attachments/7296196/image2020-12-3_11-44-42.png?version=1&modificationDate=1615364432971&api=v2)
+![](/markdown/239f4b75b4b77e85bca523371a7dd1b4.png)
 
 需要预先初始化返回对象，不管有无查询到数据
 
@@ -64,7 +64,7 @@ title: DAO-组件痛点及改进
 
 大部分的 `Golang` 初学者似乎都倾向于使用一个全局的 `DB` 对象，在查询的时候通过 `DB` 对象生成特定表的 `Model` 对象再执行 `CURD` 操作，这是一种面向过程的使用方式。这种方式并没有代码分层的设计可言， **使得数据操作和业务逻辑高度耦合**。
 
-![](/download/attachments/7296196/image2020-12-3_11-47-1.png?version=1&modificationDate=1615364456585&api=v2)
+![](/markdown/d73fdaa5b76b831db0a2c1069742c218.png)
 
 原始数据库对象操作方式，没有 `DAO` 封装
 
@@ -72,7 +72,7 @@ title: DAO-组件痛点及改进
 
 举个例子， `userId` 这个字段假如一不小心写成了 `UserId` 或者 `userid`，测试的时候如果没有完全覆盖到，在一定的条件下才触发查询操作，是不是会造成新的一场事故呢？
 
-![](/download/attachments/7296196/image2021-3-10_17-40-40.png?version=1&modificationDate=1615369243871&api=v2)
+![](/markdown/46d8aae38995327c6ce26832d21f628b.png)
 
 大量的字符串硬编码
 
@@ -80,15 +80,15 @@ title: DAO-组件痛点及改进
 
 指针属性对象为业务逻辑处理埋下隐患，开发者在代码逻辑中需要在指针与属性之间来回切换，特别是一些基础类型往往需要通过重新取值的方式传递参数。如果输入参数是 `interface{}` 类型，那么更容易引起 `BUG`。
 
-![](/download/attachments/7296196/image2022-1-13_23-29-3.png?version=1&modificationDate=1642087612801&api=v2)
+![](/markdown/620c8a9a4a47de0243748d588aa0bb51.png)
 
 `BUG` 示例，指针属性使用不当，引起地址比较逻辑错误。
 
-![](/download/attachments/7296196/image2022-1-13_23-29-50.png?version=1&modificationDate=1642087660032&api=v2)
+![](/markdown/daa08ad1e9102f4ac964a8176a80e061.png)
 
 同时也影响了业务模型结构体定义设计，对开发者造成了错误习惯引导（上层业务模型的指针属性往往是为了迎合底层数据表实体对象，方便数据传递）。
 
-![](/download/attachments/7296196/image2022-1-13_23-31-46.png?version=1&modificationDate=1642087776191&api=v2)
+![](/markdown/bba716ea66e03727826ae6401ce01b2d.png)
 
 值得注意一个常见错误，就是将底层数据实体模型当做顶层业务模型使用。特别是在底层数据实体对象使用指针属性的场景下，该问题十分明显。
 
@@ -124,6 +124,6 @@ title: DAO-组件痛点及改进
 
 11、等等。
 
-![](/download/attachments/7296196/image2021-3-10_18-47-5.png?version=1&modificationDate=1615373228772&api=v2)
+![](/markdown/90537635dc3b5623060fa9edfc49948a.png)
 
 采用 `DAO` 设计改进后的代码示例

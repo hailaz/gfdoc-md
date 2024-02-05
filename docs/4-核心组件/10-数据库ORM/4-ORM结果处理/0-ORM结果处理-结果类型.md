@@ -18,11 +18,11 @@ type Result   []Record               // 返回数据表记录列表
 
 举个🌰：
 
-![](/download/attachments/47699228/image2023-10-19_10-21-37.png?version=1&modificationDate=1697682098051&api=v2)
+![](/markdown/c4af671f6f43d161fc776afdffaaa047.png)
 
-![](/download/attachments/47699228/image2023-10-19_10-22-28.png?version=1&modificationDate=1697682148682&api=v2)
+![](/markdown/73f857180655a5dc19eb8deb79d3a774.png)
 
-![](/download/attachments/47699228/image2023-10-19_10-23-15.png?version=1&modificationDate=1697682195612&api=v2)
+![](/markdown/d8aedba99def08d9ad5e244dd0bde66a.png)
 
 ## 二、 `Record` 数据记录
 

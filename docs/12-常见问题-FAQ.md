@@ -61,7 +61,7 @@ D:\Program Files\Go\bin\pkg\mod\github.com\gogf\gf@v1.16.6\net\ghttp\internal\cl
 
 `found (v0.36.0), but does not contain package go.opentelemetry.io/otel/metric/registry`
 
-![](/download/attachments/7296348/image2023-2-15_12-10-59.png?version=1&modificationDate=1676434259781&api=v2)
+![](/markdown/08e4b24634f2819f4e6439c9cf9e08a8.png)
 
 解决办法，升级 `gf` 依赖到 `v1.16.9` 再 `go mod tidy`
 
