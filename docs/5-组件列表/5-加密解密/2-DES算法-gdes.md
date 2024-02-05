@@ -1,5 +1,5 @@
 ---
-title: DES算法-gdes
+title: 'DES算法-gdes'
 ---
 
 DES算法。

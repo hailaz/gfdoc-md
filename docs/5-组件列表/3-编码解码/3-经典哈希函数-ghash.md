@@ -1,5 +1,5 @@
 ---
-title: 经典哈希函数-ghash
+title: '经典哈希函数-ghash'
 ---
 
 ## 基本介绍

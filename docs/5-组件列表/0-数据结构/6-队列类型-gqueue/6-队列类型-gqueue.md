@@ -1,5 +1,5 @@
 ---
-title: 队列类型-gqueue
+title: '队列类型-gqueue'
 ---
 
 ## 基本介绍

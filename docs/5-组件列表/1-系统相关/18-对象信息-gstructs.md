@@ -1,5 +1,5 @@
 ---
-title: 对象信息-gstructs
+title: '对象信息-gstructs'
 ---
 
 ## 基本介绍

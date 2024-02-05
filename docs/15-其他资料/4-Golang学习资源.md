@@ -1,5 +1,5 @@
 ---
-title: Golang学习资源
+title: 'Golang学习资源'
 ---
 
 ## 一、大佬博客

@@ -1,5 +1,5 @@
 ---
-title: SHA1算法-gsha1
+title: 'SHA1算法-gsha1'
 ---
 
 SHA1算法。

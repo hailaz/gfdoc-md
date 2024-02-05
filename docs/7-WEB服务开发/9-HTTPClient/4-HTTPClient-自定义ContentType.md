@@ -1,5 +1,5 @@
 ---
-title: HTTPClient-自定义ContentType
+title: 'HTTPClient-自定义ContentType'
 ---
 
 ## 示例1，提交 `Json` 请求

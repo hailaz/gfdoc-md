@@ -1,5 +1,5 @@
 ---
-title: 资源打包-pack
+title: '资源打包-pack'
 ---
 
 ## 使用方式

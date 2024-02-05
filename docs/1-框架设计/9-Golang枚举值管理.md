@@ -1,5 +1,5 @@
 ---
-title: Golang枚举值管理
+title: 'Golang枚举值管理'
 ---
 
 ## Go实现枚举值

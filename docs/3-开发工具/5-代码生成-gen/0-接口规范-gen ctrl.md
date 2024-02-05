@@ -1,5 +1,5 @@
 ---
-title: 接口规范-gen ctrl
+title: '接口规范-gen ctrl'
 ---
 
 该功能特性从 `v2.5` 版本开始提供。该命令目前仅支持 `HTTP` 接口开发， `GRPC` 部分请参考 `gen pb` 命令。未来会考虑 `HTTP` 及 `GRPC` 统一使用该命令生成控制器及 `SDK` 源代码。

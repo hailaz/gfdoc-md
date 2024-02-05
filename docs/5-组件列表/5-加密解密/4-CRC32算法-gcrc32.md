@@ -1,5 +1,5 @@
 ---
-title: CRC32算法-gcrc32
+title: 'CRC32算法-gcrc32'
 ---
 
 CRC32算法。

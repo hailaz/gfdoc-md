@@ -1,5 +1,5 @@
 ---
-title: 工具方法-gutil
+title: '工具方法-gutil'
 ---
 
 ## 基本介绍

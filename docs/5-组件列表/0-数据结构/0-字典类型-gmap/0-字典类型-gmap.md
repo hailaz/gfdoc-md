@@ -1,5 +1,5 @@
 ---
-title: 字典类型-gmap
+title: '字典类型-gmap'
 ---
 
 ## 基本介绍

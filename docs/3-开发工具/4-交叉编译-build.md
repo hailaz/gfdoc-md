@@ -1,5 +1,5 @@
 ---
-title: 交叉编译-build
+title: '交叉编译-build'
 ---
 
 ## 使用方式

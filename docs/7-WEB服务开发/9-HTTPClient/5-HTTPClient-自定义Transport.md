@@ -1,5 +1,5 @@
 ---
-title: HTTPClient-自定义Transport
+title: 'HTTPClient-自定义Transport'
 ---
 
 由于 `gclient.Client` 内部封装扩展于标准库的 `http.Client` 对象，因此标准库 `http.Client` 有的特性， `gclient.Client` 也是支持的。我们这里提到的例子是 `Transport` 使用。来看几个示例：

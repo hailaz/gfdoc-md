@@ -1,5 +1,5 @@
 ---
-title: 配置管理-AdapterContent
+title: '配置管理-AdapterContent'
 ---
 
 ## `AdapterContent`

@@ -1,5 +1,5 @@
 ---
-title: ORM链式操作-Hook特性
+title: 'ORM链式操作-Hook特性'
 ---
 
 `Hook` 特性允许我们对特性的 `Model` 绑定 `CURD` 钩子处理。

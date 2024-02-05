@@ -1,5 +1,5 @@
 ---
-title: TOML编解码-gtoml
+title: 'TOML编解码-gtoml'
 ---
 
 `TOML` 数据格式编码解析。

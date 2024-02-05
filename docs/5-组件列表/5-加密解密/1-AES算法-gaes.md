@@ -1,5 +1,5 @@
 ---
-title: AES算法-gaes
+title: 'AES算法-gaes'
 ---
 
 AES算法。

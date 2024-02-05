@@ -1,5 +1,5 @@
 ---
-title: 查询时避免返回对象初始化及sql.ErrNoRows判断
+title: '查询时避免返回对象初始化及sql.ErrNoRows判断'
 ---
 
 ## 查询时避免返回对象初始化及 `sql.ErrNoRows` 判断

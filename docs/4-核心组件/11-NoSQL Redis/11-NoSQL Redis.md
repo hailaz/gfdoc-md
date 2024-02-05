@@ -1,5 +1,5 @@
 ---
-title: NoSQL Redis
+title: 'NoSQL Redis'
 ---
 
 ## 基本介绍

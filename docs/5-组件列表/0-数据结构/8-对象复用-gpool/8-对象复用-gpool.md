@@ -1,5 +1,5 @@
 ---
-title: 对象复用-gpool
+title: '对象复用-gpool'
 ---
 
 ## 基本介绍

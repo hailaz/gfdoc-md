@@ -1,5 +1,5 @@
 ---
-title: INI编解码-gini
+title: 'INI编解码-gini'
 ---
 
 INI数据格式编码解析。

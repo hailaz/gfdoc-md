@@ -1,5 +1,5 @@
 ---
-title: 如何给GoFrame贡献？
+title: '如何给GoFrame贡献？'
 ---
 
 很想参加开源项目，证明一下自己。

@@ -1,5 +1,5 @@
 ---
-title: 版本查看-version
+title: '版本查看-version'
 ---
 
 ## 使用方式

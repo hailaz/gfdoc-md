@@ -1,5 +1,5 @@
 ---
-title: Session-Storage接口开发
+title: 'Session-Storage接口开发'
 ---
 
 大部分场景下，通过 `gsession` 组件内置提供的常见 `Storage` 实现已经能够满足需求。如果有特殊的场景需要制定不易开发 `Storage` 当然也是支持的，因为 `gsession` 的功能都采用了接口化设计。

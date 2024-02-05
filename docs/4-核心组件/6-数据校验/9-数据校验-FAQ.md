@@ -1,5 +1,5 @@
 ---
-title: 数据校验-FAQ
+title: '数据校验-FAQ'
 ---
 
 ## `Struct` 默认值对 `required` 规则的影响

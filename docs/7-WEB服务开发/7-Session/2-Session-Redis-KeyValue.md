@@ -1,5 +1,5 @@
 ---
-title: Session-Redis-KeyValue
+title: 'Session-Redis-KeyValue'
 ---
 
 ## Redis KeyValue Storage

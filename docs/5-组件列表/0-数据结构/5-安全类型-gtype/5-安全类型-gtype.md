@@ -1,5 +1,5 @@
 ---
-title: 安全类型-gtype
+title: '安全类型-gtype'
 ---
 
 ## 基本介绍

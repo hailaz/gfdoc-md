@@ -1,5 +1,5 @@
 ---
-title: 2021-06-24 GoFrame ORM组件设计
+title: '2021-06-24 GoFrame ORM组件设计'
 ---
 
 Hi，大家好啊，本周四晚8点GOCN开源说分享主题《GoFrame ORM组件设计》，主要介绍GoFrame框架中核心组件ORM的设计及其相关特性。

@@ -1,5 +1,5 @@
 ---
-title: 树形类型-gtree
+title: '树形类型-gtree'
 ---
 
 ## 基本介绍

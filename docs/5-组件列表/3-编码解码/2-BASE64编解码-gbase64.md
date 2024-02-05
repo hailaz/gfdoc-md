@@ -1,5 +1,5 @@
 ---
-title: BASE64编解码-gbase64
+title: 'BASE64编解码-gbase64'
 ---
 
 `BASE64` 编码解析。

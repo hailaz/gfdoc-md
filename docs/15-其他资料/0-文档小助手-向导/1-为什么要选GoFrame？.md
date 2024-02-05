@@ -1,5 +1,5 @@
 ---
-title: 为什么要选GoFrame？
+title: '为什么要选GoFrame？'
 ---
 
 在设计新项目的时候

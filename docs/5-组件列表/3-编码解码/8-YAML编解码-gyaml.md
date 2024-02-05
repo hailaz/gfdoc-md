@@ -1,5 +1,5 @@
 ---
-title: YAML编解码-gyaml
+title: 'YAML编解码-gyaml'
 ---
 
 `YAML` 数据格式编码解析。

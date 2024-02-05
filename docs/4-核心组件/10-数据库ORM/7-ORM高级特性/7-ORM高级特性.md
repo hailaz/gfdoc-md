@@ -1,5 +1,5 @@
 ---
-title: ORM高级特性
+title: 'ORM高级特性'
 ---
 
 - [ORM高级特性-RawSQL](/docs/核心组件/数据库ORM/ORM高级特性/ORM高级特性-RawSQL)

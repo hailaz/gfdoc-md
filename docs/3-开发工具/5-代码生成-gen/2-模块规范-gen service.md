@@ -1,5 +1,5 @@
 ---
-title: 模块规范-gen service
+title: '模块规范-gen service'
 ---
 
 该功能特性从 `v2.1` 版本开始提供。

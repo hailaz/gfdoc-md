@@ -1,5 +1,5 @@
 ---
-title: GoFrame官方教程
+title: 'GoFrame官方教程'
 ---
 
 官方推荐以下四种形式的学习方式：

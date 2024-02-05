@@ -1,5 +1,5 @@
 ---
-title: 数据表PB-gen pbentity
+title: '数据表PB-gen pbentity'
 ---
 
 该功能特性从 `v2.4` 版本开始提供。

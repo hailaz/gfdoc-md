@@ -1,5 +1,5 @@
 ---
-title: MD5算法-gmd5
+title: 'MD5算法-gmd5'
 ---
 
 MD5算法。

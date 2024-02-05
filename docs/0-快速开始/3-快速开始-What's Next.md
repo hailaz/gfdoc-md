@@ -1,5 +1,5 @@
 ---
-title: 快速开始-What's Next
+title: '快速开始-What's Next'
 ---
 
 ## 简单总结

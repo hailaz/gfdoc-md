@@ -1,5 +1,5 @@
 ---
-title: ORM结果处理
+title: 'ORM结果处理'
 ---
 
 - [ORM结果处理-结果类型](/docs/核心组件/数据库ORM/ORM结果处理/ORM结果处理-结果类型)

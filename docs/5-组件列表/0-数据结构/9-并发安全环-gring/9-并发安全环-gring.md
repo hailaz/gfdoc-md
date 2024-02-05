@@ -1,5 +1,5 @@
 ---
-title: 并发安全环-gring
+title: '并发安全环-gring'
 ---
 
 ## 基本介绍

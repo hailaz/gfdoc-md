@@ -1,5 +1,5 @@
 ---
-title: 集合类型-gset
+title: '集合类型-gset'
 ---
 
 ## 基本介绍

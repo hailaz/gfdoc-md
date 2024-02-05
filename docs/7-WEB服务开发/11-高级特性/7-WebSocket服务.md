@@ -1,5 +1,5 @@
 ---
-title: WebSocket服务
+title: 'WebSocket服务'
 ---
 
 使用 `goframe` 框架进行 `websocket` 开发相当简单。我们以下通过实现一个简单的 `echo服务器` 来演示 `goframe` 框架的 `websocket` 的使用（客户端使用HTML5实现）。

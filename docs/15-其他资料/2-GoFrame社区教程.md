@@ -1,5 +1,5 @@
 ---
-title: GoFrame社区教程
+title: 'GoFrame社区教程'
 ---
 
 ## 一、Golang学习

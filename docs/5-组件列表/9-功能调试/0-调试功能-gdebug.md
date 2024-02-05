@@ -1,5 +1,5 @@
 ---
-title: 调试功能-gdebug
+title: '调试功能-gdebug'
 ---
 
 `goframe` 框架提供了丰富的调试功能，由 `gdebug` 组件实现。

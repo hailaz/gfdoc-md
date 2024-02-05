@@ -1,5 +1,5 @@
 ---
-title: Struct校验-基本使用
+title: 'Struct校验-基本使用'
 ---
 
 `Struct` 校验常使用以下链式操作方式：

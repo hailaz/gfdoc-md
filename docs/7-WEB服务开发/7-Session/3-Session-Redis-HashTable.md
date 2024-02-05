@@ -1,5 +1,5 @@
 ---
-title: Session-Redis-HashTable
+title: 'Session-Redis-HashTable'
 ---
 
 ## RedisHashTableStorage

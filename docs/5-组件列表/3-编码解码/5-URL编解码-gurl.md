@@ -1,5 +1,5 @@
 ---
-title: URL编解码-gurl
+title: 'URL编解码-gurl'
 ---
 
 `URL` 编码解析。

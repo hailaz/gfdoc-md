@@ -1,5 +1,5 @@
 ---
-title: 链表类型-glist
+title: '链表类型-glist'
 ---
 
 ## 基本介绍

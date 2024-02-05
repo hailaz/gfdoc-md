@@ -1,5 +1,5 @@
 ---
-title: 配置管理-AdapterFile
+title: '配置管理-AdapterFile'
 ---
 
 ## `AdapterFile`
