@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.1.1">
 <title data-rh="true">v2.3 2023-01-18 | GoFrame</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://goframe.org/gfdoc-md/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://goframe.org/gfdoc-md/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://goframe.org/gfdoc-md/docs/版本发布记录/v2.3 2023-01-18"><meta data-rh="true" property="og:locale" content="zh_Hans"><meta data-rh="true" name="docusaurus_locale" content="zh-Hans"><meta data-rh="true" name="docsearch:language" content="zh-Hans"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="v2.3 2023-01-18 | GoFrame"><meta data-rh="true" name="description" content="大家好啊！本次版本是 2022 年最后一个版本，也是 2023 年的第一个版本。该版本主要的目标："><meta data-rh="true" property="og:description" content="大家好啊！本次版本是 2022 年最后一个版本，也是 2023 年的第一个版本。该版本主要的目标："><link data-rh="true" rel="icon" href="/gfdoc-md/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://goframe.org/gfdoc-md/docs/版本发布记录/v2.3 2023-01-18"><link data-rh="true" rel="alternate" href="https://goframe.org/gfdoc-md/docs/版本发布记录/v2.3 2023-01-18" hreflang="zh-Hans"><link data-rh="true" rel="alternate" href="https://goframe.org/gfdoc-md/docs/版本发布记录/v2.3 2023-01-18" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/gfdoc-md/blog/rss.xml" title="GoFrame RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/gfdoc-md/blog/atom.xml" title="GoFrame Atom Feed"><link rel="stylesheet" href="/gfdoc-md/assets/css/styles.57a3be69.css">
-<script src="/gfdoc-md/assets/js/runtime~main.baf30531.js" defer="defer"></script>
+<script src="/gfdoc-md/assets/js/runtime~main.dba98dfd.js" defer="defer"></script>
 <script src="/gfdoc-md/assets/js/main.886c0ce0.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard" data-theme="light">
@@ -18,7 +18,7 @@
 <p>完整变更列表： <a href="https://github.com/gogf/gf/compare/v2.2.0...v2.3.1" target="_blank" rel="noopener noreferrer">https://github.com/gogf/gf/compare/v2.2.0...v2.3.1</a></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="新特性">新特性<a href="#新特性" class="hash-link" aria-label="新特性的直接链接" title="新特性的直接链接">​</a></h2>
 <ol>
-<li>将耦合较重的 <code>redis</code> 组件从主框架中解耦，作为社区组件提供。原有主框架增加 <code>redis</code> 接口定义，社区组件 <code>redis</code> 提供具体的接口实现。因此，请注意，主框架 <code>gredis</code> 组件的使用方式发生了一些变更，在依赖 <code>redis</code> 的项目中需要引入社区组件 <code>redis</code> 实现，否则方法执行将会返回错误。保留兼容原有基础的 <code>Do/DoVar</code> 方法，并增加了 <code>100+</code> 项常用 <code>redis</code> 操作方法： <a href="/gfdoc-md/docs/核心组件/NoSQL Redis/NoSQL Redis">NoSQL Redis</a></li>
+<li>将耦合较重的 <code>redis</code> 组件从主框架中解耦，作为社区组件提供。原有主框架增加 <code>redis</code> 接口定义，社区组件 <code>redis</code> 提供具体的接口实现。因此，请注意，主框架 <code>gredis</code> 组件的使用方式发生了一些变更，在依赖 <code>redis</code> 的项目中需要引入社区组件 <code>redis</code> 实现，否则方法执行将会返回错误。保留兼容原有基础的 <code>Do/DoVar</code> 方法，并增加了 <code>100+</code> 项常用 <code>redis</code> 操作方法： <a href="/gfdoc-md/docs/核心组件/NoSQL Redis">NoSQL Redis</a></li>
 <li>配置管理及注册发现组件新增常用服务接口实现：<!-- -->
 <ul>
 <li><strong>配置管理</strong>（ <code>nacos</code>）： <a href="https://github.com/gogf/gf/tree/master/contrib/config/nacos" target="_blank" rel="noopener noreferrer">https://github.com/gogf/gf/tree/master/contrib/config/nacos</a></li>
@@ -52,13 +52,13 @@
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="数据库组件">数据库组件<a href="#数据库组件" class="hash-link" aria-label="数据库组件的直接链接" title="数据库组件的直接链接">​</a></h3>
 <ol>
 <li><code>gdb</code></li>
-<li>为提高扩展性， <code>TX</code> 事务对象改为了接口定义，原有的 <code>TX</code> 对象改为了 <code>TXCore</code> 方便自定义接口实现对象的嵌套： <a href="/gfdoc-md/docs/核心组件/数据库ORM/ORM事务处理/ORM事务处理">ORM事务处理</a></li>
+<li>为提高扩展性， <code>TX</code> 事务对象改为了接口定义，原有的 <code>TX</code> 对象改为了 <code>TXCore</code> 方便自定义接口实现对象的嵌套： <a href="/gfdoc-md/docs/核心组件/数据库ORM/ORM事务处理">ORM事务处理</a></li>
 <li>增加 <code>Namespce</code> 配置项，用以支持个别数据库服务 <code>Catalog&amp;Schema</code> 区分的问题，原有的 <code>Schema</code> 继续代表数据库名称，而新增的 <code>NameSpace</code> 代表个别数据库服务的 <code>Schema</code> 配置： <a href="/gfdoc-md/docs/核心组件/数据库ORM/ORM使用配置">ORM使用配置</a></li>
 <li>改进数据库名称配置，增加对中文数据库名称的支持。</li>
-<li>执行 <code>SQL</code> 日志中增加当前执行的数据库名称打印。</li>
+<li>执行 <code>SQL</code> 日志中增加当前执行的数 据库名称打印。</li>
 <li>修复 <code>Count</code> 方法的缓存问题。</li>
 <li><code>gredis</code></li>
-<li>新增 <code>redis</code> 社区组件，将耦合较重的 <code>redis</code> 组件从主框架中解耦，作为社区组件提供。原有主框架增加 <code>redis</code> 接口定义，而社区组件 <code>redis</code> 提供具体的接口实现。因此，请注意，主框架 <code>gredis</code> 组件的使用方式发生了一些变更，在依赖 <code>redis</code> 的项目中需要引入社区组件 <code>redis</code> 实现，否则方法执行将会返回错误。保留兼容原有的 <code>Do/DoVar</code> 方法，并增加了 <code>100+</code> 项常用 <code>redis</code> 操作方法： <a href="/gfdoc-md/docs/核心组件/NoSQL Redis/NoSQL Redis">NoSQL Redis</a></li>
+<li>新增 <code>redis</code> 社区组件，将耦合较重的 <code>redis</code> 组件从主框架中解耦，作为社区组件提供。原有主框架增加 <code>redis</code> 接口定义，而社区组件 <code>redis</code> 提供具体的接口实现。因此，请注意，主框架 <code>gredis</code> 组件的使用方式发生了一些变更，在依赖 <code>redis</code> 的项目中需要引入社区组件 <code>redis</code> 实现，否则方法执行将会返回错误。保留兼容原有的 <code>Do/DoVar</code> 方法，并增加了 <code>100+</code> 项常用 <code>redis</code> 操作方法： <a href="/gfdoc-md/docs/核心组件/NoSQL Redis">NoSQL Redis</a></li>
 </ol>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="容器组件">容器组件<a href="#容器组件" class="hash-link" aria-label="容器组件的直接链接" title="容器组件的直接链接">​</a></h3>
 <ol>
@@ -75,7 +75,7 @@
 <li><code>gerror</code></li>
 <li>改进堆栈打印，统一使用空格替代 <code>\t</code>，以保证打印格式兼容不同的展示终端。</li>
 </ol>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="对象管理">对象管理<a href="#对象管理" class="hash-link" aria-label="对象管理的直接链接" title="对象管理的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="对象管理">对象管理<a href="#对象管理" class="hash-link" aria-label="对 象管理的直接链接" title="对象管理的直接链接">​</a></h3>
 <ol>
 <li><code>gins</code></li>
 <li>单例对象增加分组锁机制，提升在高并发下的锁机制性能。</li>
@@ -119,7 +119,7 @@
 <li>标记方法废弃： <code>Pack/PackToFile/PackToGoFile</code>。</li>
 <li>新增 <code>KeepPath</code> 打包选项，用以控制是否在打包文件中保留给定的相对路径，而不是使用带有本地打包目录前缀的路径（相当于去掉了目录前缀）。</li>
 <li><code>grpool</code></li>
-<li>新增 <code>supervisor</code> 特性，解决在 <code>worker</code> 数量较少的场景下，低概率下同时退出的问题  。</li>
+<li>新增 <code>supervisor</code> 特性，解决在 <code>worker</code> 数量较少的场景下，低概率下同时退出的问题。</li>
 <li><code>gstructs</code></li>
 <li>新增 <code>Tag*</code> 方法，用以获取常见的标签值。</li>
 <li><code>gtime</code></li>
@@ -162,7 +162,7 @@
 <li>增加 <code>gf fix</code> 命令，用于低版本升级高版本自动更新本地代码不兼容变更： <a href="/gfdoc-md/docs/开发工具/兼容修复-fix">兼容修复-fix</a></li>
 <li>增加 <code>gf up</code> 命令，用以将本地的框架低版本升级到最新的框架版本： <a href="/gfdoc-md/docs/开发工具/框架升级-up">框架升级-up</a></li>
 <li>改进 <code>gf build</code> 命令，在构建之前增加环境变量信息打印。</li>
-<li>改进 <code>gf pack</code> 命令，增加 <code>KeepPath</code> 参数，  用以控制资源打包后是否保留相对路径： <a href="/gfdoc-md/docs/开发工具/资源打包-pack">资源打包-pack</a></li>
+<li>改进 <code>gf pack</code> 命令，增加 <code>KeepPath</code> 参数，用以控制资源打包后是否保留相对路径： <a href="/gfdoc-md/docs/开发工具/资源打包-pack">资源打包-pack</a></li>
 <li>改进 <code>gf gen dao</code> 命令，生成的 <code>Transaction</code> 方法中 <code>tx</code> 参数从对象指针改为了接口。</li>
 </ol>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="兼容提示">兼容提示<a href="#兼容提示" class="hash-link" aria-label="兼容提示的直接链接" title="兼容提示的直接链接">​</a></h2>

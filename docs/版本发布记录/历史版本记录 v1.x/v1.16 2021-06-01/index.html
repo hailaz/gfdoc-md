@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.1.1">
 <title data-rh="true">v1.16 2021-06-01 | GoFrame</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://goframe.org/gfdoc-md/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://goframe.org/gfdoc-md/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://goframe.org/gfdoc-md/docs/版本发布记录/历史版本记录 v1.x/v1.16 2021-06-01"><meta data-rh="true" property="og:locale" content="zh_Hans"><meta data-rh="true" name="docusaurus_locale" content="zh-Hans"><meta data-rh="true" name="docsearch:language" content="zh-Hans"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="v1.16 2021-06-01 | GoFrame"><meta data-rh="true" name="description" content="Hello，小伙伴久等啦！距离上一次发布，时隔刚好半年，这半年发生了很多很多的事情。薛老的猫以不同的观测方式决定了小猫不同的结果，同样看待世界的不同方式决定了世界在我们眼中的样子。这次给大家带来了最新 GoFrame v1.16 版本！ GoFrame 是一款模块化、高性能、企业级的 Go 基础开发框架： https://goframe.org ，一款低调务实、真正意义的企业级 Golang 开发框架！本次更新包含了大量的新特性和功能改进，特别是全链路跟踪、 ORM 模型关联/嵌套事务/子查询/数十项新增方法、 HTTP 客户端拦截器、数据校验及 I18N 组件改进、重构版的定时器等等。本次更新内容较多，以下为主要更新介绍，希望大家喜欢！ Enjoy!"><meta data-rh="true" property="og:description" content="Hello，小伙伴久等啦！距离上一次发布，时隔刚好半年，这半年发生了很多很多的事情。薛老的猫以不同的观测方式决定了小猫不同的结果，同样看待世界的不同方式决定了世界在我们眼中的样子。这次给大家带来了最新 GoFrame v1.16 版本！ GoFrame 是一款模块化、高性能、企业级的 Go 基础开发框架： https://goframe.org ，一款低调务实、真正意义的企业级 Golang 开发框架！本次更新包含了大量的新特性和功能改进，特别是全链路跟踪、 ORM 模型关联/嵌套事务/子查询/数十项新增方法、 HTTP 客户端拦截器、数据校验及 I18N 组件改进、重构版的定时器等等。本次更新内容较多，以下为主要更新介绍，希望大家喜欢！ Enjoy!"><link data-rh="true" rel="icon" href="/gfdoc-md/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://goframe.org/gfdoc-md/docs/版本发布记录/历史版本记录 v1.x/v1.16 2021-06-01"><link data-rh="true" rel="alternate" href="https://goframe.org/gfdoc-md/docs/版本发布记录/历史版本记录 v1.x/v1.16 2021-06-01" hreflang="zh-Hans"><link data-rh="true" rel="alternate" href="https://goframe.org/gfdoc-md/docs/版本发布记录/历史版本记录 v1.x/v1.16 2021-06-01" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/gfdoc-md/blog/rss.xml" title="GoFrame RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/gfdoc-md/blog/atom.xml" title="GoFrame Atom Feed"><link rel="stylesheet" href="/gfdoc-md/assets/css/styles.57a3be69.css">
-<script src="/gfdoc-md/assets/js/runtime~main.baf30531.js" defer="defer"></script>
+<script src="/gfdoc-md/assets/js/runtime~main.dba98dfd.js" defer="defer"></script>
 <script src="/gfdoc-md/assets/js/main.886c0ce0.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard" data-theme="light">
@@ -16,7 +16,7 @@
 <ol>
 <li>框架新增 <strong>全链路跟踪</strong> 特性，采用 <code>OpenTelementry</code> 标准，目前已打通 <code>HTTP Client&amp;Server/GRPC Client&amp;Server/ORM/Redis/Logging</code> 组件，详细介绍请参考章节：</li>
 <li><a href="/gfdoc-md/docs/微服务开发/服务链路跟踪/链路跟踪-基本示例">链路跟踪-基本示例</a></li>
-<li><a href="/gfdoc-md/docs/微服务开发/服务链路跟踪/链路跟踪-HTTP示例/链路跟踪-HTTP示例">链路跟踪-HTTP示例</a></li>
+<li><a href="/gfdoc-md/docs/微服务开发/服务链路跟踪/链路跟踪-HTTP示例">链路跟踪-HTTP示例</a></li>
 <li><a href="/gfdoc-md/docs/微服务开发/服务链路跟踪/链路跟踪-GRPC示例">链路跟踪-GRPC示例</a></li>
 <li>数据库核心组件新增以下特性：</li>
 <li><strong>模型关联</strong>：<!-- -->
@@ -25,14 +25,14 @@
 <li><a href="/gfdoc-md/docs/核心组件/数据库ORM/ORM链式操作/ORM链式操作-模型关联/模型关联-静态关联-With特性">模型关联-静态关联-With特性</a></li>
 </ol>
 </li>
-<li><strong>嵌套事务</strong>： <a href="/gfdoc-md/docs/核心组件/数据库ORM/ORM事务处理/ORM事务处理">ORM事务处理</a></li>
+<li><strong>嵌套事务</strong>： <a href="/gfdoc-md/docs/核心组件/数据库ORM/ORM事务处理">ORM事务处理</a></li>
 <li><strong>子查询</strong> 特性： <a href="/gfdoc-md/docs/核心组件/数据库ORM/ORM链式操作/ORM链式操作-数据查询/ORM查询-子查询特性">ORM查询-子查询特性</a></li>
 <li>新增 <strong>数十项</strong> 个ORM模型操作方法（参考 <code>PHP Laravel</code>），正在使用 <code>goframe</code> 的小伙伴们建议务必看一下：<!-- -->
 <ol>
-<li><a href="/gfdoc-md/docs/核心组件/数据库ORM/ORM链式操作/ORM链式操作">ORM链式操作(🔥重点🔥)</a></li>
+<li><a href="/gfdoc-md/docs/核心组件/数据库ORM/ORM链式操作">ORM链式操作(🔥重点🔥)</a></li>
 <li><a href="/gfdoc-md/docs/核心组件/数据库ORM/ORM链式操作/ORM链式操作-写入保存">ORM链式操作-写入保存</a></li>
 <li><a href="/gfdoc-md/docs/核心组件/数据库ORM/ORM链式操作/ORM链式操作-更新删除">ORM链式操作-更新删除</a></li>
-<li><a href="/gfdoc-md/docs/核心组件/数据库ORM/ORM链式操作/ORM链式操作-数据查询/ORM链式操作-数据查询">ORM链式操作-数据查询</a></li>
+<li><a href="/gfdoc-md/docs/核心组件/数据库ORM/ORM链式操作/ORM链式操作-数据查询">ORM链式操作-数据查询</a></li>
 </ol>
 </li>
 <li>HTTP <strong>客户端增加中间件拦截器</strong> 功能特性，详情请参考章节： <a href="/gfdoc-md/docs/WEB服务开发/HTTPClient/HTTPClient-拦截器/中间件">HTTPClient-拦截器/中间件</a></li>
@@ -40,12 +40,12 @@
 <li>增加链式操作校验对象： <a href="/gfdoc-md/docs/核心组件/数据校验/数据校验-校验对象">数据校验-校验对象</a></li>
 <li>增加对 <code>Context</code> 的支持，并改进支持了强大的 <code>I18N</code> 国际化错误信息管理能力，详情请参考章节：<!-- -->
 <ol>
-<li><a href="/gfdoc-md/docs/核心组件/I18N国际化/I18N国际化">I18N国际化</a></li>
+<li><a href="/gfdoc-md/docs/核心组件/I18N国际化">I18N国际化</a></li>
 <li><a href="/gfdoc-md/docs/核心组件/数据校验/数据校验-自定义错误">数据校验-自定义错误</a></li>
 </ol>
 </li>
-<li>自定义校验规则改进，增加局部校验规则注册特性，增加完整数据校验： <a href="/gfdoc-md/docs/核心组件/数据校验/数据校验-自定义规则/数据校验-自定义规则">数据校验-自定义规则</a></li>
-<li>定时器组件 <code>gtimer</code> 的全新重构，去掉 <code>TimingWheel</code> 的实现，改为了更加稳健的 <code>PriorityQueue</code> 的改进实现，详情请参考章节： <a href="/gfdoc-md/docs/组件列表/系统相关/定时器-gtimer/定时器-gtimer">定时器-gtimer</a></li>
+<li>自定义校验规则改进，增加局部校验规则注册特性，增加完整数据校验： <a href="/gfdoc-md/docs/核心组件/数据校验/数据校验-自定义规则">数据校验-自定义规则</a></li>
+<li>定时器组件 <code>gtimer</code> 的全新重构，去掉 <code>TimingWheel</code> 的实现，改为了更加稳健的 <code>PriorityQueue</code> 的改进实现，详情请参考章节： <a href="/gfdoc-md/docs/组件列表/系统相关/定时器-gtimer">定时器-gtimer</a></li>
 <li>框架核心基础组件已增加全错误堆栈特性。当错误产生时可以完整获取链路相关组件的错误堆栈信息。该特性只有一款基础组件相对完善并且统一设计的开发框架才能具备。</li>
 </ol>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="功能改进">功能改进<a href="#功能改进" class="hash-link" aria-label="功能改进的直接链接" title="功能改进的直接链接">​</a></h2>
@@ -53,13 +53,13 @@
 <li><code>ORM</code>
 <ol>
 <li>增加全链路的链路跟踪上下文 <code>Context</code> 参数传递： <a href="/gfdoc-md/docs/核心组件/数据库ORM/ORM上下文变量">ORM上下文变量</a> 链路跟踪中默认会记录 <code>SQL</code> 以及数据库连接信息（不包含敏感配置），组件链路跟踪信息可配置关闭。</li>
-<li>进一步完善 <code>ORM</code> 组件日志记录，日志仅在调试模式下有效，详细介绍请参考章节： <a href="/gfdoc-md/docs/核心组件/数据库ORM/ORM高级特性/ORM高级特性">ORM高级特性</a></li>
-<li>新增数十项 <code>ORM</code> 模型操作方法（参考 <code>PHP Laravel</code>），例如： <code>InsertAndGetId</code>、 <code>Min/Max/Avg/Sum</code>、 <code>Increment/Decrement</code>、 <code>WhereBetween/WhereLike/WhereIn/WhereNull</code>、 <code>OrderAsc/OrderDesc/OrderRandom</code> 等等。正在使用 <code>goframe</code> 的小伙伴们建议务必看一下，详情请参考章节：<!-- -->
+<li>进一步完善 <code>ORM</code> 组件日志记录，日志仅在调试模式下有效，详细介绍请参考章节： <a href="/gfdoc-md/docs/核心组件/数据库ORM/ORM高级特性">ORM高级特性</a></li>
+<li>新增数十项 <code>ORM</code> 模型操作方法（参考 <code>PHP Laravel</code>），例如： <code>InsertAndGetId</code>、 <code>Min/Max/Avg/Sum</code>、 <code>Increment/Decrement</code>、 <code>WhereBetween/WhereLike/WhereIn/WhereNull</code>、 <code>OrderAsc/OrderDesc/OrderRandom</code> 等等。正在使用 <code>goframe</code> 的小伙伴们建议务必看一下，  详情请参考章节：<!-- -->
 <ol>
-<li><a href="/gfdoc-md/docs/核心组件/数据库ORM/ORM链式操作/ORM链式操作">ORM链式操作(🔥重点🔥)</a></li>
+<li><a href="/gfdoc-md/docs/核心组件/数据库ORM/ORM链式操作">ORM链式操作(🔥重点🔥)</a></li>
 <li><a href="/gfdoc-md/docs/核心组件/数据库ORM/ORM链式操作/ORM链式操作-写入保存">ORM链式操作-写入保存</a></li>
 <li><a href="/gfdoc-md/docs/核心组件/数据库ORM/ORM链式操作/ORM链式操作-更新删除">ORM链式操作-更新删除</a></li>
-<li><a href="/gfdoc-md/docs/核心组件/数据库ORM/ORM链式操作/ORM链式操作-数据查询/ORM链式操作-数据查询">ORM链式操作-数据查询</a></li>
+<li><a href="/gfdoc-md/docs/核心组件/数据库ORM/ORM链式操作/ORM链式操作-数据查询">ORM链式操作-数据查询</a></li>
 </ol>
 </li>
 <li>新版本开始，数据库 <code>ORM</code> 链式操作默认启用了字段过滤特性，当给定的参数无法与数据表字段智能匹配时将会被自动过滤，详情请参考章节： <a href="/gfdoc-md/docs/核心组件/数据库ORM/ORM链式操作/ORM链式操作-字段过滤">ORM链式操作-字段过滤</a></li>
@@ -70,9 +70,9 @@
 <li><code>HTTP</code>
 <ol>
 <li><code>HTTP Client</code> 增加中间件拦截器功能特性： <a href="/gfdoc-md/docs/WEB服务开发/HTTPClient/HTTPClient-拦截器/中间件">HTTPClient-拦截器/中间件</a></li>
-<li><code>HTTP Client&amp;Server</code> 增加链路跟踪支持： <a href="/gfdoc-md/docs/微服务开发/服务链路跟踪/链路跟踪-HTTP示例/链路跟踪-HTTP示例">链路跟踪-HTTP示例</a></li>
-<li><code>ghttp</code> 包中的客户端请求方法标记废除，后续统一采用 <code>HTTP Client</code> 对象方式使 用。</li>
-<li>改进 <code>Request.Parse</code> 方法的数据校验，直接校验提交参数，而不是校验数据转换后的 <code>struct</code> 对象： <a href="/gfdoc-md/docs/WEB服务开发/请求输入/请求输入-请求校验">请求输入-请求校验</a></li>
+<li><code>HTTP Client&amp;Server</code> 增加链路跟踪支持： <a href="/gfdoc-md/docs/微服务开发/服务链路跟踪/链路跟踪-HTTP示例">链路跟踪-HTTP示例</a></li>
+<li><code>ghttp</code> 包中的客户端请求方法标记废除，后续统一采用 <code>HTTP Client</code> 对象方式使用。</li>
+<li>改进 <code>Request.Parse</code> 方法的数据校验，直接校验提交参数，而不是校验数据转换后的 <code>struct</code> 对象： <a href="/gfdoc-md/docs/WEB服务开发/请求输入/请求输  入-请求校验">请求输入-请求校验</a></li>
 <li>增加 <code>WrapF/WrapH</code> 方法，用于将标准库的 <code>http.HandlerFunc/http.Handler</code> 转换为 <code>ghttp.Server</code> 支持的服务方法类型。</li>
 <li>其他大量改进工作，细节也很多。关键结果就是组件功能更加丰富、代码更加严谨、使用更加便捷。</li>
 </ol>
@@ -80,12 +80,12 @@
 <li><code>gvalid</code>
 <ol>
 <li><code>Check</code> 方法名称修改为了 <code>CheckValue</code>，详情请参考章节： <a href="/gfdoc-md/docs/核心组件/数据校验/数据校验-参数类型/数据校验-单数据校验">数据校验-单数据校验</a></li>
-<li>新增 <code>CheckStructWithData</code> 方法，用于校验指定参数的 <code>struct</code> 对象： <a href="/gfdoc-md/docs/核心组件/数据校验/数据校验-参数类型/数据校验-Struct校验/数据校验-Struct校验">数据校验-Struct校验</a></li>
+<li>新增 <code>CheckStructWithData</code> 方法，用于校验指定参数的 <code>struct</code> 对象： <a href="/gfdoc-md/docs/核心组件/数据校验/数据校验-参数类型/数据校验-Struct校验">数据校验-Struct校验</a></li>
 <li>新增 <code>Validator</code> 校验对象，用于便捷的链式操作，并可在后期进行进一步扩展： <a href="/gfdoc-md/docs/核心组件/数据校验/数据校验-校验对象">数据校验-校验对象</a></li>
-<li>自定义的规则方法定义增加了 <code>Context</code> 上下文变量输入，并增加 <code>RuleFunc</code> 及 <code>RuleFuncMap</code> 局部校验规则注册方法： <a href="/gfdoc-md/docs/核心组件/数据校验/数据校验-自定义规则/数据校验-自定义规则">数据校验-自定义规则</a></li>
+<li>自定义的规则方法定义增加了 <code>Context</code> 上下文变量输入，并增加 <code>RuleFunc</code> 及 <code>RuleFuncMap</code> 局部校验规则注册方法： <a href="/gfdoc-md/docs/核心组件/数据校验/数据校验-自定义规则">数据校验-自定义规则</a></li>
 <li>左右校验方法增加了 <code>Context</code> 参数支持，并改进支持了强大的 <code>I18N</code> 国际化错误信息管理能力：<!-- -->
 <ol>
-<li><a href="/gfdoc-md/docs/核心组件/I18N国际化/I18N国际化">I18N国际化</a></li>
+<li><a href="/gfdoc-md/docs/核心组件/I18N国际化">I18N国际化</a></li>
 <li><a href="/gfdoc-md/docs/核心组件/数据校验/数据校验-自定义错误">数据校验-自定义错误</a></li>
 </ol>
 </li>
@@ -95,7 +95,7 @@
 </li>
 <li><code>gcache</code>
 <ol>
-<li>增加 <code>Ctx</code> 链式操作方法，用于上下文参数输入，详情请参考章节： <a href="/gfdoc-md/docs/核心组件/缓存管理/缓存管理">缓存管理</a></li>
+<li>增加 <code>Ctx</code> 链式操作方法，用于上下文参数输入，详情请参考章节： <a href="/gfdoc-md/docs/核心组件/缓存管理">缓存管理</a></li>
 <li><code>Adapter</code> 接口增加 <code>Context</code> 参数输入，便于上下文参数传递，并改进相关内置实现的适配器支持上下文参数传递： <a href="/gfdoc-md/docs/核心组件/缓存管理/缓存管理-接口设计">缓存管理-接口设计</a></li>
 </ol>
 </li>
@@ -132,12 +132,12 @@
 </li>
 <li><code>gtimer</code>
 <ol>
-<li>定时器组件 <code>gtimer</code> 的全新重构，去掉 <code>TimingWheel</code> 的实现，改为了更加稳健的 <code>PriorityQueue</code> 的改进实现，详情请参考章节： <a href="/gfdoc-md/docs/组件列表/系统相关/定时器-gtimer/定时器-gtimer">定时器-gtimer</a></li>
+<li>定时器组件 <code>gtimer</code> 的全新重构，去掉 <code>TimingWheel</code> 的实现，改为了更加稳健的 <code>PriorityQueue</code> 的改进实现，详情请参考章节： <a href="/gfdoc-md/docs/组件列表/系统相关/定时器-gtimer">定时器-gtimer</a></li>
 </ol>
 </li>
 <li><code>gview</code>
 <ol>
-<li>所有模板解析方法增加了 <code>Context</code> 参数输入： <a href="/gfdoc-md/docs/核心组件/模板引擎/模板引擎">模板引擎</a></li>
+<li>所有模板解析方法增加了 <code>Context</code> 参数输入： <a href="/gfdoc-md/docs/核心组件/模板引擎">模板引擎</a></li>
 </ol>
 </li>
 <li><code>gconv</code>
@@ -147,7 +147,7 @@
 </li>
 <li><code>gi18n</code>
 <ol>
-<li><code>I18N</code> 国际化组件增加对 <code>Context</code> 的支持，详情请参考章节： <a href="/gfdoc-md/docs/核心组件/I18N国际化/I18N国际化">I18N国际化</a></li>
+<li><code>I18N</code> 国际化组件增加对 <code>Context</code> 的支持，详情请参考章节： <a href="/gfdoc-md/docs/核心组件/I18N国际化">I18N国际化</a></li>
 <li>注意，所有方法都增加了 <code>ctx</code> 参数的输入，并去掉了部分方法的 <code>language</code> 参数，转而由 <code>ctx</code> 参数来控制 <code>language</code> 输入，并提高可扩展性： <a href="/gfdoc-md/docs/核心组件/I18N国际化/I18N国际化-使用介绍">I18N国际化-使用介绍</a></li>
 <li>去掉了 <code>TranslateFormatLang</code>、 <code>Tfl</code> 方法。</li>
 </ol>
