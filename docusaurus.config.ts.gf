@@ -89,7 +89,7 @@ const config: Config = {
     //     //   items: [
     //     //     {
     //     //       label: 'Doc',
-    //     //       to: '/docs/首页',
+    //     //       to: '/docs',
     //     //     },
     //     //   ],
     //     // },

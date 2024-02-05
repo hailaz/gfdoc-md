@@ -64,7 +64,7 @@ const config: Config = {
       title: 'GoFrame',
       logo: {
         alt: 'GoFrame Logo',
-        src: 'img/logo.svg',
+        src: 'img/favicon.ico',
       },
       items: [
         {
@@ -89,7 +89,7 @@ const config: Config = {
     //     //   items: [
     //     //     {
     //     //       label: 'Doc',
-    //     //       to: '/docs/首页',
+    //     //       to: '/docs',
     //     //     },
     //     //   ],
     //     // },

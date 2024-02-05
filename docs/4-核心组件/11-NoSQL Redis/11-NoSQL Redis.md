@@ -52,8 +52,8 @@ import (
 
 # 相关文档
 
-- [Redis-配置管理](/docs/核心组件/NoSQL Redis/Redis-配置管理)
-- [Redis-使用示例](/docs/核心组件/NoSQL Redis/Redis-使用示例)
-- [Redis-命令交互](/docs/核心组件/NoSQL Redis/Redis-命令交互)
-- [Redis-Conn对象](/docs/核心组件/NoSQL Redis/Redis-Conn对象)
-- [Redis-接口化设计](/docs/核心组件/NoSQL Redis/Redis-接口化设计)
+- [Redis-配置管理](/docs/核心组件/NoSQL%20Redis/Redis-配置管理)
+- [Redis-使用示例](/docs/核心组件/NoSQL%20Redis/Redis-使用示例)
+- [Redis-命令交互](/docs/核心组件/NoSQL%20Redis/Redis-命令交互)
+- [Redis-Conn对象](/docs/核心组件/NoSQL%20Redis/Redis-Conn对象)
+- [Redis-接口化设计](/docs/核心组件/NoSQL%20Redis/Redis-接口化设计)

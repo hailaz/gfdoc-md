@@ -2,6 +2,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import clsx from 'clsx';
 
+import { Redirect } from '@docusaurus/router';
 import styles from './index.module.css';
 
 function HomepageHeader() {
@@ -19,6 +20,8 @@ function HomepageHeader() {
 
 export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
+  return <Redirect to={`${siteConfig.baseUrl}docs`} />;
+  
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
