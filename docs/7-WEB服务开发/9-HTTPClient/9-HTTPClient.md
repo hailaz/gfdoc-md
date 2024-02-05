@@ -84,5 +84,5 @@ func (r *Response) Close() error
 - [HTTPClient-自定义Transport](/docs/WEB服务开发/HTTPClient/HTTPClient-自定义Transport)
 - [HTTPClient-请求信息打印](/docs/WEB服务开发/HTTPClient/HTTPClient-请求信息打印)
 - [HTTPClient-代理Proxy设置](/docs/WEB服务开发/HTTPClient/HTTPClient-代理Proxy设置)
-- [HTTPClient-拦截器/中间件](/docs/WEB服务开发/HTTPClient/HTTPClient-拦截器/中间件)
+- [HTTPClient-拦截器/中间件](/docs/WEB服务开发/HTTPClient/HTTPClient-拦截器中间件)
 - [HTTPClient-常见问题](/docs/WEB服务开发/HTTPClient/HTTPClient-常见问题)
