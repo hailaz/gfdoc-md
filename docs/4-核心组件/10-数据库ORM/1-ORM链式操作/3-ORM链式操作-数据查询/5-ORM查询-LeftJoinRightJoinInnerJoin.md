@@ -1,5 +1,5 @@
 ---
-title: ORM查询-LeftJoinRightJoinInnerJoin
+title: ORM查询-LeftJoin/RightJoin/InnerJoin
 ---
 
 ## `LeftJoin/RightJoin/InnerJoin`
