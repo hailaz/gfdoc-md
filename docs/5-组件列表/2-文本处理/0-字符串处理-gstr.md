@@ -3643,13 +3643,13 @@ Trim(str string, characterMask ...string) string
 func ExampleTrim() {
   	var (
   		str           = `*Hello World*`
-  		characterMask = "*"
+  		characterMask = "*d"
   		result        = gstr.Trim(str, characterMask)
   	)
   	fmt.Println(result)
 
   	// Output:
-  	// Hello World
+  	// Hello Worl
 }
 ```
 

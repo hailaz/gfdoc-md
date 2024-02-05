@@ -13,7 +13,7 @@ go install github.com/hailaz/doc2pdf/cmd/doc2pdf@latest
 doc2pdf gf -m=md
 // 复制生成的文件到docs和static
 cp -r -f output/goframe-latest-md/* docs/
-cp -r -f output/goframe-latest-static/* static/
+cp -r -f output/goframe-latest-md-static/* static/
 
 // windows
 // xcopy /s /y A\* B\
