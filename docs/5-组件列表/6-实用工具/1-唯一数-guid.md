@@ -27,7 +27,7 @@ import "github.com/gogf/gf/v2/util/guid"
 
 [https://pkg.go.dev/github.com/gogf/gf/v2/util/guid](https://pkg.go.dev/github.com/gogf/gf/v2/util/guid)
 
-## 基本介绍
+### 基本介绍
 
 `guid` 通过 `S` 方法生成 `32` 字节的唯一数，该方法定义如下：
 
@@ -61,7 +61,7 @@ func S(data ...[]byte) string
      - 如果给定 `1` 个自定义参数，那么剩余的字节将会使用随机数占位，长度为 `10` 个字节；
      - 如果给定 `2` 个自定义参数，那么剩余的字节将会使用随机数占位，长度为 `3` 个字节；
 
-## 基准测试
+### 基准测试
 
 ```
 goos: darwin
@@ -77,7 +77,7 @@ Benchmark_S_Data_2-12    	 4352824	       275.5 ns/op
 PASS
 ```
 
-## 示例1，基本使用
+### 示例1，基本使用
 
 ```
 package main
@@ -98,7 +98,7 @@ func main() {
 TraceId: oa9sdw03dk0c35q9bdwcnz42p00trwfr
 ```
 
-## 示例2，自定义参数
+### 示例2，自定义参数
 
 我们的 `SessionId` 生成需要具有比较好的唯一性，且需要防止轻易的碰撞，因此可以使用以下方式：
 

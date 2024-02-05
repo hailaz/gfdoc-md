@@ -2,11 +2,11 @@
 title: 链路跟踪-HTTP示例-数据操作
 ---
 
-# `HTTP+DB+Redis+Logging`
+## `HTTP+DB+Redis+Logging`
 
 我们再来看一个相对完整一点的例子，包含几个常用核心组件的链路跟踪示例，示例代码地址： [https://github.com/gogf/gf/tree/master/example/trace/http\_with\_db](https://github.com/gogf/gf/tree/master/example/trace/http_with_db)
 
-# 客户端
+## 客户端
 
 ```
 package main
@@ -96,7 +96,7 @@ func StartRequests() {
 2. `/user/query` 用于查询用户，使用前一个接口返回的用户ID。
 3. `/user/delete` 用于删除用户，使用之前接口返回的用户ID。
 
-# 服务端
+## 服务端
 
 ```
 package main
@@ -230,7 +230,7 @@ g.DB().GetCache().SetAdapter(gcache.NewAdapterRedis(g.Redis()))
 4. 在 `ORM` 的操作中，需要通过 `Ctx` 方法将上下文变量传递到组件中， `orm` 组件会自动识别当前上下文中是否包含Tracing链路信息，如果包含则自动启用链路跟踪特性。
 5. 在 `ORM` 的操作中，这里使用 `Cache` 方法缓存查询结果到 `redis` 中，并在删除操作中也使用 `Cache` 方法清除 `redis` 中的缓存结果。关于 `ORM` 的缓存管理介绍请参考 [ORM链式操作-查询缓存](/docs/核心组件/数据库ORM/ORM链式操作/ORM链式操作-查询缓存) 章节。
 
-# 效果查看
+## 效果查看
 
 **启动服务端：**
 
@@ -266,9 +266,9 @@ g.DB().GetCache().SetAdapter(gcache.NewAdapterRedis(g.Redis()))
 
 `HTTP Client&Server`、 `Logging` 组件在之前已经介绍过，因此这里我们主要关注 `orm` 和 `redis` 组件的链路跟踪信息。
 
-## ORM链路信息
+### ORM链路信息
 
-### Attributes/Tags
+#### Attributes/Tags
 
 我们随便点开一个 `ORM` 链路 `Span`，看看 `Attributes/Tags` 信息：
 
@@ -282,7 +282,7 @@ g.DB().GetCache().SetAdapter(gcache.NewAdapterRedis(g.Redis()))
 | `db.link` | 数据库连接信息。其中密码字段被自动隐藏。 |
 | `db.group` | 在配置文件中的数据库分组名称。 |
 
-### Events/Process
+#### Events/Process
 
 ![](/download/attachments/38575588/image2021-1-29_12-35-41.png?version=1&modificationDate=1644394136112&api=v2)
 
@@ -292,9 +292,9 @@ g.DB().GetCache().SetAdapter(gcache.NewAdapterRedis(g.Redis()))
 | `db.execution.type` | 执行的 `SQL` 语句类型。常见为 `DB.ExecContext` 和 `DB.QueryContext`，分别代表写操作和读操作。 |
 | `db.execution.cost` | 当前 `SQL` 语句执行耗时，单位为 `ms` 毫秒。 |
 
-## Redis链路信息
+### Redis链路信息
 
-### Attributes/Tags
+#### Attributes/Tags
 
 ![](/download/attachments/38575588/image2021-1-29_12-39-54.png?version=1&modificationDate=1644394136121&api=v2)
 
@@ -304,7 +304,7 @@ g.DB().GetCache().SetAdapter(gcache.NewAdapterRedis(g.Redis()))
 | `redis.port` | `Redis` 连接端口。 |
 | `redis.db` | `Redis` 操作 `db`。 |
 
-### Events/Process
+#### Events/Process
 
 ![](/download/attachments/38575588/image2021-1-29_12-42-22.png?version=1&modificationDate=1644394136131&api=v2)
 

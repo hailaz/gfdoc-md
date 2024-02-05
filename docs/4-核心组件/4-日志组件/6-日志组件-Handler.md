@@ -4,9 +4,9 @@ title: 日志组件-Handler
 
 从 `v2.0` 版本开始， `glog` 组件提供了超级强大的、可自定义日志处理的 `Handler` 特性。 `Handler` 采用了中间件设计方式，开发者可以为日志对象注册多个处理 `Handler`，也可以在 `Handler` 中覆盖默认的日志组件处理逻辑。
 
-# 相关定义
+## 相关定义
 
-## `Handler` 方法定义
+### `Handler` 方法定义
 
 ```
 // Handler is function handler for custom logging content outputs.
@@ -15,7 +15,7 @@ type Handler func(ctx context.Context, in *HandlerInput)
 
 可以看到第二个参数为日志处理的日志信息，并且为指针类型，意味着在 `Handler` 中可以修改该参数的任意属性信息，并且修改后的内容将会传递给下一个 `Handler`。
 
-## `Handler` 参数定义
+### `Handler` 参数定义
 
 ```
 // HandlerInput is the input parameter struct for logging Handler.
@@ -44,18 +44,18 @@ type HandlerInput struct {
 - 一种是直接修改 `HandlerInput` 中的属性信息，然后继续执行 `in.Next()`，默认的日志输出逻辑会将 `HandlerInput` 中的属性打印为字符串输出。
 - 另一种是将日志内容写入到 `Buffer` 缓冲对象中即可，默认的日志输出逻辑如果发现 `Buffer` 已经存在日志内容将会忽略默认日志输出逻辑。
 
-## `Handler` 注册到 `Logger` 方法
+### `Handler` 注册到 `Logger` 方法
 
 ```
 // SetHandlers sets the logging handlers for current logger.
 func (l *Logger) SetHandlers(handlers ...Handler)
 ```
 
-# 使用示例
+## 使用示例
 
 我们来看两个示例便于更快速了解 `Handler` 的使用。
 
-## 示例1\. 将日志输出转换为 `Json` 格式输出
+### 示例1\. 将日志输出转换为 `Json` 格式输出
 
 在本示例中，我们采用了前置中间件的设计，通过自定义 `Handler` 将日志内容输出格式修改为了 `JSON` 格式。
 
@@ -113,7 +113,7 @@ func main() {
 {"time":"2021-12-31 11:03:25.438","level":"ERRO","content":"Error occurs, please have a check \nStack:\n1.  main.main\n    C:/hailaz/test/main.go:42"}
 ```
 
-## 示例2\. 将内容输出到第三方日志搜集服务中
+### 示例2\. 将内容输出到第三方日志搜集服务中
 
 在本示例中，我们采用了后置中间件的设计，通过自定义 `Handler` 将日志内容输出一份到第三方 `graylog` 日志搜集服务中，并且不影响原有的日志输出处理。
 
@@ -154,7 +154,7 @@ func main() {
 }
 ```
 
-# 全局默认 `Handler`
+## 全局默认 `Handler`
 
 日志对象默认是没有设置任何的 `Handler`，从 `v2.1` 版本开始，框架提供了可以设置全局默认 `Handler` 的功能特性。全局默认 `Handler` 将对所有的使用该日志组件，并且没有自定义 `Handler` 的日志打印功能生效。同时，全局默认 `Handler` 将会影响日志包方法的日志打印行为。
 
@@ -227,11 +227,11 @@ func main() {
 {"time":"2022-06-20 10:51:50.235","level":"ERRO","content":"Error occurs, please have a check"}
 ```
 
-# 组件通用 `Handler`
+## 组件通用 `Handler`
 
 组件提供了一些通用性的日志 `Handler`，方便开发者使用，提高开发效率。
 
-## `HandlerJson`
+### `HandlerJson`
 
 该 `Handler` 可以将日志内容转换为 `Json` 格式打印。使用示例：
 
@@ -263,7 +263,7 @@ func main() {
 {"Time":"2022-06-20 20:04:04.725","Level":"ERRO","Content":"Error occurs, please have a check","Stack":"1.  main.main\n    /Users/john/Workspace/Go/GOPATH/src/github.com/gogf/gf/.test/main.go:16\n"}
 ```
 
-## `HandlerStructure`
+### `HandlerStructure`
 
 该 `Handler` 可以将日志内容转换为结构化格式打印，主要是为了和 `Golang` 新版本的 `slog` 日志输出内容保持一致。需要注意，日志结构化打印的特性需要保证所有日志记录均采用结构化输出才更具意义。使用示例：
 

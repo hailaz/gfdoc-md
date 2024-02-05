@@ -4,7 +4,7 @@ title: WebSocket服务
 
 使用 `goframe` 框架进行 `websocket` 开发相当简单。我们以下通过实现一个简单的 `echo服务器` 来演示 `goframe` 框架的 `websocket` 的使用（客户端使用HTML5实现）。
 
-# HTML5客户端
+## HTML5客户端
 
 先上 `H5` 客户端的代码
 
@@ -113,7 +113,7 @@ title: WebSocket服务
 - 界面输入内容并发送信息到 `websocket` 服务端；
 - 接收到 `websocket` 的返回信息后回显在界面上；
 
-# WebSocket服务端
+## WebSocket服务端
 
 ```
 package main
@@ -163,7 +163,7 @@ func main() {
 
 读取消息以及写入消息对应的是 `websocket` 的数据读取以及写入操作( `ReadMessage & WriteMessage`)，需要注意的是这两个方法都有一个 `msgType` 的变量，表示请求读取及写入数据的类型，常见的两种数据类型为：字符串数据或者二进制数据。在使用过程中，由于接口双方都会约定统一的数据格式，因此读取和写入的 `msgType` 几乎都是一致的，所以在本示例中的返回消息时，数据类型参数直接使用的是读取到的 `msgType`。
 
-# HTTPS的WebSocket
+## HTTPS的WebSocket
 
 如果需要支持 `HTTPS` 的 `WebSocket` 服务，只需要依赖的 `WebServer` 支持 `HTTPS` 即可，访问的 `WebSocket` 地址需要使用 `wss://` 协议访问。以上客户端 `HTML5` 页面中的 `WebSocket` 访问地址需要修改为： `wss://127.0.0.1:8199/wss`。服务端示例代码：
 
@@ -205,13 +205,13 @@ func main() {
 }
 ```
 
-# 示例结果展示
+## 示例结果展示
 
 我们首先执行示例代码 `main.go`，随后访问页面 [http://127.0.0.1:8199/](http://127.0.0.1:8199/)，随意输入请求内容并提交，随后在服务端关闭程序。可以看到，页面会回显提交的内容信息，并且即时展示 `websocket` 的连接状态的改变，当服务端关闭时，客户端也会即时地打印出关闭信息。
 
 ![](/download/attachments/1114298/QQ%E6%88%AA%E5%9B%BE20180603000556.png?version=1&modificationDate=1608656405169&api=v2)
 
-# Websocket安全校验
+## Websocket安全校验
 
 `GoFrame` 框架的 `websocket` 模块并不会做同源检查( `origin`)，也就是说，这种条件下的websocket允许完全跨域。
 
@@ -220,7 +220,7 @@ func main() {
 1. `origin` 的校验: 业务层在执行 `r.WebSocket()` 之前需要进行 `origin` 同源请求的校验；或者按照自定义的处理对请求进行校验(如果请求提交参数)；如果未通过校验，那么调用 `r.Exit()` 终止请求。
 2. `websocket` 通信数据校验: 数据通信往往都有一些自定义的数据结构，在这些通信数据中加上鉴权处理逻辑；
 
-# WebSocket Client 客户端
+## WebSocket Client 客户端
 
 ```
  package main

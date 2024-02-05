@@ -2,7 +2,7 @@
 title: 字典类型-gmap
 ---
 
-# 基本介绍
+## 基本介绍
 
 支持并发安全开关选项的 `map` 容器，最常用的数据结构。该模块包含多个数据结构的 `map` 容器： `HashMap`、 `TreeMap` 和 `ListMap`。
 
@@ -28,7 +28,7 @@ import "github.com/gogf/gf/v2/container/gmap"
 
 [https://pkg.go.dev/github.com/gogf/gf/v2/container/gmap](https://pkg.go.dev/github.com/gogf/gf/v2/container/gmap)
 
-# 相关文档
+## 相关文档
 
 - [字典类型-基本使用](https://goframe.org/docs/组件列表/数据结构/字典类型-gmap/字典类型-基本使用)
 - [字典类型-性能测试](https://goframe.org/docs/组件列表/数据结构/字典类型-gmap/字典类型-性能测试)

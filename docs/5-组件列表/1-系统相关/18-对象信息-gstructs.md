@@ -2,7 +2,7 @@
 title: 对象信息-gstructs
 ---
 
-# 基本介绍
+## 基本介绍
 
 `gstructs` 组件用于方便获取结构体的相关信息。
 
@@ -18,9 +18,9 @@ import "github.com/gogf/gf/v2/os/gstructs"
 
 [https://pkg.go.dev/github.com/gogf/gf/v2/os/gstructs](https://pkg.go.dev/github.com/gogf/gf/v2/os/gstructs)
 
-# 常用方法
+## 常用方法
 
-## `Fields`
+### `Fields`
 
 - 说明：`Fields ` 将输入参数 `in` 的 `Pointer ` 属性的字段以 `Field` 切片的形式返回。
 
@@ -115,7 +115,7 @@ func main() {
 ```
 
 
-## `TagMapName`
+### `TagMapName`
 
 - 说明：`TagMapName` 从参数 `pointer` 中检索 `tag`，并以 `map[string]string` 的形式返回。
 

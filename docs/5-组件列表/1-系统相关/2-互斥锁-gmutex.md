@@ -40,7 +40,7 @@ type Mutex
 2. `Try*` 方法用于实现尝试获得特定类型的锁，如果获得锁成功则立即返回 `true`，否则立即返回 `false`，不会阻塞等待，这对于需要使用非阻塞锁机制的业务逻辑非常实用。
 3. `*Func` 方法使用闭包匿名函数的方式实现特定作用域的并发安全锁控制，这对于特定代码块的并发安全控制特别方便，由于内部使用了 `defer` 来释放锁，因此即使函数内部产生异常错误，也不会影响锁机制的安全性控制。
 
-## 基准测试
+### 基准测试
 
 `gmutex.Mutex` 与标准库的 `sync.Mutex` 及 `sync.RWMutex` 的基准测试对比结果： [gmutex\_bench\_test.go](https://github.com/gogf/gf/v2/blob/master/os/gmutex/gmutex_bench_test.go)
 
@@ -57,7 +57,7 @@ Benchmark_GMutex_RLockRUnlock-4        50000000            38.0 ns/op
 Benchmark_GMutex_TryRLock-4            100000000           16.8 ns/op
 ```
 
-## 示例1，基本使用
+### 示例1，基本使用
 
 ```
 package main
@@ -118,7 +118,7 @@ func main() {
 
 这里使用 `glog` 打印的目的，是可以方便地看到打印输出的时间。可以看到，在第3秒的时候，读锁抢占到了机会，由于 `gmutex.Mutex` 对象支持并发读但不支持并发写，因此读锁抢占后迅速执行完毕；而写锁依旧保持每秒打印一条日志继续执行。
 
-## 示例2， `*Func` 使用
+### 示例2， `*Func` 使用
 
 ```
 package main

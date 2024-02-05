@@ -2,7 +2,7 @@
 title: HTTPClient-代理Proxy设置
 ---
 
-# 代理 `Proxy` 设置
+## 代理 `Proxy` 设置
 
 HTTP客户端发起请求时可以设置代理服务器地址 `proxyURL`，该该特性使用 `SetProxy*` 相关方法实现。代理主要支持 `http` 和 `socks5` 两种形式，分别为 `http://USER:PASSWORD@IP:PORT` 或 `socks5://USER:PASSWORD@IP:PORT` 形式。
 
@@ -15,7 +15,7 @@ func (c *Client) Proxy(proxyURL string) *Client
 
 我们来看下客户端设置 `proxyURL` 的示例。
 
-# 普通调用示例
+## 普通调用示例
 
 使用 `SetProxy` 配置方法。
 
@@ -30,7 +30,7 @@ if err != nil {
 response.RawDump()
 ```
 
-# 链式调用示例
+## 链式调用示例
 
 使用 `Proxy` 链式方法。
 

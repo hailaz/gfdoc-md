@@ -4,7 +4,7 @@ title: 镜像编译-docker
 
 从 `v2.5` 版本开始，考虑到各个工具命令的解耦性， `gf docker` 工具命令默认不再执行二进制构建编译，而是推荐大家通过 `Makefile` 构建脚本自行组织使用 `gf build, gf gen enums, gf docker` 等命令结合的方式来 **组合使用** 命令（工程项目中提供了对应的 `make build, make enums, make docker` 命令），组合使用更加灵活且易维护。
 
-# 使用方式
+## 使用方式
 
 ```
 $ gf docker -h
@@ -43,7 +43,7 @@ DESCRIPTION
 
 自动编译并生成 `docker` 镜像。非必需 `FILE` 参数为编译文件路径，默认为 `main.go`。非必需参数 `OPTIONS` 为 `docker build` 命令相同参数及选项。
 
-# 使用示例
+## 使用示例
 
 ```
 $ gf docker main.go -p -tn loads/gf-demos:test
@@ -94,7 +94,7 @@ d9ff549177a9: Waiting
 ...
 ```
 
-# 配置文件示例
+## 配置文件示例
 
 大部分场景下，我们推荐使用配置文件来管理工具的配置，在 `hack/config.yaml` 文件中维护，例如 `docker` 命令的配置示例：
 

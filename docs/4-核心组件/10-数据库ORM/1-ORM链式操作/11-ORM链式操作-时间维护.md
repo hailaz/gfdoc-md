@@ -17,13 +17,13 @@ title: ORM链式操作-时间维护
 
 对时间类型的固定其实是为了形成一种规范。
 
-## 特性的启用
+### 特性的启用
 
 当数据表包含 `created_at`、 `updated_at`、 `deleted_at` 任意一个或多个字段时，该特性自动启用。
 
 以下的示例中，我们默认示例中的数据表均包含了这3个字段。
 
-## `created_at` 写入时间
+### `created_at` 写入时间
 
 在执行 `Insert/InsertIgnore/BatchInsert/BatchInsertIgnore` 方法时自动写入该时间，随后保持不变。
 
@@ -43,7 +43,7 @@ g.Model("user").Data(g.Map{"uid": 10001, "name": "john"}).Save()
 
 需要注意的是 `Replace` 方法也会更新该字段，因为该操作相当于删除已存在的旧数据并重新写一条数据。
 
-## `updated_at` 更新时间
+### `updated_at` 更新时间
 
 在执行 `Insert/InsertIgnore/BatchInsert/BatchInsertIgnore` 方法时自动写入该时间，在执行 `Save/Update` 时更新该时间（注意当写入数据存在时会更新 `updated_at` 时间，不会更新 `created_at` 时间）。
 
@@ -60,7 +60,7 @@ g.Model("user").Data(g.Map{"id": 1, "name": "john guo"}).Save()
 
 需要注意的是 `Replace` 方法也会更新该字段，因为该操作相当于删除已存在的旧数据并重新写一条数据。
 
-## `deleted_at` 数据软删除
+### `deleted_at` 数据软删除
 
 软删除会稍微比较复杂一些，当软删除存在时，所有的查询语句都将会自动加上 `deleted_at` 的条件。
 
@@ -78,7 +78,7 @@ g.Model("user").Where("uid>?", 1).All()
 
 可以看到当数据表中存在 `deleted_at` 字段时，所有涉及到该表的查询操作都将自动加上 `deleted_at IS NULL` 的条件
 
-### 联表查询的场景
+#### 联表查询的场景
 
 如果关联查询的几个表都启用了软删除特性时，会发生以下这种情况，即条件语句中会增加所有相关表的软删除时间判断。
 
@@ -87,7 +87,7 @@ g.Model("user").Where("uid>?", 1).All()
 g.Model("user", "u").LeftJoin("user_detail", "ud", "ud.uid=u.uid").Where("u.uid", 10).One()
 ```
 
-### `Unscoped` 忽略时间特性
+#### `Unscoped` 忽略时间特性
 
 `Unscoped` 用于在链式操作中忽略自动时间更新特性，例如上面的示例，加上 `Unscoped` 方法后：
 

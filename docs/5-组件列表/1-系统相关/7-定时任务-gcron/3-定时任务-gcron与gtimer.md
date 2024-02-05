@@ -2,7 +2,7 @@
 title: 定时任务-gcron与gtimer
 ---
 
-# `gcron` 与 `gtimer` 区别
+## `gcron` 与 `gtimer` 区别
 
 [定时任务-gcron](/docs/组件列表/系统相关/定时任务-gcron/定时任务-gcron) 与 [定时器-gtimer](/docs/组件列表/系统相关/定时器-gtimer/定时器-gtimer) 区别:
 

@@ -2,11 +2,11 @@
 title: Session-Redis-HashTable
 ---
 
-# RedisHashTableStorage
+## RedisHashTableStorage
 
 与 `RedisKeyValueStorage` 不同的地方在于 `RedisHashTableStorage` 底层使用 `HashTable` 存储 `Session` 数据，每一次对 `Session` 的增删查改都是直接访问 `Redis` 服务实现（单条数据项操作），不存在像 `RedisKeyValueStorage` 那样初始化全量拉取一次，请求结束后如有修改再全量更新到 `Redis` 服务的操作。
 
-# 使用示例
+## 使用示例
 
 ```
 package main

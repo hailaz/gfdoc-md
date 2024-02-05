@@ -4,12 +4,12 @@ title: 使用GoFrame须知&提问技巧
 
 来到这里，我们认为你已经具备go语言的开发能力以及基础知识。
 
-# GoFrame是什么？
+## GoFrame是什么？
 
 1. [框架介绍(最新版本)](https://goframe.orghttps://goframe.org/pages/viewpage.action?pageId=1114119)
 2. [框架设计](/docs/框架设计/框架设计)
 
-# 她能做什么？
+## 她能做什么？
 
 | 项目类型 | 描述 |
 | API | 接口服务 |
@@ -18,7 +18,7 @@ title: 使用GoFrame须知&提问技巧
 | Library | 功能库 |
 | 其它 |  |
 
-# 有哪些案例？
+## 有哪些案例？
 
 | 项目类型 | 案例 |
 | API | - [gf-demo-user](https://github.com/gogf/gf-demo-user) |
@@ -26,13 +26,13 @@ title: 使用GoFrame须知&提问技巧
 | CMD | - [gf-cli](https://github.com/gogf/gf/tree/master/cmd/gf) |
 | Library | - [polaris](https://github.com/gogf/polaris)<br></br>- [gtoken](https://github.com/goflyfox/gtoken)<br></br>- [csrf](https://github.com/gogf/csrf)<br></br>- [gf-jwt](https://github.com/gogf/gf-jwt) |
 
-## 更多 [使用案例](https://github.com/gogf/awesome-gf)
+### 更多 [使用案例](https://github.com/gogf/awesome-gf)
 
-# 如何开始使用GoFrame？
+## 如何开始使用GoFrame？
 
 1. [快速开始](/docs/快速开始/快速开始)
 
-# 使用时遇到问题怎么办？
+## 使用时遇到问题怎么办？
 
 1. 使用问题
 1. 查文档，根据使用的版本查对应的文档
@@ -48,13 +48,13 @@ title: 使用GoFrame须知&提问技巧
 3. 运行的环境：使用的go版本、gf版本、系统版本等等环境
 4. 触发的条件：参数、时间、用法等等，如果是bug，这个条件十分必要，能快速复现和定位
 
-# 开发完成后如何部署？
+## 开发完成后如何部署？
 
 1. API OR Web： [项目部署](/docs/项目开发/项目部署/项目部署)
 2. CMD：构建完就能使用
 3. Library：提供给别人引入，例如go get xxx
 
-# 相关的文章
+## 相关的文章
 
 - 页面:
 

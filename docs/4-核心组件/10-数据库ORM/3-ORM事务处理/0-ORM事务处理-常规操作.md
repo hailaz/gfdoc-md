@@ -6,7 +6,7 @@ title: ORM事务处理-常规操作
 
 常见问题注意：开启事务操作后，请务必在不需要使用该事务对象时，通过 `Commit`/ `Rollback` 操作关闭掉该事务，建议充分利用好 `defer` 方法。如果事务使用后不关闭，在应用侧会引起 `goroutine` 不断激增泄露，在数据库侧会引起事务线程数量被打满，以至于后续的事务请求执行超时。此外，建议尽可能使用后续介绍的 `Transaction` 闭包方法来安全实现事务操作： [ORM事务处理-闭包操作](/docs/核心组件/数据库ORM/ORM事务处理/ORM事务处理-闭包操作)
 
-# 一、开启事务操作
+## 一、开启事务操作
 
 ```
 db := g.DB()
@@ -18,7 +18,7 @@ if tx, err := db.Begin(ctx); err == nil {
 
 事务操作对象可以执行所有 `db` 对象的方法，具体请参考 [API文档](https://pkg.go.dev/github.com/gogf/gf/v2/database/gdb)。
 
-# 二、事务回滚操作
+## 二、事务回滚操作
 
 ```
 if tx, err := db.Begin(ctx); err == nil {
@@ -33,7 +33,7 @@ if tx, err := db.Begin(ctx); err == nil {
 }
 ```
 
-# 三、事务提交操作
+## 三、事务提交操作
 
 ```
 if tx, err := db.Begin(ctx); err == nil {
@@ -48,7 +48,7 @@ if tx, err := db.Begin(ctx); err == nil {
 }
 ```
 
-# 四、事务链式操作
+## 四、事务链式操作
 
 事务操作对象仍然可以通过 `tx.Model` 方法返回一个链式操作的对象，该对象与 `db.Model` 方法返回值相同，只不过数据库操作在事务上执行，可提交或回滚。
 

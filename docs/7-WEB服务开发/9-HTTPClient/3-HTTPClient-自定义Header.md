@@ -14,7 +14,7 @@ func (c *Client) SetHeaderRaw(headers string) *Client
 
 我们来看一个客户端通过 `Header` 来自定义发送自定义链路跟踪信息 `Span-Id` 及 `Trace-Id` 消息头的示例。
 
-## 服务端
+### 服务端
 
 ```
 package main
@@ -40,7 +40,7 @@ func main() {
 
 由于是作为示例，服务端的逻辑很简单，直接将接收到的 `Span-Id` 及 `Trace-Id` 参数返回给客户端。
 
-## 客户端
+### 客户端
 
 1. 使用 `SetHeader` 方法
 

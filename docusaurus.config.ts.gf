@@ -5,7 +5,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const config: Config = {
   title: 'GoFrame',
   tagline: 'GoFrame',
-  favicon: '/gfdoc-md/img/favicon.ico',
+  favicon: '/gf/img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://goframe.org/',
@@ -37,8 +37,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/hailaz/gfdoc-md/blob/main/',
+          editUrl: 'https://github.com/hailaz/gfdoc-md/blob/main/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -49,11 +48,11 @@ const config: Config = {
   plugins: [
     // 搜索
     [
-      require.resolve("@cmfcmf/docusaurus-search-local"),
+      require.resolve('@cmfcmf/docusaurus-search-local'),
       {
         // Options here
         // language of your documentation, see next section
-        language: "zh",
+        language: 'zh',
       },
     ],
   ],
@@ -64,7 +63,7 @@ const config: Config = {
       title: 'GoFrame',
       logo: {
         alt: 'GoFrame Logo',
-        src: 'img/logo.svg',
+        src: 'img/favicon.ico',
       },
       items: [
         {
@@ -80,6 +79,10 @@ const config: Config = {
           position: 'right',
         },
       ],
+    },
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 4,
     },
     // footer: {
     //   style: 'dark',

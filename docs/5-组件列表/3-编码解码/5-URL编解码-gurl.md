@@ -14,7 +14,7 @@ import "github.com/gogf/gf/v2/encoding/gurl"
 
 [https://pkg.go.dev/github.com/gogf/gf/v2/encoding/gurl](https://pkg.go.dev/github.com/gogf/gf/v2/encoding/gurl)
 
-# `URL` 参数构建
+## `URL` 参数构建
 
 ```
 package main
@@ -44,7 +44,7 @@ func main() {
 limit=20&name=gopher&page=7
 ```
 
-# `URL` 参数编码与解码
+## `URL` 参数编码与解码
 
 ```
 package main
@@ -76,7 +76,7 @@ limit%3D20%26name%3Dgopher%26page%3D7
 limit=20&name=gopher&page=7
 ```
 
-# 解析 `URL`
+## 解析 `URL`
 
 `component` 参数值可选项:
 

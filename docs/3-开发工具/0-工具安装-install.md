@@ -4,17 +4,17 @@ title: 工具安装-install
 
 该命令仅针对于预编译二进制下载安装。如果通过 `go install` 命名安装的工具的话，不需要手动再使用 `install` 命令安装 `gf` 工具。
 
-# 下载安装
+## 下载安装
 
-## 最新版下载
+### 最新版下载
 
-### `Mac`&`Linux` 快捷下载命令
+#### `Mac`&`Linux` 快捷下载命令
 
 ```
 wget -O gf https://github.com/gogf/gf/releases/latest/download/gf_$(go env GOOS)_$(go env GOARCH) && chmod +x gf && ./gf install -y && rm ./gf
 ```
 
-### Windows需手动下载
+#### Windows需手动下载
 
 确定自己当前项目的 `goframe` 依赖版本，查看自己的系统信息：
 
@@ -25,28 +25,28 @@ go env GOARCH
 
 下载地址： [Releases · gogf/gf (github.com)](https://github.com/gogf/gf/releases)
 
-## 通过 `go install` 安装
+### 通过 `go install` 安装
 
 ```
 go install github.com/gogf/gf/cmd/gf/v2@latest # 最新版本
 go install github.com/gogf/gf/cmd/gf/v2@v2.5.5 # 指定版本(版本需要 >= v2.5.5)
 ```
 
-## 其它版本下载
+### 其它版本下载
 
-### v2版本
+#### v2版本
 
 预编译二进制下载： [Releases · gogf/gf (github.com)](https://github.com/gogf/gf/releases)
 
 源码：[gf/cmd/gf](https://github.com/gogf/gf/tree/master/cmd/gf)
 
-### v1版本
+#### v1版本
 
 预编译二进制下载： [Releases · gogf/gf-cli (github.com)](https://github.com/gogf/gf-cli/releases)
 
 源码： [gogf/gf-cli](https://github.com/gogf/gf-cli)
 
-# 使用方式
+## 使用方式
 
 项目地址： [https://github.com/gogf/gf/tree/master/cmd/gf](https://github.com/gogf/gf/tree/master/cmd/gf)
 
@@ -58,7 +58,7 @@ go install github.com/gogf/gf/cmd/gf/v2@v2.5.5 # 指定版本(版本需要 >= v2
 
 如果是 `MacOS` 下使用 `zsh` 的小伙伴可能会遇到别名冲突问题，可以通过 `alias gf=gf` 来解决，运行一次之后 `gf` 工具会自动修改 `profile` 中的别名设置，用户重新登录（或者重开终端）就好了。
 
-# 使用示例
+## 使用示例
 
 ```
 $ ./gf_darwin_amd64 install

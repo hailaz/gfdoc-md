@@ -2,7 +2,7 @@
 title: ORM查询-常用操作示例
 ---
 
-# `in` 查询
+## `in` 查询
 
 使用字符串、 `slice` 参数类型。当使用 `slice` 参数类型时，预处理占位符只需要一个 `?` 即可。
 
@@ -78,7 +78,7 @@ g.Model("user").Where("gender", 1).WhereOrIn("type", g.Slice{1,2,3}).All()
 g.Model("user").Where("gender", 1).WhereOrNotIn("type", g.Slice{1,2,3}).All()
 ```
 
-# `like         ` 查询
+## `like         ` 查询
 
 ```  go
 // SELECT * FROM `user` WHERE name like '%john%'
@@ -113,7 +113,7 @@ g.Model("user").Where("gender", 1).WhereOrLike("name", "john%").All()
 g.Model("user").Where("gender", 1).WhereOrNotLike("name", "john%").All()
 ```
 
-# `min/max/avg/sum`
+## `min/max/avg/sum`
 
 我们直接将统计方法使用在 `Fields` 方法上，例如：
 
@@ -156,7 +156,7 @@ g.Model("user").Where("uid", 1).Avg("score")
 g.Model("user").Where("uid", 1).Sum("score")
 ```
 
-# `count` 查询
+## `count` 查询
 
 ```  go
 // SELECT COUNT(1) FROM `user` WHERE `birthday`='1990-10-01'
@@ -178,7 +178,7 @@ func (m *Model) CountColumn(column string) (int, error)
 g.Model("user").Where("birthday", "1990-10-01").CountColumn("uid")
 ```
 
-# `distinct` 查询
+## `distinct` 查询
 
 ```  go
 // SELECT DISTINCT uid,name FROM `user`
@@ -207,7 +207,7 @@ g.Model("user").Distinct().CountColumn("uid,name")
 g.Model("user").Fields("group, age").Distinct().All()
 ```
 
-# `between` 查询
+## `between` 查询
 
 ```  go
 // SELECT * FROM `user` WHERE age between 18 and 20
@@ -240,7 +240,7 @@ g.Model("user").Where("gender", 0).WhereOrBetween("age", 16, 20).All()
 g.Model("user").Where("gender", 0).WhereOrNotBetween("age", 16, 20).All()
 ```
 
-# `null` 查询
+## `null` 查询
 
 `ORM` 提供了常用条件方法 `WhereNull/WhereNotNull/WhereOrNull/WhereOrNotNull` 方法，用于常用的 `Null` 查询条件过滤。方法定义如下：
 

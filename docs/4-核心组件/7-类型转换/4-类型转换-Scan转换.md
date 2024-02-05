@@ -18,7 +18,7 @@ func Scan(params interface{}, pointer interface{}, mapping ...map[string]string)
 
 我们接下来看几个示例便可快速理解。
 
-# 自动识别转换 `Struct`
+## 自动识别转换 `Struct`
 
 ```
 package main
@@ -54,7 +54,7 @@ func main() {
 }
 ```
 
-# 自动识别转换 `Struct` 数组
+## 自动识别转换 `Struct` 数组
 
 ```
 package main
@@ -102,7 +102,7 @@ func main() {
 ]
 ```
 
-# 自动识别转换Map
+## 自动识别转换Map
 
 ```
 package main
@@ -136,7 +136,7 @@ func main() {
 }
 ```
 
-# 自动识别转换 `Map` 数组
+## 自动识别转换 `Map` 数组
 
 ```
 package main

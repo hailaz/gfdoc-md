@@ -67,7 +67,7 @@ func DecodeBytesToBits(bs []byte) []Bit
 type Bit int8
 ```
 
-## 二进制操作示例
+### 二进制操作示例
 
 我们来看一个比较完整的二进制操作示例，基本演示了绝大部分的二进制转换操作。
 
@@ -177,7 +177,7 @@ I'm string!
 此外， `gbinary` 包也提供了一系列 `gbinary.DecodeTo*` 的方法，用于将二进制转换为特定的数据类型。其中， `gbinary.DecodeToInt/gbinary.DecodeToUint` 方法会对二进制长度进行自动识别解析，支持的二进制参数长度范围 `1-8`。
 
 
-## 按位操作处理示例
+### 按位操作处理示例
 
 `gbinary` 的 `Bits` 相关操作简化了底层二进制位操作的复杂度，为精准的数据按位处理提供了可能。
 

@@ -6,7 +6,7 @@ title: 数据规范-gen dao
 
 关于框架项目工程规范介绍请查看 [代码分层设计](/docs/框架设计/工程开发设计/代码分层设计) 章节。
 
-# 使用方式
+## 使用方式
 
 大部分场景下，进入项目根目录执行 `gf gen dao` 即可。以下为命令行帮助信息。
 
@@ -85,7 +85,7 @@ CONFIGURATION SUPPORT
 
 如果使用框架推荐的项目工程脚手架，并且系统安装了 `make` 工具，也可以使用 `make dao` 快捷指令。
 
-# 配置示例
+## 配置示例
 
 `/hack/config.yaml`
 
@@ -106,7 +106,7 @@ gfcli:
 	- link: "sqlite:./file.db"
 ```
 
-# 参数说明
+## 参数说明
 
 | 名称 | 默认值 | 含义 | 示例 |
 | --- | --- | --- | --- |
@@ -138,7 +138,7 @@ gfcli:
 | `tplDaoDoPath` |  | 自定义 `DO` 代码生成模板文件路径，使用该参数请参考源码 |  |
 | `tplDaoEntityPath` |  | 自定义 `Entity` 代码生成模板文件路径，使用该参数请参考源码 |  |
 
-# 使用示例
+## 使用示例
 
 仓库地址： [https://github.com/gogf/focus-single](https://github.com/gogf/focus-single)
 
@@ -161,15 +161,15 @@ gfcli:
 
 ![](/download/attachments/3673173/image2021-8-11_19-57-42.png?version=1&modificationDate=1628683013806&api=v2)
 
-# 注意事项
+## 注意事项
 
-## 需要手动编译的数据库类型
+### 需要手动编译的数据库类型
 
 `gen dao` 命令涉及到数据访问相关代码生成时，默认支持常用的若干类型数据库。如果需要 `Oracle` 数据库类型支持，需要开发者自己修改源码文件后自行本地手动编译生成 `CLI` 工具随后安装，因为这两个数据库的驱动需要 `CGO` 支持，无法预编译生成给大家直接使用。
 
 ![](/download/attachments/3673173/image2022-7-25_17-0-17.png?version=1&modificationDate=1658739618213&api=v2)
 
-## 关于 `bool` 类型对应的数据表字段
+### 关于 `bool` 类型对应的数据表字段
 
 由于大部分数据库类型都没有 `bool` 类型的数据表字段类型，我们推荐使用 `bit(1)` 来代替 `bool` 类型。 `gen dao` 命令会自动识别 `bit(1)` 数据表字段并生成 `bool` 类型的属性。此外，我们不推荐使用 `tinyint(1)` 作为 `bool` 类型。
 

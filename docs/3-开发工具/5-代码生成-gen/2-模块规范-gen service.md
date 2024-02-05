@@ -4,27 +4,27 @@ title: 模块规范-gen service
 
 该功能特性从 `v2.1` 版本开始提供。
 
-# 基本介绍
+## 基本介绍
 
-## 设计背景
+### 设计背景
 
 在业务项目实践中，业务逻辑封装往往是最复杂的部分，同时，业务模块之间的依赖十分复杂、边界模糊，无法采用 `Golang` 包管理的形式。如何有效管理项目中的业务逻辑封装部分，对于每个采用 `Golang` 开发的项目都是必定会遇到的难题。
 
 在标准的软件设计流程中，模块与模块之间的依赖会先明确接口定义，在软件开发的实施过程中再通过代码来具体实现。但在大部分高节奏的互联网工程下，并没有严谨的软件设计流程，甚至开发人员的质量水平也参差不齐，大部分开发人员首先关心的是如何去实现需求场景对应的功能逻辑，尽可能地提高开发效率。
 
-## 设计目标
+### 设计目标
 
 提供一种代码管理方式，可以通过具体模块实现直接生成模块接口定义、模块注册代码。
 
 简化业务逻辑实现与接口分离的实现，降低模块方法与接口定义的重复操作，提高模块与模块之间的透明度与调用便捷性。
 
-## 设计实现
+### 设计实现
 
 1. 增加 `logic` 分类目录，将所有业务逻辑代码迁移到 `logic` 分类目录下，采用包管理形式来管理业务模块。
 2. 业务模块之间的依赖通过接口化解耦，将原有的 `service` 分类调整为接口目录。这样每个业务模块将会各自维护、更加灵活。
 3. 可以按照一定的编码规范，从 `logic` 业务逻辑代码生成 `service` 接口定义代码。同时，也允许人工维护这部分 `service` 接口。
 
-# 注意事项
+## 注意事项
 
 再次提醒，通过 `logic` 实现去生成 `service` 接口 **并不是一个代码管理的标准化做法**，只是提供另一个可供选择的、便捷的代码管理方式。这种管理方式有优点也有缺点，优点是针对大部分场景的业务模块的接口自动生成比较方便；缺点是无法识别语法继承关系，无法生成父级嵌套类型的方法。
 
@@ -32,7 +32,7 @@ title: 模块规范-gen service
 
 ![](/download/attachments/49770772/image-2023-11-9_16-42-20.png?version=1&modificationDate=1699519340881&api=v2)
 
-# 命令使用
+## 命令使用
 
 该命令通过分析给定的 `logic` 业务逻辑模块目录下的代码，自动生成 `service` 目录接口代码。
 
@@ -43,7 +43,7 @@ title: 模块规范-gen service
 
 该命令的示例项目请参考： [https://github.com/gogf/gf-demo-user](https://github.com/gogf/gf-demo-user)
 
-## 手动模式
+### 手动模式
 
 如果是手动执行命令行，直接在项目根目录下执行 `gf gen service` 即可。
 
@@ -100,15 +100,15 @@ EXAMPLE
 | `overwrite` |  | `true` | 生成代码文件时是否覆盖已有文件 |
 | `clear` |  | `false` | 自动删除 `logic` 中不存在的接口文件（仅删除自动维护的文件） |
 
-## 自动模式
+### 自动模式
 
-### `Goland/Idea`
+#### `Goland/Idea`
 
 如果您是使用的 `GolandIDE`，那么可以使用我们提供的配置文件： [watchers.xml](/download/attachments/49770772/watchers.xml?version=1&modificationDate=1655298456643&api=v2)  自动监听代码文件修改时自动生成接口文件。使用方式，如下图：
 
 ![](/download/attachments/49770772/image2022-6-15_21-12-30.png?version=1&modificationDate=1655298548760&api=v2)
 
-### `Visual Studio Code`
+#### `Visual Studio Code`
 
 如果您是使用的 `Visual Studio Code`，那么可以安装插件 [RunOnSave](https://marketplace.visualstudio.com/items?itemName=emeraldwalk.RunOnSave) 随后配置插件：
 
@@ -124,17 +124,17 @@ EXAMPLE
 		}
 ```
 
-# 具体使用手摸手
+## 具体使用手摸手
 
-## Step1：引入我们提供的配置
+### Step1：引入我们提供的配置
 
 我们建议您在使用 `Goland IDE` 时，使用我们提供的配置文件： [watchers.xml](/download/attachments/49770772/watchers.xml?version=1&modificationDate=1655298456643&api=v2)
 
-## Step2：编写您的业务逻辑代码
+### Step2：编写您的业务逻辑代码
 
 ![](/download/attachments/49770772/image2022-6-15_21-23-2.png?version=1&modificationDate=1655299180054&api=v2)
 
-## Step3：生成接口及服务注册文件
+### Step3：生成接口及服务注册文件
 
 如果您已经按照 `Step1` 做好了配置，那么这一步可以忽略。因为在您编写代码的时候， `service` 便同时生成了接口定义文件。
 
@@ -142,13 +142,13 @@ EXAMPLE
 
 ![](/download/attachments/49770772/image2022-6-15_21-25-56.png?version=1&modificationDate=1655299354664&api=v2)
 
-## Step4：注意服务的实现注入部分（仅一次）
+### Step4：注意服务的实现注入部分（仅一次）
 
 只有在生成完成接口文件后，您才能在每个业务模块中加上接口的具体实现注入。该方法每个业务模块加一次即可。
 
 ![](/download/attachments/49770772/image2022-6-15_21-26-57.png?version=1&modificationDate=1655299416120&api=v2)
 
-## Step5：在启动文件中引用接口实现注册（仅一次）
+### Step5：在启动文件中引用接口实现注册（仅一次）
 
 可以发现，该命令除了生成接口文件之外，还生成了一个接口实现注册文件。该文件用于在程序启动时，将接口的具体实现在启动时执行注册。
 
@@ -158,17 +158,17 @@ EXAMPLE
 
 ![](/download/attachments/49770772/image2022-6-15_21-33-47.png?version=1&modificationDate=1655299825277&api=v2)
 
-## Step6：Start&Enjoy
+### Step6：Start&Enjoy
 
 启动 `main.go` 即可。
 
-# 常见问题FAQ
+## 常见问题FAQ
 
-## 当 `logic` 中的结构体存在嵌套时，无法自动生成嵌套类型的方法
+### 当 `logic` 中的结构体存在嵌套时，无法自动生成嵌套类型的方法
 
 这种场景建议手动维护 `service` 接口定义，不使用工具的自动生成。手动维护的接口定义文件不会被工具覆盖，手动和自动可以同时使用。
 
-## 快速定位接口的具体实现
+### 快速定位接口的具体实现
 
 **项目业务模块采用接口化解耦后体验非常棒！但是我在开发和调试过程中，想要快速找到指定接口的具体实现有点困难，能给点指导思路吗？**
 

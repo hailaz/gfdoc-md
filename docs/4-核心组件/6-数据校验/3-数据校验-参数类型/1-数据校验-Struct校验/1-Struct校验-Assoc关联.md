@@ -6,7 +6,7 @@ title: Struct校验-Assoc关联
 
 该特定对接收客户端请求参数校验的场景特别有用。
 
-# 使用示例
+## 使用示例
 
 ```
 package main

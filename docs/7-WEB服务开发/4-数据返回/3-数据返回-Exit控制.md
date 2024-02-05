@@ -2,7 +2,7 @@
 title: 数据返回-Exit控制
 ---
 
-# `Exit`, `ExitAll` 与 `ExitHook`
+## `Exit`, `ExitAll` 与 `ExitHook`
 
 1. `Exit`: 仅退出当前执行的逻辑方法，不退出后续的请求流程，可用于替代 `return`。
 2. `ExitAll`: 强行中断当前执行流程，当前执行方法的后续逻辑以及后续所有的逻辑方法将不再执行，常用于权限控制。
@@ -13,7 +13,7 @@ title: 数据返回-Exit控制
 
 `Exit*` 流程退出特性底层采用的是 `panic...recover...` 机制来实现的，CPU执行损耗大约几十纳秒（ `ns`），通过极少的运行时开销来提高易用性。
 
-# `Exit` 返回方法
+## `Exit` 返回方法
 
 ```
 package main

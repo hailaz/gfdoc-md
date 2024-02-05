@@ -2,12 +2,12 @@
 title: ORM链式操作-字段过滤
 ---
 
-# `Fields/FieldsEx` 字段过滤
+## `Fields/FieldsEx` 字段过滤
 
 1. `Fields` 用于指定需要操作的表字段，包括查询字段、写入字段、更新字段等过滤；
 2. `FieldsEx` 用于例外的字段指定，可用于查询字段、写入字段、更新字段等过滤；
 
-## `Fields` 示例
+### `Fields` 示例
 
 1. 假如 `user` 表有4个字段 `uid`, `nickname`, `passport`, `password`。
 2. 查询字段过滤
@@ -47,7 +47,7 @@ m := g.Map{
 ```
 
 
-## `FieldsEx` 示例
+### `FieldsEx` 示例
 
 1. 假如 `user` 表有4个字段 `uid`, `nickname`, `passport`, `password`。
 2. 查询字段排除
@@ -87,7 +87,7 @@ m := g.Map{
 ```
 
 
-# `OmitEmpty` 空值过滤
+## `OmitEmpty` 空值过滤
 
 当 `map`/ `struct` 中存在空值如 `nil`, `""`, `0` 时，默认情况下， `gdb` 将会将其当做正常的输入参数，因此这些参数也会被更新到数据表。 `OmitEmpty` 特性可以在将数据写入到数据库之前过滤空值数据的字段。
 
@@ -101,7 +101,7 @@ func (m *Model) OmitEmptyData() *Model
 
 `OmitEmpty` 方法会同时过滤 `Where` 及 `Data` 中的空值数据，而通过 `OmitEmptyWhere/OmitEmptyData` 方法可以执行特定的字段过滤。
 
-## 写入/更新操作
+### 写入/更新操作
 
 空值会影响于写入/更新操作方法，如 `Insert`, `Replace`, `Update`, `Save` 操作。如以下操作（以 `map` 为例， `struct` 同理）：
 
@@ -150,7 +150,7 @@ g.Model("user").OmitEmpty().Data(user).Insert()
 1. 针对于 `struct` 的空值过滤大家会想到 `omitempty` 的标签。该标签常用于 `json` 转换的空值过滤，也在某一些第三方的 `ORM` 库中用作 `struct` 到数据表字段的空值过滤，即当属性为空值时不做转换。
 2. `omitempty` 标签与 `OmitEmpty` 方法所达到的效果是一样的。在 `ORM` 操作中，我们不建议对 `struct` 使用 `omitempty` 的标签来控制字段的空值过滤，而建议使用 `OmitEmpty` 方法来做控制。因为该标签一旦加上之后便绑定到了 `struct` 上，没有办法做灵活控制；而通过 `OmitEmpty` 方法使得开发者可以选择性地、根据业务场景对 `struct` 做空值过滤，操作更加灵活。
 
-## 数据查询操作
+### 数据查询操作
 
 空值也会影响数据查询操作，主要是影响 `where` 条件参数。我们可以通过 `OmitEmpty` 方法过滤条件参数中的空值。
 
@@ -180,9 +180,9 @@ r, err := g.Model("user").OmitEmpty().Where(user).One()
 // SELECT * FROM `user` WHERE `passport`='john' LIMIT 1
 ```
 
-# `OmitNil` 空值过滤
+## `OmitNil` 空值过滤
 
-## 基本介绍
+### 基本介绍
 
 当 `map`/ `struct` 中存在空值如 `nil` 时，默认情况下， `gdb` 将会将其当做正常的输入参数，因此这些参数也会被更新到数据表。 `OmitNil` 特性可以在将数据写入到数据库之前过滤空值数据的字段。与 `OmitEmpty` 特性的区别在于， `OmitNil` 只会过滤值为 `nil` 的空值字段，其他空值如 `""`, `0` 并不会被过滤。
 
@@ -196,7 +196,7 @@ func (m *Model) OmitNilData() *Model
 
 `OmitEmpty` 方法会同时过滤 `Where` 及 `Data` 中的空值数据，而通过 `OmitEmptyWhere/OmitEmptyData` 方法可以执行特定的字段过滤。
 
-## 使用 `do` 对象进行字段过滤
+### 使用 `do` 对象进行字段过滤
 
 如果使用 `GoFrame` 工程目录，通过 `gf gen dao` 或者 `make dao` 指令会自动根据配置的数据库生成对应的数据表 `dao/entity/do` 文件，如果在数据库操作中使用 `do` 对象，那么将会自动过滤未赋值的字段。例如：
 
@@ -238,7 +238,7 @@ err = dao.User.Ctx(ctx).Where(do.User{
 }).Scan(&user)
 ```
 
-# `Filter` 字段过滤(已内置)
+## `Filter` 字段过滤(已内置)
 
 ~~`gdb` 可以自动同步 **数据表结构** 到程序缓存中(缓存不过期，直至程序重启/重新部署)，并且可以过滤提交参数中不符合表结构的数据项，该特性可以使用 `Filter` 方法实现。常用于新增/删除操作中输入 `map/struct/[]map/[]string` 参数类型的场景。~~
 

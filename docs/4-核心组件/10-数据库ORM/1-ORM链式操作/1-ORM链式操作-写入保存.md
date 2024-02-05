@@ -2,9 +2,9 @@
 title: ORM链式操作-写入保存
 ---
 
-# 常用方法
+## 常用方法
 
-## `Insert/Replace/Save`
+### `Insert/Replace/Save`
 
 这几个链式操作方法用于数据的写入，并且支持自动的单条或者批量的数据写入，区别如下：
 
@@ -25,7 +25,7 @@ title: ORM链式操作-写入保存
 
 这几个方法需要结合 `Data` 方法使用，该方法用于传递数据参数，用于数据写入/更新等写操作。
 
-## `InsertIgnore`
+### `InsertIgnore`
 
 用于写入数据时如果写入的数据中存在主键或者唯一索引时，忽略错误继续执行写入。该方法定义如下：
 
@@ -33,7 +33,7 @@ title: ORM链式操作-写入保存
 func (m *Model) InsertIgnore(data ...interface{}) (result sql.Result, err error)
 ```
 
-## `InsertAndGetId`
+### `InsertAndGetId`
 
 用于写入数据时并直接返回自增字段的 `ID`。该方法定义如下：
 
@@ -41,7 +41,7 @@ func (m *Model) InsertIgnore(data ...interface{}) (result sql.Result, err error)
 func (m *Model) InsertAndGetId(data ...interface{}) (lastInsertId int64, err error)
 ```
 
-## `OnDuplicate/OnDuplicateEx`
+### `OnDuplicate/OnDuplicateEx`
 
 `OnDuplicate/OnDuplicateEx` 方法需要结合 `Save` 方法一起使用，用于指定 `Save` 方法的更新/不更新字段，参数为字符串、字符串数组、 `Map`。例如：
 
@@ -58,9 +58,9 @@ OnDuplicate(g.Map{
 
 其中 `OnDuplicateEx` 用于排除指定忽略更新的字段，排除的字段需要在写入的数据集合中。
 
-# 使用示例
+## 使用示例
 
-## 示例1，基本使用
+### 示例1，基本使用
 
 数据写入/保存方法需要结合 `Data` 方法使用，方法的参数类型可以为 `Map/Struct/Slice`：
 
@@ -107,7 +107,7 @@ user := &User{
 g.Model("user").Data(user).Insert()
 ```
 
-## 示例2，数据批量写入
+### 示例2，数据批量写入
 
 通过给 `Data` 方法输入 `Slice` 数组类型的参数，用以实现批量写入。数组元素需要为 `Map` 或者 `Struct` 类型，以便于数据库组件自动获取字段信息并生成批量操作 `SQL`。
 
@@ -132,7 +132,7 @@ g.Model("user").Data(g.List{
 }).Batch(2).Insert()
 ```
 
-## 示例3，数据批量保存
+### 示例3，数据批量保存
 
 批量保存操作与单条保存操作原理是一样的，当写入的数据中存在主键或者唯一索引时将会更新原有记录值，否则新写入一条记录。
 
@@ -146,7 +146,7 @@ g.Model("user").Data(g.List{
 }).Save()
 ```
 
-# `RawSQL` 语句嵌入
+## `RawSQL` 语句嵌入
 
 `gdb.Raw` 是字符串类型，该类型的参数将会直接作为 `SQL` 片段嵌入到提交到底层的 `SQL` 语句中，不会被自动转换为字符串参数类型、也不会被当做预处理参数。更详细的介绍请参考章节： [ORM高级特性-RawSQL](/docs/核心组件/数据库ORM/ORM高级特性/ORM高级特性-RawSQL)。例如：
 

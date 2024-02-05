@@ -2,7 +2,7 @@
 title: HTTPClient-请求信息打印
 ---
 
-# 基本介绍
+## 基本介绍
 
 `http` 客户端支持对HTTP请求的输入与输出原始信息获取与打印，方便调试，相关方法如下：
 
@@ -15,7 +15,7 @@ func (r *Response) RawResponse() string
 
 可以看到，所有的方法均绑定在 `Response` 对象上，也就是说必须要请求结束后才能打印。
 
-# 使用示例
+## 使用示例
 
 ```
 package main

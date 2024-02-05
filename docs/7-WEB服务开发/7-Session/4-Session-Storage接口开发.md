@@ -4,7 +4,7 @@ title: Session-Storage接口开发
 
 大部分场景下，通过 `gsession` 组件内置提供的常见 `Storage` 实现已经能够满足需求。如果有特殊的场景需要制定不易开发 `Storage` 当然也是支持的，因为 `gsession` 的功能都采用了接口化设计。
 
-# Storage定义
+## Storage定义
 
 [https://github.com/gogf/gf/v2/blob/master/os/gsession/gsession\_storage.go](https://github.com/gogf/gf/v2/blob/master/os/gsession/gsession_storage.go)
 
@@ -61,7 +61,7 @@ type Storage interface {
 
 每一个方法的调用时机都在注释中详细介绍了，开发者在实现自定义的 `Storage` 时，可以充分参考内置的几种 `Storage` 实现。
 
-# 注意事项
+## 注意事项
 
 - `Storage` 接口中，并不是所有的接口方法都需要实现，开发者仅需要根据业务需要，实现特定调用时机的一些接口即可。
 - 为了提高 `Session` 的执行性能，接口有 `gmap.StrAnyMap` 容器类型的使用，开发时可以参考一下章节： [字典类型-gmap](/docs/组件列表/数据结构/字典类型-gmap/字典类型-gmap)

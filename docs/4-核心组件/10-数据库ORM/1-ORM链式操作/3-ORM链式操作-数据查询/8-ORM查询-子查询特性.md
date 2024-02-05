@@ -4,7 +4,7 @@ title: ORM查询-子查询特性
 
 `ORM` 组件目前支持常见的三种语法的子查询： `Where` 子查询、 `Having` 子查询及 `From` 子查询。
 
-# `Where` 子查询
+## `Where` 子查询
 
 我们可以在 `Where` 条件中使用子查询语句，示例：
 
@@ -13,7 +13,7 @@ g.Model("orders").Where("amount > ?", g.Model("orders").Fields("AVG(amount)")).S
 // SELECT * FROM "orders" WHERE amount > (SELECT AVG(amount) FROM "orders")
 ```
 
-# `Having` 子查询
+## `Having` 子查询
 
 我们可以在 `Having` 条件中使用子查询语句，示例：
 
@@ -23,7 +23,7 @@ g.Model("users").Fields("AVG(age) as avgage").Group("name").Having("AVG(age) > ?
 // SELECT AVG(age) as avgage FROM `users` GROUP BY `name` HAVING AVG(age) > (SELECT AVG(age) FROM `users` WHERE name LIKE "name%")
 ```
 
-# `From` 子查询
+## `From` 子查询
 
 我们可以在使用 `Model` 方法创建模型时使用子查询语句，示例：
 

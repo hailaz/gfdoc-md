@@ -2,7 +2,7 @@
 title: 经典哈希函数-ghash
 ---
 
-# 基本介绍
+## 基本介绍
 
 常用经典哈希函数Go语言实现，提供 `uint32` 及 `uint64` 类型的哈希函数。
 
@@ -16,7 +16,7 @@ import "github.com/gogf/gf/v2/encoding/ghash"
 
 [https://pkg.go.dev/github.com/gogf/gf/v2/encoding/ghash](https://pkg.go.dev/github.com/gogf/gf/v2/encoding/ghash)
 
-# 基准测试
+## 基准测试
 
 ```
 goos: darwin
@@ -57,7 +57,7 @@ Benchmark_AP64
 Benchmark_AP64-12      	28123783	        42.48 ns/op
 ```
 
-# 重复测试
+## 重复测试
 
 测试结果与测试内容有关联性和随机性，我这里通过 `uint64` 数值的范围遍历来进行简单的重复性测试，本身不够严谨，因此仅供趣味性参考。
 

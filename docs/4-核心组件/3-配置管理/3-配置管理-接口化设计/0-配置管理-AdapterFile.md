@@ -2,11 +2,11 @@
 title: 配置管理-AdapterFile
 ---
 
-# `AdapterFile`
+## `AdapterFile`
 
 `AdapterFile` 是框架默认的配置管理实现方式，基于文件的配置加载和读取。
 
-# 通过 `g.Cfg` 单例对象使用
+## 通过 `g.Cfg` 单例对象使用
 
 大部分场景下，我们可以通过框架已经封装好的g.Cfg单例对象来便捷使用基于文件的配置管理实现。例如：
 
@@ -51,7 +51,7 @@ func main() {
 map[debug:true link:mysql:root:12345678@tcp(127.0.0.1:3306)/test]
 ```
 
-# 通过 `gcfg.NewWithAdapter` 使用
+## 通过 `gcfg.NewWithAdapter` 使用
 
 我们也可以通过配置组件的 `NewWithAdapter` 方法来创建一个基于给定 `Adapter` 的配置管理对象，当然，在这里我们给一个 `AdapterFile` 接口对象。
 

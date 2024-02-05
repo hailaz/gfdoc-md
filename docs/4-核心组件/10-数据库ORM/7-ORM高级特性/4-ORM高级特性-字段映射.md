@@ -2,7 +2,7 @@
 title: ORM高级特性-字段映射
 ---
 
-# 基本介绍
+## 基本介绍
 
 在对数据进行写入、更新使用诸如 `Fields/Data/Scan` 方法时，如果给定的参数为 `map/struct` 类型，给定参数的键名/属性名称将会自动按照忽略大小写及特殊字符的方式与数据表的字段进行自动识别映射。
 
@@ -23,9 +23,9 @@ nick_name  nickname      match
 nick name  nickname      match
 ```
 
-# 重要说明
+## 重要说明
 
-## 接口设计
+### 接口设计
 
 该特性需要依靠 `DB` 中定义的 `TableFields` 接口实现来支持的。如果不实现该接口，那么上层业务需要维护属性/键名到数据表字段的映射关系，维护这种非业务逻辑的工作成本是比较大的。框架的目标是尽可能让业务开发同学的精力聚焦于业务，因此框架组件中能够自动化的地方均采用自动化设计。目前对接到框架的 `driver` 实现均支持该接口。
 
@@ -45,7 +45,7 @@ nick name  nickname      match
 func (db DB) TableFields(ctx context.Context, table string, schema ...string) (fields map[string]*TableField, err error)
 ```
 
-## 字段缓存
+### 字段缓存
 
 每个数据表的字段信息，将在数据表的第一次操作时执行查询并缓存到内存中。如果需要手动刷新字段缓存，那么可以依靠以下方法实现：
 
@@ -63,7 +63,7 @@ func (c *Core) ClearTableFieldsAll(ctx context.Context) (err error)
 g.DB().GetCore()
 ```
 
-# 使用示例
+## 使用示例
 
 我们来看一个例子，我们实现一个查询用户基本信息的一个接口，这个用户是一个医生。
 

@@ -18,7 +18,7 @@ import "github.com/gogf/gf/v2/os/gfsnotify"
 
 此外也可能通过 `New` 方法创建一个监控管理对象之后再进行监控管理。其中，添加监控的时候需要给定触发监控时的回调函数，参数类型为 `*gfsnotify.Event` 对象指针。
 
-# 添加监听
+## 添加监听
 
 ```
 package main
@@ -67,7 +67,7 @@ func main() {
 
 当我们在 `/home/john` 目录下创建/删除/修改文件时，可以看到 `gfsnotify` 监控到了文件的修改并输出了对应的事件信息。
 
-# 移除监听
+## 移除监听
 
 移除监听我们可以使用 `Remove` 方法，会移除对整个文件/目录的监听。
 
@@ -149,7 +149,7 @@ func main() {
 }
 ```
 
-# fs.inotify.max\_user\_instances与fs.inotify.max\_user\_watches
+## fs.inotify.max\_user\_instances与fs.inotify.max\_user\_watches
 
 在 `*nix` 系统下， `gfsnotify` 模块使用的是系统的 `inotify` 特性来实现的文件/目录监控，因此该功能在使用时会受到系统的两个内核函数限制：
 

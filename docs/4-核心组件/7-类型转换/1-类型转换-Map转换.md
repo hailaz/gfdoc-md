@@ -17,7 +17,7 @@ func MapDeep(value interface{}, tags ...string) map[string]interface{}
 
 更多的 `map` 相关转换方法请参考接口文档： [https://pkg.go.dev/github.com/gogf/gf/v2/util/gconv](https://pkg.go.dev/github.com/gogf/gf/v2/util/gconv)
 
-# 基本示例
+## 基本示例
 
 ```
 package main
@@ -68,7 +68,7 @@ func main() {
 }
 ```
 
-# 属性标签
+## 属性标签
 
 我们可以通过 `c/gconv/json` 标签来自定义转换后的 `map` 键名，当多个标签存在时，按照 `gconv/c/json` 的标签顺序进行优先级识别。
 
@@ -109,7 +109,7 @@ func main() {
 }
 ```
 
-# 自定义标签
+## 自定义标签
 
 此外，我们也可以给 `struct` 的属性自定义自己的标签名称，并在 `map` 转换时通过第二个参数指定标签优先级。
 
@@ -143,7 +143,7 @@ func main() {
 }
 ```
 
-# 递归转换
+## 递归转换
 
 当参数为 `map`/ `struct`/ `*struct` 类型时，如果键值/属性为一个对象（或者对象指针）时，并且不是 `embedded` 结构体且没有任何的别名标签绑定， `Map` 方法将会将对象转换为结果的一个键值。我们可以使用 `MapDeep` 方法递归转换参数的子对象，即把属性也转换为 `map` 类型。我们来看个例子。
 

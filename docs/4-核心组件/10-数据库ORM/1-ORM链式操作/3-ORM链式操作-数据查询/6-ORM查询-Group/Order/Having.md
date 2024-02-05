@@ -2,7 +2,7 @@
 title: ORM查询-Group/Order/Having
 ---
 
-# `Group/Order` 分组与排序
+## `Group/Order` 分组与排序
 
 `Group` 方法用于查询分组， `Order` 方法用于查询排序。使用示例：
 
@@ -38,7 +38,7 @@ g.Model("article").Fields("id,title").OrderDesc("views").All()
 g.Model("article").Fields("id,title").OrderRandom().All()
 ```
 
-# `Having` 条件过滤
+## `Having` 条件过滤
 
 `Having` 方法用于查询结果的条件过滤。使用示例：
 

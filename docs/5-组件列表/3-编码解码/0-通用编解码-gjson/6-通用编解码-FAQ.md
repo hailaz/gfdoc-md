@@ -2,9 +2,9 @@
 title: 通用编解码-FAQ
 ---
 
-# JSON中的大数字精度丢失问题
+## JSON中的大数字精度丢失问题
 
-## 问题描述
+### 问题描述
 
 ```
 package main
@@ -27,7 +27,7 @@ func main() {
 "{\"Id\":1492404095703580700,\"Name\":\"Jason\"}"
 ```
 
-## 解决方案
+### 解决方案
 
 ```
 package main
@@ -52,6 +52,6 @@ func main() {
 "{\"Id\":1492404095703580672,\"Name\":\"Jason\"}"
 ```
 
-## 相关连接
+### 相关连接
 
 - [https://github.com/gogf/gf/issues/1603](https://github.com/gogf/gf/issues/1603)

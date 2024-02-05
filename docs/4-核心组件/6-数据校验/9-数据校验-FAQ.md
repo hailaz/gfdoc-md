@@ -2,7 +2,7 @@
 title: 数据校验-FAQ
 ---
 
-# `Struct` 默认值对 `required` 规则的影响
+## `Struct` 默认值对 `required` 规则的影响
 
 `Struct` 的属性会有 `默认值`，在某些情况下会引起 `required` 规则的失效。例如：
 

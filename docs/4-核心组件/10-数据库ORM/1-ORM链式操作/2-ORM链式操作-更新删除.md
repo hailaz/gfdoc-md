@@ -4,7 +4,7 @@ title: ORM链式操作-更新删除
 
 为安全性保证、防止误操作， `Update` 及 `Delete` 方法必须带有 `Where` 条件才能提交执行，否则将会错误返回，错误信息如： `there should be WHERE condition statement for XXX operation`。 `goframe` 是一款用于企业生产级别的框架，各个模块设计严谨，工程实践的细节处理得比较好。
 
-# `Update` 更新方法
+## `Update` 更新方法
 
 `Update` 用于数据的更新，往往需要结合 `Data` 及 `Where` 方法共同使用。 `Data` 方法用于指定需要更新的数据， `Where` 方法用于指定更新的条件范围。同时， `Update` 方法也支持直接给定数据和条件参数。
 
@@ -35,7 +35,7 @@ g.Model("user").Update("status=1", 1)
 g.Model("user").Update(g.Map{"status" : 1}, 1)
 ```
 
-# `Counter` 更新特性
+## `Counter` 更新特性
 
 可以使用 `Counter` 类型参数对特定的字段进行数值操作，例如：增加、减少操作。
 
@@ -75,7 +75,7 @@ updateData := g.Map{
 result, err := db.Update("article", updateData, "id", 1)
 ```
 
-# `Increment/Decrement` 自增/减
+## `Increment/Decrement` 自增/减
 
 我们可以通过 `Increment` 和 `Decrement` 方法实现对指定字段的自增/自减常用操作。两个方法的定义如下：
 
@@ -96,7 +96,7 @@ g.Model("article").Where("id", 1).Increment("views", 10000)
 g.Model("article").Where("id", 1).Decrement("views", 10000)
 ```
 
-# `RawSQL` 语句嵌入
+## `RawSQL` 语句嵌入
 
 `gdb.Raw` 是字符串类型，该类型的参数将会直接作为 `SQL` 片段嵌入到提交到底层的 `SQL` 语句中，不会被自动转换为字符串参数类型、也不会被当做预处理参数。更详细的介绍请参考章节： [ORM高级特性-RawSQL](/docs/核心组件/数据库ORM/ORM高级特性/ORM高级特性-RawSQL)。例如：
 
@@ -119,7 +119,7 @@ g.Model("user").Data(g.Map{
 }).Where("id", 1).Update()
 ```
 
-# `Delete` 删除方法
+## `Delete` 删除方法
 
 `Delete` 方法用于数据的删除。
 
@@ -141,6 +141,6 @@ g.Model("user").Delete("uid", 10)
 g.Model("user").Delete("score < ", 60)
 ```
 
-# 软删除特性
+## 软删除特性
 
 软删除特性请查看章节： [ORM链式操作-时间维护](/docs/核心组件/数据库ORM/ORM链式操作/ORM链式操作-时间维护)

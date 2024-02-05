@@ -6,7 +6,7 @@ title: 类型转换-UnmarshalValue
 
 标准库的常用反序列化接口，如 `UnmarshalText(text []byte) error` 其实也是支持的哟，使用方式同 `UnmarshalValue`，只是参数不同。
 
-# 接口定义
+## 接口定义
 
 ```
 // apiUnmarshalValue is the interface for custom defined types customizing value assignment.
@@ -32,9 +32,9 @@ func (c *Receiver) UnmarshalValue(interface{}) error
 func (c Receiver) UnmarshalValue(interface{}) error
 ```
 
-# 使用示例
+## 使用示例
 
-## 1、自定义数据表查询结果 `struct` 转换
+### 1、自定义数据表查询结果 `struct` 转换
 
 数据表结构：
 
@@ -195,7 +195,7 @@ func main() {
 
 可以看到自定义的 `UnmarshalValue` 类型转换方法中没有使用到反射特性，因此转换的性能会得到极大的提升。小伙伴们可以尝试着增加写入的数据量（例如 `100W`），同时对比一下去掉 `UnmarshalValue` 后的类型转换所开销的时间。
 
-## 2、自定义二进制TCP数据解包
+### 2、自定义二进制TCP数据解包
 
 一个TCP通信的数据包解包示例。
 

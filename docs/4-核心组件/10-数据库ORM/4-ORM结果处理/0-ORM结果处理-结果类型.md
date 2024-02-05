@@ -2,7 +2,7 @@
 title: ORM结果处理-结果类型
 ---
 
-# 一、数据结构
+## 一、数据结构
 
 查询结果的数据结构如下：
 
@@ -24,7 +24,7 @@ type Result   []Record               // 返回数据表记录列表
 
 ![](/download/attachments/47699228/image2023-10-19_10-23-15.png?version=1&modificationDate=1697682195612&api=v2)
 
-# 二、 `Record` 数据记录
+## 二、 `Record` 数据记录
 
 接口文档： [https://pkg.go.dev/github.com/gogf/gf/v2/database/gdb](https://pkg.go.dev/github.com/gogf/gf/v2/database/gdb)
 
@@ -113,7 +113,7 @@ Nick-Name  Nick_Name      match
 
 由于数据库结果集转 `struct` 的底层是依靠 `gconv.Struct` 方法实现的，因此如果想要实现 **自定义的属性转换**，以及更详细的映射规则说明，请参考 [类型转换-Struct转换](/docs/核心组件/类型转换/类型转换-Struct转换) 章节。
 
-# 三、 `Result` 数据集合
+## 三、 `Result` 数据集合
 
 `Result/Record` 数据类型根据数据结果集操作的需要，往往需要根据记录中 **特定的字段** 作为键名进行数据检索，因此它包含多个用于转换 `Map/List` 的方法，同时也包含了常用数据结构 `JSON/XML` 的转换方法。
 

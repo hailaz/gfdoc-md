@@ -4,7 +4,7 @@ title: ORM链式操作-Handler特性
 
 `Handler` 特性允许您轻松地复用常见的逻辑。
 
-# 示例1，查询
+## 示例1，查询
 
 ```
 func AmountGreaterThan1000(m *gdb.Model) *gdb.Model {
@@ -42,7 +42,7 @@ m.Handler(AmountGreaterThan1000, OrderStatus([]string{"paid", "shipped"})).Scan(
 // 查找所有金额大于1000 的已付款或已发货订单
 ```
 
-# 示例2，分页
+## 示例2，分页
 
 ```
 func Paginate(r *ghttp.Request) func(m *gdb.Model) *gdb.Model {

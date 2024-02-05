@@ -2,7 +2,7 @@
 title: 请求输入-Context
 ---
 
-# 基本介绍
+## 基本介绍
 
 请求流程往往会在上下文中共享一些自定义设置的变量，例如在请求开始之前通过中间件设置一些变量，随后在路由服务方法中可以获取该变量并相应对一些处理。这种需求非常常见。在 `GoFrame` 框架中，我们推荐使用 `Context` 上下文对象来处理流程共享的上下文变量，甚至将该对象进一步传递到依赖的各个模块方法中。该 `Context` 对象类型实现了标准库的 `context.Context` 接口，该接口往往会作为模块间调用方法的第一个参数，该接口参数也是 `Golang` 官方推荐的在模块间传递上下文变量的推荐方式。
 
@@ -22,9 +22,9 @@ func (r *Request) SetCtxVar(key interface{}, value interface{})
 3. `GetCtxVar` 方法用于获取上下文变量，并可给定当该变量不存在时的默认值。
 4. `SetCtxVar` 方法用于设置上下文变量。
 
-# 使用示例
+## 使用示例
 
-## 示例1， `SetCtxVar/GetCtxVar`
+### 示例1， `SetCtxVar/GetCtxVar`
 
 ```
 package main
@@ -62,7 +62,7 @@ func main() {
 HBm876TFCde435Tgf
 ```
 
-## 示例2， `SetCtx`
+### 示例2， `SetCtx`
 
 `SetCtx` 方法常用于中间件中整合一些第三方的组件，例如第三方的链路跟踪组件等等。
 

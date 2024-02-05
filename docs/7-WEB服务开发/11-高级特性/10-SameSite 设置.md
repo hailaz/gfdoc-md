@@ -2,9 +2,9 @@
 title: SameSite 设置
 ---
 
-# SameSite 介绍
+## SameSite 介绍
 
-## 参考文档
+### 参考文档
 
 [https://web.dev/samesite-cookies-explained/](https://web.dev/samesite-cookies-explained/)
 
@@ -12,11 +12,11 @@ title: SameSite 设置
 
 [https://web.dev/schemeful-samesite/](https://web.dev/schemeful-samesite/)
 
-## chrome89开始协议不同也属于跨站请求
+### chrome89开始协议不同也属于跨站请求
 
 [https://www.chromestatus.com/feature/5096179480133632](https://www.chromestatus.com/feature/5096179480133632)
 
-# 如何设置？
+## 如何设置？
 
 ```
 func main() {

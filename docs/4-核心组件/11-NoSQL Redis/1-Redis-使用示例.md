@@ -2,7 +2,7 @@
 title: Redis-使用示例
 ---
 
-# `Set/Get` 操作
+## `Set/Get` 操作
 
 ```
 package main
@@ -36,7 +36,7 @@ func main() {
 value
 ```
 
-# `SetEx` 操作
+## `SetEx` 操作
 
 ```
 package main
@@ -84,7 +84,7 @@ true
 <nil>
 ```
 
-# `HSet/HGetAll` 操作
+## `HSet/HGetAll` 操作
 
 ```
 package main
@@ -144,7 +144,7 @@ map[id:1 name:john score:100]
 }
 ```
 
-# `HMSet/HMGet` 操作
+## `HMSet/HMGet` 操作
 
 ```
 package main

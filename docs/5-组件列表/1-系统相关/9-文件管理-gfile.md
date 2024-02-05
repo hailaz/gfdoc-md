@@ -2,7 +2,7 @@
 title: 文件管理-gfile
 ---
 
-# 基本介绍
+## 基本介绍
 
 `gfile` 文件管理组件提供了更加丰富的文件/目录操作能力。
 
@@ -18,9 +18,9 @@ import "github.com/gogf/gf/v2/os/gfile"
 
 以下常用方法列表，文档更新可能滞后于代码新特性，更多的方法及示例请参考代码文档： [https://pkg.go.dev/github.com/gogf/gf/v2/os/gfile](https://pkg.go.dev/github.com/gogf/gf/v2/os/gfile)
 
-# 内容管理
+## 内容管理
 
-## `GetContents`
+### `GetContents`
 
 - 说明：读取指定路径文件内容，以字符串形式返回。
 - 格式:
@@ -69,7 +69,7 @@ func ExampleGetContents() {
 ```
 
 
-## `GetContentsWithCache`
+### `GetContentsWithCache`
 
 - 说明：带缓存获取文件内容，可设置缓存超时，文件发生变化自动清除缓存。
 - 格式:
@@ -128,7 +128,7 @@ func ExampleGetContentsWithCache() {
 ```
 
 
-## `GetBytesWithCache`
+### `GetBytesWithCache`
 
 - 说明：带缓存获取文件内容，可设置缓存超时，文件发生变化自动清除缓存，返回\[\]byte。
 - 格式:
@@ -187,7 +187,7 @@ func ExampleGetBytesWithCache() {
 ```
 
 
-## `GetBytes`
+### `GetBytes`
 
 - 说明：读取指定路径文件内容，以字节形式返回。
 - 格式:
@@ -236,7 +236,7 @@ func ExampleGetBytes() {
 ```
 
 
-## `GetBytesTilChar`
+### `GetBytesTilChar`
 
 - 说明：以某个字符定位截取指定长度的文件内容以字节形式返回
 - 格式:
@@ -290,7 +290,7 @@ func ExampleGetBytesTilChar() {
 ```
 
 
-## `GetBytesByTwoOffsets`
+### `GetBytesByTwoOffsets`
 
 - 说明：以指定的区间读取文件内容
 - 格式:
@@ -342,7 +342,7 @@ func ExampleGetBytesByTwoOffsets() {
 ```
 
 
-## `PutContents`
+### `PutContents`
 
 - 说明：往指定路径文件添加字符串内容。如果文件不存在将会递归的形式自动创建。
 - 格式:
@@ -391,7 +391,7 @@ func ExamplePutContents() {
 ```
 
 
-## `PutBytes`
+### `PutBytes`
 
 - 说明：以字节形式写入指定文件，如果文件不存在将会递归的形式自动创建
 - 格式:
@@ -439,7 +439,7 @@ func ExamplePutBytes() {
 ```
 
 
-## `PutContentsAppend`
+### `PutContentsAppend`
 
 - 说明：追加字符串内容到指定文件，如果文件不存在将会递归的形式自动创建。
 - 格式:
@@ -495,7 +495,7 @@ func ExamplePutContentsAppend() {
 ```
 
 
-## `PutBytesAppend`
+### `PutBytesAppend`
 
 - 说明：追加字节内容到指定文件。如果文件不存在将会递归的形式自动创建。
 - 格式:
@@ -550,7 +550,7 @@ func ExamplePutBytesAppend() {
 ```
 
 
-## `GetNextCharOffset`
+### `GetNextCharOffset`
 
 - 说明：从某个偏移量开始，获取文件中指定字符所在下标
 - 格式:
@@ -602,7 +602,7 @@ func ExampleGetNextCharOffset() {
 ```
 
 
-## `GetNextCharOffsetByPath`
+### `GetNextCharOffsetByPath`
 
 - 说明：从某个偏移量开始，获取文件中指定字符所在下标
 - 格式:
@@ -651,7 +651,7 @@ func ExampleGetNextCharOffsetByPath() {
 ```
 
 
-## `GetBytesTilCharByPath`
+### `GetBytesTilCharByPath`
 
 - 说明：以某个字符定位截取指定长度的文件内容以字节形式返回
 - 格式:
@@ -699,7 +699,7 @@ func ExampleGetBytesTilCharByPath() {
 ```
 
 
-## `GetBytesByTwoOffsetsByPath`
+### `GetBytesByTwoOffsetsByPath`
 
 - 说明：用两个偏移量截取指定文件的内容以字节形式返回
 - 格式:
@@ -747,7 +747,7 @@ func ExampleGetBytesByTwoOffsetsByPath() {
 ```
 
 
-## `ReadLines`
+### `ReadLines`
 
 - 说明：以字符串形式逐行读取文件内容
 - 格式:
@@ -800,7 +800,7 @@ func ExampleReadLines() {
 ```
 
 
-## `ReadLinesBytes`
+### `ReadLinesBytes`
 
 - 说明：以字节形式逐行读取文件内容
 - 格式:
@@ -853,7 +853,7 @@ func ExampleReadLinesBytes() {
 ```
 
 
-## `Truncate`
+### `Truncate`
 
 - 说明：裁剪文件为指定大小
 - 注意：如果给定文件路径是软链，将会修改源文件
@@ -906,9 +906,9 @@ func ExampleTruncate(){
 ```
 
 
-# 内容替换
+## 内容替换
 
-## `ReplaceFile`
+### `ReplaceFile`
 
 - 说明：替换指定文件的指定内容为新内容
 - 格式:
@@ -962,7 +962,7 @@ func ExampleReplaceFile() {
 ```
 
 
-## `ReplaceFileFunc`
+### `ReplaceFileFunc`
 
 - 说明：使用自定义函数替换指定文件内容
 - 格式:
@@ -1020,7 +1020,7 @@ func ExampleReplaceFileFunc() {
 ```
 
 
-## `ReplaceDir`
+### `ReplaceDir`
 
 - 说明：扫描指定目录，替换符合条件的文件的指定内容为新内容
 - 格式:
@@ -1075,7 +1075,7 @@ func ExampleReplaceDir() {
 ```
 
 
-## `ReplaceDirFunc`
+### `ReplaceDirFunc`
 
 - 说明：扫描指定目录，使用自定义函数替换符合条件的文件的指定内容为新内容
 - 格式:
@@ -1134,9 +1134,9 @@ func ExampleReplaceDirFunc() {
 ```
 
 
-# 文件时间
+## 文件时间
 
-## `MTime`
+### `MTime`
 
 - 说明：获取路径修改时间
 - 格式:
@@ -1174,7 +1174,7 @@ func ExampleMTime() {
 ```
 
 
-## `MTimestamp`
+### `MTimestamp`
 
 - 说明：获取路径修改时间戳（秒）
 - 格式:
@@ -1212,7 +1212,7 @@ func ExampleMTimestamp() {
 ```
 
 
-## `MTimestampMilli`
+### `MTimestampMilli`
 
 - 说明：获取路径修改时间戳（毫秒）
 - 格式:
@@ -1250,9 +1250,9 @@ func ExampleMTimestampMilli() {
 ```
 
 
-# 文件大小
+## 文件大小
 
-## `Size`
+### `Size`
 
 - 说明：获取路径大小，不进行格式化
 - 格式:
@@ -1298,7 +1298,7 @@ func ExampleSize() {
 ```
 
 
-## `SizeFormat`
+### `SizeFormat`
 
 - 说明：获取路径大小，并格式化成硬盘容量
 - 格式:
@@ -1344,7 +1344,7 @@ func ExampleSizeFormat() {
 ```
 
 
-## `ReadableSize`
+### `ReadableSize`
 
 - 说明：获取给定路径容量大小，并格式化人类易读的硬盘容量格式
 - 格式:
@@ -1390,7 +1390,7 @@ func ExampleReadableSize() {
 ```
 
 
-## `StrToSize`
+### `StrToSize`
 
 - 说明：硬盘容量大小字符串转换为大小整形
 - 格式:
@@ -1428,7 +1428,7 @@ func ExampleStrToSize() {
 ```
 
 
-## `FormatSize`
+### `FormatSize`
 
 - 说明：大小整形转换为硬盘容量大小字符串\`K、m、g、t、p、e、b\`
 - 格式:
@@ -1472,9 +1472,9 @@ func ExampleFormatSize() {
 ```
 
 
-# 文件排序
+## 文件排序
 
-## `SortFiles`
+### `SortFiles`
 
 - 说明：排序多个路径，按首字母进行排序，数字优先。
 - 格式:
@@ -1523,9 +1523,9 @@ func ExampleSortFiles() {
 ```
 
 
-# 文件检索
+## 文件检索
 
-## `Search`
+### `Search`
 
 - 说明：在指定目录（默认包含当前目录、运行目录、主函数目录；不会递归子目录）中搜索文件并返回真实路径。
 - 格式:
@@ -1574,9 +1574,9 @@ func ExampleSearch() {
 ```
 
 
-# 目录扫描
+## 目录扫描
 
-## `ScanDir`
+### `ScanDir`
 
 - 说明：扫描指定目录，可扫描文件或目录，支持递归扫描。
 - 格式:
@@ -1633,7 +1633,7 @@ func ExampleScanDir() {
 ```
 
 
-## `ScanDirFile`
+### `ScanDirFile`
 
 - 说明：扫描指定目录的文件，支持递归扫描
 - 格式:
@@ -1689,7 +1689,7 @@ func ExampleScanDirFile() {
 ```
 
 
-## `ScanDirFunc`
+### `ScanDirFunc`
 
 - 说明：扫描指定目录（自定义过滤方法），可扫描文件或目录，支持递归扫描
 - 格式:
@@ -1750,7 +1750,7 @@ func ExampleScanDirFunc() {
 ```
 
 
-## `ScanDirFileFunc`
+### `ScanDirFileFunc`
 
 - 说明：扫描指定目录的文件（自定义过滤方法），支持递归扫描。
 - 格式:
@@ -1816,9 +1816,9 @@ func ExampleScanDirFileFunc() {
 ```
 
 
-# 常用目录
+## 常用目录
 
-## `Pwd`
+### `Pwd`
 
 - 说明：获取当前工作路径。
 - 格式:
@@ -1856,7 +1856,7 @@ func ExamplePwd() {
 ```
 
 
-## `Home`
+### `Home`
 
 - 说明：获取运行用户的主目录
 - 格式:
@@ -1895,7 +1895,7 @@ func ExampleHome() {
 ```
 
 
-## `Temp`
+### `Temp`
 
 - 说明：获取拼接系统临时路径后的绝对地址。
 
@@ -1941,7 +1941,7 @@ func ExampleTempDir() {
 ```
 
 
-## `SelfPath`
+### `SelfPath`
 
 - 说明：获取当前运行程序的绝对路径。
 
@@ -1981,9 +1981,9 @@ func ExampleSelfPath() {
 ```
 
 
-# 类型判断
+## 类型判断
 
-## `IsDir`
+### `IsDir`
 
 - 说明：检查给定的路径是否是文件夹。
 - 格式:
@@ -2028,7 +2028,7 @@ func ExampleIsDir() {
 ```
 
 
-## `IsFile`
+### `IsFile`
 
 - 说明：检查给定的路径是否是文件。
 - 格式:
@@ -2073,9 +2073,9 @@ func ExampleIsFile() {
 ```
 
 
-# 权限操作
+## 权限操作
 
-## `IsReadable`
+### `IsReadable`
 
 - 说明：检查给定的路径是否可读。
 
@@ -2119,7 +2119,7 @@ func ExampleIsReadable() {
 ```
 
 
-## `IsWritable`
+### `IsWritable`
 
 - 说明：检查指定路径是否可写，如果路径是目录，则会创建临时文件检查是否可写，如果是文件则判断是否可以打开
 
@@ -2163,7 +2163,7 @@ func ExampleIsWritable() {
 ```
 
 
-## `Chmod`
+### `Chmod`
 
 - 说明：使用指定的权限，更改指定路径的文件权限。
 
@@ -2221,9 +2221,9 @@ func ExampleChmod() {
 ```
 
 
-# 文件/目录操作
+## 文件/目录操作
 
-## `Mkdir`
+### `Mkdir`
 
 - 说明：创建文件夹，支持递归创建（建议采用绝对路径）,创建后的文件夹权限为： `drwxr-xr-x`。
 - 格式:
@@ -2269,7 +2269,7 @@ func ExampleMkdir() {
 ```
 
 
-## `Create`
+### `Create`
 
 - 说明：创建文件/文件夹,如果传入的路径中的文件夹不存在，则会自动创建文件夹以及文件，其中创建的文件权限为 `-rw-r–r–`。
 - 注意：如果需要创建文件的已存在，则会清空该文件的内容！
@@ -2336,7 +2336,7 @@ func ExampleCreate() {
 ```
 
 
-## `Open`
+### `Open`
 
 - 说明：以只读的方式打开文件/文件夹。
 - 格式:
@@ -2385,7 +2385,7 @@ func ExampleOpen() {
 ```
 
 
-## `OpenFile`
+### `OpenFile`
 
 - 说明：以指定\`flag\`以及\`perm\`的方式打开文件/文件夹。
 - 格式:
@@ -2442,7 +2442,7 @@ func ExampleOpenFile() {
 ```
 
 
-## `OpenWithFalg`
+### `OpenWithFalg`
 
 - 说明：以指定\`flag\`的方式打开文件/文件夹。
 - 格式:
@@ -2500,7 +2500,7 @@ func ExampleOpenWithFlag() {
 ```
 
 
-## `OpenWithFalgPerm`
+### `OpenWithFalgPerm`
 
 - 说明：以指定\`flag\`以及\`perm\`的方式打开文件/文件夹。
 - 格式:
@@ -2558,7 +2558,7 @@ func ExampleOpenWithFlagPerm() {
 ```
 
 
-## `Stat`
+### `Stat`
 
 - 说明：获取给定路径的文件详情。
 - 格式:
@@ -2611,7 +2611,7 @@ func ExampleStat() {
 ```
 
 
-## `Copy`
+### `Copy`
 
 - 说明：支持复制文件或目录
 - 格式:
@@ -2680,7 +2680,7 @@ func ExampleCopy() {
 ```
 
 
-## `CopyFile`
+### `CopyFile`
 
 - 说明：复制文件
 - 格式:
@@ -2735,7 +2735,7 @@ func ExampleCopyFile() {
 ```
 
 
-## `CopyDir`
+### `CopyDir`
 
 - 说明：支持复制文件或目录
 - 格式:
@@ -2794,7 +2794,7 @@ func ExampleCopyDir() {
 ```
 
 
-## `Move`
+### `Move`
 
 - 说明：将 `src` 重命名为 `dst`。
 
@@ -2848,7 +2848,7 @@ func ExampleMove() {
 ```
 
 
-## `Rename`
+### `Rename`
 
 - 说明： `Move` 的别名，将 `src` 重命名为 `dst`。
 
@@ -2902,7 +2902,7 @@ func ExampleRename() {
 ```
 
 
-## `Remove`
+### `Remove`
 
 - 说明：删除给定路径的文件或文件夹。
 
@@ -2953,7 +2953,7 @@ func ExampleRemove() {
 ```
 
 
-## `IsEmpty`
+### `IsEmpty`
 
 - 说明：检查给定的路径，如果是文件夹则检查是否包含文件，如果是文件则检查文件大小是否为空。
 
@@ -3004,7 +3004,7 @@ func ExampleIsEmpty() {
 ```
 
 
-## `DirNames`
+### `DirNames`
 
 - 说明：获取给定路径下的文件列表，返回的是一个切片。
 
@@ -3049,7 +3049,7 @@ func ExampleDirNames() {
 ```
 
 
-## `Glob`
+### `Glob`
 
 - 说明：模糊搜索给定路径下的文件列表，支持正则，第二个参数控制返回的结果是否带上绝对路径。
 
@@ -3101,7 +3101,7 @@ func ExampleGlob() {
 ```
 
 
-## `Exists`
+### `Exists`
 
 - 说明：检查给定的路径是否存在 。
 - 格式:
@@ -3143,7 +3143,7 @@ func ExampleExists() {
 ```
 
 
-## `Chdir`
+### `Chdir`
 
 - 说明：使用给定的路径，更改当前的工作路径。
 - 格式:
@@ -3192,9 +3192,9 @@ func ExampleChdir() {
 ```
 
 
-# 路径操作
+## 路径操作
 
-## `Join`
+### `Join`
 
 - 说明：将多个字符串路径通过\`/\`进行连接。
 - 格式:
@@ -3240,7 +3240,7 @@ func ExampleJoin() {
 ```
 
 
-## `Abs`
+### `Abs`
 
 - 说明：返回路径的绝对路径。
 
@@ -3284,7 +3284,7 @@ func ExampleAbs() {
 ```
 
 
-## `RealPath`
+### `RealPath`
 
 - 说明：获取给定路径的绝对路径地址。
 
@@ -3333,7 +3333,7 @@ func ExampleRealPath() {
 ```
 
 
-## `SelfName`
+### `SelfName`
 
 - 说明：获取当前运行程序的名称。
 
@@ -3373,7 +3373,7 @@ func ExampleSelfName() {
 ```
 
 
-## `Basename`
+### `Basename`
 
 - 说明：获取给定路径中的最后一个元素，包含扩展名。
 
@@ -3417,7 +3417,7 @@ func ExampleBasename() {
 ```
 
 
-## `Name`
+### `Name`
 
 - 说明：获取给定路径中的最后一个元素，不包含扩展名。
 
@@ -3461,7 +3461,7 @@ func ExampleName() {
 ```
 
 
-## `Dir`
+### `Dir`
 
 - 说明：获取给定路径的目录部分，排除最后的元素。
 
@@ -3505,7 +3505,7 @@ func ExampleDir() {
 ```
 
 
-## `Ext`
+### `Ext`
 
 - 说明：获取给定路径的扩展名，包含\`.\`。
 
@@ -3549,7 +3549,7 @@ func ExampleExt() {
 ```
 
 
-## `ExtName`
+### `ExtName`
 
 - 说明：获取给定路径的扩展名，不包含\`.\`。
 
@@ -3593,7 +3593,7 @@ func ExampleExtName() {
 ```
 
 
-## `MainPkgPath`
+### `MainPkgPath`
 
 - 说明：获取main文件（主入口）所在的绝对路径，。
 

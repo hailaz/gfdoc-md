@@ -2,11 +2,11 @@
 title: 类型转换-Structs转换
 ---
 
-# 基本介绍
+## 基本介绍
 
 我们之前提到可以使用 `Struct` 方法实现对 `struct` 对象的转换，那么我们当然也可以实现对 `struct` 数组的转换， `struct` 数组转换使用的是 `Structs` 方法实现。 `Structs` 方法建立在 `Struct` 方法的基础之上，所有的转换规则与 `Struct` 相同，只是增加了对 `struct` 数组类型的支持。在了解 `Structs` 方法之前，建议您先了解 `Struct` 方法介绍： [类型转换-Struct转换](/docs/核心组件/类型转换/类型转换-Struct转换)
 
-# 方法定义
+## 方法定义
 
 `Structs` 方法定义如下：
 
@@ -17,7 +17,7 @@ func Structs(params interface{}, pointer interface{}, mapping ...map[string]stri
 
 其中 `pointer` 目标转换参数类型需要为 `*[]struct/*[]*struct`。
 
-# 使用示例
+## 使用示例
 
 我们来看一个简单示例即可理解。
 

@@ -4,11 +4,11 @@ title: 数据表PB-gen pbentity
 
 该功能特性从 `v2.4` 版本开始提供。
 
-# 基本介绍
+## 基本介绍
 
 该命令用于读取配置的数据库，根据数据表生成对应的 `proto` 数据结构文件。
 
-# 命令使用
+## 命令使用
 
 ```
 $ gf gen pbentity -h
@@ -85,14 +85,14 @@ CONFIGURATION SUPPORT
 | `nameCase` | `CamelLower` | 生成的 `message` 属性字段名称格式。参数可选为： `Camel`、 `CamelLower`、 `Snake`、 `SnakeScreaming`、 `SnakeFirstUpper`、 `Kebab`、 `KebabScreaming`。具体介绍请参考命名行帮助示例。 | `Snake` |
 | `option` |  | 额外的 `proto option` 配置列表 |  |
 
-# 与 `gen dao` 中的 `entity` 差别
+## 与 `gen dao` 中的 `entity` 差别
 
-## 相同之处
+### 相同之处
 
 - 两者生成的内容都是 `entity` 内容，即从数据集合（数据库表）中生成对应的 `Golang` 实体对象供程序方便使用。并且都是单向生成，即只能从数据集合生成实体对象代码，以保证实体对象数据结构的同步。
 - `gen dao` 生成的 `entity` 数据实体对象是对于 `Golang` 语言来说是通用的，但目前主要为 `HTTP` 协议服务。在 `HTTP` 服务中， `gen dao` 中生成的 `entity` 虽然是在 `internal` 目录下，但最终也会作为 `HTTP API` 返回的一部分服务客户端。
 
-## 不同之处
+### 不同之处
 
 - 在 `GRPC` 服务中， `gen dao` 生成的 `entity` 数据结构无法提供给 `GRPC` 接口使用，因为 `GRPC` 的数据结构需要使用 `proto` 文件来定义。因此，在 `GRPC` 服务中就需要使用到 `gen pbentity` 中生成的 `pbentity proto` 文件。同时，在 `GRPC` 微服务开发中， `gen dao` 生成的 `entity` 已经没有具体作用。
 - 取名 `pbentity` 而不是 `entity` 的名称，是为了防止和 `gen dao` 中的 `entity` 含义冲突。

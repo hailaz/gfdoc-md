@@ -4,7 +4,7 @@ title: ORM链式操作-Hook特性
 
 `Hook` 特性允许我们对特性的 `Model` 绑定 `CURD` 钩子处理。
 
-# 相关定义
+## 相关定义
 
 相关 `Hook` 函数：
 
@@ -32,7 +32,7 @@ type HookHandler struct {
 func (m *Model) Hook(hook HookHandler) *Model
 ```
 
-# 使用示例
+## 使用示例
 
 查询 `birth_day` 字段时，同时计算出当前用户的年龄：
 

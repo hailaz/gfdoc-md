@@ -20,7 +20,7 @@ func (r *Response) WriteXmlExit(content interface{}, rootTag ...string) error
 
 对 `JSON` 数据格式支持的同时，同时也支持 `JSONP` 协议。
 
-# `JSON`
+## `JSON`
 
 ```
 package main
@@ -58,7 +58,7 @@ Content-Length: 22
 {"id":1,"name":"john"}
 ```
 
-# `JSONP`
+## `JSONP`
 
 需要注意使用 `JSONP` 协议时必须通过 `Query` 方式提供 `callback` 参数。
 
@@ -98,7 +98,7 @@ Content-Type: text/plain; charset=utf-8
 MyCallback({"id":1,"name":"john"})
 ```
 
-# `XML`
+## `XML`
 
 ```
 package main

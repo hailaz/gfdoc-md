@@ -16,9 +16,9 @@ import "github.com/gogf/gf/v2/text/gstr"
 
 以下常用方法列表，文档更新可能滞后于代码新特性，更多的方法及示例请参考代码文档： [https://pkg.go.dev/github.com/gogf/gf/v2/text/gstr](https://pkg.go.dev/github.com/gogf/gf/v2/text/gstr)
 
-# 字符串判断
+## 字符串判断
 
-## `IsNumeric`
+### `IsNumeric`
 
 - 说明：`IsNumeric` 验证字符串 `s` 是否为数字。
 
@@ -59,9 +59,9 @@ func ExampleIsNumeric() {
 ```
 
 
-# 字符串长度
+## 字符串长度
 
-## `LenRune`
+### `LenRune`
 
 - 说明：`LenRune` 返回 `unicode` 字符串长度。
 
@@ -103,9 +103,9 @@ func ExampleLenRune() {
 ```
 
 
-# 字符串创建
+## 字符串创建
 
-## `Repeat`
+### `Repeat`
 
 - 说明：`Repeat` 返回一个由 `input` 重复 `multiplier` 次后组成的新字符串。
 
@@ -148,9 +148,9 @@ func ExampleRepeat() {
 ```
 
 
-# 大小写转换
+## 大小写转换
 
-## `ToLower`
+### `ToLower`
 
 - 说明：`ToLower` 将 `s` 中所有 `Unicode` 字符都变为小写并返回其副本。
 
@@ -192,7 +192,7 @@ func ExampleToLower() {
 ```
 
 
-## `ToUpper`
+### `ToUpper`
 
 - 说明：`ToUpper` 将 `s` 中所有 `Unicode` 字符都变为大写并返回其副本。
 
@@ -234,7 +234,7 @@ func ExampleToUpper() {
 ```
 
 
-## `UcFirst`
+### `UcFirst`
 
 - 说明：`UcFirst` 将 `s` 中首字符变为大写并返回其副本。
 
@@ -276,7 +276,7 @@ func ExampleUcFirst() {
 ```
 
 
-## `LcFirst`
+### `LcFirst`
 
 - 说明： `LcFirst` 将 `s` 中首字符变为小写并返回其副本。
 
@@ -318,7 +318,7 @@ func ExampleLcFirst() {
 ```
 
 
-## `UcWords`
+### `UcWords`
 
 - 说明： `UcWords` 将字符串 `str` 中每个单词的第一个字符变为大写。
 
@@ -360,7 +360,7 @@ func ExampleUcWords() {
 ```
 
 
-## `IsLetterLower`
+### `IsLetterLower`
 
 - 说明：`IsLetterLower` 验证给定的字符 `b` 是否是小写字符。
 
@@ -400,7 +400,7 @@ func ExampleIsLetterLower() {
 ```
 
 
-## `IsLetterUpper`
+### `IsLetterUpper`
 
 - 说明：`IsLetterUpper` 验证字符 `b` 是否是大写字符。
 
@@ -440,9 +440,9 @@ func ExampleIsLetterUpper() {
 ```
 
 
-# 字符串比较
+## 字符串比较
 
-## `Compare`
+### `Compare`
 
 - 说明：`Compare` 返回一个按字典顺序比较两个字符串的整数。 如果 `a == b`，结果为 `0`，如果 `a < b`，结果为 `-1`，如果 `a > b`，结果为 `+1`。
 
@@ -484,7 +484,7 @@ func ExampleCompare() {
 ```
 
 
-## `Equal`
+### `Equal`
 
 - 说明： `Equal` 返回 `a` 和 `b` 在不区分大小写的情况下是否相等。
 
@@ -526,9 +526,9 @@ func ExampleEqual() {
 ```
 
 
-# 切分组合
+## 切分组合
 
-## `Split`
+### `Split`
 
 - 说明：`Split` 用 `delimiter` 将 `str` 拆分为 `[]string`。
 
@@ -571,7 +571,7 @@ func ExampleSplit() {
 ```
 
 
-## `SplitAndTrim`
+### `SplitAndTrim`
 
 - 说明：`SplitAndTrim` 使用 `delimiter` 将 `str` 拆分为 `[]string`，并对 `[]string` 的每个元素调用 `Trim`，并忽略在 `Trim` 之后为空的元素。
 
@@ -614,7 +614,7 @@ func ExampleSplitAndTrim() {
 ```
 
 
-## `Join`
+### `Join`
 
 - 说明： `Join` 将 `array` 中的每一个元素连接并生成一个新的字符串。参数 `sep` 会作为新字符串的分隔符。
 
@@ -657,7 +657,7 @@ func ExampleJoin() {
 ```
 
 
-## `JoinAny`
+### `JoinAny`
 
 - 说明： `JoinAny` 将 `array` 中的每一个元素连接并生成一个新的字符串。参数 `sep` 会作为新字符串的分隔符。参数 `array` 可以是任意的类型。
 
@@ -700,7 +700,7 @@ func ExampleJoinAny() {
 ```
 
 
-## `Explode`
+### `Explode`
 
 - 说明： `Explode` 使用分隔符 `delimiter` 字符串 `str` 拆分成 `[]string`
 
@@ -743,7 +743,7 @@ func ExampleExplode() {
 ```
 
 
-## `Implode`
+### `Implode`
 
 - 说明： `Implode` 使用 `glue` 连接 `pieces` 字符串数组的每一个元素。
 
@@ -786,7 +786,7 @@ func ExampleImplode() {
 ```
 
 
-## `ChunkSplit`
+### `ChunkSplit`
 
 - 说明：`ChunkSplit` 将字符串拆分为单位为 `chunkLen` 长度更小的每一份，并用 `end` 连接每一份拆分出的字符串。
 
@@ -830,7 +830,7 @@ func ExampleChunkSplit() {
 ```
 
 
-## `Fields`
+### `Fields`
 
 - 说明： `Fields` 以 `[]string` 的形式返回字符串中的每个单词。
 
@@ -872,9 +872,9 @@ func ExampleFields() {
 ```
 
 
-# 转义处理
+## 转义处理
 
-## `AddSlashes`
+### `AddSlashes`
 
 - 说明： `AddSlashes` 将字符串中的符号前添加转义字符 `'\'`
 
@@ -917,7 +917,7 @@ func ExampleAddSlashes() {
 ```
 
 
-## `StripSlashes`
+### `StripSlashes`
 
 - 说明： `StripSlashes` 去掉字符串 `str` 中的转义字符 `'\'`。
 
@@ -959,7 +959,7 @@ func ExampleStripSlashes() {
 ```
 
 
-## `QuoteMeta`
+### `QuoteMeta`
 
 - 说明：`QuoteMeta` 为str中' `. \ + * ? [ ^ ] ( $ )` 中的每个字符前添加一个转义字符 `'\'。`
 
@@ -1012,9 +1012,9 @@ func ExampleQuoteMeta() {
 ```
 
 
-# 统计计数
+## 统计计数
 
-## `Count`
+### `Count`
 
 - 说明：`Count` 计算 `substr` 在 `s` 中出现的次数。  如果在 `s` 中没有找到 `substr`，则返回 `0`。
 
@@ -1061,7 +1061,7 @@ func ExampleCount() {
 ```
 
 
-## `CountI`
+### `CountI`
 
 - 说明：`Count` 计算 `substr` 在 `s` 中出现的次数，不区分大小写。  如果在 `s` 中没有找到 `substr`，则返回 `0`。
 
@@ -1108,7 +1108,7 @@ func ExampleCountI() {
 ```
 
 
-## `CountWords`
+### `CountWords`
 
 - 说明：`CountWords` 以 `map[string]int` 的形式返回 `str` 中使用的单词的统计信息。
 
@@ -1150,7 +1150,7 @@ func ExampleCountWords() {
 ```
 
 
-## `CountChars`
+### `CountChars`
 
 - 说明：`CountChars` 以 `map[string]int` 的形式返回 `str` 中使用的字符的统计信息。 `noSpace` 参数可以控制是否计算空格。
 
@@ -1192,9 +1192,9 @@ func ExampleCountChars() {
 ```
 
 
-# 数组处理
+## 数组处理
 
-## `SearchArray`
+### `SearchArray`
 
 - 说明：`SearchArray` 在 `[]string 'a'` 中区分大小写地搜索字符串 `'s'`，返回其在 `'a'` 中的索引。 如果在 `'a'` 中没有找到 `'s'`，则返回 `-1`。
 
@@ -1237,7 +1237,7 @@ func ExampleSearchArray() {
 ```
 
 
-## `InArray`
+### `InArray`
 
 - 说明：`InArray校验` `[]string 'a'` 中是否有字符串 `' s '`。
 
@@ -1280,7 +1280,7 @@ func ExampleInArray() {
 ```
 
 
-## `PrefixArray`
+### `PrefixArray`
 
 - 说明： `PrefixArray` 位 `[]string array` 的每一个字符串添加 `'prefix'` 的前缀。
 
@@ -1324,9 +1324,9 @@ func ExamplePrefixArray() {
 ```
 
 
-# 命名转换
+## 命名转换
 
-## `CaseCamel`
+### `CaseCamel`
 
 - 说明： `CaseCamel` 将字符串转换为大驼峰形式(首字母大写)。
 
@@ -1368,7 +1368,7 @@ func ExampleCaseCamel() {
 ```
 
 
-## `CaseCamelLower`
+### `CaseCamelLower`
 
 - 说明： `CaseCamelLower` 将字符串转换为小驼峰形式(首字母小写)。
 
@@ -1410,7 +1410,7 @@ func ExampleCaseCamelLower() {
 ```
 
 
-## `CaseSnake`
+### `CaseSnake`
 
 - 说明： `CaseSnake` 将字符串转换中的符号(下划线,空格,点,中横线)用下划线( `_` )替换,并全部转换为小写字母。
 
@@ -1452,7 +1452,7 @@ func ExampleCaseSnake() {
 ```
 
 
-## `CaseSnakeScreaming`
+### `CaseSnakeScreaming`
 
 - 说明： `CaseSnakeScreaming` 把字符串中的符号(下划线,空格,点,中横线),全部替换为下划线 `'_'`,并将所有英文字母转为大写。
 
@@ -1494,7 +1494,7 @@ func ExampleCaseSnakeScreaming() {
 ```
 
 
-## `CaseSnakeFirstUpper`
+### `CaseSnakeFirstUpper`
 
 - 说明： `CaseSnakeFirstUpper` 将字符串中的字母为大写时,将大写字母转换为小写字母并在其前面增加一个下划线 `'_'`,首字母大写时,只转换为小写,前面不增加下划线 `'_'`。
 
@@ -1536,7 +1536,7 @@ func ExampleCaseSnakeFirstUpper() {
 ```
 
 
-## `CaseKebab`
+### `CaseKebab`
 
 - 说明： `CaseKebab` 将字符串转换中的符号(下划线,空格,点,)用中横线 `'-'` 替换,并全部转换为小写字母。
 
@@ -1578,7 +1578,7 @@ func ExampleCaseKebab() {
 ```
 
 
-## `CaseKebabScreaming`
+### `CaseKebabScreaming`
 
 - 说明： `CaseKebabScreaming` 将字符串转换中的符号(下划线,空格,点,中横线)用中横线 `'-'` 替换,并全部转换为大写字母。
 
@@ -1620,7 +1620,7 @@ func ExampleCaseKebabScreaming() {
 ```
 
 
-## `CaseDelimited`
+### `CaseDelimited`
 
 - 说明： `CaseDelimited` 将字符串转换中的符号进行替换。
 
@@ -1663,7 +1663,7 @@ func ExampleCaseDelimited() {
 ```
 
 
-## `CaseDelimitedScreaming`
+### `CaseDelimitedScreaming`
 
 - 说明： `CaseDelimitedScreaming` 将字符串中的符号(空格,下划线,点,中横线)用第二个参数进行替换,该函数第二个参数为替换的字符,第三个参数为大小写转换, `true` 为全部转换大写字母, `false` 为全部转为小写字母。
 
@@ -1717,9 +1717,9 @@ func ExampleCaseDelimitedScreaming() {
 ```
 
 
-# 包含判断
+## 包含判断
 
-## `Contains`
+### `Contains`
 
 - 说明： `Contains` 返回字符串 `str` 是否包含子字符串 `substr`，区分大小写。
 
@@ -1773,7 +1773,7 @@ func ExampleContains() {
 ```
 
 
-## `ContainsI`
+### `ContainsI`
 
 - 说明：`ContainsI` 校验 `substr` 是否在 `str` 中，不区分大小写。
 
@@ -1819,7 +1819,7 @@ func ExampleContainsI() {
 ```
 
 
-## `ContainsAny`
+### `ContainsAny`
 
 - 说明：`ContainsAny` 校验 `s` 中是否包含 `chars`。
 
@@ -1873,9 +1873,9 @@ func ExampleContainsAny() {
 ```
 
 
-# 字符串转换
+## 字符串转换
 
-## `Chr`
+### `Chr`
 
 - 说明：`Chr` 返回一个数字 `0-255` 对应的 `ascii` 字符串。
 
@@ -1917,7 +1917,7 @@ func ExampleChr() {
 ```
 
 
-## `Ord`
+### `Ord`
 
 - 说明：`Ord` 将字符串的第一个字节转换为 `0-255` 之间的值。
 
@@ -1960,7 +1960,7 @@ func ExampleOrd() {
 ```
 
 
-## `OctStr`
+### `OctStr`
 
 - 说明：`OctStr` 将字符串 `str` 中的八进制字符串转换为其原始字符串。
 
@@ -2002,7 +2002,7 @@ func ExampleOctStr() {
 ```
 
 
-## `Reverse`
+### `Reverse`
 
 - 说明：`Reverse` 返回 `str` 的反转字符串。
 
@@ -2044,7 +2044,7 @@ func ExampleReverse() {
 ```
 
 
-## `NumberFormat`
+### `NumberFormat`
 
 - 说明：`NumberFormat` 以千位分组来格式化数字。
 
@@ -2092,7 +2092,7 @@ func ExampleNumberFormat() {
 ```
 
 
-## `Shuffle`
+### `Shuffle`
 
 - 说明：`Shuffle` 返回将 `str` 随机打散后的字符串。
 
@@ -2134,7 +2134,7 @@ func ExampleShuffle() {
 ```
 
 
-## `HideStr`
+### `HideStr`
 
 - 说明： `HideStr` 将字符串 `str` 从中间字符开始，百分比 `percent` 的字符转换成 `hide` 字符串。
 
@@ -2178,7 +2178,7 @@ func ExampleHideStr() {
 ```
 
 
-## `Nl2Br`
+### `Nl2Br`
 
 - 说明：`Nl2Br` 在字符串中的所有换行符之前插入 `HTML` 换行符 `(' br ' |<br />): \n\r， \r\n， \r， \n`。
 
@@ -2226,7 +2226,7 @@ use`
 ```
 
 
-## `WordWrap`
+### `WordWrap`
 
 - 说明： `WordWrap` 使用换行符将 `str` 换行到给定字符数（不会切分单词）。
 
@@ -2288,9 +2288,9 @@ func ExampleWordWrap() {
 ```
 
 
-# 域名处理
+## 域名处理
 
-## `IsSubDomain`
+### `IsSubDomain`
 
 - 说明：`IsSubDomain` 校验 `subDomain` 是否为 `mainDomain` 的子域名。 支持 `mainDomain` 中的 `'*'`。
 
@@ -2335,9 +2335,9 @@ func ExampleIsSubDomain() {
 ```
 
 
-# 参数解析
+## 参数解析
 
-## `Parse`
+### `Parse`
 
 - 说明： `Parse` 解析字符串并以 `map[string]interface{}` 类型返回。
 
@@ -2418,9 +2418,9 @@ func ExampleParse() {
 ```
 
 
-# 位置查找
+## 位置查找
 
-## `Pos`
+### `Pos`
 
 - 说明：`Pos` 返回 `needle` 在 `haystack` 中第一次出现的位置，区分大小写。 如果没有找到，则返回-1。
 
@@ -2463,7 +2463,7 @@ func ExamplePos() {
 ```
 
 
-## `PosRune`
+### `PosRune`
 
 - 说明： `PosRune` 的作用于函数 `Pos` 相似，但支持 `haystack` 和 `needle` 为 `unicode` 字符串。
 
@@ -2509,7 +2509,7 @@ func ExamplePosRune() {
 ```
 
 
-## `PosI`
+### `PosI`
 
 - 说明：`PosI` 返回 `needle` 在 `haystack` 中第一次出现的位置，不区分大小写。 如果没有找到，则返回-1。
 
@@ -2555,7 +2555,7 @@ func ExamplePosI() {
 ```
 
 
-## `PosRuneI`
+### `PosRuneI`
 
 - 说明： `PosRuneI` 的作用于函数 `PosI` 相似，但支持 `haystack` 和 `needle` 为 `unicode` 字符串。
 
@@ -2611,7 +2611,7 @@ func ExamplePosIRune() {
 ```
 
 
-## `PosR`
+### `PosR`
 
 - 说明：`PosR` 返回 `needle` 在 `haystack` 中最后一次出现的位置，区分大小写。 如果没有找到，则返回-1。
 
@@ -2657,7 +2657,7 @@ func ExamplePosR() {
 ```
 
 
-## `PosRuneR`
+### `PosRuneR`
 
 - 说明： `PosRuneR` 的作用于函数 `PosR` 相似，但支持 `haystack` 和 `needle` 为 `unicode` 字符串。
 
@@ -2703,7 +2703,7 @@ func ExamplePosRRune() {
 ```
 
 
-## `PosRI`
+### `PosRI`
 
 - 说明：`PosRI` 返回 `needle` 在 `haystack` 中最后一次出现的位置，不区分大小写。 如果没有找到，则返回-1。
 
@@ -2749,7 +2749,7 @@ func ExamplePosRI() {
 ```
 
 
-## `PosRIRune`
+### `PosRIRune`
 
 - 说明：`PosRIRune`的作用于函数`PosRI`相似，但支持 `haystack` 和 `needle` 为 `unicode` 字符串。
 
@@ -2795,9 +2795,9 @@ func ExamplePosRIRune() {
 ```
 
 
-# 查找替换
+## 查找替换
 
-## `Replace`
+### `Replace`
 
 - 说明： `Replace` 返回 `origin` 字符串中, `search` 被 `replace` 替换后的新字符串。 `search` 区分大小写。
 
@@ -2841,7 +2841,7 @@ func ExampleReplace() {
 ```
 
 
-## `ReplaceI`
+### `ReplaceI`
 
 - 说明： `ReplaceI` 返回 `origin` 字符串中, `search` 被 `replace` 替换后的新字符串。 `search` 不区分大小写。
 
@@ -2885,7 +2885,7 @@ func ExampleReplaceI() {
 ```
 
 
-## `ReplaceByArray`
+### `ReplaceByArray`
 
 - 说明：`ReplaceByArray` 返回 `origin` 被一个切片按两个一组 `(search, replace)` 顺序替换的新字符串，区分大小写。
 
@@ -2939,7 +2939,7 @@ func ExampleReplaceByArray() {
 ```
 
 
-## `ReplaceIByArray`
+### `ReplaceIByArray`
 
 - 说明：`ReplaceIByArray` 返回 `origin` 被一个切片按两个一组 `(search, replace)` 顺序替换的新字符串，不区分大小写。
 
@@ -2983,7 +2983,7 @@ func ExampleReplaceIByArray() {
 ```
 
 
-## `ReplaceByMap`
+### `ReplaceByMap`
 
 - 说明：`ReplaceByMap` 返回 `origin` 中 `map` 的 `key` 替换为 `value` 的新字符串，区分大小写。
 
@@ -3042,7 +3042,7 @@ func ExampleReplaceByMap() {
 ```
 
 
-## `ReplaceIByMap`
+### `ReplaceIByMap`
 
 - 说明：`ReplaceIByMap` 返回 `origin` 中 `map` 的 `key` 替换为 `value` 的新字符串，不区分大小写。
 
@@ -3087,9 +3087,9 @@ func ExampleReplaceIByMap() {
 ```
 
 
-# 子串截取
+## 子串截取
 
-## `Str`
+### `Str`
 
 - 说明： `Str` 返回从 `needle` 第一次出现的位置开始，到 `haystack` 结尾的字符串（包含 `needle` 本身）。
 
@@ -3132,7 +3132,7 @@ func ExampleStr() {
 ```
 
 
-## `StrEx`
+### `StrEx`
 
 - 说明： `StrEx` 返回从 `needle` 第一次出现的位置开始，到 `haystack` 结尾的字符串（不包含 `needle` 本身）。
 
@@ -3175,7 +3175,7 @@ func ExampleStrEx() {
 ```
 
 
-## `StrTill`
+### `StrTill`
 
 - 说明： `StrTill` 返回从 `haystack` 字符串开始到 `needle` 第一次出现的位置的字符串（包含 `needle` 本身）。
 
@@ -3218,7 +3218,7 @@ func ExampleStrTill() {
 ```
 
 
-## `StrTillEx`
+### `StrTillEx`
 
 - 说明： `StrTillEx` 返回从 `haystack` 字符串开始到 `needle` 第一次出现的位置的字符串（不包含 `needle` 本身）。
 
@@ -3261,7 +3261,7 @@ func ExampleStrTillEx() {
 ```
 
 
-## `SubStr`
+### `SubStr`
 
 - 说明：`SubStr` 返回字符串 `str` 从 `start` 开始，长度为 `length` 的新字符串。 参数 `length` 是可选的，它默认使用 `str` 的长度。
 
@@ -3305,7 +3305,7 @@ func ExampleSubStr() {
 ```
 
 
-## `SubStrRune`
+### `SubStrRune`
 
 - 说明：`SubStrRune` 返回 `unicode` 字符串 `str` 从 `start` 开始，长度为 `length` 的新字符串。 参数 `length` 是可选的，它默认使用 `str` 的长度。
 
@@ -3349,7 +3349,7 @@ func ExampleSubStrRune() {
 ```
 
 
-## `StrLimit`
+### `StrLimit`
 
 - 说明： `StrLimit` 取 `str` 字符串开始，长度为 `length` 的字符串，加上 `suffix...` 后返回新的字符串。
 
@@ -3393,7 +3393,7 @@ func ExampleStrLimit() {
 ```
 
 
-## `StrLimitRune`
+### `StrLimitRune`
 
 - 说明： `StrLimitRune` 取 `unicode` 字符串 `str` 开始，长度为 `length` 的字符串，加上 `suffix...` 后返回新的字符串。
 
@@ -3437,7 +3437,7 @@ func ExampleStrLimitRune() {
 ```
 
 
-## `SubStrFrom`
+### `SubStrFrom`
 
 - 说明：`SubStrFrom` 返回字符串 `str` 从第一次出现 `need` 到 `str` 的结尾的字符串（包含 `need`）。
 
@@ -3480,7 +3480,7 @@ func ExampleSubStrFrom() {
 ```
 
 
-## `SubStrFromEx`
+### `SubStrFromEx`
 
 - 说明：`SubStrFromEx` 返回字符串 `str` 从第一次出现 `need` 到 `str` 的结尾的字符串（不包含 `need`）。
 
@@ -3523,7 +3523,7 @@ func ExampleSubStrFromEx() {
 ```
 
 
-## `SubStrFromR`
+### `SubStrFromR`
 
 - 说明：`SubStrFromR` 返回字符串 `str` 从最后一次出现 `need` 到 `str` 的结尾的字符串（包含 `need`）。
 
@@ -3566,7 +3566,7 @@ func ExampleSubStrFromR() {
 ```
 
 
-## `SubStrFromREx`
+### `SubStrFromREx`
 
 - 说明：`SubStrFromREx` 返回字符串 `str` 从最后一次出现 `need` 到 `str` 的结尾的字符串（不包含 `need`）。
 
@@ -3609,9 +3609,9 @@ func ExampleSubStrFromREx() {
 ```
 
 
-# 字符/子串过滤
+## 字符/子串过滤
 
-## `Trim`
+### `Trim`
 
 - 说明： `Trim` 从字符串的开头和结尾剪切空白(或其他字符)。 可选参数 `characterMask` 指定额外剥离的字符。
 
@@ -3654,7 +3654,7 @@ func ExampleTrim() {
 ```
 
 
-## `TrimStr`
+### `TrimStr`
 
 - 说明：`TrimStr` 从字符串的开头和结尾去掉所有 `cut` 字符串（不会删除开头或结尾的空白）。
 
@@ -3698,7 +3698,7 @@ func ExampleTrimStr() {
 ```
 
 
-## `TrimLeft`
+### `TrimLeft`
 
 - 说明：`TrimLeft` 将字符串开头的空格(或其他字符)删除。
 
@@ -3741,7 +3741,7 @@ func ExampleTrimLeft() {
 ```
 
 
-## `TrimLeftStr`
+### `TrimLeftStr`
 
 - 说明：`TrimLeftStr` 从字符串的开头删除 `count` 个 `cut` 字符串（不会删除开头的空格）。
 
@@ -3785,7 +3785,7 @@ func ExampleTrimLeftStr() {
 ```
 
 
-## `TrimRight`
+### `TrimRight`
 
 - 说明： `TrimRight` 从字符串的末尾去掉空白(或其他字符)。
 
@@ -3828,7 +3828,7 @@ func ExampleTrimRight() {
 ```
 
 
-## `TrimRightStr`
+### `TrimRightStr`
 
 - 说明：`TrimRightStr` 从字符串的尾部删除 `count` 个 `cut` 字符串（不会删除尾部的空格）。
 
@@ -3872,7 +3872,7 @@ func ExampleTrimRightStr() {
 ```
 
 
-## `TrimAll`
+### `TrimAll`
 
 - 说明： `TrimAll` 删除字符串 `str` 中的所有空格(或其他字符)以及 `characterMask` 字符。
 
@@ -3915,7 +3915,7 @@ func ExampleTrimAll() {
 ```
 
 
-## `HasPrefix`
+### `HasPrefix`
 
 - 说明： `HasPrefix` 返回 `s` 是否以 `prefix` 开头。
 
@@ -3958,7 +3958,7 @@ func ExampleHasPrefix() {
 ```
 
 
-## `HasSuffix`
+### `HasSuffix`
 
 - 说明： `HasSuffix` 返回 `s` 是否以 `suffix` 结束。
 
@@ -4001,9 +4001,9 @@ func ExampleHasSuffix() {
 ```
 
 
-# 版本比较
+## 版本比较
 
-## `CompareVersion`
+### `CompareVersion`
 
 - 说明：`CompareVersion` 将 `a` 和 `b` 作为标准 `GNU` 版本进行比较。
 
@@ -4045,7 +4045,7 @@ func ExampleCompareVersion() {
 ```
 
 
-## `CompareVersionGo`
+### `CompareVersionGo`
 
 - 说明： `CompareVersionGo` 将 `a` 和 `b` 作为标准的 `Golang` 版本进行比较。
 
@@ -4090,9 +4090,9 @@ func ExampleCompareVersionGo() {
 ```
 
 
-# 相似计算
+## 相似计算
 
-## `Levenshtein`
+### `Levenshtein`
 
 - 说明： `Levenshtein` 计算两个字符串之间的 `Levenshtein` 距离。
 
@@ -4138,7 +4138,7 @@ func ExampleLevenshtein() {
 ```
 
 
-## `SimilarText`
+### `SimilarText`
 
 - 说明： `SimilarText` 计算两个字符串之间的相似度。
 
@@ -4182,7 +4182,7 @@ func ExampleSimilarText() {
 ```
 
 
-## `Soundex`
+### `Soundex`
 
 - 说明： `Soundex` 用于计算字符串的 `Soundex` 键。
 

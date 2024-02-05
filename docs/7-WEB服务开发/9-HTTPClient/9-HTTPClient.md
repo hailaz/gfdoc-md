@@ -2,7 +2,7 @@
 title: HTTPClient
 ---
 
-# 基本介绍
+## 基本介绍
 
 `GoFrame` 框架提供了强大便捷易用的 `HTTP` 客户端，由 `gclient` 组件实现，对象创建可以通过 `gclient.New()` 包方法，也可以通过 `g.Client()` 方法调用。推荐使用 `g.Client()` 来便捷地创建 `HTTP` 客户端对象。由于 `gclient.Client` 内部封装扩展于标准库的 `http.Client` 对象，因此标准库 `http.Client` 有的特性， `gclient.Client` 也是支持的。
 
@@ -19,7 +19,7 @@ title: HTTPClient
 
 请使用给定的方法创建 `Client` 对象，而不要使用 `new(ghttp.Client)` 或者 `&ghttp.Client{}` 创建客户端对象，否则，哼哼。
 
-# 链式操作
+## 链式操作
 
 `GoFrame` 框架的客户端支持便捷的链式操作，常用方法如下（文档方法列表可能滞后于源码，建议查看接口文档或源码 [https://pkg.go.dev/github.com/gogf/gf/v2/net/gclient](https://pkg.go.dev/github.com/gogf/gf/v2/net/gclient)）：
 
@@ -51,7 +51,7 @@ func (c *Client) Use(handlers ...HandlerFunc) *Client
 7. `Proxy` 方法用于设置http访问代理。
 8. `RedirectLimit` 方法用于限制重定向跳转次数。
 
-# 返回对象
+## 返回对象
 
 `gclient.Response` 为HTTP对应请求的返回结果对象，该对象继承于 `http.Response`，可以使用 `http.Response` 的所有方法。在此基础之上增加了以下几个方法：
 
@@ -69,12 +69,12 @@ func (r *Response) Close() error
 
 这里也要提醒的是， `Response` 需要手动调用 `Close` 方法关闭，也就是说，不管你使用不使用返回的 `Response` 对象，你都需要将该返回对象赋值给一个变量，并且手动调用其 `Close` 方法进行关闭（往往使用 `defer r.Close()`），否则会造成文件句柄溢出、内存溢出。
 
-# 重要说明
+## 重要说明
 
 1. `ghttp` 客户端默认关闭了 `KeepAlive` 功能以及对服务端 `TLS` 证书的校验功能，如果需要启用可自定义客户端的 `Transport` 属性。
 2. **连接池参数设定**、 **连接代理设置** 等这些高级功能也可以通过自定义客户端的 `Transport` 属性实现，该数据继承于标准库的 `http.Transport` 对象。
 
-# 相关文档
+## 相关文档
 
 - [HTTPClient-基本使用](/docs/WEB服务开发/HTTPClient/HTTPClient-基本使用)
 - [HTTPClient-文件上传](/docs/WEB服务开发/HTTPClient/HTTPClient-文件上传)

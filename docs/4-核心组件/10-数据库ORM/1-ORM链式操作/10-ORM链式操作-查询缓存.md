@@ -2,7 +2,7 @@
 title: ORM链式操作-查询缓存
 ---
 
-# 查询缓存
+## 查询缓存
 
 `gdb` 支持对查询结果的缓存处理，常用于多读少写的查询缓存场景，并支持手动的缓存清理。需要注意的是，查询缓存仅支持链式操作，且在事务操作下不可用。
 
@@ -35,13 +35,13 @@ type CacheOption struct {
 func (m *Model) Cache(option CacheOption) *Model
 ```
 
-# 缓存管理
+## 缓存管理
 
-## 缓存对象
+### 缓存对象
 
 `ORM` 对象默认情况下提供了缓存管理对象，该缓存对象类型为 `*gcache.Cache`，也就是说同时也支持 `*gcache.Cache` 的所有特性。可以通过 `GetCache() *gcache.Cache` 接口方法获得该缓存对象，并通过返回的对象实现自定义的各种缓存操作，例如： `g.DB().GetCache().Keys()`。
 
-## 缓存适配（ `Redis` 缓存）
+### 缓存适配（ `Redis` 缓存）
 
 默认情况下 `ORM` 的 `*gcache.Cache` 缓存对象提供的是单进程内存缓存，虽然性能非常高效，但是只能在单进程内使用。如果服务如果采用多节点部署，多节点之间的缓存可能会产生数据不一致的情况，因此大多数场景下我们都是通过 `Redis` 服务器来实现对数据库查询数据的缓存。 `*gcache.Cache` 对象采用了适配器设计模式，可以轻松实现从单进程内存缓存切换为分布式的 `Redis` 缓存。使用示例：
 
@@ -52,7 +52,7 @@ g.DB().GetCache().SetAdapter(redisCache)
 
 更多介绍请参考： [缓存管理-Redis缓存](/docs/核心组件/缓存管理/缓存管理-Redis缓存)
 
-## 管理方法
+### 管理方法
 
 为简化数据库的查询缓存管理，从 `v2.2.0` 版本开始，提供了两个缓存管理方法：
 
@@ -70,9 +70,9 @@ func (c *Core) ClearCacheAll(ctx context.Context) (err error)
 g.DB().GetCore()
 ```
 
-# 使用示例
+## 使用示例
 
-## 数据表结构
+### 数据表结构
 
 ```
 CREATE TABLE `user` (
@@ -83,7 +83,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 ```
 
-## 示例代码
+### 示例代码
 
 ```
 package main

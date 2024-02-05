@@ -2,11 +2,11 @@
 title: 配置管理-AdapterContent
 ---
 
-# `AdapterContent`
+## `AdapterContent`
 
 `AdapterContent` 是基于配置内容的实现，用户可以给定具体的配置内容，生成 `Adapter` 接口对象。配置内容支持多种格式，格式列表同配置管理组件。
 
-# 使用示例
+## 使用示例
 
 大部分场景下，我们可以通过框架已经封装好的g.Cfg单例对象来便捷使用基于文件的配置管理实现。例如：
 

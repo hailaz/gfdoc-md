@@ -2,7 +2,7 @@
 title: ORM方法操作(原生)
 ---
 
-# 方法操作
+## 方法操作
 
 方法操作用于原生 `SQL` 执行，相对链式操作更偏底层操作一些，在 `ORM` 链式操作执行不了太过于复杂的 `SQL` 操作时，可以交给方法操作来处理。
 
@@ -44,9 +44,9 @@ Delete(ctx context.Context, table string, condition interface{}, args ...interfa
 3.  在执行数据查询时推荐使用 `Get*` 系列查询方法。
 4. `Insert`/ `Replace`/ `Save` 方法中的 `data` 参数支持的数据类型为： `string/map/slice/struct/*struct`，当传递为 `slice` 类型时，自动识别为批量操作，此时 `batch` 参数有效。
 
-# 操作示例
+## 操作示例
 
-## 1\. `ORM` 对象
+### 1\. `ORM` 对象
 
 ```
 // 获取默认配置的数据库对象(配置名称为"default")
@@ -63,7 +63,7 @@ db, err := gdb.Instance("user-center")
 // 数据库引擎底层采用了链接池设计，当链接不再使用时会自动关闭
 ```
 
-## 2\. 数据写入
+### 2\. 数据写入
 
 ```
 r, err := db.Insert(ctx, "user", gdb.Map {
@@ -71,7 +71,7 @@ r, err := db.Insert(ctx, "user", gdb.Map {
 })
 ```
 
-## 3\. 数据查询(列表)
+### 3\. 数据查询(列表)
 
 ```
 list, err := db.GetAll(ctx, "select * from user limit 2")
@@ -79,7 +79,7 @@ list, err := db.GetAll(ctx, "select * from user where age > ? and name like ?", 
 list, err := db.GetAll(ctx, "select * from user where status=?", g.Slice{1})
 ```
 
-## 4\. 数据查询(单条)
+### 4\. 数据查询(单条)
 
 ```
 one, err := db.GetOne(ctx, "select * from user limit 2")
@@ -88,7 +88,7 @@ one, err := db.GetOne(ctx, "select * from user where uid=?", 1000)
 one, err := db.GetOne(ctx, "select * from user where uid=?", g.Slice{1000})
 ```
 
-## 5\. 数据保存
+### 5\. 数据保存
 
 ```
 r, err := db.Save(ctx, "user", gdb.Map {
@@ -97,7 +97,7 @@ r, err := db.Save(ctx, "user", gdb.Map {
 })
 ```
 
-## 6\. 批量操作
+### 6\. 批量操作
 
 其中 `batch` 参数用于指定批量操作中分批写入条数数量（默认是 `10`）。
 
@@ -110,7 +110,7 @@ _, err := db.Insert(ctx, "user", gdb.List {
 }, 10)
 ```
 
-## 7\. 数据更新/删除
+### 7\. 数据更新/删除
 
 ```
 // db.Update/db.Delete 同理

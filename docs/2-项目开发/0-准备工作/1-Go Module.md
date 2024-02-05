@@ -4,7 +4,7 @@ title: Go Module
 
 `Go Module` 是从Go版本 `1.11.1` 开始官方提供的包管理工具，用于解决Go项目的包管理及依赖，类似于PHP的 `composer`、Nodejs的 `npm`。本章节会对 `Go Module` 的一些常用的实用的命令/设置进行介绍，更详细的介绍请查看官方文档： [https://github.com/golang/go/wiki/Modules](https://github.com/golang/go/wiki/Modules)
 
-# 关于 `go.mod`
+## 关于 `go.mod`
 
 `go.mod` 是Go项目的依赖描述文件，该文件主要用来描述两个事情：
 
@@ -23,13 +23,13 @@ module my-hello
 
 一般情况下， `go.sum` 依赖分析文件应当被添加到版本管理中随着 `go.mod` 文件一起提交。
 
-# 使用 `go.mod`
+## 使用 `go.mod`
 
 使用 `go.mod` 意即用 `go.mod` 进行项目依赖管理。我们有两种 `go.mod` 的 **使用方式**： `IDE-vgo` 和 `命令行` 方式。以下我们通过下载使用 `GoFrame` 框架来演示如何使用这两种方式来管理依赖。
 
 > 如果需要 `Goland` IDE支持 `go.mod`，必须要打开 `vgo` 的支持（包括代码依赖检测）。这两种使用方式的区别仅仅是下载依赖包的方式不同。
 
-## 使用Goland IDE vgo（推荐）
+### 使用Goland IDE vgo（推荐）
 
 `vgo` 是基于 `Go Module` 规范的包管理工具，同官方的 `go mod` 命令工具类似。
 
@@ -119,7 +119,7 @@ require github.com/gogf/gf v1.6.13
 ![](/download/attachments/1114258/gomodule8.png?version=1&modificationDate=1608636691515&api=v2)
 
 
-## 使用命令行
+### 使用命令行
 
 1. 打开 `Terminal`，在项目根目录下执行:
 
@@ -172,7 +172,7 @@ require github.com/gogf/gf v1.6.13 // indirect
 且生成了新的 `go.sum` 依赖分析文件，该文件充其量算是一个临时文件，对于我们平时开发工作来说意义不大。
 
 
-# 使用GoFrame
+## 使用GoFrame
 
 我们将之前的 `hello.go` 修改如下：
 

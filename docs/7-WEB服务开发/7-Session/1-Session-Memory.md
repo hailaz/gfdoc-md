@@ -2,11 +2,11 @@
 title: Session-Memory
 ---
 
-# 内存存储
+## 内存存储
 
 内存存储比较简单，性能也很高效，但没有持久化存储 `Session` 数据，因此应用程序重启之后便会丢失 `Session` 数据，可用于特定的业务场景中。 `gsession` 的 `内存` 存储使用 `StorageMemory` 对象实现，
 
-# 使用示例
+## 使用示例
 
 ```
 package main

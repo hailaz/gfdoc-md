@@ -2,7 +2,7 @@
 title: Session-Redis-KeyValue
 ---
 
-# Redis KeyValue Storage
+## Redis KeyValue Storage
 
 文件存储的方式在单节点的场景下非常不错，但是涉及到对应用进行多节点部署的场景下，各个节点的 `Session` 无法共享，因此需要将 `Session` 存储单独剥离出来管理， `Redis` 服务器是比较常见的一个选择。
 
@@ -10,7 +10,7 @@ title: Session-Redis-KeyValue
 
 如果单个用户下(以用户维度举例) `Session` 数据量不大的业务场景中，都推荐使用这种 `Storage` 方式。如果单个用户 `Session` 数据量较大（例如 `>10MB`），可以参考 `HashTable` 的 `Storage` 方式： [Session-Redis-HashTable](/docs/WEB服务开发/Session/Session-Redis-HashTable)
 
-# 使用示例
+## 使用示例
 
 ```
 package main

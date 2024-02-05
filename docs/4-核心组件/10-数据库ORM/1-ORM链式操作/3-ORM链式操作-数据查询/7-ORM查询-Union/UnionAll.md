@@ -4,7 +4,7 @@ title: ORM查询-Union/UnionAll
 
 `GoFrame ORM` 组件支持 `Union/UnionAll` 操作， `Union/UnionAll` 操作符用于连接两个以上的 `SELECT` 语句的结果组合到一个结果集合中，关于 `Union/UnionAll` 组合查询的相关介绍可以参考MySQL的官方文档介绍 [https://dev.mysql.com/doc/refman/8.0/en/union.html](https://dev.mysql.com/doc/refman/8.0/en/union.html) 。我们可以通过链式操作或者方法操作来实现 `Union/UnionAll` 操作。
 
-# 方法定义
+## 方法定义
 
 ```
 // Union does "(SELECT xxx FROM xxx) UNION (SELECT xxx FROM xxx) ..." statement.
@@ -14,7 +14,7 @@ func (c *Core) Union(unions ...*Model) *Model
 func (c *Core) UnionAll(unions ...*Model) *Model
 ```
 
-# `Union`
+## `Union`
 
 使用 `Union` 操作符，多个 `SELECT` 语句会删除重复的数据。
 
@@ -51,7 +51,7 @@ dao.User.Union(
 // ORDER BY `id` DESC) ORDER BY `id` DESC
 ```
 
-# `UnionAll`
+## `UnionAll`
 
 使用 `UnionAll` 操作符，多个 `SELECT` 语句不会删除重复的数据。
 

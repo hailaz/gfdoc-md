@@ -2,12 +2,12 @@
 title: ORM链式操作-字段获取
 ---
 
-# `FieldsStr/FieldsExStr` 字段获取
+## `FieldsStr/FieldsExStr` 字段获取
 
 1. `FieldsStr` 用于获取指定表的字段，并可给定字段前缀，字段之间使用" `,`"符号连接成字符串返回；
 2. `FieldsExStr` 用于获取指定表中例外的字段，并可给定字段前缀，字段之间使用" `,`"符号连接成字符串返回；
 
-## `FieldsStr` 示例
+### `FieldsStr` 示例
 
 1. 假如 `user` 表有4个字段 `uid`, `nickname`, `passport`, `password`。
 2. 查询字段
@@ -41,7 +41,7 @@ g.Model("user").FieldsStr("gf_")
 ```
 
 
-## `FieldsExStr` 示例
+### `FieldsExStr` 示例
 
 1. 假如 `user` 表有4个字段 `uid`, `nickname`, `passport`, `password`。
 2. 查询字段排除

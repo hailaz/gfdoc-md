@@ -46,7 +46,7 @@ type Locker
     func (l *Locker) Unlock(key string)
 ```
 
-## 示例1，基本使用
+### 示例1，基本使用
 
 ```
 package main
@@ -92,7 +92,7 @@ func main() {
 2018-10-15 23:57:37.298 8
 ```
 
-## 示例2，TryLock非阻塞锁
+### 示例2，TryLock非阻塞锁
 
 `TryLock` 方法是有返回值的，它表示用来尝试获取锁，如果获取成功，则返回 `true`；如果获取失败（即互斥锁已被其他 `goroutine` 获取），则返回 `false`。
 

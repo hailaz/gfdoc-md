@@ -40,9 +40,9 @@ func (m *Model) WhereOrNotNull(columns ...string) *Model
 
 下面我们对其中的几个常用方法做简单介绍，其他条件查询方法用法类似。
 
-# `Where/WhereOr` 查询条件
+## `Where/WhereOr` 查询条件
 
-## 基本介绍
+### 基本介绍
 
 这两个方法用于传递查询条件参数，支持的参数为任意的 `string/map/slice/struct/*struct` 类型。
 
@@ -88,7 +88,7 @@ Where(Condition{1, 18})
 // WHERE `sex`=1 AND `age`=18
 ```
 
-## 使用示例
+### 使用示例
 
 `Where + string`，条件参数使用字符串和预处理。
 
@@ -164,7 +164,7 @@ condition := g.Map{
 g.Model("article").Where(condition).All()
 ```
 
-# `Wheref` 格式化条件字符串
+## `Wheref` 格式化条件字符串
 
 在某些场景中，在输入带有字符串的条件语句时，往往需要结合 `fmt.Sprintf` 来格式化条件（当然，注意在字符串中使用占位符代替变量的输入而不是直接将变量格式化），因此我们提供了 `Where+fmt.Sprintf` 结合的便捷方法 `Wheref`。使用示例：
 
@@ -173,7 +173,7 @@ g.Model("article").Where(condition).All()
 Wheref(`score > ? and status in (?)`, 100, g.Slice{"succeeded", "completed"})
 ```
 
-# `WherePri` 支持主键的查询条件
+## `WherePri` 支持主键的查询条件
 
 `WherePri` 方法的功能同 `Where`，但提供了对表主键的智能识别，常用于根据主键的便捷数据查询。假如 `user` 表的主键为 `uid`，我们来看一下 `Where` 与 `WherePri` 的区别：
 
@@ -189,11 +189,11 @@ WherePri(g.Slice{1,2,3})
 
 可以看到，当使用 `WherePri` 方法且给定参数为单一的参数基本类型或者 `slice` 类型时，将会被识别为主键的查询条件值。
 
-# `WhereBuilder` 复杂条件组合
+## `WhereBuilder` 复杂条件组合
 
 `WhereBuilder` 用以组合生成复杂的 `Where` 条件。
 
-## 对象创建
+### 对象创建
 
 我们可以使用 `Model` 的 `Builder` 方法生成 `WhereBuilder` 对象。该方法定义如下：
 
@@ -202,7 +202,7 @@ WherePri(g.Slice{1,2,3})
 func (m *Model) Builder() *WhereBuilder
 ```
 
-## 使用示例
+### 使用示例
 
 ```
 // SELECT * FROM `user` WHERE `id`=1 AND `address`="USA" AND (`status`="active" OR `status`="pending")
@@ -212,7 +212,7 @@ all, err := m.Where("id", 1).Where("address", "USA").Where(
 ).All()
 ```
 
-# 注意事项：空数组条件引发的 `0=1` 条件
+## 注意事项：空数组条件引发的 `0=1` 条件
 
 我们来看例子：
 

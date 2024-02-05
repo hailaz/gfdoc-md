@@ -4,7 +4,7 @@ title: 项目创建-init
 
 从 `v2` 版本开始，项目的创建不再依赖远端获取，仓库模板已经通过 [资源管理](/docs/核心组件/资源管理/资源管理) 的方式内置到了工具二进制文件中，因此项目创建速度非常迅速。
 
-# 使用方式
+## 使用方式
 
 ```
 $ gf init -h
@@ -30,9 +30,9 @@ EXAMPLE
 
 工程目录采用了通用化的设计，实际项目中可以根据项目需要适当增减模板给定的目录。例如，没有 `kubernetes` 部署需求的场景，直接删除对应 `deploy` 目录即可。
 
-# 使用示例
+## 使用示例
 
-## 在当前目录下初始化项目
+### 在当前目录下初始化项目
 
 ```
 $ gf init .
@@ -41,7 +41,7 @@ initialization done!
 you can now run 'gf run main.go' to start your journey, enjoy!
 ```
 
-## 创建一个指定名称的项目
+### 创建一个指定名称的项目
 
 ```
 $ gf init myapp
@@ -50,7 +50,7 @@ initialization done!
 you can now run 'cd myapp && gf run main.go' to start your journey, enjoy!
 ```
 
-## 创建一个 `MonoRepo` 项目
+### 创建一个 `MonoRepo` 项目
 
 默认情况下创建的是 `SingleRepo` 项目，若有需要也可以创建一个 `MonoRepo`（大仓）项目，通过使用 `-m` 选项即可。
 

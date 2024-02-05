@@ -2,7 +2,7 @@
 title: Map校验-基本使用
 ---
 
-# 默认错误提示
+## 默认错误提示
 
 ```
 package main
@@ -47,7 +47,7 @@ func main() {
 }
 ```
 
-# 自定义错误提示
+## 自定义错误提示
 
 ```
 package main

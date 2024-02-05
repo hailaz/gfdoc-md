@@ -4,9 +4,9 @@ title: 接口规范-gen ctrl
 
 该功能特性从 `v2.5` 版本开始提供。该命令目前仅支持 `HTTP` 接口开发， `GRPC` 部分请参考 `gen pb` 命令。未来会考虑 `HTTP` 及 `GRPC` 统一使用该命令生成控制器及 `SDK` 源代码。
 
-# 基本介绍
+## 基本介绍
 
-## 解决痛点
+### 解决痛点
 
 在开发项目的时候，往往需要先根据业务需求和场景设计 `API` 接口，使用 `proto` 或者 `golang struct` 来设计 `API` 的输入和输出，随后再创建与 `API` 相对应的控制器实现，最后也有可能会提供 `SDK`（同为 `Golang` 语言条件下）供内/外部服务调用。在开发过程中会遇到以下痛点：
 
@@ -15,7 +15,7 @@ title: 接口规范-gen ctrl
 - **团队开发多人协作时代码文件冲突概率大**。多人开发协作都往一个文件执行变更时，出现文件冲突的概率就会变大，团队协作开发中处理这种文件冲突的精力开销毫无意义。
 - **缺少API的HTTP SDK自动生成工具**。当开发完 `API` 后，往往需要立即给内部或者外部调用，缺少便捷的 `SDK` 生成，需要手动来维护这部分 `SDK` 代码，那么对于调用端来说成本非常高。
 
-## 命令特性
+### 命令特性
 
 - 规范了 `API` 定义与控制器文件命名、控制器实现方法命名。
 - 规范了 `API` 定义与控制器代码之间的关联关系，便于快速定位 `API` 实现。
@@ -23,9 +23,9 @@ title: 接口规范-gen ctrl
 - 根据 `API` 定义自动生成易于使用的 `HTTP SDK` 代码。该功能可配置，默认关闭。
 - 支持 `File Watch` 自动化生成模式：当某个 `API` 结构定义文件发生变化时，自动增量化更新对应的控制器、 `SDK` 代码。
 
-# 前置约定
+## 前置约定
 
-## 重要的规范🔥
+### 重要的规范🔥
 
 该命令的目的之一是规范化 `api` 代码的编写，那么我们应该有一些重要的规范需要了解（否则生成不了代码哦）：
 
@@ -40,7 +40,7 @@ title: 接口规范-gen ctrl
 
 ![](/download/attachments/93880327/image2023-7-20_10-26-56.png?version=1&modificationDate=1689820016995&api=v2)
 
-## 建议性的命名
+### 建议性的命名
 
 我们对一些常用的接口定义做了一些建议性的命名，供大家参考：
 
@@ -51,11 +51,11 @@ title: 接口规范-gen ctrl
 | **修改资源** | `UpdateReq/Res` | 通常是按照一定条件修改数据表中的一条或多条数据记录 |
 | **删除资源** | `DeleteReq/Res` | 通常是按照一定条件删除数据表中的一条或多条数据记录 |
 
-# 命令使用
+## 命令使用
 
 该命令通过分析给定的 `api` 接口定义目录下的代码，自动生成对应的控制器/ `SDK Go` 代码文件。
 
-## 手动模式
+### 手动模式
 
 如果是手动执行命令行，直接在项目根目录下执行 `gf gen ctrl` 即可，她将完整扫描 `api` 接口定义目录，并生成对应代码。
 
@@ -93,33 +93,33 @@ EXAMPLE
 | `clear` | 否 | `false` | 是否删除 `controller` 中与 `api` 层定义不存在的控制器接口文件。 |
 | `merge` | 否 | `false` | 用以控制生成的控制器代码文件按照 `api` 层的文件生成，而不是默认按照 `api` 接口拆分为不同的接口实现文件。 |
 
-## 自动模式（推荐）
+### 自动模式（推荐）
 
 如果您是使用的 `GolandIDE`，那么可以使用我们提供的配置文件： [watchers.xml](/download/attachments/93880327/watchers.xml?version=1&modificationDate=1686817123230&api=v2)  自动监听代码文件修改时自动生成接口文件。使用方式，如下图：
 
 ![](/download/attachments/93880327/image2023-6-15_16-20-1.png?version=1&modificationDate=1686817201825&api=v2)
 
-# 使用示例
+## 使用示例
 
-## 自动生成的接口定义文件
+### 自动生成的接口定义文件
 
 ![](/download/attachments/93880327/image2023-6-15_16-28-30.png?version=1&modificationDate=1686817711098&api=v2)
 
-## 自动生成的控制器代码文件
+### 自动生成的控制器代码文件
 
 ![](/download/attachments/93880327/image2023-6-15_16-29-12.png?version=1&modificationDate=1686817753666&api=v2)
 
 ![](/download/attachments/93880327/image2023-6-15_16-32-21.png?version=1&modificationDate=1686817942864&api=v2)
 
-## 自动生成的 `HTTP SDK` 代码文件
+### 自动生成的 `HTTP SDK` 代码文件
 
 ![](/download/attachments/93880327/image2023-6-15_16-30-58.png?version=1&modificationDate=1686817859145&api=v2)
 
 ![](/download/attachments/93880327/image2023-6-15_16-31-39.png?version=1&modificationDate=1686817900339&api=v2)
 
-# 常见问题
+## 常见问题
 
-## 为什么每一个 `api` 接口生成一个 `controller` 文件而不是合并到一个 `controller` 文件中
+### 为什么每一个 `api` 接口生成一个 `controller` 文件而不是合并到一个 `controller` 文件中
 
 ![](https://goframe.org/download/attachments/93880327/image2023-6-15_16-29-12.png?version=1&modificationDate=1686817753666&api=v2)
 
@@ -137,7 +137,7 @@ EXAMPLE
 
 如果一个 `api` 模块下的接口文件太多，建议将复杂的 `api` 模块进一步划分为子模块。这样可以对复杂的 `api` 模块进行解耦，也能通过多目录的方式来维护 `api` 接口定义和 `controller` 接口实现文件。目录结构会更清晰，更利于多人协作和版本管理。
 
-## 根据 `api` 模块生成对应的 `controller` 模块中为何存在一个空的 `go` 文件
+### 根据 `api` 模块生成对应的 `controller` 模块中为何存在一个空的 `go` 文件
 
 **例如**：
 

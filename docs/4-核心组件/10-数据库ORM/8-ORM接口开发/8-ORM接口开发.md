@@ -4,7 +4,7 @@ title: ORM接口开发
 
 `gdb` 模块使用了非常灵活且扩展性强的接口设计，接口设计允许开发者可以非常方便地自定义实现和替换接口定义中的任何方法。
 
-# `DB` 接口
+## `DB` 接口
 
 接口文档： [https://pkg.go.dev/github.com/gogf/gf/v2/database/gdb#DB](https://pkg.go.dev/github.com/gogf/gf/v2/database/gdb#DB)
 
@@ -15,13 +15,13 @@ title: ORM接口开发
 3. `HandleSqlBeforeCommit` 方法将会在每一条 `SQL` 提交给数据库服务端执行时被调用做一些提交前的回调处理。
 4. 其他接口方法详见接口文档或者源码文件。
 
-# `DB` 接口关系
+## `DB` 接口关系
 
 ![](/download/attachments/1114701/image2021-12-27_21-0-8.png?version=1&modificationDate=1640609880734&api=v2)
 
 `GoFrame ORM Relations`
 
-# `Driver` 接口
+## `Driver` 接口
 
 接口文档： [https://pkg.go.dev/github.com/gogf/gf/v2/database/gdb#Driver](https://pkg.go.dev/github.com/gogf/gf/v2/database/gdb#Driver)
 

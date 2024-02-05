@@ -2,13 +2,13 @@
 title: 链路跟踪-HTTP示例-Baggage
 ---
 
-# `baggage` 链路数据传递
+## `baggage` 链路数据传递
 
 `baggage` 用户链路间（服务间）传递自定义的信息。
 
 示例代码地址： [https://github.com/gogf/gf/tree/master/example/trace/http](https://github.com/gogf/gf/tree/master/example/trace/http)
 
-# 客户端
+## 客户端
 
 ```
 package main
@@ -55,7 +55,7 @@ func StartRequests() {
 3. 其中，这里通过 `g.Client()` 创建一个HTTP客户端请求对象，该客户端会自动启用链路跟踪特性，无需开发者显示调用任何方法或者任何设置。
 4. 最后，这里使用了 `g.Log().Print(ctx, content)` 方法打印服务端的返回内容，其中的 `ctx` 便是将链路信息传递给日志组件，如果 `ctx` 上下文对象中存在链路信息时，日志组件会同时自动将 `TraceId` 输出到日志内容中。
 
-# 服务端
+## 服务端
 
 ```
 package main
@@ -105,7 +105,7 @@ func HelloHandler(r *ghttp.Request) {
 2. 服务端启动启用链路跟踪特性，开发者无需显示调用任何方法或任何设置。
 3. 服务端通过 `gtrace.GetBaggageVar(ctx, "name").String()` 方法获取客户端提交的 `baggage` 信息，并转换为字符串返回。
 
-# 效果查看
+## 效果查看
 
 **启动服务端：**
 
@@ -125,7 +125,7 @@ func HelloHandler(r *ghttp.Request) {
 
 我们点击这个 `trace` 的详情，可以看得到调用链的层级关系。并且可以看得到客户端请求的地址、服务端接收的路由以及服务端路由函数名称。我们这里来介绍一下客户端的 `Atttributes` 信息和 `Events` 信息，也就是 `Jaeger` 中展示的 `Tags` 信息和 `Process` 信息。
 
-## HTTP Client Attributes
+### HTTP Client Attributes
 
 ![](/download/attachments/38575579/image2021-1-29_10-51-41.png?version=1&modificationDate=1644394026152&api=v2)
 
@@ -154,7 +154,7 @@ func HelloHandler(r *ghttp.Request) {
 | `http.connect.start` | 开始创建连接的类型和地址 |
 | `http.connect.done` | 创建连接成功后的类型和地址 |
 
-## HTTP Client Events
+### HTTP Client Events
 
 ![](/download/attachments/38575579/image2021-1-29_11-18-16.png?version=1&modificationDate=1644394026176&api=v2)
 
@@ -166,13 +166,13 @@ func HelloHandler(r *ghttp.Request) {
 | `http.response.headers` | HTTP客户端请求接收返回的的 `Header` 信息，可能会比较大。 |
 | `http.response.body` | HTTP客户端请求接收返回的 `Body` 数据，可能会比较大，最大只记录 `512KB`，如果超过该大小则忽略。 |
 
-## HTTP Server Attributes
+### HTTP Server Attributes
 
 ![](/download/attachments/38575579/image2021-1-29_11-19-42.png?version=1&modificationDate=1644394026208&api=v2)
 
 `HTTP Server` 端的 `Attributes` 含义同 `HTTP Client`，在同一请求中，打印的数据基本一致。
 
-## HTTP Server Events
+### HTTP Server Events
 
 ![](/download/attachments/38575579/image2021-1-29_11-20-53.png?version=1&modificationDate=1644394026245&api=v2)
 

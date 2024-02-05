@@ -4,7 +4,7 @@ title: ORM事务处理-嵌套事务
 
 从 `GoFrame ORM` 支持数据库嵌套事务，嵌套事务在业务项目中用得比较多，特别是业务模块之间的相互调用，保证各个业务模块的数据库操作都处于一个事务中，其原理是通过传递的 `context` 上下文来隐式传递和关联同一个事务对象。需要注意的是，数据库服务往往并不支持嵌套事务，而是依靠 `ORM` 组件层通过 `Transaction Save Point` 特性实现的。同样的，我们推荐使用 `Transaction` 闭包方法来实现嵌套事务操作。为了保证文档的完整性，因此我们这里仍然从最基本的事务操作方法开始来介绍嵌套事务操作。
 
-# 一、示例SQL
+## 一、示例SQL
 
 一个简单的示例 `SQL`，包含两个字段 `id` 和 `name`：
 
@@ -16,7 +16,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 ```
 
-# 二、常规操作（不推荐）
+## 二、常规操作（不推荐）
 
 ```
 db := g.DB()
@@ -38,11 +38,11 @@ if err = tx.Commit(); err != nil {
 }
 ```
 
-## 1、 `db.Begin` 与 `tx.Begin`
+### 1、 `db.Begin` 与 `tx.Begin`
 
 可以看到，在我们的嵌套事务中出现了 `db.Begin` 和 `tx.Begin` 两种事务开启方式，两者有什么区别呢？ `db.Begin` 是在数据库服务上真正开启一个事务操作，并返回一个事务操作对象 `tx`，随后所有的事务操作都是通过该 `tx` 事务对象来操作管理。 `tx.Begin` 表示在当前事务操作中开启嵌套事务，默认情况下会对嵌套事务的 `SavePoint` 采用自动命名，命名格式为 `transactionN`，其中的 `N` 表示嵌套的层级数量，如果您看到日志中出现 ``SAVEPOINT `transaction1` `` 表示当前嵌套层级为 `2`（从 `0` 开始计算）。
 
-## 2、更详细的日志
+### 2、更详细的日志
 
 `goframe` 的 `ORM` 拥有相当完善的日志记录机制，如果您打开 `SQL` 日志，那么将会看到以下日志信息，展示了整个数据库请求的详细执行流程：
 
@@ -72,7 +72,7 @@ mysql> select * from `user`;
 
 可以看到第一个操作被成功回滚，只有第二个操作执行并提交成功。
 
-# 三、闭包操作(推荐)
+## 三、闭包操作(推荐)
 
 我们也可以通过闭包操作来实现嵌套事务，同样也是通过 `Transaction` 方法实现。
 
@@ -176,7 +176,7 @@ db.Transaction(ctx, func(ctx context.Context, tx gdb.Tx) error {
 
 可以看到，第二条 `INSERT` 操作 ``INSERT INTO `user`(`id`,`name`) VALUES(2,'smith') `` 没有事务ID打印，表示没有使用到事务，那么该操作将会被真正提交到数据库执行，并不能被回滚。
 
-# 四、 `SavePoint/RollbackTo`
+## 四、 `SavePoint/RollbackTo`
 
 开发者也可以灵活使用 `Transaction Save Point` 特性，并实现自定义的 `SavePoint` 命名以及指定 `Point` 回滚操作。
 
@@ -237,13 +237,13 @@ mysql> select * from `user`;
 
 可以看到，通过在第一个 `Insert` 操作后保存了一个 `SavePoint` 名称 `MyPoint`，随后的几次操作都通过 `RollbackTo` 方法被回滚掉了，因此只有第一次 `Insert` 操作被成功提交执行。
 
-# 五、嵌套事务在工程中的参考示例
+## 五、嵌套事务在工程中的参考示例
 
 为了简化示例，我们还是使用用户模块相关的示例，例如用户注册，通过事务操作保存用户基本信息( `user`)、详细信息( `user_detail`)两个表，任一个表操作失败整个注册操作都将失败。为展示嵌套事务效果，我们将用户基本信息管理和用户详细信息管理划分为了两个 `dao` 对象。
 
 假如我们的项目按照 `goframe` 标准项目工程化分为三层 `api-service-dao`，那么我们的嵌套事务操作可能是这样的。
 
-## `controller`
+### `controller`
 
 ```
 // 用户注册HTTP接口
@@ -256,7 +256,7 @@ func (*cUser) Signup(r *ghttp.Request) {
 
 承接HTTP请求，并且将 `Context` 上下文边变量传递给后续的流程。
 
-## `service`
+### `service`
 
 ```
 // 用户注册业务逻辑处理
@@ -305,6 +305,6 @@ func (*userService) Signup(ctx context.Context, r *model.UserServiceSignupReq) {
 }
 ```
 
-## `dao`
+### `dao`
 
 `dao` 层的代码由 `goframe cli` 工具全自动化生成及维护即可。

@@ -2,9 +2,9 @@
 title: Golang学习资源
 ---
 
-# 一、大佬博客
+## 一、大佬博客
 
-## 国内
+### 国内
 
 | 名称 | 地址 | 备注 |
 | Tony Bai | [https://tonybai.com/](https://tonybai.com/) | 一个程序员的心路历程 |
@@ -16,7 +16,7 @@ title: Golang学习资源
 | 码农桃花源 | [https://qcrao.com/](https://qcrao.com/) |  |
 | 极客兔兔 | [https://geektutu.com/post/high-performance-go.html](https://geektutu.com/post/high-performance-go.html) | Go 语言高性能编程 |
 
-## 国外
+### 国外
 
 | 名称 | 地址 | 备注 |
 | Dave Cheney | [https://dave.cheney.net/](https://dave.cheney.net/) | Dave 写了很多Go方面的深入分析文章 |
@@ -27,15 +27,15 @@ title: Golang学习资源
 | Russ cox | [https://research.swtch.com/](https://research.swtch.com/) | Golang 作者博客 |
 | Jaana B. Dogan | [https://rakyll.org/](https://rakyll.org/) | Engineer at Google Cloud. |
 
-# 二、行业资讯
+## 二、行业资讯
 
-## 国内
+### 国内
 
 | 名称 | 地址 |
 | Segmentfault | [https://segmentfault.com/t/golang](https://segmentfault.com/t/golang) |
 | 掘金 | [https://juejin.im/timeline/backend/Go](https://juejin.im/timeline/backend/Go) |
 
-## 国外
+### 国外
 
 | 名称 | 地址 |
 | Go Dev | [https://go.dev/](https://go.dev/) |

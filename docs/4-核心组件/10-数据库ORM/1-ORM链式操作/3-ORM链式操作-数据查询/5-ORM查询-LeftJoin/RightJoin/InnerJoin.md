@@ -2,7 +2,7 @@
 title: ORM查询-LeftJoin/RightJoin/InnerJoin
 ---
 
-# `LeftJoin/RightJoin/InnerJoin`
+## `LeftJoin/RightJoin/InnerJoin`
 
 1. `LeftJoin` 左关联查询；
 2. `RightJoin` 右关联查询；
@@ -30,7 +30,7 @@ g.Model("user u").InnerJoin("user_detail ud", "u.uid=ud.uid").Fields("u.*,ud.cit
 g.Model("user u,user_detail ud").Where("u.uid=ud.uid").Fields("u.*,ud.city").All()
 ```
 
-# 自定义数据表别名
+## 自定义数据表别名
 
 ```
 // SELECT * FROM `user` AS u LEFT JOIN `user_detail` as ud ON(ud.id=u.id) WHERE u.id=1 LIMIT 1
@@ -38,7 +38,7 @@ g.Model("user", "u").LeftJoin("user_detail", "ud", "ud.id=u.id").Where("u.id", 1
 g.Model("user").As("u").LeftJoin("user_detail", "ud", "ud.id=u.id").Where("u.id", 1).One()
 ```
 
-# `LeftJoinOnFields/RightJoinOnFields/InnerJoinOnFields`
+## `LeftJoinOnFields/RightJoinOnFields/InnerJoinOnFields`
 
 LeftJoinOnFields/RightJoinOnFields/InnerJoinOnFields 这三个方法可以指定字段和操作符进行 join 查询，使用示例：
 
@@ -52,7 +52,7 @@ g.Model("user").LeftJoinOnFields("user_detail", "id", "=", "uid").Fields("user.*
 g.Model("user").RightJoinOnFields("user_detail", "id", "=", "uid").Fields("user.*,user_detail.address").All()
 ```
 
-# 结合 `dao` 使用示例
+## 结合 `dao` 使用示例
 
 ```
 // SELECT resource_task_schedule.id,...,time_window.time_window

@@ -13,7 +13,7 @@ func (c *Client) SetCookieMap(m map[string]string) *Client
 
 我们来看一个客户端自定义 `Cookie` 的示例。
 
-## 服务端
+### 服务端
 
 ```
 package main
@@ -35,7 +35,7 @@ func main() {
 
 由于是作为示例，服务端的逻辑很简单，直接将接收到的 `Cookie` 参数全部返回给客户端。
 
-## 客户端
+### 客户端
 
 1. 使用 `SetCookie` 方法
 

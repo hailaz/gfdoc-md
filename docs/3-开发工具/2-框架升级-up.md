@@ -4,7 +4,7 @@ title: 框架升级-up
 
 该命令从框架 `v2.3` 版本开始提供。
 
-# 使用方式
+## 使用方式
 
 ```
 $ gf up -h
@@ -33,7 +33,7 @@ EXAMPLE
 | `fix` | 升级时自动修复本地代码在升级中的不兼容变更 |
 | `cli` | 升级时同时更新 `cli` 工具版本 |
 
-# 使用示例
+## 使用示例
 
 ```
 $ gf up -a
@@ -64,6 +64,6 @@ auto fixing path "/Users/john/Workspace/Go/GOPATH/src/github.com/Khaos/eros"...
 done!
 ```
 
-# 注意事项
+## 注意事项
 
 命令执行前请 `git` 提交本地修改内容或执行目录备份。

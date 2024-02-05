@@ -6,11 +6,11 @@ title: 链路跟踪-GRPC示例
 
 本章节的示例代码位于： [https://github.com/gogf/gf/tree/master/example/trace/grpc\_with\_db](https://github.com/gogf/gf/tree/master/example/trace/grpc_with_db)
 
-# 目录结构
+## 目录结构
 
 ![](/download/attachments/3673718/image2022-2-9_16-16-13.png?version=1&modificationDate=1644394432696&api=v2)
 
-# Protobuf
+## Protobuf
 
 ```
 syntax = "proto3";
@@ -49,7 +49,7 @@ message DeleteRes {}
 
 使用 `gf gen pb` 命令编译该 `proto` 文件，将会生成对应的 `grpc` 接口文件和数据结构文件。
 
-# GRPC Server
+## GRPC Server
 
 ```
 package main
@@ -158,7 +158,7 @@ g.DB().GetCache().SetAdapter(gcache.NewAdapterRedis(g.Redis()))
 
 5、这里也是通过 `Cache` 方法启用 `ORM` 的缓存特性，之前已经做过介绍，这里不再赘述。
 
-# GRPC Client
+## GRPC Client
 
 ```
 package main
@@ -248,7 +248,7 @@ func StartRequests() {
 
 2、客户端非常简单，内部初始化以及默认拦截器的设置已经由 `Katyusha` 框架封装好了，开发者只需要关心业务逻辑实现即可，
 
-# 效果查看
+## 效果查看
 
 **启动服务端：**
 
@@ -276,11 +276,11 @@ func StartRequests() {
 
 查看 `Process` 中的 `Log` 信息可以看到，是由于传递的参数为 `-1`，不满足校验规则，因此在数据校验的时候报错返回了。
 
-## GRPC Client
+### GRPC Client
 
 由于 `orm`、 `redis`、 `logging` 组件在之前的章节中已经介绍过链路信息，因此我们这里主要介绍 `GRPC Client&Server` 的链路信息。
 
-### Attributes
+#### Attributes
 
 ![](/download/attachments/3673718/image2021-1-29_13-25-43.png?version=1&modificationDate=1611897943443&api=v2)
 
@@ -292,7 +292,7 @@ func StartRequests() {
 | `rpc.method` | `RPC` 的方法名称。 |
 | `rpc.system` | `RPC` 协议类型，如： `grpc`, `thrift` 等。 |
 
-### Events/Logs
+#### Events/Logs
 
 ![](/download/attachments/3673718/image2021-1-29_13-32-12.png?version=1&modificationDate=1611898332852&api=v2)
 
@@ -302,15 +302,15 @@ func StartRequests() {
 | `grpc.request.message` | `GRPC` 客户端请求提交的 `Message` 数据，可能会比较大，最大只记录 `512KB`，如果超过该大小则忽略。仅对 `Unary` 请求类型有效。 |
 | `grpc.response.message` | `GRPC` 客户端请求接收返回的的 `Message` 信息，可能会比较大。仅对 `Unary` 请求类型有效。 |
 
-## GRPC Server
+### GRPC Server
 
-### Attributes
+#### Attributes
 
 ![](/download/attachments/3673718/image2021-1-29_13-36-49.png?version=1&modificationDate=1611898610068&api=v2)
 
 `GRPC Server` 端的 `Attributes` 含义同 `GRPC Client`，在同一请求中，打印的数据基本一致。
 
-### Events
+#### Events
 
 ![](/download/attachments/3673718/image2021-1-29_13-37-8.png?version=1&modificationDate=1611898629216&api=v2)
 

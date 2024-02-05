@@ -13,7 +13,7 @@ func (r *Response) CORSDefault()
 func (r *Response) DefaultCORSOptions() CORSOptions
 ```
 
-## `CORS` 对象
+### `CORS` 对象
 
 `CORS` 是 `W3` 互联网标准组织对HTTP跨域请求的标准，在 `ghttp` 模块中，我们可以通过 `CORSOptions` 对象来管理对应的跨域请求选项。定义如下：
 
@@ -33,13 +33,13 @@ type CORSOptions struct {
 
 具体参数的介绍请查看W3组织 [官网手册](https://www.w3.org/TR/cors/)。
 
-## `CORS` 配置
+### `CORS` 配置
 
-### 默认 `CORSOptions`
+#### 默认 `CORSOptions`
 
 当然，为方便跨域设置，在 `ghttp` 模块中也提供了默认的跨域请求选项，通过 `DefaultCORSOptions` 方法获取。大多数情况下，我们在需要允许跨域请求的接口中（一般情况下使用中间件）可以直接使用 `CORSDefault()` 允许该接口跨域访问。
 
-### 限制 `Origin` 来源
+#### 限制 `Origin` 来源
 
 大多数时候，我们需要限制请求来源为我们受信任的域名列表，我们可以使用 `AllowDomain` 配置，使用方式：
 
@@ -53,11 +53,11 @@ func Middleware(r *ghttp.Request) {
 }
 ```
 
-## `OPTIONS` 请求
+### `OPTIONS` 请求
 
 有的客户端，部分浏览器在发送 `AJAX` 请求之前会首先发送 `OPTIONS` 预请求检测后续请求是否允许发送。 `GF` 框架的 `Server` 完全遵守 `W3C` 关于 `OPTIONS` 请求方法的规范约定，因此只要服务端设置好 `CORS` 中间件， `OPTIONS` 请求也将会自动支持。
 
-## 示例1，基本使用
+### 示例1，基本使用
 
 我们来看一个简单的接口示例：
 
@@ -133,7 +133,7 @@ func main() {
 
 当然我们也可以通过 `CORSOptions` 对象以及 `CORS` 方法对跨域请求做更多的设置。
 
-## 示例2，授权跨域 `Origin`
+### 示例2，授权跨域 `Origin`
 
 在大多数场景中，我们是需要自定义授权跨域的 `Origin`，那么我们可以将以上的例子改进如下，在该示例中，我们仅允许 `goframe.org` 及 `baidu.com` 跨域请求访问。
 
@@ -167,7 +167,7 @@ func main() {
 }
 ```
 
-## 示例3，自定义检测授权
+### 示例3，自定义检测授权
 
 不知大家是否有注意，在以上的示例中有个细节，即使当前接口不允许跨域访问，但是只要接口被调用，接口完整逻辑仍会被执行，在服务端其实也已经走完了一次请求流程。针对于这个问题，我们可以通过自定义授权 `Origin` 并在中间件中通过 `CORSAllowedOrigin` 方法来做判断，如果当前请求的 `Origin` 在服务端是被允许执行的，那么才会执行后续流程，否则便会终止执行。
 

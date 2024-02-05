@@ -2,7 +2,7 @@
 title: 树形类型-gtree
 ---
 
-# 基本介绍
+## 基本介绍
 
 支持并发安全开关特性的树形容器，树形数据结构的特点是支持有序遍历、内存占用低、复杂度稳定、适合大数据量存储。该模块包含多个数据结构的树形容器： `RedBlackTree`、 `AVLTree` 和 `BTree`。
 
@@ -51,7 +51,7 @@ func ComparatorUint64(a, b interface{}) int
 func ComparatorUint8(a, b interface{}) int
 ```
 
-# 相关文档
+## 相关文档
 
 - [树形类型-基本使用](/docs/组件列表/数据结构/树形类型-gtree/树形类型-基本使用)
 - [树形类型-方法介绍](/docs/组件列表/数据结构/树形类型-gtree/树形类型-方法介绍)

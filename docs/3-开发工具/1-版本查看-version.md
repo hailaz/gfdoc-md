@@ -2,14 +2,14 @@
 title: 版本查看-version
 ---
 
-# 使用方式
+## 使用方式
 
 - `gf -v`
 - `gf version`
 
 用以查看当前 `gf` 命令行工具编译时的版本信息。
 
-# 使用示例
+## 使用示例
 
 ```
 $ gf version
@@ -23,7 +23,7 @@ CLI Built Detail:
   Build Time:  2021-12-15 23:00:43
 ```
 
-# 注意事项
+## 注意事项
 
 在打印的版本信息中会自动检测当前项目使用的 `GoFrame` 版本（自动解析 `go.mod`），并以 `GoFrame Version` 的信息打印出来。
 

@@ -2,7 +2,7 @@
 title: 工具方法-gutil
 ---
 
-# 基本介绍
+## 基本介绍
 
 `gutil` 组件封装了一些开发中常用的工具方法。
 
@@ -16,9 +16,9 @@ import "github.com/gogf/gf/v2/util/gutil"
 
 [https://pkg.go.dev/github.com/gogf/gf/v2/util/gutil](https://pkg.go.dev/github.com/gogf/gf/v2/util/gutil)
 
-# 常用方法
+## 常用方法
 
-## `Dump`
+### `Dump`
 
 - 说明： `Dump` 将 `values` 以更好的可读性的方式输出在标准输出中。
 
@@ -114,7 +114,7 @@ func main() {
 ```
 
 
-## `DumpWithType`
+### `DumpWithType`
 
 - 说明： `DumpWithType` 和 `Dump` 类似，但是多了类型信息。
 
@@ -210,7 +210,7 @@ func main() {
 ```
 
 
-## `DumpTo`
+### `DumpTo`
 
 - 说明： `DumpTo` 将 `value` 以自定义的输出形式写入到 `write` 中。
 

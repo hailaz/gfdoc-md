@@ -2,7 +2,7 @@
 title: Session-File
 ---
 
-# 文件存储
+## 文件存储
 
 在默认情况下， `ghttp.Server` 的 `Session` 存储使用了 `内存+文件` 的方式，使用 `StorageFile` 对象实现。具体原理为：
 
@@ -17,7 +17,7 @@ title: Session-File
 
 有个注意的细节，由于文件存储涉及到文件操作，为便于降低 `IO` 开销并提高 `Session` 操作性能，并不是每一次 `Session` 请求结束后都会立即刷新对应 `Session` 的 `TTL` 时间。而只有当涉及到更新操作（被标记为 `dirty`）时才会立即刷新其 `TTL`；针对于读取请求，将会每隔 `一分钟` 更新前一分钟内读取操作对应的 `Session` 文件 `TTL` 时间，以便于 `Session` 自动续活。
 
-# 使用示例
+## 使用示例
 
 ```
 package main

@@ -2,7 +2,7 @@
 title: 安全类型-gtype
 ---
 
-# 基本介绍
+## 基本介绍
 
 并发安全基本类型。
 
@@ -24,7 +24,7 @@ import "github.com/gogf/gf/v2/container/gtype"
 
 [https://pkg.go.dev/github.com/gogf/gf/v2/container/gtype](https://pkg.go.dev/github.com/gogf/gf/v2/container/gtype)
 
-# 相关文档
+## 相关文档
 
 - [安全类型-基本使用](/docs/组件列表/数据结构/安全类型-gtype/安全类型-基本使用)
 - [安全类型-性能测试](/docs/组件列表/数据结构/安全类型-gtype/安全类型-性能测试)

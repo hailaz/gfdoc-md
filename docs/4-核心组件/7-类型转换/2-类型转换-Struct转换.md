@@ -31,7 +31,7 @@ func Struct(params interface{}, pointer interface{}, mapping ...map[string]strin
 
 更多的 `struct` 相关转换方法请参考接口文档： [https://pkg.go.dev/github.com/gogf/gf/v2/util/gconv](https://pkg.go.dev/github.com/gogf/gf/v2/util/gconv)
 
-# 转换规则
+## 转换规则
 
 `gconv` 模块的 `struct` 转换特性非常强大，支持任意数据类型到 `struct` 属性的映射转换。在没有提供自定义 `mapping` 转换规则的情况下，默认的转换规则如下：
 
@@ -59,7 +59,7 @@ nick_name  Nick_Name      match
 nick name  Nick_Name      match
 ```
 
-# 自动创建对象
+## 自动创建对象
 
 当给定的 `pointer` 参数类型为 `**struct` 时， `Struct` 方法内部将会自动创建该 `struct` 对象，并修改传递变量指向的指针地址。
 
@@ -97,7 +97,7 @@ func main() {
 }
 ```
 
-# `Struct` 递归转换
+## `Struct` 递归转换
 
 递归转换是指当 `struct` 对象包含子对象时，并且子对象是 `embedded` 方式定义时，可以将 `params` 参数数据（第一个参数）同时递归地映射到其子对象上，常用于带有继承对象的 `struct` 上。
 
@@ -151,7 +151,7 @@ func main() {
 }
 ```
 
-# 示例1，基本使用
+## 示例1，基本使用
 
 ```
 package main
@@ -226,7 +226,7 @@ func main() {
 }
 ```
 
-# 示例2，复杂属性类型
+## 示例2，复杂属性类型
 
 属性支持 `struct` 对象或者 `struct` 对象指针（目标为指针且未 `nil` 时，转换时会自动初始化）转换。
 

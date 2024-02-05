@@ -37,8 +37,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/hailaz/gfdoc-md/blob/main/',
+          editUrl: 'https://github.com/hailaz/gfdoc-md/blob/main/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -49,11 +48,11 @@ const config: Config = {
   plugins: [
     // 搜索
     [
-      require.resolve("@cmfcmf/docusaurus-search-local"),
+      require.resolve('@cmfcmf/docusaurus-search-local'),
       {
         // Options here
         // language of your documentation, see next section
-        language: "zh",
+        language: 'zh',
       },
     ],
   ],
@@ -80,6 +79,11 @@ const config: Config = {
           position: 'right',
         },
       ],
+    },
+    // toc目录层级显示设置
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 4,
     },
     // footer: {
     //   style: 'dark',

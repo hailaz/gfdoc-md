@@ -2,13 +2,13 @@
 title: 数据库ORM
 ---
 
-# 驱动引入
+## 驱动引入
 
 为了将数据库驱动与框架主库解耦，从 `v2.1` 版本开始，所有的数据库驱动都需要通过社区包手动引入。
 
 数据库驱动的安装和引入请参考： [https://github.com/gogf/gf/tree/master/contrib/drivers](https://github.com/gogf/gf/tree/master/contrib/drivers)
 
-# 基本介绍
+## 基本介绍
 
 `GoFrame` 框架的 `ORM` 功能由 `gdb` 模块实现，用于常用关系型数据库的 `ORM` 操作。
 
@@ -20,7 +20,7 @@ title: 数据库ORM
 
 [https://pkg.go.dev/github.com/gogf/gf/v2/database/gdb](https://pkg.go.dev/github.com/gogf/gf/v2/database/gdb)
 
-# 组件特性
+## 组件特性
 
 `GoFrame ORM` 组件具有以下显著特点：
 
@@ -39,19 +39,19 @@ title: 数据库ORM
 13. 支持调试模式、日志输出、 `DryRun`、自定义 `Handler`、自动类型类型转换、自定义接口转换等等高级特性。
 14. 支持查询缓存、软删除、自动化时间更新、模型关联、数据库集群配置（软件主从模式）等等实用特性。
 
-# 知识图谱
+## 知识图谱
 
 ![](/download/attachments/1114686/GoFrame%20ORM%20Features.png?version=1&modificationDate=1623116876136&api=v2)
 
 `GoFrame ORM Features`
 
-# 组件关联
+## 组件关联
 
 ![](/download/attachments/1114686/image2021-6-17_21-15-4.png?version=1&modificationDate=1623935662612&api=v2)
 
 `GoFrame ORM Dependencies`
 
-# `g.DB` 与 `gdb.New`、 `gdb.Instance`
+## `g.DB` 与 `gdb.New`、 `gdb.Instance`
 
 获取数据库操作对象有三种方式，一种是使用 `g.DB` 方法（推荐），一种是使用原生 `gdb.New` 方法，还有一种是使用包原生单例方法 `gdb.Instance`，而第一种是推荐的使用方式。这三种方式的区别如下：
 
@@ -61,7 +61,7 @@ title: 数据库ORM
 
 有这么多对象获取方式原因在于 `GoFrame` 是一个模块化设计的框架，每个模块皆可单独使用。
 
-## `New` 创建数据库对象
+### `New` 创建数据库对象
 
 ```
 db, err := gdb.New(gdb.ConfigNode{
@@ -69,7 +69,7 @@ db, err := gdb.New(gdb.ConfigNode{
 })
 ```
 
-## 获取数据库对象单例
+### 获取数据库对象单例
 
 ```
 // 获取默认配置的数据库对象(配置名称为"default")
@@ -83,7 +83,7 @@ db, err := gdb.Instance()
 db, err := gdb.Instance("user")
 ```
 
-# 相关文档
+## 相关文档
 
 - [ORM使用配置](/docs/核心组件/数据库ORM/ORM使用配置)
 - [ORM链式操作(🔥重点🔥)](/docs/核心组件/数据库ORM/ORM链式操作/ORM链式操作)

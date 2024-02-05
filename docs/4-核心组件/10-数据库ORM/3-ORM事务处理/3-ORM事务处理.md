@@ -2,7 +2,7 @@
 title: ORM事务处理
 ---
 
-# 基本介绍
+## 基本介绍
 
 使用 `GoFrame ORM` 组件进行事务操作非常简便、安全，可以通过两种操作方式来实现。
 
@@ -13,7 +13,7 @@ title: ORM事务处理
 
 接口文档： [https://pkg.go.dev/github.com/gogf/gf/v2/database/gdb#TX](https://pkg.go.dev/github.com/gogf/gf/v2/database/gdb#TX)
 
-# 相关文档
+## 相关文档
 
 - [ORM事务处理-常规操作](/docs/核心组件/数据库ORM/ORM事务处理/ORM事务处理-常规操作)
 - [ORM事务处理-闭包操作](/docs/核心组件/数据库ORM/ORM事务处理/ORM事务处理-闭包操作)

@@ -2,7 +2,7 @@
 title: Redis-命令交互
 ---
 
-# `Do` 方法
+## `Do` 方法
 
 `Do` 是通用的命令交互方法，执行同步指令，通过向 `Redis Server` 发送对应的 `Redis API` 命令，来使用 `Redis Server` 的服务。 `Do` 方法最大的特点是使用 `Redis` 命令与服务端交互，因此扩展很强，没有提供 `Redis` 操作方法的其他命令都可以通过 `Do` 方法来实现。使用示例：
 
@@ -24,11 +24,11 @@ func main() {
 }
 ```
 
-# 自动序列化/反序列化
+## 自动序列化/反序列化
 
 当给定的参数为 `map`, `slice`, `struct` 时， `gredis` 内部支持自动对其使用 `json` 序列化，并且读取数据时可使用 `gvar.Var` 的转换功能实现反序列化。
 
-## `map` 存取
+### `map` 存取
 
 ```
 package main
@@ -63,7 +63,7 @@ func main() {
 }
 ```
 
-## `struct` 存取
+### `struct` 存取
 
 ```
 package main

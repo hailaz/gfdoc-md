@@ -7,16 +7,16 @@ title: 常见问题(FAQ)
 - 请使用页面右上角的搜索功能，全文快速检索常见问题。
 - 欢迎大家积极参与编辑，把自己遇到的坑怎么填的记录起来。 **众人拾柴火焰高**
 
-# 一、Golang基础
+## 一、Golang基础
 
-## 1、程序产生异常，但是程序直接崩溃未被框架自动捕获
+### 1、程序产生异常，但是程序直接崩溃未被框架自动捕获
 
 使用 `GoFrame` 框架是严谨和安全的，如果程序产生了异常，会默认被框架捕获。如果未被自动捕获，那么可能是由于程序逻辑自行开了新的 `goroutine`，在新的 `goroutine` 中产生了异常。因此这里有两个方案可供大家选择：
 
 - 不建议在请求中再开 `goroutine` 来处理请求，这样或使得 `goruotine` 快速膨胀，当 `goroutine` 多了之后也会在 `Go` 引擎层面影响程序的整体调度。
 - 如果实在有必要新开 `goroutine` 的场景下，可以考虑使用 `grpool.AddWithRecover` 来创建新的 `goroutine`，见名知意，它会自动捕获异常。更详细的介绍请参考： [协程管理-grpool](/docs/组件列表/系统相关/协程管理-grpool)
 
-## 2、 `json` 输出时屏蔽掉一些字段
+### 2、 `json` 输出时屏蔽掉一些字段
 
 可以通过结构体嵌套的方式实现，通过使用 `*struct{}` 类型不占用空间以及 `omitempty` 字段为空不输出字段的特性
 
@@ -39,9 +39,9 @@ func TestJson(t *testing.T) {
 }
 ```
 
-# 二、兼容性相关
+## 二、兼容性相关
 
-## 1、 `client_tracing.go:73:3: undefined: attribute.Any`
+### 1、 `client_tracing.go:73:3: undefined: attribute.Any`
 
 以下错误：
 
@@ -57,7 +57,7 @@ D:\Program Files\Go\bin\pkg\mod\github.com\gogf\gf@v1.16.6\net\ghttp\internal\cl
 
 解决的办法是只有升级 `goframe` 的版本， `goframe` 最新版本已经更新使用了稳定的 `otel` 包。如果您使用的已经是 `v1` 的最新版本（ `v1.16`），那么请升级为 `v2` 版本解决。
 
-## 2、使用 `gf` 依赖 `v1.16.2` 时 `go mod tidy` 失败
+### 2、使用 `gf` 依赖 `v1.16.2` 时 `go mod tidy` 失败
 
 `found (v0.36.0), but does not contain package go.opentelemetry.io/otel/metric/registry`
 
@@ -65,13 +65,13 @@ D:\Program Files\Go\bin\pkg\mod\github.com\gogf\gf@v1.16.6\net\ghttp\internal\cl
 
 解决办法，升级 `gf` 依赖到 `v1.16.9` 再 `go mod tidy`
 
-# 三、数据库相关
+## 三、数据库相关
 
 请参考章节： [ORM常见问题](/docs/核心组件/数据库ORM/ORM常见问题)
 
-# 四、使用相关
+## 四、使用相关
 
-## 1、不同环境如何，加载不同的配置文件?
+### 1、不同环境如何，加载不同的配置文件?
 
 不同环境指的是：开发环境/测试环境/预发环境/生产环境等。
 
@@ -85,11 +85,11 @@ D:\Program Files\Go\bin\pkg\mod\github.com\gogf\gf@v1.16.6\net\ghttp\internal\cl
 我们不建议您在程序中通过代码逻辑来区分和读取不同环境的配置文件。
 
 
-## 2、 `glog with "ERROR: logging before flag.Parse"`
+### 2、 `glog with "ERROR: logging before flag.Parse"`
 
 `Golang` 官方有个简单的日志库包名也叫做 `glog`，检查你文件顶部 `import` 的包名，将 `github.com/golang/glog` 修改为框架的日志组件即可，日志组件使用请参考： [日志组件](/docs/核心组件/日志组件/日志组件)
 
-## 3、 `gcron` 与 `http` 如何同时使用?
+### 3、 `gcron` 与 `http` 如何同时使用?
 
 ```
 func main() {
@@ -113,7 +113,7 @@ func main() {
 
 注意, `gcron` 一定要在 `g.Server().Run` 的前面。
 
-## 4、 `GoFrame` 的 `struct tag`(标签) 有哪些？
+### 4、 `GoFrame` 的 `struct tag`(标签) 有哪些？
 
 参数请求、数据校验、 `OpenAPIv3`、命令管理、数据库ORM。
 
@@ -130,15 +130,15 @@ func main() {
 - 框架常用标签标签集中管理到了 `gtag` 组件下： [https://github.com/gogf/gf/blob/master/util/gtag/gtag.go](https://github.com/gogf/gf/blob/master/util/gtag/gtag.go)
 - 在接口文档章节，由于采用了标签形式生成 `OpenAPI` 文档，因此标签比较多，具体请参考章节： [接口文档](/docs/WEB服务开发/接口文档/接口文档)
 
-## 5、 `HTTP Server` 出现 `context cancel` 报错
+### 5、 `HTTP Server` 出现 `context cancel` 报错
 
 从框架 `v2.5` 版本开始，框架的 `HTTP Server` 的 `Request` 对象将会直接继承与标准库的 `http.Request` 对象，其中就包括其中的 `context` 上下文对象，具体请参考发布记录： [v2.5 2023-07-17](/docs/版本发布记录/v2.5%202023-07-17)。当客户端例如浏览器、 `HTTP Client` 取消请求时，服务端会接收到 `context cancel` 操作( `context.Done`)，但是服务端并不会直接报出 `context cancel` 的错误。这种错误往往在业务逻辑调用了底层的数据库、消息组件等组件时，由这些组件识别到 `context cancel` 操作，将会停止执行并往上抛出 `context cancel` 错误提醒上层已经终止执行。
 
 这是符合标准库设计的行为，客户端终止请求后，服务端也没有继续执行下去的必要。
 
-# 五、环境相关
+## 五、环境相关
 
-## 1、 `Linux` 下执行 `go build main.go` 提示连接超时 `connection timed out`
+### 1、 `Linux` 下执行 `go build main.go` 提示连接超时 `connection timed out`
 
 ```
 go: github.com/gogf/gf@v1.14.6-0.20201214132204-c685876e6f67: Get "https://proxy.golang.org/github.com/gogf/gf/@v/v1.14.6-0.20201214132204-c685876e6f67.mod":
@@ -158,7 +158,7 @@ export GOPROXY=https://goproxy.cn
 - [Go Module](/docs/项目开发/准备工作/Go%20Module)
 - [https://goproxy.cn](https://goproxy.cn)
 
-## 2、 `Linux` 下安装 `gf` 提示命令不存在 `command not found`
+### 2、 `Linux` 下安装 `gf` 提示命令不存在 `command not found`
 
 ```
 ./gf install
@@ -184,6 +184,6 @@ Git Commit: 22011e76dc3e14006936164cc89e2d4c9190a36d
 Build Time: 2021-03-30 15:43:22
 ```
 
-## 3、 `Win10` 提示 `gf` 命令不存在
+### 3、 `Win10` 提示 `gf` 命令不存在
 
 解决办法：安装 `gf.exe` 参考： [开发工具](/docs/开发工具/开发工具)

@@ -2,29 +2,29 @@
 title: 链路跟踪-TraceID注入和获取
 ---
 
-# 一、基本介绍
+## 一、基本介绍
 
 在链路跟踪中， `TraceID` 作为在各个服务间传递的唯一标识，用于串联服务间请求关联关系，是非常重要的一项数据。 `TraceID` 是通过 `Context` 参数传递的，如果使用框架的 `glog` 日志组件，那么在日志打印中将会自动读取 `TraceID` 记录到日志内容中。因此也建议大家使用框架的 `glog` 日志组件来打印日志，便于完美地支持链路跟踪特性。
 
-# 二、TraceID的注入
+## 二、TraceID的注入
 
-## 1、客户端
+### 1、客户端
 
 如果使用 `GoFrame` 框架的 `Client`，那么所有的请求将会自带 `TraceID` 的注入。 `GoFrame` 的 `TraceID` 使用的是 `OpenTelemetry` 规范，是由十六进制字符组成的的 `32` 字节字符串。
 
 强烈建议大家统一使用 `gclient` 组件，不仅功能全面而且自带链路跟踪能力。
 
-## 2、服务端
+### 2、服务端
 
 如果使用 `GoFrame` 框架的 `Server`，如果请求带有 `TraceID`，那么将会自动承接到 `Context` 中；否则，将会自动注入标准的 `TraceID`，并传递给后续逻辑。
 
-# 三、TraceID的获取
+## 三、TraceID的获取
 
-## 1、客户端
+### 1、客户端
 
 如果使用 `GoFrame` 框架的 `Client`，这里有三种方式。
 
-### 1）自动生成TraceID（推荐）
+#### 1）自动生成TraceID（推荐）
 
 通过 `gctx.New/WithCtx` 方法创建一个带有 `TraceID` 的 `Context`，该 `Context` 参数用于传递给请求方法。随后可以通过 `gctx.CtxId` 方法获取整个链路的 `TraceID`。相关方法：
 
@@ -38,7 +38,7 @@ func WithCtx(ctx context.Context) context.Context
 
 使用 `WithCtx` 方法时，如果给定的 `ctx` 参数本身已经带有 `TraceID`，那么它将会直接使用该 `TraceID`，并不会新建。
 
-### 2）客户端自定义TraceID
+#### 2）客户端自定义TraceID
 
 这里还有个高级的用法，客户端可以自定义 `TraceID`，使用 `gtrace.WithTraceID` 方法。方法定义如下：
 
@@ -47,11 +47,11 @@ func WithCtx(ctx context.Context) context.Context
 func WithTraceID(ctx context.Context, traceID string) (context.Context, error)
 ```
 
-### 3）读取Response Header
+#### 3）读取Response Header
 
 如果是请求 `GoFrame` 框架的 `Server`，那么在返回请求的 `Header` 中将会增加 `Trace-Id` 字段，供客户端读取。
 
-## 2、服务端
+### 2、服务端
 
 如果使用 `GoFrame` 框架的 `Server`，直接通过 `gctx.CtxId` 方法即可获取 `TraceID`。相关方法：
 
@@ -60,9 +60,9 @@ func WithTraceID(ctx context.Context, traceID string) (context.Context, error)
 func CtxId(ctx context.Context) string
 ```
 
-# 四、使用示例
+## 四、使用示例
 
-## 1、HTTP Response Header TraceID
+### 1、HTTP Response Header TraceID
 
 ```
 package main
@@ -132,7 +132,7 @@ Trace-Id: 908d2027560af616e218e912d2ac3972
 908d2027560af616e218e912d2ac3972
 ```
 
-## 2、客户端注入 `TraceID`
+### 2、客户端注入 `TraceID`
 
 ```
 package main
@@ -181,7 +181,7 @@ func main() {
 2022-06-06 21:17:18.451 [INFO] {e843f0737b0af616d8ed185d46ba65c5} response: e843f0737b0af616d8ed185d46ba65c5
 ```
 
-## 3、客户端自定义 `TraceID`
+### 3、客户端自定义 `TraceID`
 
 ```
 package main
@@ -232,15 +232,15 @@ func main() {
 2022-06-06 21:40:04.901 [INFO] {aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa} response: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 ```
 
-# 五、常见问题
+## 五、常见问题
 
-## 1、如果没有使用 `GoFrame` 框架的 `Client/Server`，如何获取链路的 `TraceID`？
+### 1、如果没有使用 `GoFrame` 框架的 `Client/Server`，如何获取链路的 `TraceID`？
 
 可以参考 `GoFrame` 框架的 `Client/Server` 的链路跟踪实现，并自行实现一遍，这块可能需要一定成本。
 
 如果使用的第三方 `Client/Server` 组件，请参考第三方组件相关介绍。
 
-## 2、企业内部服务没有使用标准的 `OpenTelemetry` 规范，但是每个请求都带 `RequestID` 参数，形如 `33612a70-990a-11ea-87fe-fd68517e7a2d`，如何和 `TraceID` 结合起来？
+### 2、企业内部服务没有使用标准的 `OpenTelemetry` 规范，但是每个请求都带 `RequestID` 参数，形如 `33612a70-990a-11ea-87fe-fd68517e7a2d`，如何和 `TraceID` 结合起来？
 
 根据我的分析，你这个 `RequestID` 的格式和 `TraceID` 规范非常切合，使用的是 `UUID` 字符串，而 `UUID` 可直接转换为 `TraceID`。建议在自己的 `Server` 内部第一层中间件中将 `RequestID` 转换为 `TraceID`，通过自定义 `TraceID` 的方式注入到 `Context` 中，并将该 `Context` 传递给后续业务逻辑。
 

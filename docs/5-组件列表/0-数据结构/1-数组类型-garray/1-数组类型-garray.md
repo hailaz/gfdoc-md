@@ -2,7 +2,7 @@
 title: 数组类型-garray
 ---
 
-# 基本介绍
+## 基本介绍
 
 数组容器，提供普通数组，及排序数组，支持数据项唯一性矫正，支持并发安全开关控制。
 
@@ -29,7 +29,7 @@ import "github.com/gogf/gf/v2/container/garray"
    - `SortedArray`, `SortedIntArray`, `SortedStrArray`
    - 其中排序数组 `SortedArray`，需要给定排序比较方法，在工具包 `gutil` 中也定义了很多 `Comparator*` 比较方法
 
-# 相关文档
+## 相关文档
 
 - [数组类型-基本使用](/docs/组件列表/数据结构/数组类型-garray/数组类型-基本使用)
 - [数组类型-方法介绍](/docs/组件列表/数据结构/数组类型-garray/数组类型-方法介绍)

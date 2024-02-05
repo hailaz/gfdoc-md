@@ -2,7 +2,7 @@
 title: Cookie
 ---
 
-# 基本介绍
+## 基本介绍
 
 接口文档： [https://pkg.go.dev/github.com/gogf/gf/v2/net/ghttp#Cookie](https://pkg.go.dev/github.com/gogf/gf/v2/net/ghttp#Cookie)
 
@@ -35,7 +35,7 @@ type Cookie
 
 默认的 `SessionId` 在 `Cookie` 中的存储名称为 `gfsession`。
 
-# 使用示例
+## 使用示例
 
 ```
 package main
@@ -75,7 +75,7 @@ type Controller struct {
 
 由于对于Web开发者来讲， `Cookie` 都已经是非常熟悉的组件了，相关 `API` 也非常简单，这里便不再赘述。
 
-# `Cookie` 会话过期
+## `Cookie` 会话过期
 
 `Cookie` 的有效期默认是1年，如果我们期望Cookie随着用户的浏览会话过期，像这样：
 
