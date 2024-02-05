@@ -27,6 +27,7 @@ title: Session
 `gsession` 实现并为开发者提供了常见的四种 `Session` 存储实现方式：
 
 | Storage | 支持分布式 | 支持持久化 | 内存占用 | 执行效率 | 简要介绍 |
+| --- | --- | --- | --- | --- | --- |
 | `StorageFile` | 否 | 是 | 中 | 中 | 基于文件存储（默认）。单节点部署方式下比较高效的持久化存储方式： [Session-File](/docs/WEB服务开发/Session/Session-File) |
 | `StorageMemory` | 否 | 否 | 高 | 高 | 基于纯内存存储。单节点部署，性能最高效，但是无法持久化保存，重启即丢失： [Session-Memory](/docs/WEB服务开发/Session/Session-Memory) |
 | `StorageRedis` | 是 | 是 | 中 | 中 | 基于 `Redis` 存储（ `Key-Value`）。远程 `Redis` 节点存储 `Session` 数据，支持应用多节点部署： [Session-Redis-KeyValue](/docs/WEB服务开发/Session/Session-Redis-KeyValue) |

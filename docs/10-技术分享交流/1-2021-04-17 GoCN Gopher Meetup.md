@@ -10,7 +10,7 @@ title: 2021-04-17 GoCN Gopher Meetup
 
 ![](/download/attachments/7296880/image2021-4-14_17-55-22.png?version=1&modificationDate=1618394123326&api=v2)![](/download/attachments/7296880/image2021-4-18_0-54-15.png?version=1&modificationDate=1618678455826&api=v2)
 
-更多关于 `GoFrame` 设计相关的介绍，可参考《 [框架设计](/docs/框架设计/框架设计)》章节。
+更多关于 `GoFrame` 设计相关的介绍，可参考《 [框架设计](/docs/框架设计)》章节。
 
 由于时间有限，针对于大家比较感兴趣的微服务开发方面的介绍，会在后续活动中再进行分享交流。
 

@@ -7,6 +7,7 @@ title: 字符集转换-gcharset
 支持的字符集:
 
 | 编码 | 字符集 |
+| --- | --- |
 | **中文** | `GBK/GB18030/GB2312/Big5` |
 | **日文** | `EUCJP/ISO2022JP/ShiftJIS` |
 | **韩文** | `EUCKR` |

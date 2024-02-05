@@ -111,10 +111,10 @@ gfcli:
 | 名称 | 默认值 | 含义 | 示例 |
 | --- | --- | --- | --- |
 | `gfcli.gen.dao` |  | `dao` 代码生成配置项，可以有多个配置项构成数组，支持多个数据库生成。不同的数据库可以设置不同的生成规则，例如可以生成到不同的位置或者文件。 | - |
-| `link`<br></br>**必须参数** |  | 分为两部分，第一部分表示你连接的数据库类型 `mysql`, `postgresql` 等, 第二部分就是连接数据库的 `dsn` 信息。具体请参考 [ORM使用配置](/docs/核心组件/数据库ORM/ORM使用配置) 章节。 | - |
+| `link`<br />**必须参数** |  | 分为两部分，第一部分表示你连接的数据库类型 `mysql`, `postgresql` 等, 第二部分就是连接数据库的 `dsn` 信息。具体请参考 [ORM使用配置](/docs/核心组件/数据库ORM/ORM使用配置) 章节。 | - |
 | `path` | `internal` | 生成 `dao` 和 `model` 文件的存储 **目录** 地址。 | `./app` |
-| `group` | `default` | 在数据库配置中的数据库分组名称。只能配置一个名称。数据库在配置文件中的分组名称往往确定之后便不再修改。 | `default`<br></br>`order`<br></br>`user` |
-| `prefix` |  | 生成数据库对象及文件的前缀，以便区分不同数据库或者不同数据库中的相同表名，防止数据表同名覆盖。 | `order_`<br></br>`user_` |
+| `group` | `default` | 在数据库配置中的数据库分组名称。只能配置一个名称。数据库在配置文件中的分组名称往往确定之后便不再修改。 | `default`<br />`order`<br />`user` |
+| `prefix` |  | 生成数据库对象及文件的前缀，以便区分不同数据库或者不同数据库中的相同表名，防止数据表同名覆盖。 | `order_`<br />`user_` |
 | `removePrefix` |  | 删除数据表的指定前缀名称。多个前缀以 `,` 号分隔。 | `gf_` |
 | `removeFieldPrefix` |  | 删除字段名称的指定前缀名称。多个前缀以 `,` 号分隔。 | `f_` |
 | `tables` |  | 指定当前数据库中需要执行代码生成的数据表。如果为空，表示数据库的所有表都会生成。 | `user, user_detail` |
@@ -129,7 +129,7 @@ gfcli:
 | `noJsonTag` | `false` | 生成的数据模型中，字段不带有json标签 |  |
 | `noModelComment` | `false` | 用于指定是否关闭数据模型结构体属性的注释自动生成，内容为数据表对应字段的注释。 | `true` |
 | `clear` | `false` | 自动删除数据库中不存在对应数据表的本地 `dao/do/entity` 代码文件。请谨慎使用该参数！ |  |
-| `typeMapping` | `decimal:`<br></br>`  type: float64`<br></br>`money:`<br></br>`  type: float64`<br></br>`numeric:`<br></br>`  type: float64`<br></br>`smallmoney:`<br></br>`  type: float64` | **从版本v2.5开始支持。**<br></br>用于自定义数据表字段类型到生成的Go文件中对应属性类型映射。该配置支持通过 `import` 配置引入第三方包，例如：<br></br>`decimal:`<br></br>`  type:   decimal.Decimal`<br></br>`  import: github.com/shopspring/decimal` |  |
+| `typeMapping` | `decimal:`<br />`  type: float64`<br />`money:`<br />`  type: float64`<br />`numeric:`<br />`  type: float64`<br />`smallmoney:`<br />`  type: float64` | **从版本v2.5开始支持。**<br />用于自定义数据表字段类型到生成的Go文件中对应属性类型映射。该配置支持通过 `import` 配置引入第三方包，例如：<br />`decimal:`<br />`  type:   decimal.Decimal`<br />`  import: github.com/shopspring/decimal` |  |
 | `daoPath` | `dao` | 代码生成的 `DAO` 文件存放目录 |  |
 | `doPath` | `model/do` | 代码生成 `DO` 文件存放目录 |  |
 | `entityPath` | `model/entity` | 代码生成的 `Entity` 文件存放目录 |  |
@@ -147,8 +147,9 @@ gfcli:
 1、以下 `3` 个目录的文件由 `dao` 命令生成：
 
 | 路径 | 说明 | 详细介绍 |
+| --- | --- | --- |
 | `/internal/dao` | 数据操作对象 | 通过对象方式访问底层数据源，底层基于 `ORM` 组件实现。往往需要结合 `entity` 和 `do` 通用使用。该目录下的文件开发者可扩展修改，但是往往没这种必要。 |
-| `/internal/model/do` | 数据转换模型 | 数据转换模型用于业务模型到数据模型的转换，由工具维护，用户不能修改。工具每次生成代码文件将会覆盖该目录。关于 `do` 文件的介绍请参考：<br></br>- [数据模型与业务模型](/docs/框架设计/工程开发设计/数据模型与业务模型)<br></br>- [DAO-工程痛点及改进](/docs/框架设计/工程开发设计/DAO封装设计/DAO-工程痛点及改进)<br></br>- [利用指针属性和do对象实现灵活的修改接口](/docs/核心组件/数据库ORM/ORM最佳实践/利用指针属性和do对象实现灵活的修改接口) |
+| `/internal/model/do` | 数据转换模型 | 数据转换模型用于业务模型到数据模型的转换，由工具维护，用户不能修改。工具每次生成代码文件将会覆盖该目录。关于 `do` 文件的介绍请参考：<br />- [数据模型与业务模型](/docs/框架设计/工程开发设计/数据模型与业务模型)<br />- [DAO-工程痛点及改进](/docs/框架设计/工程开发设计/DAO封装设计/DAO-工程痛点及改进)<br />- [利用指针属性和do对象实现灵活的修改接口](/docs/核心组件/数据库ORM/ORM最佳实践/利用指针属性和do对象实现灵活的修改接口) |
 | `/internal/model/entity` | 数据模型 | 数据模型由工具维护，用户不能修改。工具每次生成代码文件将会覆盖该目录。 |
 
 2、 `model` 中的模型分为两类： **数据模型** 和 **业务模型**。

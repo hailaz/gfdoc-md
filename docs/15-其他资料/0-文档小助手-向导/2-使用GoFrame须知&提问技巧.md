@@ -7,11 +7,12 @@ title: 使用GoFrame须知&提问技巧
 ## GoFrame是什么？
 
 1. [框架介绍(最新版本)](https://goframe.orghttps://goframe.org/pages/viewpage.action?pageId=1114119)
-2. [框架设计](/docs/框架设计/框架设计)
+2. [框架设计](/docs/框架设计)
 
 ## 她能做什么？
 
 | 项目类型 | 描述 |
+| --- | --- |
 | API | 接口服务 |
 | Web | 网站 |
 | CMD | 命令行工具 |
@@ -21,16 +22,17 @@ title: 使用GoFrame须知&提问技巧
 ## 有哪些案例？
 
 | 项目类型 | 案例 |
+| --- | --- |
 | API | - [gf-demo-user](https://github.com/gogf/gf-demo-user) |
-| Web | - [gf-demo-chat](https://github.com/gogf/gf-demo-chat)<br></br>- [focus-single](https://github.com/gogf/focus-single) |
+| Web | - [gf-demo-chat](https://github.com/gogf/gf-demo-chat)<br />- [focus-single](https://github.com/gogf/focus-single) |
 | CMD | - [gf-cli](https://github.com/gogf/gf/tree/master/cmd/gf) |
-| Library | - [polaris](https://github.com/gogf/polaris)<br></br>- [gtoken](https://github.com/goflyfox/gtoken)<br></br>- [csrf](https://github.com/gogf/csrf)<br></br>- [gf-jwt](https://github.com/gogf/gf-jwt) |
+| Library | - [polaris](https://github.com/gogf/polaris)<br />- [gtoken](https://github.com/goflyfox/gtoken)<br />- [csrf](https://github.com/gogf/csrf)<br />- [gf-jwt](https://github.com/gogf/gf-jwt) |
 
 ### 更多 [使用案例](https://github.com/gogf/awesome-gf)
 
 ## 如何开始使用GoFrame？
 
-1. [快速开始](/docs/快速开始/快速开始)
+1. [快速开始](/docs/快速开始)
 
 ## 使用时遇到问题怎么办？
 
@@ -50,7 +52,7 @@ title: 使用GoFrame须知&提问技巧
 
 ## 开发完成后如何部署？
 
-1. API OR Web： [项目部署](/docs/项目开发/项目部署/项目部署)
+1. API OR Web： [项目部署](/docs/项目开发/项目部署)
 2. CMD：构建完就能使用
 3. Library：提供给别人引入，例如go get xxx
 

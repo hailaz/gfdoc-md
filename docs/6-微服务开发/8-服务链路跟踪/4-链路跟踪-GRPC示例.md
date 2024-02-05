@@ -285,6 +285,7 @@ func StartRequests() {
 ![](/download/attachments/3673718/image2021-1-29_13-25-43.png?version=1&modificationDate=1611897943443&api=v2)
 
 | Attribute/Tag | 说明 |
+| --- | --- |
 | `net.peer.ip` | 请求的目标IP。 |
 | `net.peer.port` | 请求的目标端口。 |
 | `rpc.grpc.status_code` | `GRPC` 的内部状态码， `0` 表示成功， `非0` 表示失败。 |
@@ -297,6 +298,7 @@ func StartRequests() {
 ![](/download/attachments/3673718/image2021-1-29_13-32-12.png?version=1&modificationDate=1611898332852&api=v2)
 
 | Event/Log | 说明 |
+| --- | --- |
 | `grpc.metadata.outgoing` | `GRPC` 客户端请求提交的 `Metadata` 信息，可能会比较大。 |
 | `grpc.request.baggage` | `GRPC` 客户端请求提交的 `Baggage` 信息，用于服务间链路信息传递。 |
 | `grpc.request.message` | `GRPC` 客户端请求提交的 `Message` 数据，可能会比较大，最大只记录 `512KB`，如果超过该大小则忽略。仅对 `Unary` 请求类型有效。 |

@@ -7,6 +7,7 @@ title: Golang学习资源
 ### 国内
 
 | 名称 | 地址 | 备注 |
+| --- | --- | --- |
 | Tony Bai | [https://tonybai.com/](https://tonybai.com/) | 一个程序员的心路历程 |
 | 曹春晖 | [https://xargin.com/](https://xargin.com/) |  |
 | 鸟窝 | [https://colobu.com/](https://colobu.com/) |  |
@@ -19,6 +20,7 @@ title: Golang学习资源
 ### 国外
 
 | 名称 | 地址 | 备注 |
+| --- | --- | --- |
 | Dave Cheney | [https://dave.cheney.net/](https://dave.cheney.net/) | Dave 写了很多Go方面的深入分析文章 |
 | A Journey with Go | [https://medium.com/a-journey-with-go](https://medium.com/a-journey-with-go) | Everything about Go: internals, concurrency, compiler, or packages available in the Go community. |
 | Uber | [https://eng.uber.com/aresdb/](https://eng.uber.com/aresdb/) | Uber 团队博客 |
@@ -32,12 +34,14 @@ title: Golang学习资源
 ### 国内
 
 | 名称 | 地址 |
+| --- | --- |
 | Segmentfault | [https://segmentfault.com/t/golang](https://segmentfault.com/t/golang) |
 | 掘金 | [https://juejin.im/timeline/backend/Go](https://juejin.im/timeline/backend/Go) |
 
 ### 国外
 
 | 名称 | 地址 |
+| --- | --- |
 | Go Dev | [https://go.dev/](https://go.dev/) |
 | reddit Go | [https://www.reddit.com/r/golang/](https://www.reddit.com/r/golang/) |
 | Dev Go | [https://dev.to/t/go](https://dev.to/t/go) |

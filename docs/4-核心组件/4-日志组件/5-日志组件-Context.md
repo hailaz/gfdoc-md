@@ -61,6 +61,6 @@ Stack:
 
 ## 链路跟踪支持
 
-`glog` 组件支持 `OpenTelemetry` 标准的链路跟踪特性，该支持是内置的，无需开发者做任何设置，具体请参考章节： [服务链路跟踪](/docs/微服务开发/服务链路跟踪/服务链路跟踪)
+`glog` 组件支持 `OpenTelemetry` 标准的链路跟踪特性，该支持是内置的，无需开发者做任何设置，具体请参考章节： [服务链路跟踪](/docs/微服务开发/服务链路跟踪)
 
 ![](/download/attachments/1114222/image2022-1-25_22-32-48.png?version=1&modificationDate=1643121034417&api=v2)

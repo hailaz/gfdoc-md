@@ -10,7 +10,7 @@ title: 如何给GoFrame贡献？
 
 ### 分步指南
 
-1. [加入我们](/docs/加入我们/加入我们)
+1. [加入我们](/docs/加入我们)
 2. [GoFrame社区投稿](https://goframe.org/pages/viewpage.action?pageId=3673232)
 
 ### 相关的文章

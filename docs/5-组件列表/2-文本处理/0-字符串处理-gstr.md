@@ -2221,7 +2221,7 @@ use`
   	fmt.Println(result)
 
   	// Output:
-  	// goframe<br></br>is<br></br>very<br></br>easy<br></br>to<br></br>use
+  	// goframe<br>is<br>very<br>easy<br>to<br>use
 }
 ```
 

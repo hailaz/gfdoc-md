@@ -76,7 +76,7 @@ D:\Program Files\Go\bin\pkg\mod\github.com\gogf\gf@v1.16.6\net\ghttp\internal\cl
 不同环境指的是：开发环境/测试环境/预发环境/生产环境等。
 
 - 首先，在一些互联网项目中，特别是分布式或者微服务化的架构下，一般会使用配置管理中心，不同的环境会对应不同的配置管理中心，所以这样的场景不会存在这样的问题。
-- 其次，如果是传统的项目管理方式下，可能会将配置文件放到代码仓库中共同管理，这样的方式是不推荐的。如果您仍然想要这么做，您可以通过系统环境变量或者命令行启动参数，让程序自动选择配置文件或者指定配置目录，参考 [配置管理](/docs/核心组件/配置管理/配置管理) 章节。例如： `./app --gf.gcfg.file config-prod.toml ` 则通过命令行启动参数的方式将默认读取的配置文件修改为了 `config-prod.toml` 文件。
+- 其次，如果是传统的项目管理方式下，可能会将配置文件放到代码仓库中共同管理，这样的方式是不推荐的。如果您仍然想要这么做，您可以通过系统环境变量或者命令行启动参数，让程序自动选择配置文件或者指定配置目录，参考 [配置管理](/docs/核心组件/配置管理) 章节。例如： `./app --gf.gcfg.file config-prod.toml ` 则通过命令行启动参数的方式将默认读取的配置文件修改为了 `config-prod.toml` 文件。
 
 
 
@@ -87,7 +87,7 @@ D:\Program Files\Go\bin\pkg\mod\github.com\gogf\gf@v1.16.6\net\ghttp\internal\cl
 
 ### 2、 `glog with "ERROR: logging before flag.Parse"`
 
-`Golang` 官方有个简单的日志库包名也叫做 `glog`，检查你文件顶部 `import` 的包名，将 `github.com/golang/glog` 修改为框架的日志组件即可，日志组件使用请参考： [日志组件](/docs/核心组件/日志组件/日志组件)
+`Golang` 官方有个简单的日志库包名也叫做 `glog`，检查你文件顶部 `import` 的包名，将 `github.com/golang/glog` 修改为框架的日志组件即可，日志组件使用请参考： [日志组件](/docs/核心组件/日志组件)
 
 ### 3、 `gcron` 与 `http` 如何同时使用?
 
@@ -118,17 +118,18 @@ func main() {
 参数请求、数据校验、 `OpenAPIv3`、命令管理、数据库ORM。
 
 | Tag(简写) | 全称 | 描述 | 相关文档 |
+| --- | --- | --- | --- |
 | `v` | `valid` | 数据校验标签。 | [Struct校验-基本使用](/docs/核心组件/数据校验/数据校验-参数类型/数据校验-Struct校验/Struct校验-基本使用) |
 | `p` | `param` | 自定义请求参数匹配。 | [请求输入-对象处理](/docs/WEB服务开发/请求输入/请求输入-对象处理) |
 | `d` | `default` | 请求参数默认值绑定。 | [请求输入-默认值绑定](/docs/WEB服务开发/请求输入/请求输入-默认值绑定) |
-| `orm` | `orm` | ORM标签，用于指定表名、关联关系。 | [数据规范-gen dao](/docs/开发工具/代码生成-gen/数据规范-gen%20dao)<br></br>[模型关联-静态关联-With特性](/docs/核心组件/数据库ORM/ORM链式操作/ORM链式操作-模型关联/模型关联-静态关联-With特性) |
+| `orm` | `orm` | ORM标签，用于指定表名、关联关系。 | [数据规范-gen dao](/docs/开发工具/代码生成-gen/数据规范-gen%20dao)<br />[模型关联-静态关联-With特性](/docs/核心组件/数据库ORM/ORM链式操作/ORM链式操作-模型关联/模型关联-静态关联-With特性) |
 | `dc` | `description` | 通用结构体属性描述，ORM和接口都用到。属于框架默认的属性描述标签。 |  |
 
 其他：
 
 - 命令行结构化管理参数： [命令管理-结构化参数](/docs/核心组件/命令管理/命令管理-结构化参数)
 - 框架常用标签标签集中管理到了 `gtag` 组件下： [https://github.com/gogf/gf/blob/master/util/gtag/gtag.go](https://github.com/gogf/gf/blob/master/util/gtag/gtag.go)
-- 在接口文档章节，由于采用了标签形式生成 `OpenAPI` 文档，因此标签比较多，具体请参考章节： [接口文档](/docs/WEB服务开发/接口文档/接口文档)
+- 在接口文档章节，由于采用了标签形式生成 `OpenAPI` 文档，因此标签比较多，具体请参考章节： [接口文档](/docs/WEB服务开发/接口文档)
 
 ### 5、 `HTTP Server` 出现 `context cancel` 报错
 
@@ -186,4 +187,4 @@ Build Time: 2021-03-30 15:43:22
 
 ### 3、 `Win10` 提示 `gf` 命令不存在
 
-解决办法：安装 `gf.exe` 参考： [开发工具](/docs/开发工具/开发工具)
+解决办法：安装 `gf.exe` 参考： [开发工具](/docs/开发工具)

@@ -43,6 +43,7 @@ func (d *DriverMysql) New(core *Core, node *ConfigNode) (DB, error) {
 一个新的驱动至少应该实现以下接口方法：
 
 | 接口方法 | 说明 |
+| --- | --- |
 | `Open` | 用于创建数据库连接。 |
 | `GetChars` | 用于获取该数据库的安全/转义符号。 |
 | `Tables` | 返回当前/指定数据库的数据表列表。 |

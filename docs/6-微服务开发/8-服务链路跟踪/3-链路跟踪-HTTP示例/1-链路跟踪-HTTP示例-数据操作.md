@@ -278,7 +278,7 @@ g.DB().GetCache().SetAdapter(gcache.NewAdapterRedis(g.Redis()))
 
 | Attribute/Tag | 说明 |
 | --- | --- |
-| `<br></br>                db.type<br></br>              ` | 数据库连接类型。如 `mysql`, `mssql`, `pgsql` 等等。 |
+| `<br />                db.type<br />              ` | 数据库连接类型。如 `mysql`, `mssql`, `pgsql` 等等。 |
 | `db.link` | 数据库连接信息。其中密码字段被自动隐藏。 |
 | `db.group` | 在配置文件中的数据库分组名称。 |
 
@@ -300,7 +300,7 @@ g.DB().GetCache().SetAdapter(gcache.NewAdapterRedis(g.Redis()))
 
 | Attribute/Tag | 说明 |
 | --- | --- |
-| `<br></br>                redis.host<br></br>              ` | `Redis` 连接地址。 |
+| `<br />                redis.host<br />              ` | `Redis` 连接地址。 |
 | `redis.port` | `Redis` 连接端口。 |
 | `redis.db` | `Redis` 操作 `db`。 |
 
