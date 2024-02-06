@@ -19,3 +19,9 @@ cp -r -f output/goframe-latest-md-static/* static/
 // xcopy /s /y A\* B\
 
 ```
+
+## 代码块支持语言
+
+https://prismjs.com/#supported-languages
+
+https://docusaurus.io/zh-CN/docs/markdown-features/code-blocks

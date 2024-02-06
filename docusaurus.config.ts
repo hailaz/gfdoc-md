@@ -101,8 +101,9 @@ const config: Config = {
     //   // copyright: `Copyright ©${new Date().getFullYear()}`,
     // },
     prism: {
-      theme: prismThemes.github,
+      theme: prismThemes.oneDark,
       darkTheme: prismThemes.dracula,
+      defaultLanguage: 'go',
     },
   } satisfies Preset.ThemeConfig,
 };
