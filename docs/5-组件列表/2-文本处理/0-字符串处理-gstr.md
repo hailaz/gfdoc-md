@@ -999,7 +999,7 @@ func ExampleQuoteMeta() {
   	}
   	{
   		var (
-  			str    = `https://goframe.org/docs/组件列表/文本处理/字符串处理-gstr`
+  			str    = `https://goframe.org/pages/viewpage.action?pageId=1114327`
   			result = gstr.QuoteMeta(str)
   		)
   		fmt.Println(result)

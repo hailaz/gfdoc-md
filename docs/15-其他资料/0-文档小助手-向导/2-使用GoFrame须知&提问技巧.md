@@ -7,7 +7,7 @@ sidebar_position: 2
 
 ## GoFrame是什么？
 
-1. [框架介绍(最新版本)](https://goframe.orghttps://goframe.org/pages/viewpage.action?pageId=1114119)
+1. [框架介绍(最新版本)](https://goframe.org/pages/viewpage.action?pageId=1114119)
 2. [框架设计](/docs/框架设计)
 
 ## 她能做什么？
@@ -42,7 +42,7 @@ sidebar_position: 2
 2. 看源码，在文档未完善的模块，可以通过查看源码和单元测试代码知道如何使用某个方法
 2. 应用问题
 1. [常见问题(FAQ)](/docs/常见问题-FAQ)
-2. 社群讨论，加群方式在 [框架介绍(最新版本)](https://goframe.orghttps://goframe.org/pages/viewpage.action?pageId=1114119) 中的帮助
+2. 社群讨论，加群方式在 [框架介绍(最新版本)](https://goframe.org/pages/viewpage.action?pageId=1114119) 中的帮助
 3. bug
 1. 到主库上提 [issues](https://github.com/gogf/gf/issues)
 4. 如何提问？提问技巧

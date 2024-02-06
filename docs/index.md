@@ -114,7 +114,7 @@ golang版本 >= 1.18
 
 ## 捐赠
 
-如果您喜欢 `GoFrame`，要不给开发者 [来杯咖啡](/pages/viewpage.action?pageId=1115633) 吧！ 请在捐赠时备注您的 `github`/ `gitee` 账号名称。
+如果您喜欢 `GoFrame`，要不给开发者 [来杯咖啡](/docs/支持我们/来杯咖啡) 吧！ 请在捐赠时备注您的 `github`/ `gitee` 账号名称。
 
 ## 赞助
 

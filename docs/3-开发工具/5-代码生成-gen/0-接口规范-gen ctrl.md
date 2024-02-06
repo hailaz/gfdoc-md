@@ -97,7 +97,7 @@ EXAMPLE
 
 ### 自动模式（推荐）
 
-如果您是使用的 `GolandIDE`，那么可以使用我们提供的配置文件： [watchers.xml](/download/attachments/93880327/watchers.xml?version=1&modificationDate=1686817123230&api=v2)  自动监听代码文件修改时自动生成接口文件。使用方式，如下图：
+如果您是使用的 `GolandIDE`，那么可以使用我们提供的配置文件： [watchers.xml](https://goframe.org/download/attachments/93880327/watchers.xml?version=1&modificationDate=1686817123230&api=v2)  自动监听代码文件修改时自动生成接口文件。使用方式，如下图：
 
 ![](/markdown/7d15b228b1ee57f8f34254a0413f4fc0.png)
 
