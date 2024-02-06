@@ -1,5 +1,6 @@
 ---
 title: '配置管理-TOML格式'
+sidebar_position: 5
 ---
 
 ## 基本介绍

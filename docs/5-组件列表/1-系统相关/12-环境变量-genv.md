@@ -1,5 +1,6 @@
 ---
 title: '环境变量-genv'
+sidebar_position: 12
 ---
 
 环境变量管理组件。

@@ -1,5 +1,6 @@
 ---
 title: "快速开始-What's Next"
+sidebar_position: 3
 ---
 
 ## 简单总结

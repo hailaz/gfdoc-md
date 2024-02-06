@@ -1,5 +1,6 @@
 ---
 title: 'ORM查询-All/One/Array/Value/Count'
+sidebar_position: 1
 ---
 
 ## 这5个方法是数据查询比较常用的方法，方法列表：

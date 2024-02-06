@@ -1,5 +1,6 @@
 ---
 title: '数据校验-FAQ'
+sidebar_position: 9
 ---
 
 ## `Struct` 默认值对 `required` 规则的影响

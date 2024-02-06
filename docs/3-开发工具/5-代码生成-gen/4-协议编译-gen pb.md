@@ -1,5 +1,6 @@
 ---
 title: '协议编译-gen pb'
+sidebar_position: 4
 ---
 
 该功能特性从 `v2.4` 版本开始提供。

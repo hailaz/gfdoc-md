@@ -1,5 +1,6 @@
 ---
 title: '使用GoFrame须知&提问技巧'
+sidebar_position: 2
 ---
 
 来到这里，我们认为你已经具备go语言的开发能力以及基础知识。

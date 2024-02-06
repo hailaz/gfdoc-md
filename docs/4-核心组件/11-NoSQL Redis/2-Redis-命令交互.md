@@ -1,5 +1,6 @@
 ---
 title: 'Redis-命令交互'
+sidebar_position: 2
 ---
 
 ## `Do` 方法

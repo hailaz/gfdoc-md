@@ -1,5 +1,6 @@
 ---
 title: '资源打包-pack'
+sidebar_position: 7
 ---
 
 ## 使用方式

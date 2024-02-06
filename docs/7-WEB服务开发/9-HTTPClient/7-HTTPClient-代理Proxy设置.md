@@ -1,5 +1,6 @@
 ---
 title: 'HTTPClient-代理Proxy设置'
+sidebar_position: 7
 ---
 
 ## 代理 `Proxy` 设置

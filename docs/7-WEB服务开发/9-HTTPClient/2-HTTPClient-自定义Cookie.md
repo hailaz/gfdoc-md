@@ -1,5 +1,6 @@
 ---
 title: 'HTTPClient-自定义Cookie'
+sidebar_position: 2
 ---
 
 HTTP客户端发起请求时可以自定义发送给服务端的 `Cookie` 内容，该特性使用 `SetCookie*` 相关方法实现。

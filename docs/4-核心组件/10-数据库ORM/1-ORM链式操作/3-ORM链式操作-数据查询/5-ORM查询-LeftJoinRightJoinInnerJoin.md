@@ -1,5 +1,6 @@
 ---
 title: 'ORM查询-LeftJoin/RightJoin/InnerJoin'
+sidebar_position: 5
 ---
 
 ## `LeftJoin/RightJoin/InnerJoin`

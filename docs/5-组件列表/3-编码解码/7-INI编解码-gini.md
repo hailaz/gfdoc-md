@@ -1,5 +1,6 @@
 ---
 title: 'INI编解码-gini'
+sidebar_position: 7
 ---
 
 INI数据格式编码解析。

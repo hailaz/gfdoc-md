@@ -1,5 +1,6 @@
 ---
 title: 'Golang学习资源'
+sidebar_position: 4
 ---
 
 ## 一、大佬博客

@@ -1,5 +1,6 @@
 ---
 title: '对象信息-gstructs'
+sidebar_position: 18
 ---
 
 ## 基本介绍

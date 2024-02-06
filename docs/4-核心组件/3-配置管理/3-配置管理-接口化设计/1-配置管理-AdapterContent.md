@@ -1,5 +1,6 @@
 ---
 title: '配置管理-AdapterContent'
+sidebar_position: 1
 ---
 
 ## `AdapterContent`

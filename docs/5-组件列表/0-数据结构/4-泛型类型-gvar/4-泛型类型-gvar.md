@@ -1,5 +1,6 @@
 ---
 title: '泛型类型-gvar'
+sidebar_position: 4
 ---
 
 ![](/markdown/cd9ed75865d6b5efe704f58156a42fa4.png)

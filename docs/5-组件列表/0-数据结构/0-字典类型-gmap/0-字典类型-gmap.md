@@ -1,5 +1,6 @@
 ---
 title: '字典类型-gmap'
+sidebar_position: 0
 ---
 
 ## 基本介绍

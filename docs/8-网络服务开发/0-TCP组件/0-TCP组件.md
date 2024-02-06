@@ -1,5 +1,6 @@
 ---
 title: 'TCP组件'
+sidebar_position: 0
 ---
 
 `gtcp` 模块实现简便易用、轻量级的 `TCPServer` 服务端。

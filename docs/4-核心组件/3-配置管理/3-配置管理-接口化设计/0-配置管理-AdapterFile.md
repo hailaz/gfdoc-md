@@ -1,5 +1,6 @@
 ---
 title: '配置管理-AdapterFile'
+sidebar_position: 0
 ---
 
 ## `AdapterFile`

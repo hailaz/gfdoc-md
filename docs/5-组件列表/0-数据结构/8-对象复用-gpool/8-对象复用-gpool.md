@@ -1,5 +1,6 @@
 ---
 title: '对象复用-gpool'
+sidebar_position: 8
 ---
 
 ## 基本介绍

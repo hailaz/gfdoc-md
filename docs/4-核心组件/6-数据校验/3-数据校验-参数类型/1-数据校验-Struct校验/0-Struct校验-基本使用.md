@@ -1,5 +1,6 @@
 ---
 title: 'Struct校验-基本使用'
+sidebar_position: 0
 ---
 
 `Struct` 校验常使用以下链式操作方式：

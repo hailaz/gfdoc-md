@@ -1,5 +1,6 @@
 ---
 title: 'Session-Redis-KeyValue'
+sidebar_position: 2
 ---
 
 ## Redis KeyValue Storage

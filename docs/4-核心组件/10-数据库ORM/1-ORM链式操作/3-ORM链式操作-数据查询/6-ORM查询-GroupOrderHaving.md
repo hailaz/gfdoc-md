@@ -1,5 +1,6 @@
 ---
 title: 'ORM查询-Group/Order/Having'
+sidebar_position: 6
 ---
 
 ## `Group/Order` 分组与排序

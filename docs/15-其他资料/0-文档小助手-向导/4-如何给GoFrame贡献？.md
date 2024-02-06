@@ -1,5 +1,6 @@
 ---
 title: '如何给GoFrame贡献？'
+sidebar_position: 4
 ---
 
 很想参加开源项目，证明一下自己。

@@ -1,5 +1,6 @@
 ---
 title: '为什么要选GoFrame？'
+sidebar_position: 1
 ---
 
 在设计新项目的时候

@@ -1,5 +1,6 @@
 ---
 title: 'GoFrame社区教程'
+sidebar_position: 2
 ---
 
 ## 一、Golang学习

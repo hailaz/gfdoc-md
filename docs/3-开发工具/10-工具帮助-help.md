@@ -1,5 +1,6 @@
 ---
 title: '工具帮助-help'
+sidebar_position: 10
 ---
 
 使用方式：

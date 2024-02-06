@@ -1,5 +1,6 @@
 ---
 title: '数据表PB-gen pbentity'
+sidebar_position: 5
 ---
 
 该功能特性从 `v2.4` 版本开始提供。

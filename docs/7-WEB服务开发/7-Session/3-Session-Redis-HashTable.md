@@ -1,5 +1,6 @@
 ---
 title: 'Session-Redis-HashTable'
+sidebar_position: 3
 ---
 
 ## RedisHashTableStorage

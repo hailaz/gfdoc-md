@@ -1,5 +1,6 @@
 ---
 title: 'ORM常见问题'
+sidebar_position: 11
 ---
 
 ## `driver: bad connection`

@@ -1,5 +1,6 @@
 ---
 title: '缓存管理-Redis缓存'
+sidebar_position: 2
 ---
 
 ## 基本介绍

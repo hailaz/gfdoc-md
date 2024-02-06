@@ -1,9 +1,6 @@
 ---
 title: 首页
 sidebar_position: -1
-# 显示 h2 到 h5 标题
-toc_min_heading_level: 6
-toc_max_heading_level: 6
 ---
 <div align="center">
 <img src={require('/markdown/0ec2082abc02139e3fc1ce9090862d33.png').default} alt="Image" width="50%" />

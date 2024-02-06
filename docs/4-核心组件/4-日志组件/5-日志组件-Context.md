@@ -1,5 +1,6 @@
 ---
 title: '日志组件-Context'
+sidebar_position: 5
 ---
 
 从 `v2` 版本开始， `glog` 组件将 `ctx` 上下文变量作为日志打印的必需参数。

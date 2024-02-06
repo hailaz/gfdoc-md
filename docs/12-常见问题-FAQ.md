@@ -1,5 +1,6 @@
 ---
 title: '常见问题(FAQ)'
+sidebar_position: 12
 ---
 
 寄语：

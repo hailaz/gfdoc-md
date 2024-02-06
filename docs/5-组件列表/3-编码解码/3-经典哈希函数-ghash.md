@@ -1,5 +1,6 @@
 ---
 title: '经典哈希函数-ghash'
+sidebar_position: 3
 ---
 
 ## 基本介绍

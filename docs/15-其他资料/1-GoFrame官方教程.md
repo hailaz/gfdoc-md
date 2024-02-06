@@ -1,5 +1,6 @@
 ---
 title: 'GoFrame官方教程'
+sidebar_position: 1
 ---
 
 官方推荐以下四种形式的学习方式：

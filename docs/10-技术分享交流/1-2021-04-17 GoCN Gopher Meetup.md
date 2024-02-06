@@ -1,5 +1,6 @@
 ---
 title: '2021-04-17 GoCN Gopher Meetup'
+sidebar_position: 1
 ---
 
 大家好啊，新的一轮 `GoFrame` 框架技术分享来啦！

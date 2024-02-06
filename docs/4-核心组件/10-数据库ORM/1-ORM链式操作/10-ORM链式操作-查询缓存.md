@@ -1,5 +1,6 @@
 ---
 title: 'ORM链式操作-查询缓存'
+sidebar_position: 10
 ---
 
 ## 查询缓存

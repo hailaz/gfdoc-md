@@ -1,5 +1,6 @@
 ---
 title: 'Golang枚举值管理'
+sidebar_position: 9
 ---
 
 ## Go实现枚举值

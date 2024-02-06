@@ -1,5 +1,6 @@
 ---
 title: '数组类型-garray'
+sidebar_position: 1
 ---
 
 ## 基本介绍

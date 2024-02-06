@@ -1,5 +1,6 @@
 ---
 title: '分页管理-Ajax分页'
+sidebar_position: 2
 ---
 
 `Ajax` 分页与其他分页方式的区别在于，分页链接会使用 `Javascript` 方法来实现，该 `Javascript` 方法是分页方法，参数固定为该分页对应的分页 `URL` 地址。该 `Javascript` 方法通过 `Ajax` 获取到 `URL` 连接对应的分页内容后渲染到页面。

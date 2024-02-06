@@ -1,5 +1,6 @@
 ---
 title: '通用编解码-Struct转换'
+sidebar_position: 2
 ---
 
 ## `Struct` 转换

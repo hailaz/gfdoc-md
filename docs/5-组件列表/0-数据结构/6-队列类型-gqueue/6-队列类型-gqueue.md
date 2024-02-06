@@ -1,5 +1,6 @@
 ---
 title: '队列类型-gqueue'
+sidebar_position: 6
 ---
 
 ## 基本介绍

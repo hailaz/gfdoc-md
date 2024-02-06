@@ -1,5 +1,6 @@
 ---
 title: '自动编译-run'
+sidebar_position: 6
 ---
 
 ## 注意事项
