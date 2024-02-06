@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.1.1">
 <title data-rh="true">v1.15 2020-12-31 | GoFrame</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://goframe.org/gfdoc-md/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://goframe.org/gfdoc-md/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://goframe.org/gfdoc-md/docs/版本发布记录/历史版本记录 v1.x/v1.15 2020-12-31"><meta data-rh="true" property="og:locale" content="zh_Hans"><meta data-rh="true" name="docusaurus_locale" content="zh-Hans"><meta data-rh="true" name="docsearch:language" content="zh-Hans"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="v1.15 2020-12-31 | GoFrame"><meta data-rh="true" name="description" content="大家好呀！自上次发布到现在，从初秋到深冬，我们也完全冇闲着哟，我们这次带来了爱心满满的 GoFrame v1.15 版本。此外，还有两件事："><meta data-rh="true" property="og:description" content="大家好呀！自上次发布到现在，从初秋到深冬，我们也完全冇闲着哟，我们这次带来了爱心满满的 GoFrame v1.15 版本。此外，还有两件事："><link data-rh="true" rel="icon" href="/gfdoc-md/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://goframe.org/gfdoc-md/docs/版本发布记录/历史版本记录 v1.x/v1.15 2020-12-31"><link data-rh="true" rel="alternate" href="https://goframe.org/gfdoc-md/docs/版本发布记录/历史版本记录 v1.x/v1.15 2020-12-31" hreflang="zh-Hans"><link data-rh="true" rel="alternate" href="https://goframe.org/gfdoc-md/docs/版本发布记录/历史版本记录 v1.x/v1.15 2020-12-31" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/gfdoc-md/blog/rss.xml" title="GoFrame RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/gfdoc-md/blog/atom.xml" title="GoFrame Atom Feed"><link rel="stylesheet" href="/gfdoc-md/assets/css/styles.57a3be69.css">
-<script src="/gfdoc-md/assets/js/runtime~main.e46c156a.js" defer="defer"></script>
+<script src="/gfdoc-md/assets/js/runtime~main.1278b6ff.js" defer="defer"></script>
 <script src="/gfdoc-md/assets/js/main.a14eafb1.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard" data-theme="light">
@@ -41,8 +41,8 @@
 <li>请求对象 <code>Request</code> 增加默认值设置特性： <a href="/gfdoc-md/docs/WEB服务开发/请求输入/请求输入-默认值绑定">请求输入-默认值绑定</a></li>
 <li>增加 <code>Request.SetCtx</code> 方法，用于自定义上下文变量，常用于中间件/拦截器中： <a href="/gfdoc-md/docs/WEB服务开发/请求输入/请求输入-Context">请求输入-Context</a></li>
 <li>模板解析中增加 <code>Request</code> 变量，用于获得客户端提交的请求参数，无论是 <code>QueryString/Form</code> 类型参数： <a href="/gfdoc-md/docs/WEB服务开发/数据返回/数据返回-模板解析">数据返回-模板解析</a></li>
-<li><code>Cookie</code> 功能改进，如何设置与 <code>Session</code> 有效期保持一致的 <code>Cookie</code>，请参考： <a href="https://goframe.orghttps://goframe.org/display/gf/Cookie#Cookie-Cookie%E4%BC%9A%E8%AF%9D%E8%BF%87%E6%9C%9F" target="_blank" rel="noopener noreferrer">Cookie#Cookie会话过期</a></li>
-<li>分组路由注册增加 <code>ALLMap</code> 方法，用于批量注册路由： <a href="https://goframe.org/docs/WEB%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%8F%91/%E8%B7%AF%E7%94%B1%E7%AE%A1%E7%90%86/%E8%B7%AF%E7%94%B1%E7%AE%A1%E7%90%86-%E8%B7%AF%E7%94%B1%E6%B3%A8%E5%86%8C/%E8%B7%AF%E7%94%B1%E6%B3%A8%E5%86%8C-%E5%88%86%E7%BB%84%E8%B7%AF%E7%94%B1#id-%E5%88%86%E7%BB%84%E8%B7%AF%E7%94%B1-%E6%89%B9%E9%87%8F%E6%B3%A8%E5%86%8C" target="_blank" rel="noopener noreferrer">分组路由#批量注册</a></li>
+<li><code>Cookie</code> 功能改进，如何设置与 <code>Session</code> 有效期保持一致的 <code>Cookie</code>，请参考： <a href="https://goframe.org/display/gf/Cookie#Cookie-Cookie%E4%BC%9A%E8%AF%9D%E8%BF%87%E6%9C%9F" target="_blank" rel="noopener noreferrer">Cookie#Cookie会话过期</a></li>
+<li>分组路由注册增加 <code>ALLMap</code> 方法，用于批量注册路由： <a href="https://goframe.org/pages/viewpage.action?pageId=1114517#id-%E5%88%86%E7%BB%84%E8%B7%AF%E7%94%B1-%E6%89%B9%E9%87%8F%E6%B3%A8%E5%86%8C" target="_blank" rel="noopener noreferrer">分组路由#批量注册</a></li>
 <li>新增 <code>CRSF</code> 插件介绍文档： <a href="/gfdoc-md/docs/WEB服务开发/高级特性/CSRF防御设置">CSRF防御设置</a></li>
 <li>其他一些功能及细节改进。</li>
 </ul>
@@ -50,11 +50,11 @@
 <li><code>gdb</code>
 <ul>
 <li>增加 <code>Ctx</code> 方法，用于异步 <code>IO</code> 控制或传递自定义的上下文信息，特别是链路跟踪信息： <a href="/gfdoc-md/docs/核心组件/数据库ORM/ORM上下文变量">ORM上下文变量</a></li>
-<li>增加 <code>Raw</code> 类型，用于原始 <code>SQL</code> 语句嵌入，该  语句将会直接提交到底层数据库驱动，不会做任何处理： <a href="https://goframe.org/docs/%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6/%E6%95%B0%E6%8D%AE%E5%BA%93ORM/ORM%E9%93%BE%E5%BC%8F%E6%93%8D%E4%BD%9C/ORM%E9%93%BE%E5%BC%8F%E6%93%8D%E4%BD%9C-%E5%86%99%E5%85%A5%E4%BF%9D%E5%AD%98#id-%E5%86%99%E5%85%A5%E4%BF%9D%E5%AD%98-RawSQL%E8%AF%AD%E5%8F%A5%E5%B5%8C%E5%85%A5" target="_blank" rel="noopener noreferrer">写入保存#RawSQL语句嵌入</a>、 <a href="https://goframe.org/docs/%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6/%E6%95%B0%E6%8D%AE%E5%BA%93ORM/ORM%E9%93%BE%E5%BC%8F%E6%93%8D%E4%BD%9C/ORM%E9%93%BE%E5%BC%8F%E6%93%8D%E4%BD%9C-%E6%9B%B4%E6%96%B0%E5%88%A0%E9%99%A4#id-%E6%9B%B4%E6%96%B0%E5%88%A0%E9%99%A4-RawSQL%E8%AF%AD%E5%8F%A5%E5%B5%8C%E5%85%A5" target="_blank" rel="noopener noreferrer">更新删除#RawSQL语句嵌入</a></li>
+<li>增加 <code>Raw</code> 类型，用于原始 <code>SQL</code> 语句嵌入，该语句将会直接提交到底层数据库驱动，不会做任何处理： <a href="https://goframe.org/pages/viewpage.action?pageId=1114344#id-%E5%86%99%E5%85%A5%E4%BF%9D%E5%AD%98-RawSQL%E8%AF%AD%E5%8F%A5%E5%B5%8C%E5%85%A5" target="_blank" rel="noopener noreferrer">写入保存#RawSQL语句嵌入</a>、 <a href="https://goframe.org/pages/viewpage.action?pageId=1114238#id-%E6%9B%B4%E6%96%B0%E5%88%A0%E9%99%A4-RawSQL%E8%AF%AD%E5%8F%A5%E5%B5%8C%E5%85%A5" target="_blank" rel="noopener noreferrer">更新删除#RawSQL语句嵌入</a></li>
 <li>改进 <code>Fields/Fields/Data</code> 方法，增加对输入 <code>map/struct</code> 参数与数据表字段的自动映射检测、过滤： <a href="/gfdoc-md/docs/核心组件/数据库ORM/ORM高级特性#ORM%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7-%E5%AD%97%E6%AE%B5%E6%98%A0%E5%B0%84">ORM高级特性#字段映射</a></li>
 <li>增加 <code>InsertedAt/UpdatedAt/DeletedAt</code> 字段名称的配置，增加 <code>TimeMaintainDisabled</code> 配置可关闭时间填充及软删除特性： <a href="/gfdoc-md/docs/核心组件/数据库ORM/ORM链式操作/ORM链式操作-时间维护">ORM链式操作-时间维护</a></li>
-<li>增加 <code>Counter</code> 更新特性，用于字段的增加/减少操作： <a href="https://goframe.org/docs/%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6/%E6%95%B0%E6%8D%AE%E5%BA%93ORM/ORM%E9%93%BE%E5%BC%8F%E6%93%8D%E4%BD%9C/ORM%E9%93%BE%E5%BC%8F%E6%93%8D%E4%BD%9C-%E6%9B%B4%E6%96%B0%E5%88%A0%E9%99%A4#id-%E6%9B%B4%E6%96%B0%E5%88%A0%E9%99%A4-Counter%E6%9B%B4%E6%96%B0%E7%89%B9%E6%80%A7" target="_blank" rel="noopener noreferrer">更新删除#Counter更新特性</a></li>
-<li>改进 <code>ORM</code> 时区处理，详情请参考章节： <a href="/gfdoc-md/docs/  核心组件/数据库ORM/ORM时区处理">ORM时区处理</a></li>
+<li>增加 <code>Counter</code> 更新特性，用于字段的增加/减少操作： <a href="https://goframe.org/pages/viewpage.action?pageId=1114238#id-%E6%9B%B4%E6%96%B0%E5%88%A0%E9%99%A4-Counter%E6%9B%B4%E6%96%B0%E7%89%B9%E6%80%A7" target="_blank" rel="noopener noreferrer">更新删除#Counter更新特性</a></li>
+<li>改进 <code>ORM</code> 时区处理，详情请参考章节： <a href="/gfdoc-md/docs/核心组件/数据库ORM/ORM时区处理">ORM时区处理</a></li>
 <li>其他关于性能和易用性的细节改进。</li>
 <li>一些细节问题改进。</li>
 <li>完善单元测试。</li>
@@ -69,7 +69,7 @@
 </li>
 <li><code>gvalid</code>
 <ul>
-<li>增加 <code>phone-loose</code> 宽松手机号校验规则，只要满足 <code>13/14/15/16/17/18/19</code> 开头的 <code>11</code> 位数字都可以通过验证。</li>
+<li>增加 <code>phone-loose</code> 宽  松手机号校验规则，只要满足 <code>13/14/15/16/17/18/19</code> 开头的 <code>11</code> 位数字都可以通过验证。</li>
 <li>返回校验错误实现了 <code>gerror</code> 的 <code>Current() error</code> 接口，因此可以使用 <code>gerror.Current</code> 方法来获取当前第一条校验错误： <a href="/gfdoc-md/docs/核心组件/数据校验/数据校验-校验结果">数据校验-校验结果</a></li>
 <li>其他细节改进。</li>
 <li>单元测试完善。</li>
@@ -105,13 +105,13 @@
 </li>
 <li><code>gcfg</code>
 <ul>
-<li>改进单例名称的配置对象获取，增加自动检测文件类型功能： <a href="https://goframe.org/docs/%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6/%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86/%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86-%E9%85%8D%E7%BD%AE%E5%AF%B9%E8%B1%A1#id-%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86%E5%8D%95%E4%BE%8B%E5%AF%B9%E8%B1%A1-%E8%87%AA%E5%8A%A8%E6%A3%80%E7%B4%A2%E7%89%B9%E6%80%A7" target="_blank" rel="noopener noreferrer">配置管理-单例对象#自动检索特性</a></li>
+<li>改进单例名称的配置对象获取，增加自动检测文件类型功能： <a href="https://goframe.org/pages/viewpage.action?pageId=1114194#id-%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86%E5%8D%95%E4%BE%8B%E5%AF%B9%E8%B1%A1-%E8%87%AA%E5%8A%A8%E6%A3%80%E7%B4%A2%E7%89%B9%E6%80%A7" target="_blank" rel="noopener noreferrer">配置管理-单例对象#自动检索特性</a></li>
 <li>其他一些细节改进。</li>
 </ul>
 </li>
 <li><code>gcmd</code>
 <ul>
-<li>改进默认参数解析获取方式： <a href="/gfdoc-md/docs/组件列 表/系统相关/命令管理-gcmd">命令管理-gcmd</a></li>
+<li>改进默认参数解析获取方式： <a href="/gfdoc-md/docs/组件列表/系统相关/命令管理-gcmd">命令管理-gcmd</a></li>
 <li>增加 <code>GetWithEnv</code> 方法，当命令行中不存在指定参数时，同时从环境变量中获取： <a href="/gfdoc-md/docs/组件列表/系统相关/命令管理-gcmd">命令管理-gcmd</a></li>
 </ul>
 </li>
